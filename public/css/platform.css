@@ -1,0 +1,896 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+body {
+  background: #f9f9fc;
+  color: #000000;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+}
+
+/* =========================================================
+   2) HEADER / NAVIGATION
+   ========================================================= */
+
+header {
+  width: 100%;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #0a0a1a 40%, #1a0033 100%);
+  /* backdrop-filter: blur(12px); */ /* removed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header.scrolled {
+  background: linear-gradient(135deg, #0a0a1a 40%, #1a0033 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header.scrolled .menu a {
+  color: #ffffff; /* make nav links dark for visibility */
+}
+
+header.scrolled .menu a:hover {
+  color: #cf68ff; /* make nav links dark for visibility */
+}
+
+header.scrolled .logo h2 {
+  color: #4c2dff;
+}
+
+.logo h2 {
+  color: #a64ce3;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo h2:hover {
+  color: #3a44fe;
+}
+
+/* Nav Menu */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  color: #fff;
+  padding: 10px 5px;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #6A11CB, #2575FC);
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu a:hover {
+  color: #b168f9;
+}
+
+/* Login Button */
+.login-btn a {
+  background: linear-gradient(90deg, #6A11CB, #2575FC);
+  color: #fff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.login-btn a:hover {
+  background: linear-gradient(90deg, #110a96, #4d0276);
+  transform: scale(1.08);
+  color: white;
+}
+
+.dropdown{
+    position: relative;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 110%;
+  left: 0;
+  min-width: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  /* Glass */
+  background: rgba(26, 0, 51, 0.75);
+  backdrop-filter: blur(14px);
+  /* Glow border */
+  border: 1px solid rgba(156, 64, 248, 0.3);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
+              0 0 20px rgba(156, 64, 248, 0.25);
+  animation: dropdownFade 0.35s ease forwards;
+  z-index: 999;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+  padding: 16px 22px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.dropdown-menu li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 0%;
+  width: 3px;
+  background: linear-gradient(90deg, #6A11CB, #2575FC);
+  border-radius: 4px;
+  transform: translateY(-50%);
+  transition: height 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+  background: rgba(156, 64, 248, 0.15);
+  color: #a95af8;
+  padding-left: 28px;
+}
+
+.dropdown-menu li a:hover::before {
+  height: 60%;
+}
+
+/* Show dropdown on hover (desktop) */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Dropdown animation */
+@keyframes dropdownFade {
+  from { opacity: 0; transform: translateY(-12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  height: 3px;
+  width: 25px;
+  background: #fff;
+  border-radius: 4px;
+  transition: all 0.4s ease;
+}
+
+/* Animate to X when active */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 1200px) {
+  .hamburger {
+    display: flex;
+  }
+
+  nav {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 26, 0.95);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    animation: slideDown 0.4s ease forwards;
+  }
+  nav.active {
+    display: flex;
+    padding: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .menu li {
+    width: 100%;
+  }
+  .menu li a {
+    padding: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+
+  .login-btn a {
+    display: block;
+    width: 80%;
+    margin: 16px auto;
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================================
+   PLATFORM SECTION STYLING (LIGHT THEME)
+   ================================ */
+
+.platform-section {
+  background: #ffffff;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #eaecef;
+}
+
+/* Soft blue background glow */
+.platform-section::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -60px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(0, 102, 255, 0.15), transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+  animation: floatGlow 10s ease-in-out infinite alternate;
+}
+
+/* Animation for glow effect */
+@keyframes floatGlow {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(40px, 40px);
+  }
+}
+
+/* Container content */
+.platform-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Page title */
+.platform-section .page-title {
+  font-size: 50px;
+  font-weight: 700;
+   background: linear-gradient(90deg, #6a11cb, #2575fc); /* Purple → Blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;  /* fallback for non-webkit */
+  margin-bottom: 20px;
+  position: relative;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+  margin-top: 60px;
+}
+
+/* Title underline effect */
+.platform-section .page-title::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 4px;
+  background: linear-gradient(90deg, #6a11cb, #2575fc);
+  margin: 10px auto 0;
+  border-radius: 4px;
+}
+
+/* Description text */
+.platform-section .page-desc {
+  
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .platform-section {
+    padding: 70px 15px;
+  }
+
+  .platform-section .page-title {
+    font-size: 2rem;
+  }
+
+  .platform-section .page-desc {
+    font-size: 1rem;
+  }
+}
+
+/* ================================
+   DOWNLOAD VERTEX SECTION (LIGHT THEME)
+   ================================ */
+
+.cta {
+  background: #ffffff;
+  padding: 80px 20px;
+  color: #222;
+  text-align: center;
+  border-top: 1px solid #e5e8ef;
+}
+
+/* Title */
+.cta__subscribe h2 {
+  font-size: 50px;
+  font-weight: 700;
+    background: linear-gradient(90deg, #6a11cb, #2575fc); /* Purple → Blue */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;  /* fallback for non-webkit */
+  margin-bottom: 50px;
+  position: relative;
+  line-height: 1.3;
+  letter-spacing: -0.5px;
+
+}
+
+/* Flexbox layout for store icons */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap; /* all in one line */
+  gap: 30px; /* bigger gap for larger images */
+  margin: 30px auto;
+  max-width: 1000px;
+}
+
+/* Each app store box */
+.store {
+  flex: 1;
+  text-align: center;
+}
+
+/* Store images - bigger version */
+.store img {
+  width: 350px;      /* bigger image width */
+  max-width: 95%;    /* responsive max width */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effects */
+.store img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 25px rgba(81, 0, 255, 0.3);
+}
+
+/* Section subtitle (like 'Older Version' or 'Latest Version') */
+.cta__subscribe h6 {
+  color: #555;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 992px) {
+  .store img {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-wrap: wrap; /* stack vertically on smaller screens */
+    gap: 30px;
+  }
+
+  .store img {
+    width: 220px;
+  }
+
+  .cta__subscribe h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Small accent line under subtitles */
+.cta__subscribe h6::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #3d34e0, #00aaff);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Footer Styles */
+.footer {
+  background: linear-gradient(135deg, #0a0a1a 40%, #1a0033 100%);
+  color: #fff;
+  padding: 60px 50px 20px;
+  line-height: 1.6;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.footer-col h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+}
+
+.footer-col h4::after {
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #6A11CB, #2575FC);
+  display: block;
+  margin-top: 8px;
+}
+
+.footer-col ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  color: #ddd; /* optional for dark footer */
+}
+
+.footer-col ul li i {
+  margin-right: 10px; /* <-- gap between icon & text */
+  color: #ffffff; /* match your theme, you can change */
+  font-size: 16px;
+}
+
+.footer-col ul li a {
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #8a12f3;
+}
+
+/* Logo & Social */
+.footer-logo {
+  max-width: 140px;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;              /* circle size */
+  height: 40px;
+  border: solid 1px;
+  border-radius: 50%;       /* makes it a circle */
+  background: #22222200;         /* default circle background */
+  color: #bbb;              /* icon color */
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+  background: #7712f3;      /* circle background on hover */
+  color: #fff;              /* icon color on hover */
+  transform: scale(1.1);    /* slight zoom effect */
+  box-shadow: 0 4px 12px rgba(119, 18, 243, 0.4);
+}
+
+/* ================= LEGAL SECTION ================= */
+.footer-legal {
+  color: #ccc;
+  padding: 40px 20px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.footer-legal h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #bb8bf6;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-legal h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #6A11CB, #2575FC);
+  margin-top: 6px;
+  border-radius: 2px;
+}
+
+.footer-legal p {
+  margin-bottom: 18px;
+  color: #bbb;
+}
+
+.footer-legal p:last-child {
+  margin-bottom: 0; /* no gap after last paragraph */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-legal {
+    font-size: 13px;
+    padding: 30px 15px;
+  }
+  .footer-legal h3 {
+    font-size: 15px;
+  }
+}
+
+/* Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-bottom .footer-social {
+  gap: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+  .footer-col h4::after {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 90px;   /* moved up so it doesn’t overlap */
+  right: 25px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7712f3, #5a0dcf);
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s ease;
+  z-index: 1100;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background: linear-gradient(135deg, #5a0dcf, #3a0aa3);
+  transform: scale(1.1);
+}
+
+/* Floating Dark Mode Toggle */
+.dark-toggle {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;   /* stays at bottom */
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  z-index: 1200;
+}
+
+.dark-toggle:hover {
+  background: #333;
+  transform: scale(1.1);
+}
+
+
+/* ===== DARK MODE ===== */
+body.dark-mode {
+    background-color: #0a0a0f;
+    color: #ddd;
+}
+
+/* PLATFORM SECTION DARK MODE */
+body.dark-mode .platform-section {
+    background-color: #11111a;
+}
+
+
+
+body.dark-mode .platform-section .page-title {
+    color: #9b59b6;
+    }
+
+body.dark-mode .platform-section .page-desc {
+    color: #ccc;
+}
+
+/* CTA / DOWNLOAD SECTION DARK MODE */
+body.dark-mode .cta {
+    background-color: #11111a;
+}
+
+
+body.dark-mode .cta__subscribe h2 {
+    color: #9b59b6;
+    }
+
+body.dark-mode .cta__subscribe h2 span {
+    color: #ffffff;
+    }
+
+body.dark-mode .cta__subscribe h6 {
+    color: #aaa;
+}
+
+
+
+body.dark-mode .store img:hover {
+    transform: translateY(-5px) scale(1.05);
+    filter: drop-shadow(0 0 5px #3498db) drop-shadow(0 0 5px #9b59b6);
+}
+
+/* Responsive adjustments already inherit from previous CSS */
+body.dark-mode {
+  background: #0f0f1a; /* dark mode support */
+  color: #f1f1f1;
+}
+
+/* Header */
+body.dark-mode header {
+  background: linear-gradient(135deg, #111111 40%, #1a0033 100%);
+}
+
+/* Dark mode header after scroll */
+body.dark-mode header.scrolled {
+  background: linear-gradient(135deg, #0d0d0d 40%, #1a0033 100%);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+body.dark-mode .menu a {
+  color: #ddd;
+}
+
+body.dark-mode .menu a:hover {
+  color: #c57aff;
+}
+
+body.dark-mode .login-btn a {
+  background: linear-gradient(90deg, #150c55, #220944);
+}
+
+/* Dropdown */
+body.dark-mode .dropdown-menu {
+  background: rgba(20, 20, 20, 0.95);
+  border: 1px solid rgba(156, 64, 248, 0.4);
+}
+
+/* Buttons */
+body.dark-mode .hero-buttons a:last-child {
+  border: 2px solid #555;
+  color: #ddd;
+}
+
+body.dark-mode .hero-buttons a:last-child:hover {
+  background: linear-gradient(90deg, #150c55, #220944);
+  border-color: transparent;
+}
+
+/* Cards, sections, faq, testimonials (if you add them later) */
+body.dark-mode .card,
+body.dark-mode .section,
+body.dark-mode .pricing-card,
+body.dark-mode .faq-item,
+body.dark-mode .testimonial-card {
+  background: #161616;
+  color: #f5f5f5;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ================= DARK MODE FOOTER ================= */
+.dark-mode .footer {
+  background: linear-gradient(135deg, #000000 40%, #0d0d2e 100%);
+  color: #e0e0e0;
+}
+
+.dark-mode .footer-col h4 {
+  color: #fff;
+}
+
+.dark-mode .footer-col h4::after {
+  background: linear-gradient(90deg, #bb86fc, #3700b3);
+}
+
+.dark-mode .footer-col ul li {
+  color: #ccc;
+}
+
+.dark-mode .footer-col ul li i {
+  color: #bb86fc; /* icons match dark theme accent */
+}
+
+.dark-mode .footer-col ul li a {
+  color: #aaa;
+}
+
+.dark-mode .footer-col ul li a:hover {
+  color: #bb86fc;
+}
+
+/* Social icons */
+.dark-mode .footer-social a {
+  border-color: rgba(255,255,255,0.2);
+  color: #aaa;
+}
+
+.dark-mode .footer-social a:hover {
+  background: #bb86fc;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(187,134,252,0.4);
+}
+
+/* Legal section */
+.dark-mode .footer-legal {
+  color: #bbb;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+.dark-mode .footer-legal h3 {
+  color: #bb86fc;
+}
+
+.dark-mode .footer-legal h3::after {
+  background: linear-gradient(90deg, #bb86fc, #3700b3);
+}
+
+.dark-mode .footer-legal p {
+  color: #aaa;
+}
+
+/* Footer bottom */
+.dark-mode .footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.dark-mode .footer-bottom p {
+  color: #aaa;
+}

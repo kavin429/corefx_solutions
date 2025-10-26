@@ -1,0 +1,85 @@
+<?php
+
+namespace App\Http\Controllers\Auth;
+
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use App\Models\User;
+use App\Models\Admin;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\DB;
+
+class ForgotPasswordController extends Controller
+{
+    // Show forgot password form
+    public function showForgotForm()
+    {
+        return view('auth.forgot-password');
+    }
+
+    // Handle reset request (direct reset + email + notify)
+    public function sendResetLink(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:users,email',
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+
+        // Generate secure random password (10 chars with letters, numbers, symbols)
+        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=';
+        $newPassword = substr(str_shuffle($characters), 0, 10);
+
+        // Save hashed password
+        $user->password = bcrypt($newPassword);
+        $user->save();
+
+        // Send email with new password to user
+        Mail::raw(
+            "Hello {$user->name},\n\n".
+            "We have reset your password for your Infinity Trade Solutions LTD account.\n\n".
+            "Your new login credentials are:\n".
+            "-----------------------------------\n".
+            "Email: {$user->email}\n".
+            "Password: {$newPassword}\n".
+            "-----------------------------------\n\n".
+            "⚠️ For your security, please log in immediately and change this password.\n\n".
+            "Thank you,\nThe Infinity Trade Solutions LTD Team",
+            function ($message) use ($user) {
+                $message->to($user->email)
+                        ->subject('Infinity Trade Solutions LTD - Password Reset Notification');
+            }
+        );
+
+        // Store notification in DB for the user
+        DB::table('notifications')->insert([
+            'notifiable_id'   => $user->id,
+            'notifiable_type' => User::class,
+            'title'           => 'Password Reset Successful',
+            'message'         => 'A new password was generated and sent to your email.',
+            'is_read'         => 0,
+            'created_at'      => now(),
+            'updated_at'      => now(),
+        ]);
+
+        // -------------------------------
+        // Notify all admins in DB
+        // -------------------------------
+        $admins = Admin::all();
+        foreach ($admins as $admin) {
+            DB::table('notifications')->insert([
+                'notifiable_id'   => $admin->id,
+                'notifiable_type' => Admin::class,
+                'sender_id'       => $user->id,
+                'sender_type'     => User::class,
+                'title'           => 'User Password Reset',
+                'message'         => "User {$user->email} has reset their password.",
+                'is_read'         => 0,
+                'created_at'      => now(),
+                'updated_at'      => now(),
+            ]);
+        }
+
+        return back()->with('status', 'A new password has been sent to your email.');
+    }
+}

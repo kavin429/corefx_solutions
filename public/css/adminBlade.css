@@ -1,0 +1,773 @@
+/* ---------- adminBlade.css ---------- */
+* {
+  font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+/* ---------- Body ---------- */
+body {
+    margin: 0;
+    background: #f3f0ff; /* Light purple background */
+    color: #3b2a5a;      /* Dark purple text */
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ---------- Sidebar Base ---------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(135deg, #f3e5ff, #e0ccff);
+    color: #240c40;
+    padding: 1rem;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar .profile-pic {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 2px solid #240c40;;
+} 
+
+/* ---------- Accordion Items ---------- */
+.sidebar .accordion-item {
+    background: transparent;       /* Sidebar purple background */
+    border: none;              /* Remove borders */
+    border-radius: 6px;        /* Rounded corners */
+    margin-bottom: 0.5rem;     /* Space between items */
+    overflow: hidden;          /* Clip inner content */
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+/* Accordion Buttons - general style */
+.sidebar .accordion-button {
+    background: none;
+    color: #240c40;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+/* Collapsed state */
+.sidebar .accordion-button.collapsed {
+    background: transparent;
+    color: #240c40;
+}
+
+/* Expanded state */
+.sidebar .accordion-button:not(.collapsed) {
+    background: #d4affe; /* Slightly lighter purple when expanded */
+    color: #130820;
+}
+
+/* Hover effect for both states */
+.sidebar .accordion-button:hover {
+    background: #e1c6ff; /* Subtle hover purple */
+    transform: translateX(3px); /* Slight shift on hover */
+}
+
+/* Icon spacing */
+.sidebar .accordion-button i {
+    font-size: 1.1rem;
+}
+
+/* Accordion collapse content */
+.sidebar .accordion-collapse {
+    background: rgba(255, 255, 255, 0.05); 
+    transition: max-height 0.3s ease;
+}
+
+/* Accordion body content */
+.sidebar .accordion-body {
+    padding: 0.25rem 0 0.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Links inside accordion body */
+.sidebar .accordion-body .sidebar-link {
+    color: #5c1ba7;
+    text-decoration: none;
+    padding: 0.35rem 0.5rem;
+    border-radius: 4px;
+    transition: background 0.3s, color 0.3s;
+    font-size: 0.95rem;
+}
+
+.sidebar .accordion-body .sidebar-link:hover {
+    background: #e1c6ff;
+    color: #5c1ba7;
+}
+
+/* Active link */
+.sidebar .accordion-body .sidebar-link.active {
+    background: #e1c6ff;
+    color: #5c1ba7;
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 3px;
+}
+
+/* ---------- Sidebar Links ---------- */
+.sidebar-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #240c40;
+    border-radius: 6px;
+    margin-bottom: 0.25rem;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background: #d4affe;  /* Highlight */
+    color: #5c1ba7;
+}
+
+/* ---------- Main Content ---------- */
+.main {
+    margin-left: 250px;
+    padding: 1.5rem;
+    transition: margin-left 0.3s ease;
+}
+
+/* Topbar */
+.topbar {
+    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+}
+
+/* Topbar greeting */
+.topbar-greeting {
+    font-size: 1.8rem;
+    color: #3b2a5a;
+    padding: 10px 0;
+}
+
+
+/* Topbar icons container */
+.topbar-icons .topbar-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: 6px;
+    background: #f3f0ff;
+    color: #5b3e96;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+}
+
+.topbar-icons .topbar-btn:hover {
+    background: #5b3e96;
+    color: #fff;
+}
+
+/* Notification badge */
+.notification-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: red;
+    border: 1px solid #fff;
+    border-radius: 50%;
+}
+
+/* Form button reset */
+.topbar-icons form .topbar-btn {
+    padding: 0;
+}
+
+/* ---------- Cards ---------- */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(155, 89, 182, 0.1);
+    padding: 1.5rem;
+    text-align: center;
+    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    color: #3b2a5a;
+}
+
+/* Make all cards in the row same height */
+.align-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.align-cards > .col-md-4 {
+    display: flex;
+}
+
+.align-cards > .col-md-4 > .card {
+    flex: 1; /* Stretch card to fill column height */
+    display: flex;
+    flex-direction: column; /* Keep content stacked vertically */
+    justify-content: space-between; /* Optional: push nested cards to bottom */
+}
+
+/* Card general text */
+.card h6 {
+    font-weight: 500;       /* Medium weight for labels */
+    font-size: 1rem;        /* Label size */
+    color: #5c1ba7;         /* Purple text for labels */
+    margin-bottom: 0.5rem;
+    text-transform: uppercase; /* Optional: uppercase labels */
+    letter-spacing: 0.5px;     /* Small spacing for cleaner look */
+}
+
+.card h3, 
+.card h5 {
+    font-weight: 700;       /* Bold numbers */
+    font-size: 2rem;        /* Main numbers */
+    color: #3b2a5a;         /* Dark purple text */
+    margin: 0;
+}
+
+/* Nested cards (Deposits / Withdrawals) */
+.card .row .card h6 {
+    font-size: 0.9rem;      /* Slightly smaller labels */
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.card .row .card h5 {
+    font-size: 1.5rem;      /* Slightly smaller numbers */
+    font-weight: 700;
+}
+
+/* Optional: add number animation for effect */
+.card h3, .card h5 {
+    transition: color 0.3s, transform 0.3s;
+}
+
+.card h3:hover, .card h5:hover {
+    transform: scale(1.05);
+    color: #8e44ad; /* highlight on hover */
+}
+
+/* Optional: text alignment inside nested cards */
+.card .row .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1.5px;
+    border-color: #e1c7ff;
+}
+
+/* ---------- Dark Mode Cards ---------- */
+body.dark .align-cards > .col-md-4 > .card {
+    background: linear-gradient(135deg, #2a1546, #3c1f66); /* Dark purple gradient */
+    color: #e9dfff; /* Light text */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Card general text in dark mode */
+body.dark .card h6 {
+    color: #c7aaff; /* Lighter purple for labels */
+}
+
+body.dark .card h3, 
+body.dark .card h5 {
+    color: #ffffff; /* White for numbers */
+}
+
+/* Nested cards (Deposits / Withdrawals) in dark mode */
+body.dark .card .row .card {
+    background: #4d2786; /* Default dark nested card */
+    color: #fff;
+}
+
+body.dark .card .row .card.bg-success {
+    background:linear-gradient(135deg, #2a1546, #3c1f66); /* Keep green for deposits */
+    color: #fff;
+}
+
+body.dark .card .row .card.bg-danger {
+    background:linear-gradient(135deg, #2a1546, #3c1f66); /* Keep red for withdrawals */
+    color: #fff;
+}
+
+/* Nested card text in dark mode */
+body.dark .card .row .card h6 {
+    color: #e0c6ff; /* lighter purple labels */
+}
+
+body.dark .card .row .card h5 {
+    color: #fff; /* White numbers */
+}
+
+/* Hover effect in dark mode */
+body.dark .card h3:hover, 
+body.dark .card h5:hover {
+    transform: scale(1.05);
+    color: #ebbffc; /* Highlight on hover in dark mode */
+}
+
+
+
+/* ---------- Card Icon Styles ---------- */
+.card-icon {
+    color: #fff;
+    border: solid 1.5px #8e44ad;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 1rem auto 1rem auto; /* center horizontally with top/bottom spacing */
+    background: #8e44ad;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem; /* adjust icon size */
+}
+
+body.dark .card-icon {
+    color: #fff;                     /* icon color */
+    background: #5e2a86;             /* darker purple background */
+    border-color: #8b5de0;           /* border color for dark mode */
+}
+
+
+
+
+/* ---------- Responsive ---------- */
+@media (max-width: 767.98px) {
+    .sidebar { left: -250px; }
+    .sidebar.active { left: 0; }
+    .main { margin-left: 0; }
+
+    
+}
+
+/* ---------- Notifications ---------- */
+#notificationModal .modal-dialog {
+    position: absolute;
+    top: 45px;
+    right: 10px;
+    margin: 0;
+    width: 280px;
+}
+
+#notificationModal .modal-content {
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(59, 42, 90, 0.3);
+}
+
+#notificationModal .modal-header {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+}
+
+#notificationModal .modal-body {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 0.3rem 0.6rem;
+}
+
+#notificationModal .list-group-item {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    color: #3b2a5a;
+}
+
+#notificationModal .btn-close {
+    font-size: 0.8rem;
+}
+
+/* Optional: Scrollbar styling for sidebar */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#accountsPieChart {
+    height: 215px; /* Adjust as needed */
+    max-height: 215px;
+}
+
+/* ---------- adminBlade-dark.css ---------- */
+
+/* ---------- Body ---------- */
+body.dark {
+    background: linear-gradient(135deg, #1a0b2e, #2a1546);
+    color: #e9dfff;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ---------- Sidebar Base ---------- */
+body.dark .sidebar {
+    background: linear-gradient(180deg, #2a1546, #3c1f66);
+    color: #e9dfff;
+}
+
+body.dark .sidebar .profile-pic {
+    border: 2px solid #e9dfff;
+}
+
+/* ---------- Accordion Items ---------- */
+body.dark .sidebar .accordion-item {
+    background: transparent;
+}
+
+body.dark .sidebar .accordion-button {
+    background: none;
+    color: #e9dfff;
+}
+
+body.dark .sidebar .accordion-button.collapsed {
+    color: #e9dfff;
+}
+
+body.dark .sidebar .accordion-button:not(.collapsed) {
+    background: linear-gradient(90deg, #6a3dbb, #4d2786);
+    color: #fff;
+}
+
+body.dark .sidebar .accordion-button:hover {
+    background: linear-gradient(90deg, #5a2f9c, #3c1f66);
+    transform: translateX(3px);
+}
+
+body.dark .sidebar .accordion-button i {
+    color: #c7aaff;
+}
+
+/* Accordion collapse & body */
+body.dark .sidebar .accordion-collapse {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+body.dark .sidebar .accordion-body {
+    color: #c7aaff;
+}
+
+body.dark .sidebar .accordion-body .sidebar-link {
+    color: #c7aaff;
+}
+
+body.dark .sidebar .accordion-body .sidebar-link:hover {
+    background: linear-gradient(90deg, #6a3dbb, #4d2786);
+    color: #fff;
+}
+
+body.dark .sidebar .accordion-body .sidebar-link.active {
+    background: linear-gradient(90deg, #8b5de0, #6a3dbb);
+    color: #fff;
+}
+
+/* ---------- Sidebar Links ---------- */
+body.dark .sidebar-link {
+    color: #e9dfff;
+}
+
+body.dark .sidebar-link:hover,
+body.dark .sidebar-link.active {
+    background: linear-gradient(90deg, #6a3dbb, #4d2786);
+    color: #fff;
+}
+
+/* ---------- Main Content ---------- */
+body.dark .main {
+    background: transparent;
+    color: #e9dfff;
+}
+
+/* ---------- Topbar ---------- */
+body.dark .topbar {
+    background: linear-gradient(135deg, #2a1546, #3c1f66);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+body.dark .topbar-greeting {
+    color: #c7aaff;
+}
+
+/* Topbar icons */
+body.dark .topbar-icons .topbar-btn {
+    background: linear-gradient(135deg, #4d2786, #6a3dbb);
+    color: #fff;
+}
+
+body.dark .topbar-icons .topbar-btn:hover {
+    background: linear-gradient(135deg, #6a3dbb, #8b5de0);
+    color: #fff;
+}
+
+/* Notification badge */
+body.dark .notification-badge {
+    background: #ff4c6a;
+    border: 1px solid #2a1546;
+}
+
+/* ---------- Cards ---------- */
+body.dark .card {
+    background: linear-gradient(135deg, #2a1546, #3c1f66);
+    color: #e9dfff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* ---------- Notifications ---------- */
+body.dark #notificationModal .modal-content {
+    background: linear-gradient(135deg, #2a1546, #3c1f66);
+    color: #e9dfff;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.7);
+}
+
+body.dark #notificationModal .list-group-item {
+    background: linear-gradient(135deg, #3c1f66, #4d2786);
+    color: #e9dfff;
+}
+
+body.dark #notificationModal .btn-close {
+    filter: invert(1);
+}
+
+/* ---------- Scrollbars ---------- */
+body.dark .sidebar::-webkit-scrollbar-thumb {
+    background: rgba(200, 160, 255, 0.4);
+}
+
+body.dark .sidebar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* ---------- Chart ---------- */
+body.dark #accountsPieChart {
+    background: transparent;
+}
+
+/* --------------------- Responsive Styles --------------------- */
+
+/* Small tablets and below */
+@media (max-width: 991.98px) {
+    .main {
+        margin-left: 0; /* Remove sidebar space */
+        padding: 1rem;
+    }
+    .sidebar {
+        width: 200px; /* narrower sidebar */
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 767.98px) {
+    /* Sidebar */
+    .sidebar {
+        left: -250px; /* hide by default */
+        width: 250px;
+        transition: left 0.3s ease;
+    }
+    .sidebar.active {
+        left: 0; /* show when toggled */
+    }
+
+    /* Main content */
+    .main {
+        margin-left: 0;
+        padding: 0.8rem;
+    }
+
+    /* Topbar */
+    .topbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+    }
+    .topbar-greeting {
+        font-size: 1rem;
+    }
+    .topbar-icons {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    /* Cards */
+    .card {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Notifications modal */
+    #notificationModal .modal-dialog {
+        top: 35px;
+        right: 5px;
+        width: 90%;
+        max-width: 300px;
+    }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 575.98px) {
+    .sidebar {
+        width: 220px; /* slightly narrower */
+    }
+    .topbar {
+        padding: 0.3rem 0.5rem;
+    }
+    .topbar-greeting {
+        font-size: 1.2rem;
+    }
+    .card {
+        padding: 0.8rem;
+        font-size: 0.85rem;
+    }
+    #usersBarChart,
+    #accountsPieChart {
+        height: 180px;
+        max-height: 180px;
+    }
+}
+
+/* ---------- Pagination Container ---------- */
+.mt-3 {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+/* ---------- Pagination List ---------- */
+.pagination {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 0.4rem; /* spacing between buttons */
+    flex-wrap: nowrap; /* keep all buttons in one line */
+}
+
+/* ---------- Pagination Links & Buttons ---------- */
+.pagination li a,
+.pagination li span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 38px;
+    height: 38px;
+    padding: 0 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b3e6b; /* dark purple */
+    background-color: #f3e5ff; /* light purple */
+    border-radius: 8px;
+    border: 1px solid #d0b3ff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* prevent wrapping */
+}
+
+/* ---------- Prev / Next Buttons ---------- */
+.pagination li.previous a,
+.pagination li.next a {
+    font-weight: 600;
+    color: #fff;
+    background-color: #8e44ad; /* strong purple */
+}
+
+.pagination li.previous a:hover,
+.pagination li.next a:hover {
+    background-color: #7d3c98;
+    color: #fff;
+}
+
+/* ---------- Hover Effect ---------- */
+.pagination li a:hover:not(.active) {
+    background-color: #e0ccff;
+    color: #240c40;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ---------- Active Page ---------- */
+.pagination li.active span {
+    background-color: #8e44ad; /* strong purple */
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* ---------- Disabled State ---------- */
+.pagination li.disabled span {
+    background-color: #f8f9fa;
+    color: #ccc;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+/* ---------- Dark Mode ---------- */
+body.dark .pagination li a,
+body.dark .pagination li span {
+    background-color: #2a1546;
+    color: #e9dfff;
+    border: 1px solid #5a3d99;
+}
+
+body.dark .pagination li a:hover:not(.active) {
+    background-color: #3c1f66;
+    color: #fff;
+}
+
+body.dark .pagination li.active span {
+    background-color: #5e2a86;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+body.dark .pagination li.previous a,
+body.dark .pagination li.next a {
+    background-color: #5e2a86;
+}
+
+body.dark .pagination li.previous a:hover,
+body.dark .pagination li.next a:hover {
+    background-color: #4c216d;
+}
+
+/* Light mode (default Bootstrap look) */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Dark mode override */
+body.dark-mode .text-muted {
+    color: #b5b5b5 !important;  /* softer gray for dark backgrounds */
+}
+
+/* Optional: make it a little dimmer for timestamps */
+body.dark-mode small.text-muted {
+    color: #a0a0a0 !important;
+}
+

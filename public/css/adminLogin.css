@@ -1,0 +1,231 @@
+/* ---------------- BASE RESET ---------------- */
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+html, body {
+  height: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------------- LIGHT MODE ---------------- */
+body {
+  background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+  color: #111827;
+}
+
+/* ---------------- LOGIN CARD ---------------- */
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 4rem;
+  max-width: 1000px;
+  width: 200%;
+  margin: 2rem;
+  text-align: left;
+  padding-right: 5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.login-card h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* ---------------- INPUT FIELDS ---------------- */
+.login-card input[type="email"],
+.login-card input[type="password"] {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border 0.3s, background 0.3s;
+}
+
+.login-card input:focus {
+  border-color: #8825eb;
+  box-shadow: 0 0 0 3px rgba(113, 37, 235, 0.25);
+  outline: none;
+}
+
+/* ---------------- LABELS ---------------- */
+.login-card label {
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+/* ---------------- CHECKBOX ---------------- */
+.login-card input[type="checkbox"] {
+  accent-color: #6725eb;
+}
+
+/* ---------------- BUTTON ---------------- */
+.login-card button {
+  background: linear-gradient(135deg, #2563eb, #641eaf);
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 110%;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-size: 15px;
+}
+
+.login-card button:hover {
+  background: linear-gradient(135deg, #5f1eaf, #1e3a8a);
+  transform: translateY(-1px);
+}
+
+/* ---------------- ERROR MESSAGES ---------------- */
+.login-card .error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.error-box {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  background-color: #FEE2E2;
+  color: #B91C1C;
+  border: 1px solid #FCA5A5;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* ---------------- DARK MODE ---------------- */
+body.dark-mode {
+  background: linear-gradient(135deg, #112027, #4c3a76);
+  color: #e5e7eb;
+}
+
+body.dark-mode .login-card {
+  background: rgba(0, 0, 0, 0.7);
+  color: #f9fafb;
+  border: 1px solid #4d1e9a;
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .login-card input {
+  background: #1a1127;
+  border: 1px solid #6384b8;
+  color: #f9fafb;
+}
+
+body.dark-mode .login-card input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}
+
+body.dark-mode .login-card label {
+  color: #d1d5db;
+}
+
+body.dark-mode .login-card button {
+  background: linear-gradient(135deg, #702be8, #3224c9);
+}
+
+body.dark-mode .login-card button:hover {
+  background: linear-gradient(135deg, #4d1e9a, #262463);
+}
+
+body.dark-mode .error-box {
+  background-color: #7f1d1d;
+  color: #fecaca;
+  border: 1px solid #f87171;
+}
+
+/* ---------------- DARK MODE TOGGLE ---------------- */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #3e107e;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+  background: #15052c;
+  transform: rotate(15deg);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 5rem;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 5rem;
+    width: 90%;
+  }
+}
+
+
+/* ---------------- PASSWORD TOGGLE FIX ---------------- */
+.login-card input[type="text"].password-input,
+.login-card input[type="password"].password-input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border 0.3s, background 0.3s;
+  background-color: #fff;
+  color: #111827;
+}
+
+.login-card input.password-input:focus {
+  border-color: #8825eb;
+  box-shadow: 0 0 0 3px rgba(113, 37, 235, 0.25);
+  outline: none;
+}
+
+/* Ensure dark mode also works after toggle */
+body.dark-mode .login-card input.password-input {
+  background: #1a1127;
+  border: 1px solid #6384b8;
+  color: #f9fafb;
+}
+
+body.dark-mode .login-card input.password-input:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.25);
+}

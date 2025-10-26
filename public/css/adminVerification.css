@@ -1,0 +1,329 @@
+/* ==========================
+   Admin Verifications Page
+========================== */
+
+* {
+  font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+/* ---------- Container ---------- */
+.admin-verifications-container {
+    padding: 2rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- Page Heading ---------- */
+.admin-verifications-container h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    color: #3b2a5a;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d8bfff;
+    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+}
+
+
+/* ---------- Alerts ---------- */
+.alert-success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* ==========================
+   Table Styles
+========================== */
+.verification-table {
+    overflow-x: auto;
+}
+
+.verification-table table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    border-radius: 8px;
+    background-color: #ffffff; /* Light mode table bg */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.verification-table th,
+.verification-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+    color: #3b2a5a; /* Light mode text */
+}
+
+/* Table Header */
+.verification-table th {
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: linear-gradient(135deg, #f3e5ff, #e0ccff);
+    color: #240c40;
+}
+
+/* Table Cells */
+.verification-table td {
+    border-bottom: 1px solid #e0d6f5;
+    background-color: #ffffff; 
+}
+
+/* ---------- Links ---------- */
+.verification-table a {
+    color: #6a3dbb;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.verification-table a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================
+   Badges
+========================== */
+.badge {
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    display: inline-block;
+    text-align: center;
+    min-width: 75px;
+}
+
+.badge.verified {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.badge.pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.badge.rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+/* ==========================
+   Action Buttons
+========================== */
+.inline-form {
+    display: inline-block;
+    margin: 0 0.25rem;
+}
+
+.btn.approve {
+    background: linear-gradient(135deg, #8446c5, #9b5de5);
+    color: #fff;
+    border: none;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn.approve:hover {
+    background: linear-gradient(135deg, #6a3dbb, #8245c9);
+}
+
+.btn.reject {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn.reject:hover {
+    background-color: #c82333;
+}
+
+/* ==========================
+   Responsive Styles
+========================== */
+@media (max-width: 991.98px) {
+    .verification-table table {
+        min-width: 0;
+        font-size: 0.9rem;
+    }
+
+    .verification-table th,
+    .verification-table td {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .inline-form {
+        display: block;
+        margin: 0.25rem 0;
+    }
+    .admin-verifications-container h2 {
+        text-align: center;
+    }
+}
+
+/* ==========================
+   Dark Mode Styles
+========================== */
+body.dark .admin-verifications-container {
+    background: linear-gradient(135deg, #1a0b2e, #2a1546);
+    color: #e9dfff;
+}
+
+body.dark .verification-table table {
+    background-color: #2a1546;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+body.dark .verification-table th {
+    background: #3c1f66;
+    color: #e9dfff;
+}
+
+body.dark .verification-table td {
+    background-color: #2a1546;
+    color: #e9dfff;
+    border-color: rgba(255,255,255,0.1);
+}
+
+/* Badges in Dark Mode */
+body.dark .badge.verified,
+body.dark .badge.pending,
+body.dark .badge.rejected {
+    color: #fff;
+}
+
+/* Buttons in Dark Mode */
+body.dark .btn.approve,
+body.dark .btn.reject {
+    color: #fff;
+}
+
+/* Links in Dark Mode */
+body.dark .verification-table a {
+    color: #c7aaff;
+}
+
+body.dark .verification-table a:hover {
+    color: #e0b3ff;
+    text-decoration: underline;
+}
+
+
+/* ---------- Dark Mode Heading ---------- */
+body.dark .admin-verifications-container h2 {
+    color: #e9dfff;
+    background:  linear-gradient(135deg, #2a1546, #3c1f66);
+    border-color: #6f41aa;
+}
+
+/* ==========================
+   Search Form
+========================== */
+.admin-verifications-container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+.admin-verifications-container form input.form-control {
+    background-color: #fff;
+    color: #3b2a5a;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.admin-verifications-container form input.form-control::placeholder {
+    color: #888;
+}
+
+.admin-verifications-container form input.form-control:focus {
+    border-color: #6a3dbb;
+    box-shadow: 0 0 0 0.15rem rgba(155, 93, 229, 0.25);
+    outline: none;
+}
+
+/* Buttons */
+.admin-verifications-container form .btn {
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 0.45rem 0.75rem;
+    transition: all 0.3s ease;
+}
+
+/* Primary Search Button */
+.admin-verifications-container form .btn-primary {
+    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    border: none;
+    color: #fff;
+}
+
+.admin-verifications-container form .btn-primary:hover {
+    background: linear-gradient(135deg, #5a32a0, #8446c5);
+}
+
+/* Reset Button */
+.admin-verifications-container form .btn-secondary {
+    background-color: #6c757d;
+    border: none;
+    color: #fff;
+}
+
+.admin-verifications-container form .btn-secondary:hover {
+    background-color: #5c636a;
+}
+
+/* Search Form */
+body.dark .admin-verifications-container form input.form-control {
+    background-color: #331b57;
+    color: #e9dfff;
+    border: 1px solid #5e2a86;
+}
+
+body.dark .admin-verifications-container form input.form-control::placeholder {
+    color: rgba(233,223,255,0.6);
+}
+
+body.dark .admin-verifications-container form input.form-control:focus {
+    border-color: #9b5de5;
+    box-shadow: 0 0 0 0.2rem rgba(155, 93, 229, 0.25);
+}
+
+body.dark .admin-verifications-container form .btn-primary {
+    background: linear-gradient(135deg, #8e5de5, #6a3dbb);
+    color: #fff;
+}
+
+body.dark .admin-verifications-container form .btn-primary:hover {
+    background: linear-gradient(135deg, #7a4ad0, #5a32a0);
+}
+
+body.dark .admin-verifications-container form .btn-secondary {
+    background-color: #462a57;
+    color: #fff;
+}
+
+body.dark .admin-verifications-container form .btn-secondary:hover {
+    background-color: #361f4a;
+}
+

@@ -1,0 +1,459 @@
+/* =========================
+   General Styles
+========================= */
+* {
+    font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+ h3 {
+    font-weight: 600;
+    color: #4b3e6b;
+    padding: 1rem 1.5rem;
+    border: solid 1px;
+    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    border-radius: 22px;
+    border-color: #cdb0e0;
+}
+
+body.dark-mode h3 {
+    background: linear-gradient(135deg, #1e1e2f, #2a143d);
+    border-color: #1b0629;
+}
+
+/* =========================
+   Card Styles
+========================= */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin-bottom: 2rem;
+}
+
+/* ======================================
+   DEPOSIT ACCORDION STYLES
+   Supports Light + Dark Themes
+   Toggle with body.dark-mode
+====================================== */
+
+/* ---------- Base Layout ---------- */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.accordion-item {
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(130, 90, 255, 0.25);
+}
+
+/* ---------- Accordion Header ---------- */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    border-bottom: 1px solid rgba(130, 90, 255, 0.15);
+}
+
+.accordion-header button {
+    font-size: 1rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.accordion-header i {
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+}
+
+.accordion-header i:hover {
+    transform: scale(1.1);
+}
+
+/* ---------- Accordion Body ---------- */
+.accordion-body {
+    padding: 0 1.25rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.accordion-body p {
+    font-size: 0.95rem;
+    padding: 0.75rem 0;
+    word-wrap: break-word;
+}
+
+/* ---------- Tooltip ---------- */
+.custom-tooltip {
+    position: absolute;
+    background: #7a5eff;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.custom-tooltip.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ==================================================
+   🌞 LIGHT THEME (Default)
+================================================== */
+body:not(.dark-mode) .accordion-item {
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body:not(.dark-mode) .accordion-item:hover {
+    border-color: #8a6eff;
+    transform: translateY(-2px);
+}
+
+body:not(.dark-mode) .accordion-header {
+    background: #f9f7ff;
+}
+
+body:not(.dark-mode) .accordion-header button {
+    color: #4a3f75;
+}
+
+body:not(.dark-mode) .accordion-header button.active {
+    color: #7a5eff;
+}
+
+body:not(.dark-mode) .accordion-header i {
+    color: #7a5eff;
+}
+
+body:not(.dark-mode) .accordion-body {
+    background: #fafafa;
+}
+
+body:not(.dark-mode) .accordion-body p {
+    color: #333;
+}
+
+/* ==================================================
+   🌙 DARK MODE (Activated by body.dark-mode)
+================================================== */
+body.dark-mode .accordion-item {
+    background: linear-gradient(145deg, #1b1531, #17112a);
+    border-color: rgba(160, 120, 255, 0.3);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .accordion-item:hover {
+    border-color: #a57aff;
+    transform: translateY(-2px);
+}
+
+body.dark-mode .accordion-header {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+body.dark-mode .accordion-header button {
+    color: #e8dcff;
+}
+
+body.dark-mode .accordion-header button.active {
+    color: #b997ff;
+}
+
+body.dark-mode .accordion-header i {
+    color: #b6a4ff;
+}
+
+body.dark-mode .accordion-body {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+body.dark-mode .accordion-body p {
+    color: #d9d2ff;
+}
+
+body.dark-mode .custom-tooltip {
+    background: #9b6bff;
+}
+
+/* ======================================
+   DEPOSIT FORM STYLES
+   Supports Light + Dark Themes
+   Toggle with body.dark-mode
+====================================== */
+
+.deposit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+/* ---------- Form Labels ---------- */
+.deposit-form label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    margin-top: 4px;
+    display: block;
+    letter-spacing: 0.3px;
+    text-align: left;
+}
+
+/* ---------- Inputs & Selects ---------- */
+.deposit-form input[type="number"],
+.deposit-form select,
+.deposit-form input[type="file"] {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    outline: none;
+    transition: all 0.25s ease;
+    margin-bottom: 20px;
+}
+
+.deposit-form input:focus,
+.deposit-form select:focus {
+    border-color: #8c6bff;
+    box-shadow: 0 0 0 3px rgba(140, 107, 255, 0.15);
+}
+
+/* ---------- Submit Button ---------- */
+.deposit-btn-wrapper {
+    text-align: right;
+}
+
+.deposit-btn {
+    background: linear-gradient(90deg, #9d72ff, #4a7acd);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+
+}
+
+.deposit-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+}
+
+/* ---------- Screenshot Preview ---------- */
+#screenshot-preview {
+    display: block;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==================================================
+   🌞 LIGHT THEME (Default)
+================================================== */
+body:not(.dark-mode) .deposit-form {
+    background: #ffffff;
+    border: 1px solid rgba(140, 107, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+body:not(.dark-mode) .deposit-form label {
+    color: #3e2d75;
+}
+
+body:not(.dark-mode) .deposit-form input,
+body:not(.dark-mode) .deposit-form select,
+body:not(.dark-mode) .deposit-form input[type="file"] {
+    background: #faf8ff;
+    border: 1px solid rgba(140, 107, 255, 0.15);
+    color: #2d2b38;
+}
+
+body:not(.dark-mode) .deposit-form input::placeholder {
+    color: #8b7cbb;
+}
+
+/* ==================================================
+   🌙 DARK MODE (Activated by body.dark-mode)
+================================================== */
+body.dark-mode .deposit-form {
+    background: linear-gradient(145deg, #1b1531, #17112a);
+    border: 1px solid rgba(160, 120, 255, 0.25);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+body.dark-mode .deposit-form label {
+    color: #dcd2ff;
+}
+
+body.dark-mode .deposit-form input,
+body.dark-mode .deposit-form select,
+body.dark-mode .deposit-form input[type="file"] {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(160, 120, 255, 0.25);
+    color: #f2ecff;
+}
+
+body.dark-mode .deposit-form input::placeholder {
+    color: #b9a3ff;
+}
+
+body.dark-mode .deposit-btn {
+    background: linear-gradient(90deg, #7c3aed, #5b21b6);
+}
+
+body.dark-mode .deposit-btn:hover {
+    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+}
+
+/* =========================================
+   DARK MODE CUSTOM SELECT DROPDOWN STYLING
+========================================= */
+body.dark-mode select {
+    background-color: #1f1838 !important;
+    color: #e8deff !important;
+    border: 1px solid rgba(164, 122, 255, 0.35);
+    appearance: none; /* remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #c8a9ff 50%),
+                      linear-gradient(135deg, #c8a9ff 50%, transparent 50%);
+    background-position: calc(100% - 18px) calc(50% - 3px),
+                         calc(100% - 13px) calc(50% - 3px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    padding-right: 35px; /* space for arrow */
+    transition: all 0.3s ease;
+}
+
+/* On hover/focus */
+body.dark-mode select:hover,
+body.dark-mode select:focus {
+    background-color: #271d4b !important;
+    border-color: #b38cff !important;
+    box-shadow: 0 0 0 3px rgba(164, 122, 255, 0.2);
+}
+
+/* Dropdown options */
+body.dark-mode select option {
+    background-color: #1f1838;
+    color: #f0e7ff;
+}
+
+/* When disabled */
+body.dark-mode select:disabled {
+    background-color: #2a214b;
+    color: #8e7ccc;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   Alerts
+========================= */
+.alert {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.alert-success {
+    background: #d1fae5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+.alert-danger {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #f87171;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media(max-width: 768px) {
+    .accordion-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .deposit-btn {
+        width: 100%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+/* =========================
+   Dark Mode
+========================= */
+body.dark-mode {
+    background: #121212;
+    color: #e4e4e7;
+}
+
+body.dark-mode .card {
+    background: #1f1f2a;
+    border: 1px solid #2c2c3c;
+}
+
+
+
+body.dark-mode .alert-success {
+    background: #065f46;
+    color: #d1fae5;
+    border: 1px solid #10b981;
+}
+
+body.dark-mode .alert-danger {
+    background: #991b1b;
+    color: #fee2e2;
+    border: 1px solid #f87171;
+}
+
+body.dark-mode label {
+    color: #d1d5db;
+}
+
+.card .card-body h6 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    text-align: left;
+    color: #471276;
+}
+
+body.dark-mode .card .card-body h6 {
+    color: #bc79ff;
+}

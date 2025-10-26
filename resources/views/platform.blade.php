@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infinity Trade Solutions LTD</title>
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon.png') }}" />
+  <link rel="stylesheet" href="{{ asset('css/platform.css') }}">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+    <div class="logo">
+      <h2>Infinity Trade</h2>
+    </div>
+
+  <div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+    <nav>
+        <ul class="menu" id="navMenu">
+            <li><a href="{{ route('home') }}">Home</a></li>
+            <li><a href="{{ route('about') }}">About Us</a></li>
+            <li class="dropdown">
+                <a href="#">Trading Products ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ route('forex') }}">Forex</a></li>
+                        <li><a href="{{ route('metals') }}">Metals</a></li>
+                        <li><a href="{{ route('indices') }}">Indices</a></li>
+                        <li><a href="{{ route('crypto') }}">Crypto Currencies</a></li>
+                    </ul>
+                </li>
+            <li><a href="{{ route('platform') }}">Platform</a></li>
+            <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
+            <li><a href="{{ route('contact') }}">Contact Us</a></li>
+            <li class="login-btn"><a href="{{ route('login') }}">Log In</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<!-- PLATFORM SECTION -->
+
+<section class="platform-section">
+    <div class="container">
+        <h1 class="page-title">Infinity Trade Solutions LTD Trading Platform</h1>
+        <p class="page-desc">
+            The Infinity Trade Solutions LTD platform is designed to give traders lightning-fast execution, 
+            advanced charting tools, 
+            and access to multiple asset classes including Forex, Crypto, Metals, and Indices. 
+            Available on desktop, mobile, and web, so you can trade anytime, anywhere.
+        </p>
+    </div>
+</section>
+
+
+<section class="cta padding-top padding-bottom  bg-color">
+        <div class="container">
+            <div class="cta__wrapper">
+                <div class="cta__newsletter justify-content-center">
+                    <div class="cta__newsletter-inner aos-init aos-animate" 
+                    data-aos="fade-up" data-aos-duration="1000">
+
+                        <div class="cta__subscribe">
+                            <h2 style="text-align:center"> <span>Download</span> Vertex</h2>
+<div class="row">
+    <!-- Android APK -->
+    <div class="col-4 store">
+        <a href="{{ url('/download/android') }}">
+            <img src="{{ asset('pics/googlePlay.png') }}" alt="Download for Android" style="width:160px;">
+        </a>
+    </div>
+
+    <!-- Windows EXE -->
+    <div class="col-4 store">
+        <a href="{{ url('/download/windows') }}">
+            <img src="{{ asset('pics/windowsStore.png') }}" alt="Download for Windows" style="width:160px;">
+        </a>
+    </div>
+
+    <!-- iOS App Store -->
+    <div class="col-4 store">
+        <a href="{{ url('/download/ios') }}">
+            <img src="{{ asset('pics/appStore.png') }}" alt="Download for iOS" style="width:160px;">
+        </a>
+    </div>
+</div>
+
+</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Column 1: Logo + Social -->
+    <div class="footer-col footer-brand">
+     <!-- <img src="" alt="Tradefx Logo" class="footer-logo"> -->
+      <div class="footer-social">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+       
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h4>Trading Products</h4>
+      <ul>
+        <li><a href="{{ route('forex') }}">Forex</a></li>
+        <li><a href="{{ route('metals') }}">Metals</a></li>
+        <li><a href="{{ route('indices') }}">Indices</a></li>
+        <li><a href="{{ route('crypto') }}">Crypto currency</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h4>Account Types</h4>
+      <ul>
+        <li><a href="#pricing">Micro</a></li>
+        <li><a href="#pricing">Classic</a></li>
+        <li><a href="#pricing">Premium</a></li>
+        <li><a href="#pricing">Professional</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="footer-col">
+      <h4>Others</h4>
+      <ul>
+        <li><a href="{{ route('platform') }}">Platform</a></li>
+        <li><a href="{{ route('about') }}">About us</a></li>
+        <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
+        <li><a href="{{ route('contact') }}">Contact us</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 5 -->
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <ul>
+        <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
+        <li><i class="fas fa-envelope"></i>  supports@tforexm.com</li>
+        <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
+        <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Legal -->
+  <div class="footer-legal">
+    <h3>legal</h3>
+    <p> This Website is Owned by Infinity Trade Solutions LTD Limited. The objects of the Company are all 
+      subject matters not forbidden by International Business Companies (Amendment and Consolidation).</p>
+    <h3>General Risk Warning</h3>
+    <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as they carry 
+      a high degree of risk to your capital. Please ensure that you fully understand the risks involved, 
+      taking into account your investments objectives and level of experience, before trading, and if necessary, 
+      seek independent advice. Please read the full Risk Disclosure.</p>
+    <h3>Risk disclosure</h3>
+    <p>Past performance is not indicative of future results. The information on our website is provided for 
+      informational purposes only and should not be construed as investment advice. You should seek independent 
+      advice before making any investment decisions. Infinity Trade Solutions LTD does not accept clients from 
+      the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, China, Congo, Cuba, Egypt, 
+      Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, Malaysia, Maldives, Mali, Moldova, 
+      Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, Syria, Tunisia, Turkey, 
+      Vanuatu, Venezuela, Yemen, and Zimbabwe. Infinity Trade Solutions LTD may reject any applicant from any 
+      jurisdiction at their sole discretion without the requirement to explain the reason why 
+      (Terms and conditions).</p>
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p>© Infinity Trade Solutions LTD - 09711441</p>
+    <div class="footer-social">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </div>
+</footer>
+<!-- Dark Mode Toggle -->
+<button id="darkModeToggle" class="dark-toggle">
+  🌙
+</button>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top">
+  ↑
+</button>
+
+
+<script src="{{ asset('js/platform.js') }}"></script>
+
+</body>
+</html>

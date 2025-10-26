@@ -1,0 +1,250 @@
+* {
+  font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+/* =========================
+   Page Heading
+========================= */
+ h3 {
+    font-weight: 600;
+    color: #4b3e6b;
+    padding: 1rem 1.5rem;
+    border: solid 1px;
+    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    border-radius: 22px;
+    border-color: #cdb0e0;
+}
+
+body.dark-mode h3 {
+    background: linear-gradient(135deg, #1e1e2f, #2a143d);
+    border-color: #1b0629;
+}
+
+/* =========================
+   Cards Styling
+========================= */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.card-header {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Notifications (Blue) */
+.card-header.bg-primary {
+    background-color: #7c3aed;
+}
+
+/* Activities (Green) */
+.card-header.bg-success {
+    background-color: #10b981;
+}
+
+/* =========================
+   List Group Styling
+========================= */
+.list-group {
+    border: none;
+    padding: 0.5rem 0.75rem;
+    margin: 0;
+}
+
+.list-group-item {
+    background: linear-gradient(135deg, #f3e8ff, #e0f2fe);
+    border: 1px solid #ffffff;
+    margin-bottom: 0.8rem;
+    border-radius: 12px;
+    padding: 1rem 1.25rem;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-group-item:last-child {
+    margin-bottom: 0;
+}
+
+.list-group-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08);
+}
+
+/* Unread/important */
+.list-group-item.fw-bold {
+    background: linear-gradient(135deg, #e0f2fe, #f3e8ff );
+    border-left: 4px solid #7c3aed;
+    font-weight: 600;
+}
+
+/* Title */
+.list-group-item strong {
+    color: #1f2937;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 0.3rem;
+}
+
+/* Text */
+.list-group-item small {
+    display: block;
+    margin-top: 0.25rem;
+    color: #6b7280 !important;
+    font-size: 0.85rem;
+}
+
+/* Empty State */
+.list-group-item:only-child {
+    text-align: center;
+    color: #58637a;
+    font-style: italic;
+}
+
+/* Pagination Footer */
+.card-footer {
+    border-top: 1px solid #e5e7eb;
+    background: transparent;
+    padding: 0.5rem 1rem;
+}
+
+/* =========================
+   Dark Mode
+========================= */
+body.dark-mode .card {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    background: #1e1e2f;
+    color: #f5f5f5;
+}
+
+body.dark-mode .card-header.bg-primary {
+    background-color: #9d72ff;
+}
+
+body.dark-mode .card-header.bg-success {
+    background-color: #22c55e;
+}
+
+body.dark-mode .list-group-item {
+    background: linear-gradient(135deg, #1e1e2f, #2a143d);
+    border: 1px solid #2d2d2d;
+    color: #e4e4e7;
+}
+
+body.dark-mode .list-group-item.fw-bold {
+    background: linear-gradient(135deg, #2d1f3d, #1e293b);
+    border-left: 4px solid #9d72ff;
+}
+
+body.dark-mode .list-group-item strong {
+    color: #cfcaff;
+}
+
+body.dark-mode .list-group-item small {
+    color: #9ca3af !important;
+}
+
+.card .card-header { 
+    color: #150a1f;
+    background: linear-gradient(135deg, #9cd7fe, #c899fa );
+}
+
+body.dark-mode .card .card-header { 
+    color: #f8f1ff;
+    background: linear-gradient(135deg, #021929, #260c47 );
+}
+
+/* =========================
+   Search Form
+========================= */
+form.d-flex input.form-control {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.2s;
+}
+
+form.d-flex input.form-control:focus {
+    border-color: #8f63ff;
+    box-shadow: 0 0 0 0.15rem rgba(108, 99, 255, 0.2);
+    outline: none;
+}
+
+form.d-flex button,
+form.d-flex a {
+    border-radius: 8px;
+    padding: 0.45rem 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background: linear-gradient(90deg, #864bc5, #4a7acd);
+}
+
+form.d-flex button:hover,
+form.d-flex a:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(90deg, #47439c, #4c295f);
+}
+
+/* =========================
+   Search Form
+========================= */
+body.dark-mode form.d-flex input.form-control {
+    background: #1d1d1d;
+    border: 1px solid #333;
+    color: #eee;
+}
+
+body.dark-mode form.d-flex input.form-control:focus {
+    border-color: #9d72ff;
+    box-shadow: 0 0 0 0.15rem rgba(157, 114, 255, 0.25);
+}
+
+body.dark-mode form.d-flex button,
+body.dark-mode form.d-flex a {
+    background: linear-gradient(90deg, #7c3aed, #5b21b6);
+    color: #fff;
+    border: none;
+}
+
+body.dark-mode form.d-flex button:hover,
+body.dark-mode form.d-flex a:hover {
+     background: linear-gradient(90deg, #5b21b6, #7c3aed);
+}
+
+/* Placeholder color */
+.form-control::placeholder {
+    color: #888;        /* light gray */
+    opacity: 1;         /* ensures full opacity across browsers */
+}
+
+/* Dark mode version (if you want different color in dark theme) */
+body.dark-mode .form-control::placeholder {
+    color: #bbb;        /* lighter gray for dark backgrounds */
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(40%) sepia(80%) saturate(500%) hue-rotate(250deg);}
+
+
+    @media (max-width: 576px) {
+        form.d-flex {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        form.d-flex input,
+        form.d-flex button,
+        form.d-flex a {
+            width: 100% !important;
+        }
+        h3 {
+            text-align: center;
+        }
+    }

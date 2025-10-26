@@ -1,0 +1,279 @@
+/* =====================
+   Container & Page Title
+===================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container h2 {
+    font-size: 1.5rem;
+    text-align: left;
+    color: #3b2a5a;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d8bfff;
+    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+}
+
+body.dark .container h2 {
+    color: #e9dfff;
+    background:  linear-gradient(135deg, #2a1546, #3c1f66);
+    border-color: #6f41aa;
+}
+
+/* =====================
+   Form Styles
+===================== */
+form input.form-control {
+    border-radius: 8px;
+    border: 1px solid #d0b3ff;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input.form-control:focus {
+    border-color: #9b5de5;
+    outline: none;
+    box-shadow: 0 0 0 0.15rem rgba(155, 93, 229, 0.25);
+}
+
+body.dark form input.form-control {
+    background-color: #331b57;
+    color: #e9dfff;
+    border-color: #5a3d7a;
+}
+
+body.dark form input.form-control:focus {
+    border-color: #9b5de5;
+    box-shadow: 0 0 0 0.15rem rgba(155, 93, 229, 0.3);
+}
+
+/* =====================
+   Buttons
+===================== */
+.btn1, .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    text-decoration: none;
+}
+
+/* Primary (Update) */
+.btn1.btn-sm.btn-primary {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    color: #fff;
+}
+
+.btn1.btn-sm.btn-primary:hover {
+    background: linear-gradient(135deg, #5a32a0, #8446c5);
+}
+
+/* Danger (Delete) */
+.btn1.btn-sm.btn-danger {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.75rem;
+    background: linear-gradient(135deg, #d9534f, #c12b27);
+    color: #fff;
+}
+
+.btn1.btn-sm.btn-danger:hover {
+    background: linear-gradient(135deg, #c12b27, #a71f1a);
+}
+
+/* Success (Add Method) */
+.btn.btn-success {
+    font-size: 0.85rem;
+    padding: 0.45rem 1rem;
+    border-radius: 6px;
+    font-weight: 500;
+    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    color: #fff;
+    border: none;
+}
+
+.btn.btn-success:hover {
+    background: linear-gradient(135deg, #5a32a0, #8446c5);
+}
+
+/* Dark mode buttons */
+body.dark .btn1.btn-sm.btn-primary {
+    background: linear-gradient(135deg, #8e5de5, #6a3dbb);
+}
+
+body.dark .btn1.btn-sm.btn-primary:hover {
+    background: linear-gradient(135deg, #7a4ad0, #5a32a0);
+}
+
+body.dark .btn1.btn-sm.btn-danger {
+    background: linear-gradient(135deg, #9f2a28, #7a1c1a);
+}
+
+body.dark .btn1.btn-sm.btn-danger:hover {
+    background: linear-gradient(135deg, #7a1c1a, #5d1514);
+}
+
+body.dark .btn.btn-success {
+    background: linear-gradient(135deg, #8e5de5, #6a3dbb);
+}
+
+body.dark .btn.btn-success:hover {
+    background: linear-gradient(135deg, #7a4ad0, #5a32a0);
+}
+
+/* =====================
+   Modern Table Styles
+===================== */
+.table-container {
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    margin-top: 1rem;
+}
+
+.table {
+    width: 100%;
+    min-width: 700px;
+    border-collapse: separate;
+    border-spacing: 0;
+    font-size: 0.9rem;
+}
+
+.table thead th {
+    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    color: #fff;
+    text-align: center;
+    padding: 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.table tbody td {
+    text-align: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #f8e6ff;
+}
+
+.table tbody tr:hover {
+    background-color: #ddbaea;
+    transition: background 0.3s;
+}
+
+/* Column Widths */
+.table th:nth-child(1),
+.table td:nth-child(1) { width: 15%; } /* Name */
+.table th:nth-child(2),
+.table td:nth-child(2) { width: 15%; } /* Network */
+.table th:nth-child(3),
+.table td:nth-child(3) { width: 25%; } /* Address */
+.table th:nth-child(4),
+.table td:nth-child(4) { width: 45%; } /* Actions */
+
+/* Inputs inside table */
+.table input[type="text"] {
+    width: 100%;
+
+    border: 1px solid #d0b3ff;
+    border-radius: 6px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+    margin: 0.2rem;
+}
+
+body.dark .table input[type="text"] {
+    background-color: #331b57;
+    border-color: #5a3d7a;
+    color: #e9dfff;
+}
+
+/* Actions buttons inside table */
+.table td form {
+    display: inline-block;
+    margin: 0 0.2rem;
+}
+
+.table td form button {
+    margin: 0.1rem 0;
+}
+
+/* Dark mode table */
+body.dark .table thead th {
+    background: #5e2a86;
+    color: #f1e9ff;
+}
+
+body.dark .table tbody td {
+    background-color: #2a1546;
+    color: #e9dfff;
+    border-color: rgba(255,255,255,0.1);
+}
+
+body.dark .table tbody tr:nth-child(even) {
+    background-color: #331b57;
+}
+
+body.dark .table tbody tr:hover {
+    background-color: #3c1f66;
+}
+
+/* =====================
+   Alerts
+===================== */
+.alert {
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+body.dark .alert {
+    background-color: #2a1546;
+    color: #e9dfff;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* =====================
+   Responsive Design
+===================== */
+@media (max-width: 992px) {
+    .table input[type="text"] {
+        max-width: 100%;
+        font-size: 0.8rem;
+    }
+    .btn1.btn-sm, .btn {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+    }
+    .table {
+        min-width: 700px;
+    }
+    .container h2 {
+        text-align: center;
+    }
+}
+
+/* Dark mode placeholder text for form inputs */
+body.dark input::placeholder,
+body.dark textarea::placeholder,
+body.dark select::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* Light gray for dark mode */
+    opacity: 1; /* Ensure opacity works across browsers */
+}

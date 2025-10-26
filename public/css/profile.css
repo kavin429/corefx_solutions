@@ -1,0 +1,345 @@
+* {
+  font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+ h3 {
+    font-weight: 600;
+    color: #4b3e6b;
+    padding: 1rem 1.5rem;
+    border: solid 1px;
+    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    border-radius: 22px;
+    border-color: #cdb0e0;
+}
+
+body.dark-mode h3 {
+    background: linear-gradient(135deg, #1e1e2f, #2a143d);
+    border-color: #1b0629;
+}
+
+/* Container for the entire profile page */
+.profile-container {
+    max-width: 950px;
+    width: 100%;
+    margin: 2rem auto;
+    
+}
+
+
+
+/* Profile card styling */
+.profile-card {
+    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    border-radius: 12px;
+    padding: 1.5rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    transition: transform 0.2s;
+}
+
+.profile-card:hover {
+    transform: translateY(-2px);
+}
+
+/* Section titles inside cards */
+.profile-section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0.5rem;
+}
+
+/* Profile avatar */
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem auto;
+    border: 3px solid #9046e5;
+}
+
+/* File input and password input styling */
+.profile-card input[type="file"],
+.profile-card input[type="password"] {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.profile-card input[type="file"] {
+    margin-bottom: 1.5rem;
+}
+
+.profile-card input[type="file"]:focus,
+.profile-card input[type="password"]:focus {
+    border-color: #9b46e5;
+    outline: none;
+}
+
+/* Buttons inside profile cards */
+.profile-card button {
+    background: linear-gradient(90deg, #864bc5, #4a7acd); 
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.profile-card button:hover {
+    background: linear-gradient(90deg, #47439c, #4c295f);
+}
+
+/* Container for buttons in form */
+.profile-card .form-buttons {
+    display: flex;
+    justify-content: space-between; /* Change Password left, Forgot Password right */
+    align-items: center;
+    gap: 1rem; /* space between buttons */
+    margin-top: 1rem;
+}
+
+/* Change Password button */
+.profile-card .form-buttons button {
+    background: linear-gradient(90deg, #864bc5, #4a7acd); 
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Forgot Password button (styled as link/button) */
+.profile-card .form-buttons .forgot-btn {
+    background: linear-gradient(90deg, #864bc5, #4a7acd);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+/* Hover effect for both */
+.profile-card .form-buttons button:hover,
+.profile-card .form-buttons .forgot-btn:hover {
+    background: linear-gradient(90deg, #47439c, #4c295f);
+    transform: translateY(-1px);
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+    .profile-card .form-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .profile-card .form-buttons button,
+    .profile-card .form-buttons .forgot-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 0.2rem;
+    }
+
+    .profile-card button {
+        width: 100%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+}
+
+/* Personal info layout */
+.profile-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 2rem;
+}
+
+.profile-info label {
+    font-weight: 600;
+    color: #555;
+}
+
+.profile-info p {
+    margin: 0;
+    color: #333;
+}
+
+/* Form group spacing */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .profile-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem; /* smaller gap for compact view */
+        padding: 0.5rem 1rem;
+    }
+
+    .profile-info label {
+        font-weight: 600;
+        font-size: 0.9rem; /* slightly smaller text */
+        color: #666;
+        margin-bottom: 0.25rem;
+    }
+
+    .profile-info p {
+        margin: 0 0 0.5rem 0;
+        font-size: 0.9rem;
+        color: #444;
+    }
+
+    .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    flex: 1;
+    padding-right: 60px; /* leave space for toggle button */
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+    transition: border-color 0.2s;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+    color: #831abc8e;
+    font-size: 0.9rem;
+    user-select: none;
+}
+
+/* =========================
+   Profile Page - Dark Theme
+   (apply with body.dark-mode)
+========================= */
+
+body.dark-mode {
+    background: #121212;
+    color: #e4e4e7;
+}
+
+/* Profile Card */
+body.dark-mode .profile-card {
+    background: linear-gradient(135deg, #1e1e2f, #2a143d);
+    border-radius: 12px;
+    padding: 1.5rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode .profile-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.8);
+}
+
+/* Section Titles */
+body.dark-mode .profile-section-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    color: #cfcfcf;
+}
+
+/* Avatar */
+body.dark-mode .profile-avatar {
+    border: 3px solid #7c3aed;
+}
+
+/* Labels and text */
+body.dark-mode .profile-info label {
+    font-weight: 600;
+    color: #bbb;
+}
+
+body.dark-mode .profile-info p {
+    color: #e4e4e7;
+}
+
+/* Inputs */
+body.dark-mode .profile-card input[type="file"],
+body.dark-mode .profile-card input[type="password"] {
+    background: #1e1e2f;
+    border: 1px solid #444;
+    color: #e4e4e7;
+}
+
+body.dark-mode .profile-card input[type="file"]:focus,
+body.dark-mode .profile-card input[type="password"]:focus {
+    border-color: #7c3aed;
+    outline: none;
+}
+
+/* Password toggle */
+body.dark-mode .toggle-password {
+    color: #a855f7;
+}
+
+/* Buttons */
+body.dark-mode .profile-card button, 
+body.dark-mode .profile-card .form-buttons .forgot-btn {
+    background: linear-gradient(90deg, #7c3aed, #5b21b6);
+    color: #fff;
+    border: none;
+}
+
+body.dark-mode .profile-card button:hover,
+body.dark-mode .profile-card .form-buttons .forgot-btn:hover {
+    background: linear-gradient(90deg, #5b21b6, #7c3aed);
+}
+
+/* Form group */
+body.dark-mode .form-group {
+    margin-bottom: 1rem;
+}
+
+/* Responsive (dark stays same) */
+@media (max-width: 768px) {
+    body.dark-mode .profile-info {
+        grid-template-columns: 1fr;
+    }
+
+    body.dark-mode .profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile-section-title {
+        text-align: center;
+    }
+}

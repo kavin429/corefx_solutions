@@ -1,0 +1,292 @@
+/* Reset & Base */
+* {
+  font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+/* =======================
+   General Layout
+======================= */
+.verification-container {
+    max-width: 950px;
+    margin: 1px auto;
+    color: #333;
+    padding: 1rem;
+}
+
+ h3 {
+    font-weight: 600;
+    color: #4b3e6b;
+    padding: 1rem 1.5rem;
+    border: solid 1px;
+    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    border-radius: 22px;
+    border-color: #cdb0e0;
+}
+
+body.dark-mode h3 {
+    background: linear-gradient(135deg, #1e1e2f, #2a143d);
+    border-color: #1b0629;
+}
+
+/* =======================
+   Card Styling
+======================= */
+.verification-card {
+    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.verification-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.12);
+}
+
+/* =======================
+   Form Styling
+======================= */
+.verification-form {
+    margin-bottom: 2rem;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #4b3e6b;
+    border-left: 4px solid #9d72ff;
+    padding-left: 0.75rem;
+}
+
+.form-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #6e119a;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-input:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
+    outline: none;
+}
+
+/* =======================
+   Document Links
+======================= */
+.document-link a {
+    text-decoration: none;
+    color: #9d72ff;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    transition: color 0.3s;
+}
+
+.document-link a:hover {
+    color: #4a3ea6;
+    text-decoration: underline;
+}
+
+/* =======================
+   Badges
+======================= */
+.badge {
+    display: inline-block;
+    padding: 0.4rem 0.85rem;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge.verified {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.badge.rejected {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.badge.pending {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+/* =======================
+   Buttons
+======================= */
+.btn {
+    padding: 0.75rem 1.6rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #9d72ff, #4a7acd);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(90deg, #9d72ff, #4a7acd);
+    color: #fff;
+}
+
+.btn-success:hover {
+    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+    transform: translateY(-2px);
+}
+
+/* =======================
+   Alerts
+======================= */
+.alert-success {
+    background: #d1fae5;
+    color: #065f46;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 768px) {
+    .verification-card {
+        padding: 1.5rem;
+    }
+    .verification-title {
+        font-size: 1.8rem;
+    }
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    h3 {
+        text-align: center;
+    }
+}
+
+/* =======================
+   🌙 Dark Mode Theme
+======================= */
+.dark-mode {
+    background: #0b0f1a;
+    color: #e4e4e7;
+}
+
+/* Container */
+.dark-mode .verification-container {
+    color: #e4e4e7;
+}
+
+.dark-mode .form-label {
+    color: #d1d5db; /* light gray for readability */
+}
+
+/* Section Title */
+.dark-mode .section-title {
+    color: #cfcfff;
+    border-left-color: #7c3aed;
+}
+
+/* Form Input */
+.dark-mode .form-input {
+    background: #1a1b27;
+    border: 1px solid #4a3ea6;
+    color: #f3f4f6;
+}
+
+.dark-mode .form-input:focus {
+    border-color: #9d72ff;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.4);
+}
+
+/* Document Links */
+.dark-mode .document-link a {
+    color: #9d72ff;
+}
+
+.dark-mode .document-link a:hover {
+    color: #c084fc;
+}
+
+/* Badges */
+.dark-mode .badge.verified {
+    background-color: #059669;
+}
+
+.dark-mode .badge.rejected {
+    background-color: #b91c1c;
+}
+
+.dark-mode .badge.pending {
+    background-color: #d97706;
+    color: #fff;
+}
+
+/* Buttons */
+.dark-mode .btn-primary,
+.dark-mode .btn-success {
+    background: linear-gradient(90deg, #7c3aed, #5b21b6);
+}
+
+.dark-mode .btn-primary:hover,
+.dark-mode .btn-success:hover {
+     background: linear-gradient(90deg, #5b21b6, #7c3aed);
+}
+
+/* Alerts */
+.dark-mode .alert-success {
+    background: #064e3b;
+    color: #a7f3d0;
+}
+
+.dark-mode .verification-card {
+    background: linear-gradient(135deg, #1e1e2f, #2a143d);
+}
+
+/* Target the address upload button */
+form button.btn-success,
+form button.btn-primary {
+    border: none;       /* Remove border */
+    outline: none;      /* Remove focus outline */
+    box-shadow: none;   /* Remove any shadow */
+}
+
+/* Optional: remove focus glow when clicked */
+form button.btn-success:focus,
+form button.btn-primary:focus {
+    box-shadow: none;
+}
+

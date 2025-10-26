@@ -1,0 +1,68 @@
+/* Make TradingView widget responsive */
+.tradingview-widget-container {
+    width: 900px !important;   /* full width */
+    max-width: 100%;          /* prevent overflow */
+}
+
+.tradingview-widget-container iframe {
+    width: 100% !important;   /* iframe takes full width */
+    height: 550px;            /* default height */
+}
+
+@media (max-width: 576px) {
+    .tradingview-widget-container iframe {
+        height: 400px;        /* smaller height on mobile */
+    }
+}
+
+.tradingview-wrapper {
+    max-width: 1000px;      /* Limit width */
+    margin: 2rem auto;      /* Center horizontally with margin */
+    padding: 2rem;          /* Padding around the widget */
+    background: linear-gradient(135deg, #e0f2fe, #e3c7fe); /* Optional: background */
+    border-radius: 22px;    /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Soft shadow */
+}
+
+.tradingview-wrapper .tradingview-widget-container {
+    width: 100% !important;
+    height: 550px !important;
+}
+
+.tradingview-wrapper a {
+    color: #0d6efd; /* Adjust copyright link */
+    text-decoration: none;
+}
+
+.tradingview-wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Mode TradingView Wrapper */
+body.dark-mode .tradingview-wrapper {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #2b1d3f, #1a1525); /* deep violet gradient */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.6); /* stronger shadow for dark mode */
+}
+
+/* TradingView container inside dark mode */
+body.dark-mode .tradingview-wrapper .tradingview-widget-container {
+    width: 100% !important;
+    height: 550px !important;
+}
+
+/* Copyright / link */
+body.dark-mode .tradingview-wrapper a {
+    color: #c084fc; /* soft violet */
+    text-decoration: none;
+}
+
+body.dark-mode .tradingview-wrapper a:hover {
+    text-decoration: underline;
+    color: #e9d5ff; /* lighter hover */
+}
+
+

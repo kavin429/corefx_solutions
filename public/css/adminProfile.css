@@ -1,0 +1,187 @@
+* {
+  font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
+}
+
+h3 {
+    font-size: 1.5rem;
+    text-align: left;
+    color: #3b2a5a;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border: solid 1px;
+    border-radius: 8px;
+    border-color: #d8bfff;
+    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+}
+
+body.dark h3 {
+    color: #e9dfff;
+    background:  linear-gradient(135deg, #2a1546, #3c1f66);
+    border-color: #6f41aa;
+}
+ 
+/* ---------- Container ---------- */
+.profile-wrapper {
+    display: grid;
+    grid-template-columns: 1fr; /* Default: single column */
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    padding: 0 1rem;
+}
+
+/* ---------- Cards ---------- */
+.profile-card {
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(135deg, #f3e5ff, #e0ccff);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 12px rgba(155, 89, 182, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+}
+
+.profile-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(155, 89, 182, 0.25);
+}
+
+/* ---------- Headings ---------- */
+.profile-card h4 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #3b2a5a;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+/* ---------- Profile Picture ---------- */
+.profile-pic {
+    display: block;
+    margin: 0 auto 1rem auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #9b59b6;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- Form Inputs ---------- */
+.form-control {
+    width: 100%;
+    padding: 0.55rem 0.85rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff;
+    color: #3b2a5a;
+}
+
+.form-control:focus {
+    border-color: #9b59b6;
+    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.2);
+    outline: none;
+}
+
+/* ---------- Buttons ---------- */
+.btn1 {
+    padding: 0.55rem 1.4rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background-color: #9b59b6;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #7f3fb8;
+}
+
+.btn-warning {
+    background-color: #9b59b6;
+    border: none;
+    color: #fff;
+}
+
+.btn-warning:hover {
+    background-color: #7f3fb8;
+}
+
+/* ---------- Responsive Styles ---------- */
+@media (min-width: 992px) {
+    /* Desktop: two-column grid */
+    .profile-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2.5rem;
+        justify-items: center;
+    }
+}
+
+@media (max-width: 991.98px) {
+    /* Mobile/Tablet: single column */
+    .profile-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .profile-card {
+        padding: 1.5rem 1rem;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    h4 {
+        font-size: 1.4rem;
+    }
+}
+
+/* ---------- Dark Mode ---------- */
+body.dark .profile-card {
+    background: linear-gradient(135deg, #2a1546, #3c1f66);
+    color: #e9dfff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+body.dark .form-control {
+    background-color: #2a1546;
+    color: #e9dfff;
+    border: 1px solid #6a3dbb;
+}
+
+body.dark .btn-primary {
+    background-color: #6a3dbb;
+}
+
+body.dark .btn-primary:hover {
+    background-color: #8b5de0;
+}
+
+body.dark .btn-warning {
+    background-color: #6a3dbb;
+}
+
+body.dark .btn-warning:hover {
+    background-color: #8b5de0;
+}
+
+body.dark h4 {
+    color: #c7aaff;
+}

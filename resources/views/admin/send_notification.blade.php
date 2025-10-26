@@ -1,0 +1,233 @@
+@extends('admin.layouts.admin')
+
+<link rel="stylesheet" href="{{ asset('css/adminNotifications.css') }}">
+
+@section('content')
+<div class="container mt-5">
+    <h2>Send Notification</h2>
+
+    {{-- Success Message --}}
+    @if(session('success'))
+        <div class="alert alert-success">{{ session('success') }}</div>
+    @endif
+
+    {{-- Validation Errors --}}
+    @if($errors->any())
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                @foreach($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
+    {{-- Send Notification Form --}}
+    <form action="{{ route('admin.notifications.send') }}" method="POST">
+        @csrf
+        <div class="mb-3">
+            <label for="title" class="form-label">Title</label>
+            <input type="text" name="title" id="title" class="form-control" value="{{ old('title') }}" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea name="message" id="message" rows="4" class="form-control" required>{{ old('message') }}</textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Select Users</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="selectAll" value="all">
+                <label class="form-check-label" for="selectAll">Send to All Users</label>
+            </div>
+            <hr>
+            @foreach($users as $user)
+                <div class="form-check">
+                    <input class="form-check-input user-checkbox" type="checkbox" name="users[]" value="{{ $user->id }}" id="user{{ $user->id }}">
+                    <label class="form-check-label" for="user{{ $user->id }}">
+                        {{ $user->name }} ({{ $user->email }})
+                    </label>
+                </div>
+            @endforeach
+        </div>
+
+        <button type="submit" class="btn1 btn-primary">Send Notification</button>
+    </form>
+
+    {{-- ============================================= --}}
+    {{-- 🔹 Notification History Section --}}
+    {{-- ============================================= --}}
+    <hr class="my-5">
+
+    {{-- Filters --}}
+    <form action="{{ route('admin.notifications.index') }}" method="GET" class="mb-4">
+        <div class="row g-3">
+            <div class="col-md-3">
+                <label class="form-label">Start Date</label>
+                <input type="date" name="start_date" value="{{ request('start_date') }}" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">End Date</label>
+                <input type="date" name="end_date" value="{{ request('end_date') }}" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <label class="form-label">Search</label>
+                <input type="text" name="search" value="{{ request('search') }}" class="form-control" placeholder="Search by title/message">
+            </div>
+            <div class="col-md-3 d-flex align-items-end">
+                <button type="submit" class="btn1 btn-secondary me-2">Filter</button>
+                <a href="{{ route('admin.notifications.index') }}" class="btn1 btn-light">Reset</a>
+            </div>
+        </div>
+    </form>
+
+{{-- ============================================= --}}
+    {{-- 🔹 Admin Activities --}}
+    {{-- ============================================= --}}
+    <hr class="my-5">
+    <h2 class="container">Admin Activities</h2>
+
+    @if($activities->count())
+        <form action="{{ route('admin.activities.bulkDelete') }}" method="POST" id="activityDeleteForm">
+            @csrf
+            @method('DELETE')
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div></div>
+                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Delete selected activities?')">
+                    <i class="bi bi-trash"></i> Delete Selected
+                </button>
+            </div>
+
+            <div class="table-responsive mt-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="selectAllActivities"></th>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Message</th>
+                            <th>Recipient</th>
+                            <th>Status</th>
+                            <th>Sent At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($activities as $activity)
+                            <tr>
+                                <td><input type="checkbox" name="selected[]" value="{{ $activity->id }}" class="activity-checkbox"></td>
+                                <td>{{ ($activities->currentPage() - 1) * $activities->perPage() + $loop->iteration }}</td>
+                        
+                                <td>{{ $activity->title }}</td>
+                                <td class="break-word">{{ $activity->message }}</td>
+                                <td>{{ optional($activity->notifiable)->name ?? 'User' }}</td>
+                                <td>
+                                    @if($activity->is_read)
+                                        <span class="badge bg-success">Read</span>
+                                    @else
+                                        <span class="badge bg-secondary">Unread</span>
+                                    @endif
+                                </td>
+                                <td>{{ $activity->created_at->format('d-m-Y H:i') }}</td>
+                            </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+            {{ $activities->links('pagination::bootstrap-5') }}
+        </form>
+    @else
+        <p class="text-muted mt-3">No activities found.</p>
+    @endif
+
+
+{{-- ============================================= --}}
+{{-- 🔸 User Notifications (with Bulk Delete) --}}
+{{-- ============================================= --}}
+<div class="mt-5">
+    <h2 class="container">User Notifications</h2>
+
+    @if($notifications->count())
+        <form action="{{ route('admin.notifications.bulkDelete') }}" method="POST" id="notificationDeleteForm">
+            @csrf
+            @method('DELETE')
+
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div></div>
+                <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Delete selected notifications?')">
+                    <i class="bi bi-trash"></i> Delete Selected
+                </button>
+            </div>
+
+            <div class="table-responsive mt-3">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" id="selectAllNotifications"></th>
+                            <th>#</th>
+                            <th>Title</th>
+                            <th>Message</th>
+                            <th>Sent By</th>
+                            <th>Status</th>
+                            <th>Received At</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach($notifications as $notification)
+                            @if($notification->sender_type === 'user')
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="selected[]" value="{{ $notification->id }}" class="notification-checkbox">
+                                    </td>
+                                    <td>{{ ($notifications->currentPage() - 1) * $notifications->perPage() + $loop->iteration }}</td>
+                                    <td>{{ $notification->title }}</td>
+                                    <td class="break-word">{{ $notification->message }}</td>
+                                    <td> Client ID: {{ $notification->sender_id }}</td>
+
+
+                                    <td> 
+                                        @if($notification->is_read)
+                                            <span class="badge bg-success">Read</span>
+                                        @else
+                                            <span class="badge bg-secondary">Unread</span>
+                                        @endif
+                                    </td>
+                                    <td>{{ $notification->created_at->format('d-m-Y H:i') }}</td>
+                                </tr>
+                            @endif
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+
+            {{-- pagination --}}
+            <div class="mt-3">
+                {{ $notifications->links('pagination::bootstrap-5') }}
+            </div>
+        </form>
+    @else
+        <p class="text-center mt-3 text-muted">No notifications received from users.</p>
+    @endif
+</div>
+</div>
+
+<script>
+    // ===== Select All for Users =====
+    document.getElementById('selectAll').addEventListener('change', function() {
+        document.querySelectorAll('.user-checkbox').forEach(cb => cb.checked = this.checked);
+    });
+
+    // ===== Select All for Activities =====
+    document.getElementById('selectAllActivities')?.addEventListener('change', function() {
+        document.querySelectorAll('.activity-checkbox').forEach(cb => cb.checked = this.checked);
+    });
+
+    // ===== Select All for Notifications =====
+    document.getElementById('selectAllNotifications')?.addEventListener('change', function() {
+        document.querySelectorAll('.notification-checkbox').forEach(cb => cb.checked = this.checked);
+    });
+</script>
+@endsection
+
