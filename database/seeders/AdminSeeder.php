@@ -4,20 +4,20 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use App\Models\Admin; 
+use App\Models\Admin; // Correct model
 
 class AdminSeeder extends Seeder
 {
     public function run()
     {
-        // Check if admin already exists to avoid duplicates
         $adminEmail = 'admin@gmail.com';
 
-        if (!User::where('email', $adminEmail)->exists()) {
-            User::create([
+        // Check if admin already exists
+        if (!Admin::where('email', $adminEmail)->exists()) {
+            Admin::create([
                 'name' => 'Admin',
                 'email' => $adminEmail,
-                'password' => Hash::make('Admin@123'), // plain password hashed
+                'password' => Hash::make('Admin@123'), // password is hashed automatically
             ]);
         }
     }
