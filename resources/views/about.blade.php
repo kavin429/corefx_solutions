@@ -19,7 +19,7 @@ rel="stylesheet">
     <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-      <h2>Infinity Trade Solutions</h2>
+      <h2>Infinity Trade</h2>
     </div>
 
   <div class="hamburger" onclick="toggleMenu()">
