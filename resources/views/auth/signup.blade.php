@@ -119,12 +119,12 @@
           <span>Enable biometric login (optional)</span>
         </label>
 
-            <!-- ===== reCAPTCHA ===== -->
+            <!-- ===== reCAPTCHA ===== 
         <div class="g-recaptcha" data-sitekey="{{ env('NOCAPTCHA_SITEKEY') }}"></div>
 
 
 
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
 
         <button type="submit" class="btn">Sign Up</button>

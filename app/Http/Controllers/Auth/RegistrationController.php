@@ -29,7 +29,7 @@ class RegistrationController extends Controller
             'password'         => ['required','confirmed','min:8'],
             'promo_code'       => ['nullable','string','max:50'],
             'wants_biometrics' => ['nullable','boolean'],
-            'g-recaptcha-response' => ['required','captcha'],
+            'g-recaptcha-response' => ['nullable','captcha'],
         ]);
 
         // Build E.164 like phone
