@@ -38,7 +38,7 @@
 
 <div class="cards">
     <!-- Balance Card -->
-    <div class="card p-4 text-center shadow-card balance-card">
+    <div class="card">
         <div class="icon-circle balance-icon">
             <i class="bi bi-wallet2"></i>
         </div>
@@ -47,7 +47,7 @@
     </div>
 
     <!-- Income Card -->
-    <div class="card p-4 text-center shadow-card income-card">
+    <div class="card">
         <div class="icon-circle income-icon">
             <i class="bi bi-graph-up-arrow"></i>
         </div>
@@ -56,7 +56,7 @@
     </div>
 
     <!-- PNL Card -->
-    <div class="card p-4 text-center shadow-card pnl-card">
+    <div class="card">
         <div class="icon-circle pnl-icon">
             <i class="bi bi-bar-chart-line"></i>
         </div>
@@ -65,7 +65,7 @@
     </div>
 
     <!-- Outcome Card -->
-    <div class="card p-4 text-center shadow-card outcome-card">
+    <div class="card">
         <div class="icon-circle outcome-icon">
             <i class="bi bi-graph-down-arrow"></i>
         </div>

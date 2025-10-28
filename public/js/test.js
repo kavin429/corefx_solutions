@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", () => {
     else if (i > maxIndex) prodIndex = 0;
     else prodIndex = i;
 
-    slider.style.transform = `translateX(-${prodIndex * (100 / visibleCards)}%)`;
+    slider.style.transform = `translateX(-${prodIndex * (105 / visibleCards)}%)`;
 
     // Animate only visible cards
     cards.forEach((card, idx) => {
@@ -346,9 +346,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!cards || dots.length === 0) return; // Safety check
 
   let index = 0;
+  let cardWidth = cards.children[0].offsetWidth + 20; // card width + margin
+  let autoSlideInterval;
 
   function showCard(i) {
-    const cardWidth = cards.children[0].offsetWidth + 30; // card width + margin
     cards.style.transform = `translateX(-${i * cardWidth}px)`;
     dots.forEach(dot => dot.classList.remove('active'));
     dots[i].classList.add('active');
@@ -359,10 +360,66 @@ document.addEventListener('DOMContentLoaded', () => {
     dot.addEventListener('click', () => {
       index = i;
       showCard(index);
+      resetAutoSlide();
     });
   });
 
+  // ==========================
+  // Auto slide every 5 seconds
+  // ==========================
+  function autoSlide() {
+    index = (index + 1) % cards.children.length;
+    showCard(index);
+  }
 
+  function resetAutoSlide() {
+    clearInterval(autoSlideInterval);
+    autoSlideInterval = setInterval(autoSlide, 5000);
+  }
+
+  autoSlideInterval = setInterval(autoSlide, 5000);
+
+  // ==========================
+  // Touch / Mouse drag support
+  // ==========================
+  let isDragging = false;
+  let startX = 0;
+  let currentTranslate = 0;
+
+  cards.addEventListener('touchstart', dragStart);
+  cards.addEventListener('touchmove', dragMove);
+  cards.addEventListener('touchend', dragEnd);
+
+  cards.addEventListener('mousedown', dragStart);
+  cards.addEventListener('mousemove', dragMove);
+  cards.addEventListener('mouseup', dragEnd);
+  cards.addEventListener('mouseleave', dragEnd);
+
+  function dragStart(e) {
+    isDragging = true;
+    startX = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+    clearInterval(autoSlideInterval); // stop auto-slide while dragging
+  }
+
+  function dragMove(e) {
+    if (!isDragging) return;
+    const x = e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+    const delta = x - startX;
+    cards.style.transform = `translateX(${-index * cardWidth + -delta}px)`;
+  }
+
+  function dragEnd(e) {
+    if (!isDragging) return;
+    isDragging = false;
+    const x = e.type.includes('mouse') ? e.pageX : (e.changedTouches ? e.changedTouches[0].clientX : startX);
+    const delta = x - startX;
+
+    if (delta < -50 && index < cards.children.length - 1) index++; // swipe left
+    if (delta > 50 && index > 0) index--; // swipe right
+
+    showCard(index);
+    resetAutoSlide();
+  }
 });
 
 // faq section

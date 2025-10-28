@@ -374,7 +374,7 @@ padding: 5px;
       <div class="step-number">5</div>
       <div class="step-content">
         <h3>Withdraw</h3>
-        <p>Withdraw your profit securely.</p>
+        <p>Withdraw your profit safe and securely.</p>
       </div>
     </div>
   </div>
@@ -442,6 +442,8 @@ padding: 5px;
           </div>
         </div>
 
+        
+
         <!-- Card 2 -->
         <div class="testimonial-card">
           <p>As a beginner, I learned quickly with Infinity Trade Solutions LTD. 
@@ -487,6 +489,41 @@ padding: 5px;
           
           </div>
         </div>
+
+        <!-- Card 1 -->
+        <div class="testimonial-card">
+          <p>I admire Infinity Trade Solutions LTD’s combination of tools and support. 
+            Trading is fast, deposits and withdrawals are hassle-free, and transparency builds trust. 
+            It truly feels like a safe and professional environment for long-term trading success and growth.
+            <div class="client-info">
+            <img src="{{ asset('pics/profile2.jpg') }}" alt="Client">
+            <div>
+              <h4>Fatima Al Mansoori</h4>
+              <span>Abu Dhabi, UAE</span>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <p>As a beginner, I learned quickly with Infinity Trade Solutions LTD. 
+            The platform is simple yet powerful, and support is always professional. 
+            Trading feels smooth, and I trust them completely. 
+            Infinity Trade Solutions LTD gave me confidence to grow steadily as a trader.</p>
+          <div class="client-info">
+            <img src="{{ asset('pics/profile1.jpg') }}" alt="Client">
+            <div>
+              <h4>Aisha Rahman</h4>
+              <span>Dubai, UAE</span>
+            </div>
+          
+          </div>
+        </div>
+
+        
+
+
       </div>
     </div>
   </div>

@@ -198,8 +198,8 @@
       <ul>
         <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
         <li><i class="fas fa-envelope"></i>  supports@tforexm.com</li>
-        <li><i class="fas fa-building"></i>  21, Wenlock road, London N1 7SL, UK</li>
-        <li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li>
+        <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
+       
       </ul>
     </div>
   </div>

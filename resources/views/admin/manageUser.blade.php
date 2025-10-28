@@ -154,7 +154,8 @@
                                 </div>
                                 <div class="mb-2">
                                     <label>Birth Date</label>
-                                    <input type="date" name="birth_date" class="form-control" value="{{ $user->profile->birth_date ?? '' }}">
+                                    <input type="date" name="birth_date" class="form-control"
+                                        value="{{ $user->profile && $user->profile->birth_date ? \Carbon\Carbon::parse($user->profile->birth_date)->format('Y-m-d') : '' }}">
                                 </div>
                                 <div class="mb-2">
                                     <label>Promo Code</label>

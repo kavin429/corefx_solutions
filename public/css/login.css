@@ -1,3 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior: none; /* Disable mobile rubber-band scroll */
+  touch-action: pan-y; /* Allow only vertical scroll */
+}
+
 /* resources/css/login.css */
 
 * {
@@ -245,7 +254,7 @@ header.scrolled .logo h2 {
 
   nav {
     position: absolute;
-    top: 80px;
+    top: 65px;
     left: 0;
     width: 100%;
     background: rgba(10, 10, 26, 0.95);
@@ -538,10 +547,10 @@ body.dark-mode .links a {
 }
 
 /* ----- Responsive ----- */
-@media (max-width: 640px) {
+@media (max-width: 540px) {
   .login-root .card {
-    width: 90%;
-    padding: 1.5rem;
+    width: 100%;
+    padding: 1rem;
   }
 
   h2 {

@@ -1,3 +1,12 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior: none; /* Disable mobile rubber-band scroll */
+  touch-action: pan-y; /* Allow only vertical scroll */
+}
+
 * {
    font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
 }
@@ -692,4 +701,54 @@ body.dark-mode .liveid-dropdown select.form-select option {
     color:#f2e9fa;
 }
 
+/* =====================================
+   🔹 RESPONSIVE ENHANCEMENTS (MOBILE)
+===================================== */
+
+/* Medium devices (tablets) */
+@media (max-width: 992px) {
+  /* --- Topbar --- */
+  .topbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.8rem;
+    padding: 1.2rem;
+  }
+
+  .topbar .welcome h2 {
+    font-size: 1.8rem;
+  }
+
+  .top-icons {
+    justify-content: center;
+  }
+
+}
+
+/* Small devices (phones) */
+@media (max-width: 576px) {
+  /* --- Topbar --- */
+  .topbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    padding: 1.5rem;
+  }
+
+  .topbar .welcome h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3a005f;
+  }
+
+  .top-icons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+}
 
