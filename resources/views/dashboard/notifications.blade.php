@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="{{ asset('css/notification.css') }}">
 
 @section('content')
-<div class="container mt-4">
+<!-- <div class="container mt-4"> -->
     <h3 class="mb-4">Notifications & Activities</h3>
 
     {{-- 🔍 Search & Date Filter --}}

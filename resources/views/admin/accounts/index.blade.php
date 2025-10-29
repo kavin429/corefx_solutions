@@ -65,7 +65,7 @@
                             @csrf
                             <button type="submit" 
                                 class="btn1 btn-sm {{ $account->user->is_active ? 'btn-success' : 'btn-secondary' }}">
-                                {{ $account->user->is_active ? 'Active' : 'Inactive' }}
+                                {{ $account->user->is_active ? 'Inactive' : 'Active' }}
                             </button>
                             </form>
 

@@ -3,7 +3,7 @@
 
 @section('content')
 
-<div class="verification-container">
+<!-- <div class="verification-container"> -->
 
     <h3 class="mb-4">Account Verification</h3>
 
@@ -26,7 +26,7 @@
 
             @if($profile->identity_document_path)
                 <div class="document-link">
-                    <a href="{{ $profile->identity_document_url }}" target="_blank">View Uploaded Document</a>
+                    <a href="{{ asset('storage/' . $profile->identity_document_path) }}" target="_blank">View Uploaded Document</a>
                 </div>
 
                 @if($profile->identity_status === 'verified')
@@ -52,7 +52,8 @@
 
             @if($profile->address_document_path)
                 <div class="document-link">
-                    <a href="{{ $profile->address_document_url }}" target="_blank">View Uploaded Document</a>
+                    <a href="{{ asset('storage/' . $profile->address_document_path) }}" target="_blank">View Uploaded Document</a>
+
                 </div>
 
                 @if($profile->address_status === 'verified')

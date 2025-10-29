@@ -542,33 +542,29 @@ backToTop.addEventListener("click", () => {
 
 // ---------------------------------------------------------
 
+const watchBtn = document.getElementById("watchVideoBtn");
+const popup = document.getElementById("videoPopup");
+const videoFrame = document.getElementById("videoFrame");
+const closeVideo = document.getElementById("closeVideo");
 
-  const watchBtn = document.getElementById("watchVideoBtn");
-  const popup = document.getElementById("videoPopup");
-  const videoFrame = document.getElementById("videoFrame");
-  const closeVideo = document.getElementById("closeVideo");
+const videoURL = "https://www.youtube.com/embed/xHU5MHuUSKI?autoplay=1&mute=1";
 
-  const videoURL = "https://www.youtube.com/embed/xHU5MHuUSKI?si=uDfdVdPU8DXoNqGl&autoplay=1";
-
-  watchBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    popup.style.display = "flex";
+watchBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  popup.style.display = "flex";
+  setTimeout(() => {
     videoFrame.src = videoURL;
-  });
+  }, 300);
+});
 
-  closeVideo.addEventListener("click", () => {
+closeVideo.addEventListener("click", () => {
+  popup.style.display = "none";
+  videoFrame.src = "";
+});
+
+popup.addEventListener("click", (e) => {
+  if (e.target === popup) {
     popup.style.display = "none";
-    videoFrame.src = ""; // stop video
-  });
-
-  // Close popup when clicking outside video
-  popup.addEventListener("click", (e) => {
-    if (e.target === popup) {
-      popup.style.display = "none";
-      videoFrame.src = "";
-    }
-  });
-
-
-
-
+    videoFrame.src = "";
+  }
+});

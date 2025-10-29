@@ -4,10 +4,9 @@
 }
 
 /* ---------------------- General Layout ---------------------- */
-.withdraw-form-container {
-    max-width: 950px;
-    margin: 2rem auto;
-    padding: 2rem;
+#withdrawForm {
+    margin: 1rem auto;
+    padding: 2rem 1.3rem;
     background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
@@ -111,7 +110,7 @@ body.dark-mode h3 {
    Dark Mode for Withdraw Form
    Apply with: body.dark-mode
 ========================= */
-body.dark-mode .withdraw-form-container {
+body.dark-mode #withdrawForm  {
     background: linear-gradient(135deg, #1e1e2f, #2a143d);
     color: #e4e4e7;
     box-shadow: 0 6px 18px rgba(0,0,0,0.6);

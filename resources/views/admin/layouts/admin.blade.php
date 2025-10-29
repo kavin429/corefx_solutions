@@ -31,7 +31,7 @@
                     alt="Profile Picture" 
                     class="rounded-circle mb-2 profile-pic">
             @else
-                <img src="{{ asset('default-avatar.png') }}" 
+                <img src="{{ asset('pics/client2.png') }}" 
                     alt="Default Profile" 
                     class="rounded-circle mb-2 profile-pic">
             @endif

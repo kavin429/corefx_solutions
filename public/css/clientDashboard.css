@@ -1,10 +1,43 @@
+/* =========================================================
+   1) GLOBAL / BASE
+   ========================================================= */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overscroll-behavior: none; /* Disable mobile rubber-band scroll */
-  touch-action: pan-y; /* Allow only vertical scroll */
+  height: auto;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: auto;
+  touch-action: pan-y; /* allows only vertical scroll */
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2e9fa; /* light violet background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* purple gradient */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+/* Dark mode support */
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #1e1e2f;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
 }
 
 * {
@@ -33,20 +66,25 @@ a {
     left: 0;
     top: 0;
     width: 250px;
-    height: auto; /* only as tall as its content */
-    min-height: 100%; /* ensures at least covers content */
+    height: 100vh; /* Full viewport height */
     background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
     color: #2e1147;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll; /* scrolling always available */
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox: hide scrollbar */
+    -ms-overflow-style: none; /* IE/Edge: hide scrollbar */
     transition: all 0.3s ease;
     z-index: 1000;
 }
 
-
-
+/* Hide scrollbar for Chrome, Safari, Edge, Opera */
+.sidebar::-webkit-scrollbar {
+  display: none;
+}
 
 .sidebar .profile-avatar {
     width: 80px;
@@ -85,7 +123,7 @@ a {
 ========================= */
 .main {
     margin-left: 250px;
-    padding: 1rem;
+    padding: 1rem 0.1rem;
     transition: all 0.3s ease;
 }
 
@@ -97,6 +135,7 @@ a {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin: 0.5rem;
 }
 
 .topbar .welcome h2 {
@@ -422,6 +461,27 @@ body.dark-mode small.text-muted {
     color: #a0a0a0 !important;
 }
 
+/* Default (light mode) */
+#notificationModal .btn-close {
+    filter: invert(0);    /* normal dark icon */
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+#notificationModal .btn-close:hover {
+    opacity: 1;
+}
+
+/* Dark mode */
+body.dark-mode #notificationModal .btn-close {
+    filter: invert(1) brightness(1.2); /* turns icon white for dark mode */
+    opacity: 0.8;
+}
+
+body.dark-mode #notificationModal .btn-close:hover {
+    opacity: 1;
+}
+
 
 /* Circle Icons - Purple Glow */
 .balance-icon {
@@ -447,7 +507,7 @@ body.dark-mode small.text-muted {
 #notificationModal .modal-dialog {
     position: absolute;
     top: 45px;       /* below the bell */
-    right: 10px;     /* right aligned */
+    right: 20px;     /* right aligned */
     margin: 0;
     width: 280px;    /* compact width */
 }
@@ -614,7 +674,7 @@ body.dark-mode .pagination li.next a:hover {
 /* ---------- Live ID Dropdown ---------- */
 .liveid-dropdown {
     max-width: 950px;
-    margin: 0.5rem 0;
+   
     margin-top: 1px;
     margin-bottom: 2rem;
 }
@@ -627,7 +687,7 @@ body.dark-mode .pagination li.next a:hover {
 }
 
 .liveid-dropdown select.form-select {
-    width: 100%;
+    width: 102%;
     padding: 0.5rem 0.75rem;
     border: 1px solid #ad8cd9;
     border-radius: 10px;

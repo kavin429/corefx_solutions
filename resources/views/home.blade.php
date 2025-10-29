@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" 
 rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 <style>
@@ -119,11 +120,15 @@ padding: 5px;
                 <button type="button" class="custom-close" onclick="closeModal()" aria-label="Close">×</button>
 
             </div>
-            <div class="modal-body p-0 text-center">
-                @if($popup->popup_image)
-                    <img src="{{ asset('storage/'.$popup->popup_image) }}" class="img-fluid" alt="Promotion">
-                @endif
-            </div>
+            <!-- Popup -->
+<div id="videoPopup" style="display:none; justify-content:center; align-items:center; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999;">
+  <iframe
+    id="videoFrame"
+    frameborder="0"
+    allow="autoplay; encrypted-media; fullscreen"
+    allowfullscreen
+  ></iframe>
+</div>
         </div>
     </div>
 </div>
@@ -132,14 +137,16 @@ padding: 5px;
 <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-      <h2><a href="{{ route('home') }}">Infinity Trade</a></h2></a>
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
+        </a>
     </div>
 
-  <div class="hamburger" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+    <div class="hamburger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 
     <nav>
         <ul class="menu" id="navMenu">
@@ -147,23 +154,19 @@ padding: 5px;
             <li><a href="{{ route('about') }}">About Us</a></li>
             <li class="dropdown">
                 <a href="#">Trading Products ▾</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="{{ route('forex') }}">Forex</a></li>
-                        <li><a href="{{ route('metals') }}">Metals</a></li>
-                        <li><a href="{{ route('indices') }}">Indices</a></li>
-                        <li><a href="{{ route('crypto') }}">Crypto Currencies</a></li>
-                    </ul>
-                </li>
+                <ul class="dropdown-menu">
+                    <li><a href="{{ route('forex') }}">Forex</a></li>
+                    <li><a href="{{ route('metals') }}">Metals</a></li>
+                    <li><a href="{{ route('indices') }}">Indices</a></li>
+                    <li><a href="{{ route('crypto') }}">Crypto Currencies</a></li>
+                </ul>
+            </li>
             <li><a href="{{ route('platform') }}">Platform</a></li>
             <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
-            
             <li class="login-btn"><a href="{{ route('login') }}">Log In</a></li>
-            
-
         </ul>
     </nav>
-
 </header>
 
 <!-- ===== HERO SECTION ===== -->
@@ -427,40 +430,8 @@ padding: 5px;
     <!-- Track -->
     <div class="testimonial-container">
       <div class="testimonial-track">
-        <!-- Card 1 -->
-        <div class="testimonial-card">
-          <p>I admire Infinity Trade Solutions LTD’s combination of tools and support. 
-            Trading is fast, deposits and withdrawals are hassle-free, and transparency builds trust. 
-            It truly feels like a safe and professional environment for long-term trading success and growth.
-            <div class="client-info">
-            <img src="{{ asset('pics/profile2.jpg') }}" alt="Client">
-            <div>
-              <h4>Fatima Al Mansoori</h4>
-              <span>Abu Dhabi, UAE</span>
-            </div>
-           
-          </div>
-        </div>
 
-        
-
-        <!-- Card 2 -->
-        <div class="testimonial-card">
-          <p>As a beginner, I learned quickly with Infinity Trade Solutions LTD. 
-            The platform is simple yet powerful, and support is always professional. 
-            Trading feels smooth, and I trust them completely. 
-            Infinity Trade Solutions LTD gave me confidence to grow steadily as a trader.</p>
-          <div class="client-info">
-            <img src="{{ asset('pics/profile1.jpg') }}" alt="Client">
-            <div>
-              <h4>Aisha Rahman</h4>
-              <span>Dubai, UAE</span>
-            </div>
-          
-          </div>
-        </div>
-
-        <!-- Card 3 -->
+      <!-- Card 3 -->
         <div class="testimonial-card">
           <p>Infinity Trade Solutions LTD offers advanced tools and a simple interface that make trading easier. 
             The mobile-friendly design helps me monitor trades anytime. With fast execution, 
@@ -520,6 +491,7 @@ padding: 5px;
           
           </div>
         </div>
+
 
         
 
@@ -703,7 +675,7 @@ padding: 5px;
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-      <!--<img src="" alt="Tradefx Logo" class="footer-logo">-->
+      <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -751,7 +723,7 @@ padding: 5px;
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
-        <li><i class="fas fa-envelope"></i>  supports@tforexm.com</li>
+        <li><i class="fas fa-envelope"></i>  supports@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>

@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="{{ asset('css/transaction.css') }}">
 
 @section('content')
-<div class="container-fluid">
+<!-- <div class="container-fluid"> -->
     <h3 class="mb-4">My Transactions</h3> 
 
     <!-- Summary Cards -->

@@ -20,16 +20,17 @@ class AdminTransactionHistoryController extends Controller
             ->whereIn('status', ['pending', 'completed', 'failed']);
 
         // Search by keyword
-        if ($request->filled('search')) {
-            $search = $request->search;
-            $query->where(function($q) use ($search) {
-                $q->whereHas('user', fn($q2) => $q2->where('name', 'like', "%$search%"))
-                  ->orWhereHas('account', fn($q2) => $q2->where('account_name', 'like', "%$search%"))
-                  ->orWhere('type', 'like', "%$search%")
-                  ->orWhere('method', 'like', "%$search%")
-                  ->orWhere('beneficiary_name', 'like', "%$search%");
-            });
-        }
+if ($request->filled('search')) {
+    $search = $request->search;
+    $query->where(function($q) use ($search) {
+        $q->whereHas('user', fn($q2) => $q2->where('name', 'like', "%$search%"))
+          ->orWhereHas('account', fn($q2) => $q2->where('account_name', 'like', "%$search%")
+                                               ->orWhere('live_id', 'like', "%$search%")) // ✅ added live_id search
+          ->orWhere('type', 'like', "%$search%")
+          ->orWhere('method', 'like', "%$search%")
+          ->orWhere('beneficiary_name', 'like', "%$search%");
+    });
+}
 
         // Filters
         if ($request->filled('type')) $query->where('type', $request->type);

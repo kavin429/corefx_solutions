@@ -22,10 +22,10 @@
     @endif
 
     <h3 class="mb-4">Deposit Request</h3>
-<div class="container mt-4">  
+<!--<div class="container mt-4">  -->
 
     {{-- Deposit Methods --}}
-    <div class="card mb-4">
+   <!-- <div class="card mb-4"> -->
         <div class="card-body">
             <h6>Crypto Payment Methods</h6>
             <div class="accordion" id="depositAccordion">

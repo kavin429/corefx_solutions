@@ -254,20 +254,7 @@ document.querySelectorAll(".dropdown-toggle").forEach(item => {
 });
 
 
-//header
-window.addEventListener("scroll", function() {
-  const header = document.querySelector("header");
-  const hero = document.querySelector(".hero");
 
-  // Get hero height
-  const heroHeight = hero.offsetHeight;
-
-  if (window.scrollY > heroHeight - 80) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-});
 
 
 // Dark Mode Toggle

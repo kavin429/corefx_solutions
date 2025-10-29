@@ -3,7 +3,7 @@
 ========================= */
 body {
     background: #f5f7fa;
-    font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
+    
     color: #333;
 }
 
@@ -33,7 +33,7 @@ body {
 form.d-flex input.form-control { 
     border-radius: 8px;
     border: 1px solid #ccc;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 0.5rem;
     transition: all 0.2s;
 }
 

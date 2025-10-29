@@ -52,3 +52,52 @@ loginForm.onsubmit = async (e) => {
     console.error(err);
   }
 };
+
+//------------------------------------
+
+// Toggle full menu
+  function toggleMenu() {
+    document.querySelector("nav").classList.toggle("active");
+    document.querySelector(".hamburger").classList.toggle("active");
+  }
+
+  // Dropdown toggle on mobile (only one open at a time)
+  document.querySelectorAll(".dropdown-toggle").forEach(item => {
+    item.addEventListener("click", function(e) {
+      if (window.innerWidth <= 900) { // only on mobile
+        e.preventDefault();
+
+        // Close all other dropdowns
+        document.querySelectorAll(".dropdown").forEach(drop => {
+          if (drop !== this.parentElement) {
+            drop.classList.remove("open");
+          }
+        });
+
+        // Toggle the clicked dropdown
+        this.parentElement.classList.toggle("open");
+      }
+    });
+  });
+
+  // Dark Mode Toggle
+const toggleBtn = document.getElementById("darkModeToggle");
+
+// Check saved theme
+if (localStorage.getItem("theme") === "dark") {
+  document.body.classList.add("dark-mode");
+  toggleBtn.textContent = "☀️";
+}
+
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+
+  if (document.body.classList.contains("dark-mode")) {
+    toggleBtn.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
+  } else {
+    toggleBtn.textContent = "🌙";
+    localStorage.setItem("theme", "light");
+  }
+});
+

@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinity Trade Solutions LTD</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
 
     html, body {
@@ -21,7 +23,7 @@
 
     /* General */
     body {
-      font-family: "Exo 2", sans-serif;
+      font-family: 'Poppins' , sans-serif;
       background: linear-gradient(135deg, #f5f0ff, #ede6fa);
       color: #3b2a5a;
       transition: all 0.3s ease;

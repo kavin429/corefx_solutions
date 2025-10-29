@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="image/png" href="{{ asset('pics/icon.png') }}">
-
-  <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon.png') }}" />
+  <link rel="stylesheet" href="{{ asset('css/promotion.css') }}">
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{ asset('css/promotion.css') }}">
 
 </head>
 <body>
@@ -22,7 +22,9 @@
 <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-      <h2>Infinity Trade</h2>
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
+        </a>
     </div>
 
   <div class="hamburger" onclick="toggleMenu()">
@@ -47,10 +49,7 @@
             <li><a href="{{ route('platform') }}">Platform</a></li>
             <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
-            
             <li class="login-btn"><a href="{{ route('login') }}">Log In</a></li>
-            
-
         </ul>
     </nav>
 
@@ -166,7 +165,7 @@
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-     <!-- <img src="" alt="Tradefx Logo" class="footer-logo"> -->
+    <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -214,7 +213,7 @@
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
-        <li><i class="fas fa-envelope"></i>  supports@tforexm.com</li>
+        <li><i class="fas fa-envelope"></i>  supports@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>

@@ -1,16 +1,49 @@
+/* =========================================================
+   1) GLOBAL / BASE
+   ========================================================= */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overscroll-behavior: none; /* Disable mobile rubber-band scroll */
-  touch-action: pan-y; /* Allow only vertical scroll */
+  height: auto;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
+  overscroll-behavior-y: auto;
+  touch-action: pan-y; /* allows only vertical scroll */
+}
+
+/* ===== Scrollbar Styling ===== */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f2e9fa; /* light violet background */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* purple gradient */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+}
+
+/* Dark mode support */
+body.dark-mode ::-webkit-scrollbar-track {
+  background: #1e1e2f;
+}
+
+body.dark-mode ::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #7c3aed, #5b21b6);
 }
 
 /* resources/css/login.css */
 
 * {
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: 'Poppins' , sans-serif;
 }
 
 /* ----- Global Styles ----- */
@@ -608,7 +641,7 @@ body.dark-mode .login-root .card {
 .footer {
   background: linear-gradient(135deg, #0a0a1a 40%, #1a0033 100%);
   color: #fff;
-  padding: 60px 50px 20px;
+  padding: 60px 25px 20px;
   line-height: 1.6;
 }
 
@@ -636,24 +669,31 @@ body.dark-mode .login-root .card {
 }
 
 .footer-col ul li {
-  list-style: none;
-  margin-bottom: 10px;
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  color: #ddd; /* optional for dark footer */
+    list-style: none;
+    margin-bottom: 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    color: #ddd;
+
+    /* Ensure icon stays left and text shrinks instead of overflowing */
+    flex-wrap: nowrap;         /* no wrapping to next line */
+    overflow-wrap: anywhere;   /* allow breaking within long words if necessary */
 }
 
 .footer-col ul li i {
-  margin-right: 10px; /* <-- gap between icon & text */
-  color: #ffffff; /* match your theme, you can change */
-  font-size: 16px;
+    margin-right: 10px;       /* gap between icon and text */
+    flex-shrink: 0;           /* icon never shrinks */
 }
 
 .footer-col ul li a {
-  color: #bbb;
-  text-decoration: none;
-  transition: 0.3s;
+    color: #bbb;
+    text-decoration: none;
+    transition: 0.3s;
+
+    /* allow long emails to break within container */
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 .footer-col ul li a:hover {
@@ -695,7 +735,7 @@ body.dark-mode .login-root .card {
 /* ================= LEGAL SECTION ================= */
 .footer-legal {
   color: #ccc;
-  padding: 40px 20px;
+  padding: 10px 5px;
   border-top: 1px solid rgba(255,255,255,0.08);
   font-size: 14px;
   line-height: 1.7;
@@ -724,6 +764,7 @@ body.dark-mode .login-root .card {
 .footer-legal p {
   margin-bottom: 18px;
   color: #bbb;
+  text-align: justify;
 }
 
 .footer-legal p:last-child {
@@ -782,6 +823,16 @@ body.dark-mode .login-root .card {
     margin-right: auto;
   }
 }
+
+@media (max-width: 500px) {
+  .footer-logo {
+    margin-left: 0;
+    margin-right: auto; /* aligns left */
+    display: block;      /* ensure margin works */
+    text-align: left;    /* optional if needed inside container */
+  }
+}
+
 
 /* Floating Dark Mode Toggle */
 .dark-toggle {
@@ -1009,3 +1060,16 @@ body.dark-mode .testimonial-card {
 body.dark-mode .card h2 {
   color: #fff; /* white in dark mode */
 }
+
+.logo img {
+    height: 50px;           /* adjust as needed */
+    width: auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        height: 40px;       /* smaller logo for mobile */
+    }
+}
+

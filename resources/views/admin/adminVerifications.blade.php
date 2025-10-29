@@ -44,7 +44,8 @@
                             {{-- Identity --}}
                             <td>
                                 @if($profile->identity_document_path)
-                                    <a href="{{ Storage::disk('public')->url($profile->identity_document_path) }}" target="_blank">View</a>
+                                    <a href="{{ asset('storage/' . $profile->identity_document_path) }}" target="_blank">View</a>
+
                                 @else
                                     -
                                 @endif
@@ -69,7 +70,7 @@
                             {{-- Address --}}
                             <td>
                                 @if($profile->address_document_path)
-                                    <a href="{{ Storage::disk('public')->url($profile->address_document_path) }}" target="_blank">View</a>
+                                    <a href="{{ asset('storage/' . $profile->address_document_path) }}" target="_blank">View</a>
                                 @else
                                     -
                                 @endif

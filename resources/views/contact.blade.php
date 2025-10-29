@@ -10,7 +10,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
-<link rel="stylesheet" href="{{ asset('css/promotion.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
@@ -18,7 +19,9 @@
 <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-      <h2>Infinity Trade</h2>
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
+        </a>
     </div>
 
   <div class="hamburger" onclick="toggleMenu()">
@@ -62,7 +65,7 @@
             <div class="contact-info">
                 <h4>Get In Touch</h4>
                 <p><i class="bi bi-telephone-fill text-purple me-2"></i> +44 20 4577 3834</p>
-                <p><i class="bi bi-envelope-fill text-purple me-2"></i> supports@tforexm.com</p>
+                <p><i class="bi bi-envelope-fill text-purple me-2"></i> supports@infinitytradesolution.com</p>
                 <hr>
                 <h5 class="fw-semibold text-dark mt-3">Our Office</h5>
                 <p><strong>London Office:</strong><br>20–22 Wenlock Road, London, England, N1 7GU</p>
@@ -89,7 +92,7 @@
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-      <!-- <img src="" alt="Tradefx Logo" class="footer-logo"> -->
+      <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>

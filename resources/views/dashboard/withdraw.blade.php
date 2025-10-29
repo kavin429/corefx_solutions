@@ -23,7 +23,7 @@
 @endif
 
 
-<div class="withdraw-form-container">
+<!--<div class="withdraw-form-container"> -->
 
     <form action="{{ route('withdraw.store') }}" method="POST" id="withdrawForm">
         @csrf
