@@ -4,11 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="pics/icon.png" href="pics/icon.png" />
+  <link rel="icon" type="pics/icon.png" href="pics/Infinity1.png" />
   <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" 
 rel="stylesheet">
@@ -29,8 +29,6 @@ rel="stylesheet">
     border: none;       /* removes border */
     box-shadow: none;   /* optional: remove shadow too */
 }
-
-
 
 #promoPopupModal .modal-dialog {
     max-width: 450px; /* popup width */
@@ -68,13 +66,13 @@ rel="stylesheet">
 /* Close button */
 .custom-close {
     font-size: 1rem;
-background: #ffffff51;
+    background: #ffffff51;
     border: none;
     border-radius: 10%;
     cursor: pointer;
     transition: background 0.3s;
-margin-right: 5px;
-padding: 5px;
+  margin-right: 5px;  
+  padding: 5px;
 }
 
 
@@ -99,7 +97,6 @@ padding: 5px;
     }
 }
 
-
 </style>
 
 </head>
@@ -120,15 +117,11 @@ padding: 5px;
                 <button type="button" class="custom-close" onclick="closeModal()" aria-label="Close">×</button>
 
             </div>
-            <!-- Popup -->
-<div id="videoPopup" style="display:none; justify-content:center; align-items:center; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); z-index:9999;">
-  <iframe
-    id="videoFrame"
-    frameborder="0"
-    allow="autoplay; encrypted-media; fullscreen"
-    allowfullscreen
-  ></iframe>
-</div>
+            <div class="modal-body p-0 text-center">
+                @if($popup->popup_image)
+                    <img src="{{ asset('storage/'.$popup->popup_image) }}" class="img-fluid" alt="Promotion">
+                @endif
+            </div>
         </div>
     </div>
 </div>
@@ -186,7 +179,7 @@ padding: 5px;
 
     <div class="hero-buttons">
       <a href="{{ route('signup') }}">Get Started</a>
-      <a href="#" id="watchVideoBtn">Watch Video</a>
+     <!-- <a href="#" id="watchVideoBtn">Watch Video</a> -->
     </div>
   </div>
 
@@ -195,13 +188,13 @@ padding: 5px;
   </div>
 </section>
 
-<!-- ===== VIDEO POPUP MODAL ===== -->
+<!-- ===== VIDEO POPUP MODAL ===== 
 <div id="videoPopup" class="video-popup">
   <div class="video-popup-content">
     <span id="closeVideo">&times;</span>
     <iframe id="videoFrame" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
   </div>
-</div>
+</div> -->
 
 <!-- ========== ABOUT US SECTION ========== -->
 <section class="about">
@@ -700,10 +693,10 @@ padding: 5px;
     <div class="footer-col">
       <h4>Account Types</h4>
       <ul>
-        <li><a href="#pricing">Micro</a></li>
-        <li><a href="#pricing">Classic</a></li>
-        <li><a href="#pricing">Premium</a></li>
-        <li><a href="#pricing">Professional</a></li>
+        <li><a href="#pricing">Elite</a></li>
+        <li><a href="#pricing">Pro</a></li>
+        <li><a href="#pricing">VIP</a></li>
+        <li><a href="#pricing">Raw</a></li>
       </ul>
     </div>
 
@@ -723,7 +716,7 @@ padding: 5px;
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
-        <li><i class="fas fa-envelope"></i>  supports@infinitytradesolution.com</li>
+        <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
@@ -746,8 +739,8 @@ padding: 5px;
       for informational purposes only and should not be construed as investment advice. 
       You should seek independent advice before making any investment decisions. Infinity Trade Solutions LTD 
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
-      China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, Malaysia, 
-      Maldives, Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
+      China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
+      Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
       Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Infinity Trade Solutions LTD 
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
       explain the reason why (Terms and conditions).</p>

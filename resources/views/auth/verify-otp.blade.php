@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Infinity Trade Solutions LTD</title>
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
 </head>
 <body>

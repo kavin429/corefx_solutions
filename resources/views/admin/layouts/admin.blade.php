@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Infinity Trade Solutions LTD')</title>
-    <link rel="icon" type="image/png" href="{{ asset('pics/icon.png') }}">
+    <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
+    
     <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
@@ -31,7 +32,7 @@
                     alt="Profile Picture" 
                     class="rounded-circle mb-2 profile-pic">
             @else
-                <img src="{{ asset('pics/client2.png') }}" 
+                <img src="{{ asset('pics/adminPro.jpeg') }}" 
                     alt="Default Profile" 
                     class="rounded-circle mb-2 profile-pic">
             @endif
@@ -61,12 +62,12 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingUsers">
                     <button class="accordion-button {{ $usersActive ? '' : 'collapsed' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapseUsers" aria-expanded="{{ $usersActive ? 'true' : 'false' }}">
-                        <i class="bi bi-people me-2"></i> Users
+                        <i class="bi bi-people me-2"></i> Clients 
                     </button>
                 </h2>
                 <div id="collapseUsers" class="accordion-collapse collapse {{ $usersActive ? 'show' : '' }}" data-bs-parent="#sidebarAccordion">
                     <div class="accordion-body p-1">
-                        <a href="{{ route('users.index') }}" class="sidebar-link {{ request()->routeIs('users.*') ? 'active' : '' }}">Manage Users</a>
+                        <a href="{{ route('users.index') }}" class="sidebar-link {{ request()->routeIs('users.*') ? 'active' : '' }}">Manage Clients</a>
                         <a href="{{ route('admin.verifications') }}" class="sidebar-link {{ request()->routeIs('admin.verifications') ? 'active' : '' }}">User Verifications</a>
                     </div>
                 </div>

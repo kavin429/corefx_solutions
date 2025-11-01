@@ -130,7 +130,7 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>User</th>
+                <th>Client</th>
                 <th>Account</th>
                 <th>Type</th>
                 <th>Amount</th>

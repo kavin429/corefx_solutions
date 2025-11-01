@@ -20,7 +20,7 @@
                     <tr>
                         <th>#</th>
                         <th>Submitted At</th>
-                        <th>User</th>
+                        <th>Client</th>
                         <th>Live ID</th>
                         <th>Amount</th>
                         <th>Method</th>

@@ -35,7 +35,7 @@
                 <option value="">-- Choose Account --</option>
                 @foreach(auth()->user()->accounts as $account)
                     <option value="{{ $account->id }}">
-                        Account #{{ $account->live_id ?? $account->id }} - {{ ucfirst($account->type) }} - {{ $account->currency }} (Balance: ${{ number_format($account->balance,2) }})
+                        Client ID: {{ $account->live_id ?? $account->user_id }} - {{ ucfirst($account->type) }} - {{ $account->currency }} (Balance: ${{ number_format($account->balance,2) }})
                     </option>
                 @endforeach
             </select>

@@ -183,7 +183,7 @@
                     <th>#</th>
                     <th>Date</th>
                     <th>Live ID</th>
-                    <th>User</th>
+                    <th>Client</th>
                     <th>Type</th>
                     <th>Amount</th>
                     <th>Method</th>
@@ -202,14 +202,20 @@
                         <td>{{ $t->account->live_id }}</td>
                         <td>{{ $t->user->name ?? 'N/A' }}</td>
 
-                        <td class="text-capitalize">{{ $t->type }}</td>
+                        <td class="text-capitalize">
+                             @if($t->type === 'withdraw')
+                                <span>Debited</span>
+                            @else
+                                <span>Credited</span>
+                            @endif
+                        </td>
                         <td style="text-align: right;">${{ number_format($t->amount, 2) }}</td>
                         <td class="text-capitalize">{{ $t->method ?? '-' }}</td>
                         <td>
                             @if($t->status === 'completed')
-                                <span class="badge bg-success">Completed</span>
+                                <span class="badge bg-success">Success</span>
                             @elseif($t->status === 'failed')
-                                <span class="badge bg-danger">Failed</span>
+                                <span class="badge bg-danger">Unsuccess</span>
                             @else
                                 <span class="badge bg-warning text-dark">Pending</span>
                             @endif

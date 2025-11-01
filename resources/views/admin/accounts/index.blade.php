@@ -33,7 +33,7 @@
                     <tr>
                         <th>#</th>
                         <th>Live ID</th>                   
-                        <th>User</th>
+                        <th>Client</th>
                         <!--<th>Type</th>-->
                         <th>Balance ($)</th>
                         <th>PNL ($)</th>

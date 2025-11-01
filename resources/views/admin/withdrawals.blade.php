@@ -19,7 +19,7 @@
                     <th>#</th>
                     <th>Submitted At</th>
                     <th>Live ID</th>
-                    <th>User</th>
+                    <th>Client</th>
                     <th>Amount</th>
                     <th>Method</th>
                     <th>Beneficiary</th>

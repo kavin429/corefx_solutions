@@ -36,7 +36,7 @@
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Select Users</label>
+            <label class="form-label">Select Clients</label>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="selectAll" value="all">
                 <label class="form-check-label" for="selectAll">Send to All Users</label>

@@ -127,11 +127,15 @@ if ($request->filled('search')) {
         return redirect()->back()->with('success', 'Notification sent successfully!');
     }
 
-    public function bulkDeleteActivities(Request $request)
+public function bulkDeleteActivities(Request $request)
 {
     $ids = $request->input('selected', []);
     if (!empty($ids)) {
-        Activity::whereIn('id', $ids)->delete();
+        // Delete only admin activities (notifications sent by admin)
+        Notification::whereIn('id', $ids)
+            ->where('sender_type', 'admin')
+            ->delete();
+
         return back()->with('success', 'Selected activities deleted successfully.');
     }
     return back()->with('error', 'No activities selected.');

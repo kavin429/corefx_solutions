@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon.png') }}" />
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
@@ -116,10 +116,10 @@
     <div class="footer-col">
       <h4>Account Types</h4>
       <ul>
-        <li><a href="#">Micro</a></li>
-        <li><a href="#">Classic</a></li>
-        <li><a href="#">Premium</a></li>
-        <li><a href="#">Professional</a></li>
+        <li><a href="#pricing">Elite</a></li>
+        <li><a href="#pricing">Pro</a></li>
+        <li><a href="#pricing">VIP</a></li>
+        <li><a href="#pricing">Raw</a></li>
       </ul>
     </div>
 
@@ -138,7 +138,7 @@
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
-        <li><i class="fas fa-envelope"></i>  supports@infinitytradesolution.com</li>
+        <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
        
       </ul>
@@ -160,7 +160,7 @@
       informational purposes only and should not be construed as investment advice. You should seek independent 
       advice before making any investment decisions. Infinity Trade Solutions LTD does not accept clients from 
       the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, China, Congo, Cuba, Egypt, Guinea, 
-      Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, Malaysia, Maldives, Mali, Moldova, Nicaragua, 
+      Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, Mali, Moldova, Nicaragua, 
       Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, Syria, Tunisia, Turkey, Vanuatu, 
       Venezuela, Yemen, and Zimbabwe. Infinity Trade Solutions LTD may reject any applicant from any 
       jurisdiction at their sole discretion without the requirement to explain the reason why 

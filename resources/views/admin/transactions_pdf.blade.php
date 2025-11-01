@@ -61,8 +61,9 @@
     <table>
         <thead>
             <tr>
+                <th>#</th>
                 <th>Live ID</th>
-                <th>User</th>
+                <th>Client</th>
                 <th>Type</th>
                 <th>Amount</th>
                 <th>Method</th>
@@ -75,6 +76,7 @@
         <tbody>
             @forelse($transactions as $t)
             <tr>
+                <td>{{ $loop->iteration }}</td> <!-- ✅ Serial number -->
                 <td>{{ $t->account->live_id ?? '-' }}</td>
                 <td>{{ $t->user->name ?? '-' }}</td>
                 <td>{{ ucfirst($t->type) }}</td>
@@ -112,7 +114,7 @@
             </tr>
             @empty
             <tr>
-                <td colspan="9" style="text-align:center;">No transactions found.</td>
+                <td colspan="10" style="text-align:center;">No transactions found.</td>
             </tr>
             @endforelse
         </tbody>

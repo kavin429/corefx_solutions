@@ -210,7 +210,7 @@ function populateCountries() {
   });
 
   // Default to Sri Lanka if available
-  const def = COUNTRIES.find(c => c.name === 'Sri Lanka') ? 'Sri Lanka' : COUNTRIES[0].name;
+  const def = COUNTRIES.find(c => c.name === 'United Kingdom') ? 'United Kingdom' : COUNTRIES[0].name;
   countrySelect.value = countrySelect.getAttribute('data-old') || def;
   updateCode();
 }

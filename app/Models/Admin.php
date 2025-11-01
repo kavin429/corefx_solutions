@@ -30,7 +30,7 @@ class Admin extends Authenticatable
         if ($this->profile_picture) {
             return asset('storage/' . $this->profile_picture);
         }
-        return asset('pics/client2.png'); // fallback image
+        return asset('pics/adminPro.jpeg'); // fallback image
     }
 
 

@@ -10,7 +10,7 @@
 <div class="col-md-4">
     <div class="card p-3 text-center">
         <i class="bi bi-people card-icon fa-3x mb-4 mt-2"></i>
-        <h6>Total Users</h6>
+        <h6>Total Clients</h6>
         <h3>{{ $totalUsers }}</h3>
         
     </div>
@@ -55,7 +55,7 @@
 <div class="row g-3">
     <div class="col-md-6">
         <div class="card">
-            <h6 class="mb-3">Monthly User Registrations</h6>
+            <h6 class="mb-3">Monthly Client Registrations</h6>
             <canvas id="usersBarChart"></canvas>
         </div>
     </div>

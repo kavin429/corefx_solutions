@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@yield('title', 'Infinity Trade Solutions LTD')</title>
-    <link rel="icon" type="image/png" href="{{ asset('pics/icon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('pics/Infinity1.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ asset('css/clientDashboard.css') }}" rel="stylesheet">
@@ -19,7 +19,7 @@
 <body>
     <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
-            <img src="{{ auth()->user()->profile->avatar_path ? Storage::url(auth()->user()->profile->avatar_path) : asset('pics/client2.png') }}" 
+            <img src="{{ auth()->user()->profile->avatar_path ? Storage::url(auth()->user()->profile->avatar_path) : asset('pics/adminPro.jpeg') }}" 
      alt="Avatar" class="profile-avatar">
 
 <nav>

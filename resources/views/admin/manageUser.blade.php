@@ -8,7 +8,7 @@
 
 @section('content')
 <div class="main1">
-    <h2>Manage Users</h2>
+    <h2>Manage Clients</h2>
     <!-- Search Form -->
      <form action="{{ route('users.index') }}" method="GET" class="search-form">
         <input type="text" name="search" value="{{ request('search') }}" class="form-control form-control-sm" placeholder="Search by id, name, email, or phone">

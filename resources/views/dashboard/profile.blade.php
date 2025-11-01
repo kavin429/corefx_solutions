@@ -30,7 +30,7 @@
 @endif
 
         <h2 class="profile-section-title">Profile Picture</h2>
-        <img src="{{ $user->profile->avatar_path ? Storage::url($user->profile->avatar_path) : asset('pics/client2.png') }}" 
+        <img src="{{ $user->profile->avatar_path ? Storage::url($user->profile->avatar_path) : asset('pics/adminPro.jpeg') }}" 
              alt="Avatar" class="profile-avatar">
 
         <form action="{{ route('dashboard.profile.avatar') }}" method="POST" enctype="multipart/form-data">

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="image/png" href="{{ asset('pics/icon.png') }}">
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/adminLogin.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">

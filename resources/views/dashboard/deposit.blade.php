@@ -24,29 +24,20 @@
     <h3 class="mb-4">Deposit Request</h3>
 <!--<div class="container mt-4">  -->
 
-    {{-- Deposit Methods --}}
-   <!-- <div class="card mb-4"> -->
-        <div class="card-body">
-            <h6>Crypto Payment Methods</h6>
-            <div class="accordion" id="depositAccordion">
-                @foreach($depositMethods as $method)
-                    @php $uniqueId = 'method-' . $method->id; @endphp
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <button type="button" onclick="toggleAccordion('{{ $uniqueId }}')">
-                                {{ $method->name }}
-                            </button>
-                            <i class="fa-regular fa-clipboard"
-                               onclick="copyText('{{ $uniqueId }}-copy','{{ $uniqueId }}-tooltip')"></i>
-                        </div>
-                        <div class="accordion-body" id="collapse{{ $uniqueId }}">
-                            <p id="{{ $uniqueId }}-tooltip">
-                                <span id="{{ $uniqueId }}-copy">{{ $method->address }}</span>
-                            </p>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
+{{-- Deposit Methods --}}
+<div class="deposit-methods">
+    <h6>Crypto Payment Methods</h6>
+    @foreach($depositMethods as $method)
+        @php $uniqueId = 'method-' . $method->id; @endphp
+        <div class="deposit-method">
+            <span>{{ $method->name }}: <br><span id="{{ $uniqueId }}-copy">{{ $method->address }}</span></span>
+            <i class="fa-regular fa-clipboard"
+               onclick="copyText('{{ $uniqueId }}-copy','{{ $uniqueId }}-tooltip')"></i>
+            <span class="copy-tooltip" id="{{ $uniqueId }}-tooltip">Copied!</span>
+        </div>
+    @endforeach
+</div>
+
 
             <hr style="margin:1.5rem 0;">
 
@@ -61,7 +52,7 @@
                     <option value="">-- Choose Account --</option>
                     @foreach(auth()->user()->accounts as $account)
                         <option value="{{ $account->id }}">
-                            Account #{{ $account->live_id ?? $account->id }} - 
+                            Client ID: {{ $account->live_id ?? $account->user_id }} - 
                             {{ ucfirst($account->type) }} - 
                             {{ $account->currency }} 
                             (Balance: ${{ number_format($account->balance, 2) }})
@@ -100,28 +91,29 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    // Copy to Clipboard
+
     window.copyText = function(copyId, tooltipId) {
-        const text = document.getElementById(copyId).innerText;
-        navigator.clipboard.writeText(text).then(() => {
-            showTooltip(tooltipId, "Copied!");
-        });
-    }
+    const text = document.getElementById(copyId).innerText;
+    navigator.clipboard.writeText(text).then(() => {
 
-    function showTooltip(tooltipId, text) {
-        let tooltip = document.createElement("span");
-        tooltip.className = "custom-tooltip";
-        tooltip.innerText = text;
-        document.body.appendChild(tooltip);
+        const tooltip = document.getElementById(tooltipId);
+        const icon = tooltip.previousElementSibling; // the clipboard icon
 
-        const target = document.getElementById(tooltipId);
-        const rect = target.getBoundingClientRect();
-        tooltip.style.left = rect.left + window.scrollX + "px";
-        tooltip.style.top = rect.top + window.scrollY - 30 + "px";
+        // Position tooltip below the icon
+        const rect = icon.getBoundingClientRect();
+        tooltip.style.top = rect.bottom + 6 + window.scrollY + "px"; // 6px gap below
+        tooltip.style.left = rect.left + window.scrollX + (rect.width / 2) - (tooltip.offsetWidth / 2) + "px";
 
-        tooltip.classList.add("show");
-        setTimeout(() => tooltip.remove(), 1500);
-    }
+
+        // Show tooltip
+        tooltip.classList.add('show');
+
+        // Hide after 1.5s
+        setTimeout(() => {
+            tooltip.classList.remove('show');
+        }, 1500);
+    });
+}
 
     // Screenshot preview
     window.previewScreenshot = function(input) {
@@ -159,6 +151,9 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.classList.add("active");
         }
     }
+
 });
 </script>
+
+
 @endsection

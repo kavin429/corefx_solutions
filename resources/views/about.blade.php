@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon.png') }}" />
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/about.css') }}">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -78,7 +78,7 @@ rel="stylesheet">
     <div class="who-content">
       <h2 class="section-title">Who We Are</h2>
       <p class="who-text">
-        Infinity Trade Solutions LTD was founded by a diverse group of financial experts in 2016 with 
+        Infinity Trade Solutions LTD was founded by a diverse group of financial experts in 2015 with 
         the vision of building a financial platform where every individual can play 
         a crucial role in the forex industry.
       </p>
@@ -262,10 +262,10 @@ rel="stylesheet">
     <div class="footer-col">
       <h4>Account Types</h4>
       <ul>
-        <li><a href="#pricing">Micro</a></li>
-        <li><a href="#pricing">Classic</a></li>
-        <li><a href="#pricing">Premium</a></li>
-        <li><a href="#pricing">Professional</a></li>
+        <li><a href="#pricing">Elite</a></li>
+        <li><a href="#pricing">Pro</a></li>
+        <li><a href="#pricing">VIP</a></li>
+        <li><a href="#pricing">Raw</a></li>
       </ul>
     </div>
 
@@ -285,7 +285,7 @@ rel="stylesheet">
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
-        <li><i class="fas fa-envelope"></i>  supports@infinitytradesolution.com</li>
+        <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
@@ -308,8 +308,8 @@ rel="stylesheet">
       for informational purposes only and should not be construed as investment advice. 
       You should seek independent advice before making any investment decisions. Infinity Trade Solutions LTD 
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
-      China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, Malaysia, 
-      Maldives, Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
+      China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya,
+      Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
       Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Infinity Trade Solutions LTD 
       may reject any applicant from any jurisdiction at their sole discretion without the requirement 
       to explain the reason why (Terms and conditions).</p>
