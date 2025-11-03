@@ -15,9 +15,18 @@
       <p>We sent a 6-digit code to <strong>{{ $email }}</strong>. It expires in <span id="countdown"></span></p>
 
       @if ($errors->any())
-      <div class="errors"><ul>@foreach ($errors->all() as $e)<li>{{ $e }}</li>@endforeach</ul></div>
+      <div class="errors">
+        <ul>
+          @foreach ($errors->all() as $e)
+            <li>{{ $e }}</li>
+          @endforeach
+        </ul>
+      </div>
       @endif
-      @if (session('status')) <div class="notice">{{ session('status') }}</div> @endif
+
+      @if (session('status'))
+        <div class="notice">{{ session('status') }}</div>
+      @endif
 
       <form method="POST" action="{{ route('otp.verify') }}">
         @csrf
@@ -36,14 +45,20 @@
   </div>
 
   <script>
-    // countdown seconds provided by server
-    let remaining = {{ $remaining }};
+    // Convert remaining time to integer seconds
+    let remaining = Math.floor(Number({{ $remaining }}));
     const el = document.getElementById('countdown');
-    (function tick(){
-      if (remaining <= 0) { el.textContent = 'expired'; return; }
-      const m = Math.floor(remaining/60), s = remaining%60;
-      el.textContent = `${m}:${String(s).padStart(2,'0')}`;
-      remaining--; setTimeout(tick,1000);
+
+    (function tick() {
+      if (remaining <= 0) {
+        el.textContent = 'expired';
+        return;
+      }
+      const m = Math.floor(remaining / 60);
+      const s = remaining % 60;
+      el.textContent = `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
+      remaining--;
+      setTimeout(tick, 1000);
     })();
   </script>
 </body>

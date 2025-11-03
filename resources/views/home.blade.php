@@ -383,20 +383,21 @@ rel="stylesheet">
     <h2>Our <span>Plans</span></h2>
     <div class="pricing-grid">
 
-      @foreach($plans as $plan)
-        <article class="pricing-card">
-          <div class="price">${{ number_format($plan->price, 0) }}</div>
-          <h3>{{ $plan->name }}</h3>
-          <ul>
-            <li>Leverage {{ $plan->leverage }}</li>
-            <li>Min lot size {{ $plan->min_lot_size }}</li>
-            <li>Starting from {{ $plan->starting_pips }} pips</li>
-            <li>{{ $plan->swap }}</li>
-            <li>Commission {{ $plan->commission }}</li>
-          </ul>
-          <a href="{{ route('login') }}" class="btn">Choose plan</a>
-        </article>
-      @endforeach
+@foreach($plans as $plan)
+    <article class="pricing-card @if($loop->last) highlight-card @endif">
+      <div class="price">${{ number_format($plan->price, 0) }}</div>
+      <h3>{{ $plan->name }}</h3>
+      <ul>
+        <li>Leverage {{ $plan->leverage }}</li>
+        <li>Min lot size {{ $plan->min_lot_size }}</li>
+        <li>Starting from {{ $plan->starting_pips }} pips</li>
+        <li>{{ $plan->swap }}</li>
+        <li>Commission {{ $plan->commission }}%</li>
+        <li>{{ $plan->spread }}</li>
+      </ul>
+      <a href="{{ route('login') }}" class="btn">Choose plan</a>
+    </article>
+@endforeach
 
     </div>
   </div>
@@ -715,7 +716,7 @@ rel="stylesheet">
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
+        <li> <i class="fas fa-phone"></i>  +44 73 6652 5041</li>
         <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->

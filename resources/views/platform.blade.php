@@ -76,7 +76,7 @@
                     data-aos="fade-up" data-aos-duration="1000">
 
                         <div class="cta__subscribe">
-                            <h2 style="text-align:center"> <span>Download</span> Vertex</h2>
+                            <h2 style="text-align:center"> <span>Download</span> Our Platform</h2>
 <div class="row">
     <!-- Android APK -->
     <div class="col-4 store">
@@ -162,7 +162,7 @@
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
+        <li> <i class="fas fa-phone"></i>  +44 73 6652 5041</li>
         <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->

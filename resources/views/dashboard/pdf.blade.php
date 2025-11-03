@@ -2,56 +2,67 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Infinity Trade Solutions LTD</title>
+    <title>Infinity Trade Solutions LTD - Transaction Invoice</title>
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
             font-size: 12px;
-            color: #333;
+            color: #000; /* ✅ all text black */
             margin: 20px;
         }
 
         header {
-            border-bottom: 2px solid #8a34dbff;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
         }
 
-        header h1 {
-            margin: 0;
-            color: #7f34dbff;
+        .logo img {
+            height: 100px;
         }
 
-        .company-info, .customer-info {
-            margin-top: 10px;
+        .company-info {
+            text-align: right;
             font-size: 12px;
         }
 
-        .customer-info {
-            float: right;
-            text-align: right;
+        .company-info p {
+            margin: 2px 0;
+        }
+
+        .client-info {
+            text-align: left;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+
+        .client-info p {
+            margin: 2px 0;
         }
 
         h2 {
             text-align: center;
             margin: 20px 0;
-            color: #3a2c50ff;
+            color: #3a2c50ff; /* ✅ heading color */
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
+            color: #000; /* ensure table text is black */
         }
 
         th, td {
             border: 1px solid #ccc;
             padding: 8px 10px;
             text-align: left;
+            color: #000; /* ✅ table text black */
         }
 
         th {
-            background-color: #8734dbff;
+            background-color: #333333ff;
             color: #fff;
             font-weight: bold;
         }
@@ -91,75 +102,142 @@
 
         tfoot td {
             font-weight: bold;
+            color: #000; /* ✅ ensure footer totals are black */
         }
 
         .total-row {
             background-color: #f2f2f2;
         }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .footer-note {
+            text-align: center; /* ✅ center the footer text */
+            margin-top: 20px;
+            font-size: 11px;
+            color: #000; /* black */
+        }
+td.deposit,
+td.withdraw,
+td.center {
+    color: #000 !important; /* force black */
+}
+
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Infinity Trade Solutions LTD</h1>
+    <div class="logo">
+    <img src="{{ public_path('pics/Infinity1.png') }}">
+
+</div>
+
+    
     <div class="company-info">
-        <p>Infinity Trade Solutions LTD.</p>
-        <p>Email: info@itsltd.com | Phone: +1234567890</p>
-        <p>Website: www.itsltd.com</p>
+        <p><strong>Infinity Trade Solutions LTD</strong></p>
+        <p>+44 73 6652 5041</p>
+        <p>20-22 Wenlock Road, London, England, N1 7GU</p>
+        <p><strong>support@infinitytradesolution.com</strong></p>
     </div>
 </header>
 
-<h2>Transaction Invoice</h2>
+<div class="client-info">
+    <p><strong>Client Name:</strong> {{ $user->name ?? 'N/A' }}</p>
+    <p><strong>Email:</strong> {{ $user->email ?? 'N/A' }}</p>
+    <p><strong>Phone:</strong> {{ $user->phone ?? 'N/A' }}</p>
+    <p><strong>Country:</strong> {{ $user->country ?? '-' }}</p>
+</div>
+
+<hr>
+
+<h2>Transaction Statement</h2>
 
 <table>
     <thead>
         <tr>
             <th>#</th>
-            <th>Type</th>
-            <th>Amount ($)</th>
-            <th>Status</th>
-            <th>Account</th>
-            <th>Balance ($)</th>
             <th>Date</th>
+            <th>Live ID</th>
+            <th>Client</th>
+            <th>Credited</th>
+            <th>Debited</th>
+            <th>Transaction Type</th>
+            <th>Status</th>
         </tr>
     </thead>
     <tbody>
         @php $counter = 1; @endphp
         @foreach($transactions as $txn)
-            @php $isDeposit = strtolower($txn->type) === 'deposit'; @endphp
             <tr>
                 <td>{{ $counter++ }}</td>
-                <td class="{{ $isDeposit ? 'deposit' : 'withdraw' }}">{{ ucfirst($txn->type) }}</td>
-                <td class="{{ $isDeposit ? 'deposit' : 'withdraw' }}">{{ number_format($txn->amount, 2) }}</td>
+                <td>{{ $txn->created_at->format('d/m/Y H:i:s') }}</td>
+                <td>{{ $txn->account?->live_id ?? '-' }}</td>
+                <td>{{ $txn->user->name ?? 'N/A' }}</td>
+                <td class="text-right deposit">
+                    @if(strtolower($txn->type) !== 'withdraw')
+                        {{ number_format($txn->amount, 2) }}
+                    @else
+                        -
+                    @endif
+                </td>
+                <td class="text-right withdraw">
+                    @if(strtolower($txn->type) === 'withdraw')
+                        {{ number_format($txn->amount, 2) }}
+                    @else
+                        -
+                    @endif
+                </td>
+                <td class="text-capitalize">{{ $txn->method ?? '-' }}</td>
                 <td class="center
                     {{ $txn->status === 'completed' ? 'status-completed' : '' }}
                     {{ $txn->status === 'pending' ? 'status-pending' : '' }}
                     {{ $txn->status === 'failed' ? 'status-failed' : '' }}">
-                    {{ ucfirst($txn->status) }}
+                    @if($txn->status === 'completed')
+                        Success
+                    @elseif($txn->status === 'failed')
+                        Unsuccess
+                    @else
+                        Pending
+                    @endif
                 </td>
-                <td>{{ $txn->account?->live_id ?? '-' }}</td>
-                <td>{{ number_format($txn->account?->balance ?? 0, 2) }}</td>
-                <td>{{ $txn->created_at->format('d/m/Y H:i:s') }}</td>
             </tr>
         @endforeach
     </tbody>
     <tfoot>
         <tr class="total-row">
-            <td colspan="2">Total Deposits</td>
-            <td colspan="5">
+            <td colspan="7" class="text-right">Total Credited</td>
+            <td class="text-right">
                 ${{ number_format($transactions->where('type', 'deposit')->sum('amount'), 2) }}
             </td>
         </tr>
         <tr class="total-row">
-            <td colspan="2">Total Withdrawals</td>
-            <td colspan="5">
+            <td colspan="7" class="text-right">Total Debited</td>
+            <td class="text-right">
                 ${{ number_format($transactions->where('type', 'withdraw')->sum('amount'), 2) }}
             </td>
         </tr>
     </tfoot>
 </table>
+<br>
+<p class="footer-note">If you have any questions about this statement, please contact <strong>accounts@infinitytradesolution.com </strong></p>
+<br>
+<p class="footer-note">This is a system-generated statement from Infinity Trade Solutions LTD.</p>
 
-<p style="margin-top:20px; font-size: 11px;">This is a system-generated invoice from Infinity Trade Solutions LTD.</p>
+<script type="text/php">
+if (isset($pdf)) {
+    $pdf->page_script('
+        $font = $fontMetrics->get_font("DejaVu Sans", "normal");
+        $size = 10;
+        $pageText = "Page " . $PAGE_NUM . " of " . $PAGE_COUNT;
+        $y = 810; 
+        $x = 520; 
+        $pdf->text($x, $y, $pageText, $font, $size);
+    ');
+}
+</script>
 
 </body>
 </html>

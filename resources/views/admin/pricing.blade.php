@@ -5,8 +5,8 @@
 
 @section('content')
 <div class="container mt-4">
-        <h2>Pricing Plans</h2>
-    
+    <h2>Pricing Plans</h2>
+
     <div class="d-flex justify-content-between align-items-center mb-4">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addPricingModal">
             <i class="bi bi-plus-circle"></i> Add New Plan
@@ -16,7 +16,6 @@
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
-
 
     <div class="card-body">
         <div class="table-responsive">
@@ -31,6 +30,7 @@
                         <th>Pips</th>
                         <th>Swap</th>
                         <th>Commission</th>
+                        <th>Spread</th>
                         <th width="160">Action</th>
                     </tr>
                 </thead>
@@ -45,6 +45,7 @@
                         <td>{{ $plan->starting_pips }}</td>
                         <td>{{ $plan->swap }}</td>
                         <td>{{ $plan->commission }}</td>
+                        <td>{{ $plan->spread ?? '-' }}</td>
                         <td>
                             <!-- Edit Modal Button -->
                             <button type="button" class="btn1 btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editPricingModal{{ $plan->id }}">
@@ -81,6 +82,7 @@
                                         <input type="text" class="form-control mb-2" name="starting_pips" value="{{ $plan->starting_pips }}" required placeholder="Starting Pips">
                                         <input type="text" class="form-control mb-2" name="swap" value="{{ $plan->swap }}" required placeholder="Swap">
                                         <input type="number" class="form-control mb-2" name="commission" value="{{ $plan->commission }}" step="0.01" required placeholder="Commission">
+                                        <input type="text" class="form-control mb-2" name="spread" value="{{ $plan->spread }}" placeholder="Spread (optional)">
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -93,7 +95,7 @@
 
                     @empty
                     <tr>
-                        <td colspan="9" class="text-center text-muted">No pricing plans found.</td>
+                        <td colspan="10" class="text-center text-muted">No pricing plans found.</td>
                     </tr>
                     @endforelse
                 </tbody>
@@ -120,6 +122,7 @@
                     <input type="text" class="form-control mb-2" name="starting_pips" required placeholder="Starting Pips">
                     <input type="text" class="form-control mb-2" name="swap" required placeholder="Swap">
                     <input type="number" class="form-control mb-2" name="commission" step="0.01" required placeholder="Commission">
+                    <input type="text" class="form-control mb-2" name="spread" placeholder="Spread (optional)">
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

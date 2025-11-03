@@ -130,7 +130,7 @@
         <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
 
 
-        <button type="submit" class="btn">Sign Up</button>
+        <button type="submit" class="btn" id="signupBtn">Sign Up</button>
 
         <p class="login-link">
              Already have an account? <a href="{{ route('login') }}">Log In</a>
@@ -199,7 +199,7 @@
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 20 4577 3834</li>
+        <li> <i class="fas fa-phone"></i>  +44 73 6652 5041</li>
         <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
        

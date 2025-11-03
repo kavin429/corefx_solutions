@@ -14,6 +14,9 @@ use Illuminate\Support\Facades\DB;
 
 class OtpController extends Controller
 {
+    /**
+     * Show OTP verification page.
+     */
     public function showVerify(Request $request)
     {
         $email = $request->query('email');
@@ -25,6 +28,9 @@ class OtpController extends Controller
         return view('auth.verify-otp', compact('email', 'remaining'));
     }
 
+    /**
+     * Verify OTP and create user account.
+     */
     public function verify(Request $request)
     {
         $data = $request->validate([
@@ -62,38 +68,47 @@ class OtpController extends Controller
             ]);
         }
 
-        // ✅ Wrap user + profile creation in a transaction
+        // ✅ Check if user already exists
+        if (User::where('email', $pending->email)->exists()) {
+            $pending->delete();
+            throw ValidationException::withMessages([
+                'email' => 'An account with this email already exists. Please login instead.'
+            ]);
+        }
+
+        // ✅ Create user and profile in a transaction
         DB::transaction(function() use ($pending) {
 
-            // Create the user
+            // Create user
             $user = User::create([
-                'first_name'        => $pending->first_name,
-                'last_name'         => $pending->last_name,
-                'name'              => $pending->first_name . ' ' . $pending->last_name,
-                'email'             => $pending->email,
-                'password'          => $pending->password_hash,
-                'phone'             => $pending->phone,
-                'country'           => $pending->country,
-                'birth_date'        => $pending->birth_date,
-                'biometrics_enabled'=> $pending->wants_biometrics,
-                'email_verified_at' => now(),
+                'first_name'         => $pending->first_name,
+                'last_name'          => $pending->last_name,
+                'name'               => $pending->first_name . ' ' . $pending->last_name,
+                'email'              => $pending->email,
+                'password'           => $pending->password_hash,
+                'phone'              => $pending->phone,
+                'country'            => $pending->country,
+                'birth_date'         => $pending->birth_date,
+                'biometrics_enabled' => $pending->wants_biometrics,
+                'email_verified_at'  => now(),
             ]);
 
-            // Create the profile
+            // Parse phone code and number
             preg_match('/^\+(\d{1,3})(\d+)$/', $pending->phone, $matches);
             $phone_code = $matches[1] ?? '';
             $phone_number = $matches[2] ?? '';
 
+            // Create profile
             $user->profile()->create([
-                'first_name' => $pending->first_name,
-                'last_name'  => $pending->last_name,
-                'birth_date' => $pending->birth_date,
-                'country'    => $pending->country,
-                'phone_code' => $phone_code,
-                'phone_number' => $phone_number,
-                'avatar_path' => null,
-                'is_verified_identity' => false,
-                'is_verified_address'  => false,
+                'first_name'          => $pending->first_name,
+                'last_name'           => $pending->last_name,
+                'birth_date'          => $pending->birth_date,
+                'country'             => $pending->country,
+                'phone_code'          => $phone_code,
+                'phone_number'        => $phone_number,
+                'avatar_path'         => null,
+                'is_verified_identity'=> false,
+                'is_verified_address' => false,
             ]);
 
             // Delete pending registration
@@ -106,6 +121,9 @@ class OtpController extends Controller
         return redirect()->route('dashboard')->with('status', 'Account created successfully!');
     }
 
+    /**
+     * Resend OTP.
+     */
     public function resend(Request $request)
     {
         $data = $request->validate([
@@ -114,16 +132,22 @@ class OtpController extends Controller
 
         $pending = PendingRegistration::where('email', $data['email'])->firstOrFail();
 
-        if (now()->diffInSeconds($pending->updated_at) < 60) {
-            return back()->withErrors(['email' => 'Please wait a moment before requesting a new code.']);
+        // ✅ Allow resend only if at least 60 seconds passed since last update
+        $secondsSinceLast = now()->diffInSeconds($pending->updated_at);
+        if ($secondsSinceLast < 60) {
+            $secondsLeft = 60 - $secondsSinceLast;
+            return back()->withErrors([
+                'email' => "Please wait {$secondsLeft} seconds before requesting a new code."
+            ]);
         }
 
+        // Generate new OTP
         $otp = (string) random_int(100000, 999999);
 
         $pending->update([
-            'otp_hash' => Hash::make($otp),
+            'otp_hash'       => Hash::make($otp),
             'otp_expires_at' => now()->addMinutes(5),
-            'otp_attempts' => 0,
+            'otp_attempts'   => 0,
         ]);
 
         Mail::to($pending->email)->send(new VerifyRegistrationMail($otp));

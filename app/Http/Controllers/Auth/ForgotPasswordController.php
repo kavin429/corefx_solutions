@@ -8,23 +8,40 @@ use App\Models\User;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
 
 class ForgotPasswordController extends Controller
 {
-    // Show forgot password form
+    /**
+     * Show forgot password form.
+     */
     public function showForgotForm()
     {
         return view('auth.forgot-password');
     }
 
-    // Handle reset request (direct reset + email + notify)
+    /**
+     * Handle reset request (direct reset + email + notify)
+     */
     public function sendResetLink(Request $request)
     {
         $request->validate([
             'email' => 'required|email|exists:users,email',
         ]);
 
-        $user = User::where('email', $request->email)->first();
+        $email = $request->email;
+
+        // -------------------------------
+        // Check if user has requested recently (5-minute cooldown)
+        // -------------------------------
+        if (Cache::has('password_reset_'.$email)) {
+            $secondsLeft = Cache::get('password_reset_'.$email) - time();
+            return back()->withErrors([
+                'email' => "You can request a new password in {$secondsLeft} seconds."
+            ]);
+        }
+
+        $user = User::where('email', $email)->first();
 
         // Generate secure random password (10 chars with letters, numbers, symbols)
         $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+-=';
@@ -62,9 +79,7 @@ class ForgotPasswordController extends Controller
             'updated_at'      => now(),
         ]);
 
-        // -------------------------------
-        // Notify all admins in DB
-        // -------------------------------
+        // Notify all admins
         $admins = Admin::all();
         foreach ($admins as $admin) {
             DB::table('notifications')->insert([
@@ -80,6 +95,11 @@ class ForgotPasswordController extends Controller
             ]);
         }
 
-        return back()->with('status', 'A new password has been sent to your email.');
+        // -------------------------------
+        // Store 5-minute cooldown in cache
+        // -------------------------------
+        Cache::put('password_reset_'.$email, time() + 300, 300); // 300 seconds = 5 minutes
+
+        return back()->with('status', 'A new password has been sent to your email. You cannot request another one for 5 minutes.');
     }
 }

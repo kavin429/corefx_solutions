@@ -346,6 +346,7 @@ header.scrolled .logo h2 {
   background: linear-gradient(90deg, #6a11cb, #2575fc);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 30px;
   margin-top: 70px;
 }

@@ -17,5 +17,6 @@ class PricingPlan extends Model
         'starting_pips',
         'swap',
         'commission',
+        'spread', // newly added column
     ];
 }

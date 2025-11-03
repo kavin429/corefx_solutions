@@ -75,7 +75,7 @@
                 </select>
 
                 <label>Upload Deposit Screenshot</label>
-                <input type="file" name="screenshot" accept="image/*" onchange="previewScreenshot(this)">
+                <input type="file" name="screenshot" accept="image/*" onchange="previewScreenshot(this)" required>
                 <img id="screenshot-preview" src="#" alt="Screenshot Preview" style="display:none; max-width:200px; margin-top:10px;">
 
                 <div class="deposit-btn-wrapper mt-3">

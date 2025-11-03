@@ -473,3 +473,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 
 Route::get('/promotion', [PromotionController::class, 'show'])->name('promotion.show');
+
+use App\Http\Controllers\Admin\PendingRegistrationController;
+
+Route::middleware(['auth:admin'])->group(function () {
+    Route::get('/admin/pending-registrations', [PendingRegistrationController::class, 'index'])->name('pending.index');
+    Route::delete('/admin/pending-registrations/{id}', [PendingRegistrationController::class, 'destroy'])->name('pending.destroy');
+});
+
+

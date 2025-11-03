@@ -290,3 +290,46 @@ function togglePassword(fieldId, el) {
     el.textContent = "Show";
   }
 }
+
+// ----------------------------------------------------------
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const signupBtn = document.getElementById('signupBtn');
+    const form = document.getElementById('signupForm');
+    const key = 'signupBtnUnlockTime';
+
+    // --- Restore disabled state if needed ---
+    const savedUnlock = localStorage.getItem(key);
+    if (savedUnlock && Date.now() < parseInt(savedUnlock)) {
+        disableButtonUntil(parseInt(savedUnlock));
+    }
+
+    // --- Handle form submission ---
+    form.addEventListener('submit', function () {
+        signupBtn.disabled = true;
+        signupBtn.innerText = 'Please wait...';
+        const unlockTime = Date.now() + 5 * 60 * 1000; // 5 minutes
+        localStorage.setItem(key, unlockTime);
+        disableButtonUntil(unlockTime);
+    });
+
+    // --- Countdown handler ---
+    function disableButtonUntil(unlockTime) {
+        signupBtn.disabled = true;
+        const interval = setInterval(() => {
+            const remaining = unlockTime - Date.now();
+            if (remaining <= 0) {
+                signupBtn.disabled = false;
+                signupBtn.innerText = 'Sign Up';
+                localStorage.removeItem(key);
+                clearInterval(interval);
+                return;
+            }
+            const minutes = Math.floor(remaining / 60000);
+            const seconds = Math.floor((remaining % 60000) / 1000);
+            signupBtn.innerText = `Wait ${minutes}:${seconds.toString().padStart(2, '0')}`;
+        }, 1000);
+    }
+});
+

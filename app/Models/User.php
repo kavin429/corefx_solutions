@@ -78,5 +78,14 @@ class User extends Authenticatable
     {
         return trim("{$this->first_name} {$this->last_name}") ?: $this->name;
     }
+
+    public function isFullyVerified(): bool
+    {
+        if (!$this->profile) return false;
+
+        return $this->profile->identity_status === 'verified'
+            && $this->profile->address_status === 'verified';
+    }
+
 }
 

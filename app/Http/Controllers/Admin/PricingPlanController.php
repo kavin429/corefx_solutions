@@ -26,6 +26,7 @@ class PricingPlanController extends Controller
             'starting_pips' => 'required|string|max:255',
             'swap'          => 'required|string|max:255',
             'commission'    => 'required|numeric',
+            'spread'        => 'nullable|string|max:255', // added
         ]);
 
         PricingPlan::create($request->all());
@@ -44,6 +45,7 @@ class PricingPlanController extends Controller
             'starting_pips' => 'required|string|max:255',
             'swap'          => 'required|string|max:255',
             'commission'    => 'required|numeric',
+            'spread'        => 'nullable|string|max:255', // added
         ]);
 
         $pricing->update($request->all());

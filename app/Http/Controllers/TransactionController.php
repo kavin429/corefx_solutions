@@ -102,34 +102,39 @@ class TransactionController extends Controller
 
     // Download transactions as PDF with filters
     public function downloadPdf(Request $request)
-    {
-        $query = Transaction::where('user_id', auth()->id())
-                            ->with('account')
-                            ->latest();
+{
+    $user = auth()->user();
+    $userProfile = $user->profile;
 
-        if ($search = $request->input('search')) {
-            $query->where(function($q) use ($search) {
-                $q->where('type', 'like', "%{$search}%")
-                  ->orWhere('note', 'like', "%{$search}%");
-            });
-        }
+    $query = $user->transactions()->with('account')->latest();
 
-        if ($accountId = $request->input('account')) {
-            $query->where('account_id', $accountId);
-        }
-
-        if ($startDate = $request->input('start_date')) {
-            $query->whereDate('created_at', '>=', $startDate);
-        }
-
-        if ($endDate = $request->input('end_date')) {
-            $query->whereDate('created_at', '<=', $endDate);
-        }
-
-        $transactions = $query->get();
-
-        $pdf = Pdf::loadView('dashboard.pdf', compact('transactions'));
-
-        return $pdf->download('transactions.pdf');
+    if ($search = $request->input('search')) {
+        $query->where(function($q) use ($search) {
+            $q->where('type', 'like', "%{$search}%")
+              ->orWhere('note', 'like', "%{$search}%");
+        });
     }
+
+    if ($accountId = $request->input('account')) {
+        $query->where('account_id', $accountId);
+    }
+
+    if ($startDate = $request->input('start_date')) {
+        $query->whereDate('created_at', '>=', $startDate);
+    }
+
+    if ($endDate = $request->input('end_date')) {
+        $query->whereDate('created_at', '<=', $endDate);
+    }
+
+    $transactions = $query->get();
+
+    $totalDeposit = $transactions->where('type', 'deposit')->where('status', 'completed')->sum('amount');
+    $totalWithdraw = $transactions->where('type', 'withdraw')->where('status', 'completed')->sum('amount');
+
+    $pdf = Pdf::loadView('dashboard.pdf', compact('transactions', 'user', 'userProfile', 'totalDeposit', 'totalWithdraw'));
+
+    return $pdf->download('transactions.pdf');
+}
+
 }

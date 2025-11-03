@@ -35,7 +35,7 @@
             <div class="col-12">
                 <div class="card1 p-3 shadow-sm d-flex flex-md-row align-items-center gap-3">
                     <!-- Avatar -->
-                    <img src="{{ $user->profile->avatar_path ? Storage::url($user->profile->avatar_path) : asset('pics/client2.png') }}" 
+                    <img src="{{ $user->profile->avatar_path ? Storage::url($user->profile->avatar_path) : asset('pics/adminPro.jpeg') }}" 
                          class="profile-avatar mb-2 mb-md-0" alt="Avatar">
 
                     <!-- User Info -->
@@ -99,7 +99,7 @@
                         </div>
                         <div class="modal-body text-start">
                             <p><strong>Profile Picture:</strong></p>
-                            <img src="{{ $user->profile->avatar_path ? Storage::url($user->profile->avatar_path) : asset('pics/client2.png') }}" 
+                            <img src="{{ $user->profile->avatar_path ? Storage::url($user->profile->avatar_path) : asset('pics/adminPro.jpeg') }}" 
                                  class="profile-avatar mb-3" alt="Avatar">
                             <p><strong>ID:</strong> {{ $user->id }}</p>                                 
                             <p><strong>Name:</strong> {{ $user->name }}</p>

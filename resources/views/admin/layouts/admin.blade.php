@@ -41,7 +41,7 @@
         @php
             // Determine active sections
             $dashboardActive = request()->routeIs('admin.dashboard');
-            $usersActive = request()->routeIs('users.*') || request()->routeIs('admin.verifications');
+            $usersActive = request()->routeIs('users.*') || request()->routeIs('admin.verifications') || request()->routeIs('pending.*');
             $accountsActive = request()->routeIs('admin.accounts.*') || request()->routeIs('admin.transactions.history') || request()->routeIs('admin.withdrawals.*') || request()->routeIs('admin.deposits.*');
             $notificationsActive = request()->routeIs('admin.notifications.*');
             $settingsActive = request()->routeIs('admin.profile') || request()->routeIs('admin.pricing.*') || request()->routeIs('admin.deposit-methods.*') || request()->routeIs('admin.promotions.index');
@@ -69,6 +69,11 @@
                     <div class="accordion-body p-1">
                         <a href="{{ route('users.index') }}" class="sidebar-link {{ request()->routeIs('users.*') ? 'active' : '' }}">Manage Clients</a>
                         <a href="{{ route('admin.verifications') }}" class="sidebar-link {{ request()->routeIs('admin.verifications') ? 'active' : '' }}">User Verifications</a>
+                        <!-- 🔹 New Pending Registrations link -->
+            <a href="{{ route('pending.index') }}" 
+               class="sidebar-link {{ request()->routeIs('pending.*') ? 'active' : '' }}">
+               Pending Registrations
+            </a>
                     </div>
                 </div>
             </div>

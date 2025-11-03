@@ -1843,6 +1843,28 @@ body.dark-mode .feature-card:hover i {
   }
 }
 
+.pricing-card.highlight-card {
+  border: 2px solid #7725fc;       /* Purple border */
+  background: #f5f0ff;             /* Slightly lighter purple background */
+  box-shadow: 0 10px 30px rgba(119, 37, 252, 0.2);
+}
+
+.pricing-card.highlight-card .price {
+  color: #7725fc;                  /* Price in purple */
+}
+
+.pricing-card.highlight-card .btn {
+  background: linear-gradient(90deg, #2575FC, #6A11CB);             /* Button purple */
+  color: #fff;
+  border: none;
+}
+
+.pricing-card.highlight-card .btn:hover {
+  background: linear-gradient(90deg, #2575FC, #6A11CB);             /* Darker purple on hover */
+}
+
+
+
 /* ===== Testimonial Section ===== */
 #testimonials {
   padding: 180px 20px;

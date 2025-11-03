@@ -28,43 +28,44 @@
        <i class="bi bi-house-door"></i> Dashboard
     </a>
 
-    <a href="{{ route('dashboard.profile') }}" 
-       class="{{ request()->routeIs('dashboard.profile') ? 'active' : '' }}">
-       <i class="bi bi-person-circle"></i> Profile
+    @if(auth()->user()->isFullyVerified())
+        <a href="{{ route('dashboard.profile') }}" 
+           class="{{ request()->routeIs('dashboard.profile') ? 'active' : '' }}">
+           <i class="bi bi-person-circle"></i> Profile
+        </a>
+
+        <a href="{{ route('accounts.index') }}" 
+           class="{{ request()->routeIs('accounts.index') ? 'active' : '' }}">
+           <i class="bi bi-credit-card-2-front"></i> Accounts
+        </a>
+
+        <a href="{{ route('dashboard.transactions.index') }}" 
+           class="{{ request()->routeIs('dashboard.transactions.*') ? 'active' : '' }}">
+           <i class="bi bi-receipt"></i> Transactions
+        </a>
+
+        <a href="{{ route('deposit.index') }}" 
+           class="{{ request()->routeIs('deposit.*') ? 'active' : '' }}">
+           <i class="bi bi-wallet2"></i> Deposit
+        </a>
+
+        <a href="{{ route('withdraw.form') }}" 
+           class="{{ request()->routeIs('withdraw.*') ? 'active' : '' }}">
+           <i class="bi bi-cash-stack"></i> Withdraw
+        </a>
+
+        <a href="{{ route('user.notifications') }}" 
+           class="{{ request()->routeIs('user.notifications') ? 'active' : '' }}">
+           <i class="bi bi-bell"></i> Notifications
+        </a>
+    @endif
+
+    <!-- Always show Verification link -->
+    <a href="{{ route('verification.index') }}" 
+       class="{{ request()->routeIs('verification.index') ? 'active' : '' }}">
+       <i class="bi bi-shield-check"></i> Verified Documents
     </a>
-
-    <a href="{{ route('accounts.index') }}" 
-       class="{{ request()->routeIs('accounts.index') ? 'active' : '' }}">
-       <i class="bi bi-credit-card-2-front"></i> Accounts
-    </a>
-            <a href="{{ route('dashboard.transactions.index') }}" 
-   class="{{ request()->routeIs('dashboard.transactions.*') ? 'active' : '' }}">
-   <i class="bi bi-receipt"></i>
- Transactions
-</a>
-
-
-            <a href="{{ route('deposit.index') }}" 
-   class="{{ request()->routeIs('deposit.*') ? 'active' : '' }}">
-   <i class="bi bi-wallet2"></i> Deposit </a>
-
-            <a href="{{ route('withdraw.form') }}" 
-   class="{{ request()->routeIs('withdraw.*') ? 'active' : '' }}">
-   <i class="bi bi-cash-stack"></i>
- Withdraw
-</a>
-
-   <a href="{{ route('verification.index') }}" 
-   class="{{ request()->routeIs('verification.index') ? 'active' : '' }}">
-   <i class="bi bi-shield-check"></i> Verified Documents
-</a>
-
-            <a href="{{ route('user.notifications') }}" 
-   class="{{ request()->routeIs('user.notifications') ? 'active' : '' }}">
-   <i class="bi bi-bell"></i> Notifications
-</a>
-
-        </nav>
+</nav>
     </div> 
 
     <!-- Main Content -->
