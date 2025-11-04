@@ -16,79 +16,89 @@ rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 <style>
-  /* ===== Promotion Popup Centered in Banner ===== */
+/* ===============================
+   🌟 Promotion Popup (FXM Style)
+=============================== */
+/* Full-page blur when modal is open */
+body.modal-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.3);
+    z-index: 1049;
+    pointer-events: none; /* allows clicking only the modal */
+    transition: backdrop-filter 0.3s ease, background 0.3s ease;
+}
+
 #promoPopupModal {
-    position: fixed; /* was absolute */
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1050;
 }
 
-#promoPopupModal .modal-content {
-    border: none;       /* removes border */
-    box-shadow: none;   /* optional: remove shadow too */
-}
-
+/* --- Modal Dialog --- */
 #promoPopupModal .modal-dialog {
-    max-width: 450px; /* popup width */
+    max-width: 650px;
     margin: 0;
 }
 
+/* --- Modal Content --- */
 #promoPopupModal .modal-content {
-    
+    position: relative;
+    border: none;
+    border-radius: 16px;
     overflow: hidden;
+    background: #000;
     padding: 0;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    background-color: black;
-    animation: fadeInScale 0.3s ease-in-out;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.5);
+    animation: fadeInScale 0.4s ease-in-out;
 }
 
+/* --- Image --- */
 #promoPopupModal .modal-body {
     padding: 0;
     text-align: center;
+    position: relative;
 }
 
 #promoPopupModal .modal-body img {
     width: 100%;
-    height: auto;
-    
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px; /* round popup corners */
 }
 
-/* Modal header */
-#promoPopupModal .modal-header {
-    display: flex;
-    justify-content: flex-end; /* aligns content (like your button) to the right */
-    align-items: flex-start;   /* optional: aligns vertically to the top */
-           /* adjust padding if needed */
-}
-
-/* Close button */
+/* --- Close Button Inside Image --- */
 .custom-close {
-    font-size: 1rem;
-    background: #ffffff51;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
     border: none;
-    border-radius: 10%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
     cursor: pointer;
-    transition: background 0.3s;
-  margin-right: 5px;  
-  padding: 5px;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
-
 
 .custom-close:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: #a855f7;
+    transform: scale(1.1);
 }
 
-/* Blur only hero section when modal is active */
-.hero.modal-open-blur {
-    filter: blur(4px);
-}
-
-/* Popup animation */
+/* --- Animation --- */
 @keyframes fadeInScale {
     0% {
-        transform: scale(0.8);
+        transform: scale(0.85);
         opacity: 0;
     }
     100% {
@@ -96,6 +106,86 @@ rel="stylesheet">
         opacity: 1;
     }
 }
+
+/* --- Blur hero section when active --- */
+.hero.modal-open-blur {
+    filter: blur(5px);
+}
+
+/* ===============================
+   🌟 Responsive Styles for Promo Popup
+=============================== */
+
+/* Small devices: mobile (≤ 576px) */
+@media (max-width: 576px) {
+    #promoPopupModal {
+        width: 95vw;       /* nearly full width */
+        height: 85vh;      /* almost full height */
+    }
+
+    #promoPopupModal .modal-dialog {
+        width: 100%;
+        height: 100%;
+    }
+
+    #promoPopupModal .modal-content {
+        border-radius: 12px;  /* slightly smaller corners for small screens */
+    }
+
+    #promoPopupModal .modal-body img {
+        border-radius: 12px;
+        object-fit: contain;   /* prevent image from being cropped */
+    }
+
+    .custom-close {
+        top: 6px;
+        right: 6px;
+        font-size: 18px;
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Medium devices: tablets (≤ 768px) */
+@media (max-width: 768px) {
+    #promoPopupModal {
+        width: 90vw;
+        height: 88vh;
+    }
+
+    #promoPopupModal .modal-content {
+        border-radius: 14px;
+    }
+
+    .custom-close {
+        top: 8px;
+        right: 8px;
+        font-size: 19px;
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Large devices: small desktops (≤ 992px) */
+@media (max-width: 992px) {
+    #promoPopupModal {
+        width: 80vw;
+        height: 80vh;
+    }
+
+    #promoPopupModal .modal-content {
+        border-radius: 16px;
+    }
+
+    .custom-close {
+        top: 10px;
+        right: 10px;
+        font-size: 20px;
+        width: 32px;
+        height: 32px;
+    }
+}
+
 
 </style>
 
@@ -111,13 +201,13 @@ rel="stylesheet">
 <!-- Promotion Popup Modal -->
 @if($popup = \App\Models\Promotion::where('popup_enabled', true)->latest()->first())
 <div class="modal fade" id="promoPopupModal" tabindex="-1" aria-labelledby="promoPopupLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow-lg">
-            <div class="modal-header border-0">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
                 <button type="button" class="custom-close" onclick="closeModal()" aria-label="Close">×</button>
 
             </div>
-            <div class="modal-body p-0 text-center">
+            <div class="modal-body">
                 @if($popup->popup_image)
                     <img src="{{ asset('storage/'.$popup->popup_image) }}" class="img-fluid" alt="Promotion">
                 @endif
@@ -716,7 +806,7 @@ rel="stylesheet">
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 73 6652 5041</li>
+        <li> <i class="fas fa-phone"></i>  +44 74 4143 0900</li>
         <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
@@ -769,47 +859,29 @@ rel="stylesheet">
   ↑
 </button>
 
-
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const modalEl = document.getElementById('promoPopupModal');
-    const hero = document.querySelector('.hero');
-    let confettiInterval;
 
-    // Function to show the modal
     function showModal() {
-        modalEl.style.display = "flex"; // show modal
+        modalEl.style.display = "flex";
         modalEl.classList.add('show');
-        hero.classList.add('modal-open-blur');
-        document.body.style.overflow = 'hidden'; // disable background scroll
-
-        // Start continuous confetti
-        confettiInterval = setInterval(() => {
-            confetti({
-                particleCount: 20 + Math.floor(Math.random() * 5),
-                spread: 200,
-                origin: { x: Math.random(), y: 0.5 },
-                gravity: 0.5
-            });
-        }, 200);
+        document.body.classList.add('modal-open'); // enables blur
+        document.body.style.overflow = 'hidden'; // prevent scrolling
     }
 
-    // Function to close modal
     window.closeModal = function() {
-        modalEl.style.display = "none"; // hide modal
+        modalEl.style.display = "none";
         modalEl.classList.remove('show');
-        hero.classList.remove('modal-open-blur');
-        document.body.style.overflow = ''; // restore scroll
-
-        if(confettiInterval) clearInterval(confettiInterval);
+        document.body.classList.remove('modal-open'); // remove blur
+        document.body.style.overflow = ''; // restore scrolling
     }
 
-    // Show modal on page load
     if(modalEl) showModal();
 });
+
 </script>
+
 
 
 <script src="{{ asset('js/test.js') }}"></script>

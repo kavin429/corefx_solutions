@@ -199,7 +199,7 @@
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 73 6652 5041</li>
+        <li> <i class="fas fa-phone"></i>  +44 74 4143 0900</li>
         <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
        

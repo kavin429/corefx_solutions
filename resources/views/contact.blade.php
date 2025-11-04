@@ -64,7 +64,7 @@
         <div class="col-lg-5">
             <div class="contact-info">
                 <h4>Get In Touch</h4>
-                <p><i class="bi bi-telephone-fill text-purple me-2"></i> +44 73 6652 5041</p>
+                <p><i class="bi bi-telephone-fill text-purple me-2"></i> +44 74 4143 0900</p>
                 <p><i class="bi bi-envelope-fill text-purple me-2"></i> support@infinitytradesolution.com</p>
                 <hr>
                 <h5 class="fw-semibold text-dark mt-3">Our Office</h5>
@@ -139,7 +139,7 @@
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 73 6652 5041</li>
+        <li> <i class="fas fa-phone"></i>  +44 74 4143 0900</li>
         <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
