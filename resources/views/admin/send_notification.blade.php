@@ -106,11 +106,12 @@
                         <tr>
                             <th><input type="checkbox" id="selectAllActivities"></th>
                             <th>#</th>
+                            <th>Sent At</th>
                             <th>Title</th>
                             <th>Message</th>
                             <th>Recipient</th>
                             <th>Status</th>
-                            <th>Sent At</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -118,7 +119,7 @@
                             <tr>
                                 <td><input type="checkbox" name="selected[]" value="{{ $activity->id }}" class="activity-checkbox"></td>
                                 <td>{{ ($activities->currentPage() - 1) * $activities->perPage() + $loop->iteration }}</td>
-                        
+                                <td>{{ $activity->created_at->format('d-m-Y H:i') }}</td>                        
                                 <td>{{ $activity->title }}</td>
                                 <td class="break-word">{{ $activity->message }}</td>
                                 <td>{{ optional($activity->notifiable)->name ?? 'User' }}</td>
@@ -129,7 +130,7 @@
                                         <span class="badge bg-secondary">Unread</span>
                                     @endif
                                 </td>
-                                <td>{{ $activity->created_at->format('d-m-Y H:i') }}</td>
+                                
                             </tr>
                         @endforeach
                     </tbody>
@@ -167,11 +168,12 @@
                         <tr>
                             <th><input type="checkbox" id="selectAllNotifications"></th>
                             <th>#</th>
+                            <th>Received At</th>
                             <th>Title</th>
                             <th>Message</th>
                             <th>Sent By</th>
                             <th>Status</th>
-                            <th>Received At</th>
+                            
                         </tr>
                     </thead>
                     <tbody>
@@ -182,6 +184,7 @@
                                         <input type="checkbox" name="selected[]" value="{{ $notification->id }}" class="notification-checkbox">
                                     </td>
                                     <td>{{ ($notifications->currentPage() - 1) * $notifications->perPage() + $loop->iteration }}</td>
+                                    <td>{{ $notification->created_at->format('d-m-Y H:i') }}</td>
                                     <td>{{ $notification->title }}</td>
                                     <td class="break-word">{{ $notification->message }}</td>
                                     <td> Client ID: {{ $notification->sender_id }}</td>
@@ -194,7 +197,7 @@
                                             <span class="badge bg-secondary">Unread</span>
                                         @endif
                                     </td>
-                                    <td>{{ $notification->created_at->format('d-m-Y H:i') }}</td>
+                                    
                                 </tr>
                             @endif
                         @endforeach
