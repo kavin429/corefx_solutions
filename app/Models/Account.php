@@ -9,13 +9,10 @@ class Account extends Model
 {
     use HasFactory;
 
-    
     // The table associated with the model.
-    
     protected $table = 'accounts';
 
     // The attributes that are mass assignable.
-    
     protected $fillable = [
         'user_id',
         'live_id',
@@ -24,19 +21,20 @@ class Account extends Model
         'currency',
         'balance',
         'pnl',
+        'live_id_assigned_at', // ✅ add this line
     ];
 
-    
-    // Relationships
-    
+    // Casts
+    protected $casts = [
+        'live_id_assigned_at' => 'datetime', // ✅ ensures Carbon date formatting
+    ];
 
-    // Each account belongs to one user
+    // Relationships
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    // Example: if you want to link transactions later
     public function transactions()
     {
         return $this->hasMany(Transaction::class);

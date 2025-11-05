@@ -35,8 +35,11 @@ class VerificationAdminController extends Controller
      */
     public function approveIdentity(UserProfile $profile)
     {
-        // Update status to verified
-        $profile->update(['identity_status' => 'verified']);
+        // ✅ Update status and verified timestamp
+        $profile->update([
+            'identity_status' => 'verified',
+            'identity_verified_at' => now(),
+        ]);
 
         // Send notification
         Notification::create([
@@ -79,8 +82,11 @@ class VerificationAdminController extends Controller
      */
     public function approveAddress(UserProfile $profile)
     {
-        // Update status to verified
-        $profile->update(['address_status' => 'verified']);
+        // ✅ Update status and verified timestamp
+        $profile->update([
+            'address_status' => 'verified',
+            'address_verified_at' => now(),
+        ]);
 
         // Send notification
         Notification::create([

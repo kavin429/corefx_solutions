@@ -25,22 +25,24 @@ class UserProfile extends Model
         'address_document_path',
         'identity_status',   // pending | verified | rejected
         'address_status',    // pending | verified | rejected
-        'promo_code'
+        'promo_code',
+        'identity_verified_at',
+        'address_verified_at',
     ];
 
     protected $casts = [
         'birth_date' => 'date',
+        'identity_verified_at' => 'datetime',
+        'address_verified_at' => 'datetime',
     ];
 
     // A profile belongs to one user
-    
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
     // Avatar URL accessor
-    
     public function getAvatarUrlAttribute()
     {
         return $this->avatar_path 
@@ -49,7 +51,6 @@ class UserProfile extends Model
     }
 
     // Identity document URL accessor
-    
     public function getIdentityDocumentUrlAttribute()
     {
         return $this->identity_document_path
@@ -58,7 +59,6 @@ class UserProfile extends Model
     }
 
     // Address document URL accessor
-    
     public function getAddressDocumentUrlAttribute()
     {
         return $this->address_document_path

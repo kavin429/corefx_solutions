@@ -10,7 +10,6 @@ use App\Models\Notification;
 
 class UserController extends Controller
 {
-
     // Display a listing of all users with their accounts, optionally filtered by search.
     public function index(Request $request)
     {
@@ -27,15 +26,18 @@ class UserController extends Controller
 
                 // Search by name, email, or profile phone
                 $q->orWhere('name', 'like', "%{$search}%")
-                ->orWhere('email', 'like', "%{$search}%")
-                ->orWhereHas('profile', function($q2) use ($search) {
-                    $q2->where('phone_number', 'like', "%{$search}%");
-                });
+                  ->orWhere('email', 'like', "%{$search}%")
+                  ->orWhereHas('profile', function($q2) use ($search) {
+                      $q2->where('phone_number', 'like', "%{$search}%");
+                  });
             });
         }
 
-        // Paginate results (10 per page)
-        $users = $query->paginate(100)->withQueryString(); // preserves search query in pagination links
+        // ✅ Order latest users first
+        $query->latest();
+
+        // Paginate results (100 per page)
+        $users = $query->paginate(100)->withQueryString();
 
         return view('admin.manageUser', compact('users'));
     }
@@ -87,42 +89,41 @@ class UserController extends Controller
 
     // Assign or update a Live ID for a user's account that currently has null live_id.
     public function assignLiveId(Request $request, User $user)
-    {
-        $request->validate([
-            'account_id' => 'required|exists:accounts,id',
-            'live_id' => 'required|string|unique:accounts,live_id',
-        ]);
+{
+    $request->validate([
+        'account_id' => 'required|exists:accounts,id',
+        'live_id' => 'required|string|unique:accounts,live_id',
+    ]);
 
-        // Only select an account for this user that has live_id = null
-        $account = $user->accounts()
-                        ->where('id', $request->account_id)
-                        ->whereNull('live_id')
-                        ->firstOrFail();
+    $account = $user->accounts()
+                    ->where('id', $request->account_id)
+                    ->whereNull('live_id')
+                    ->firstOrFail();
 
-        $account->update(['live_id' => $request->live_id]);
+    // ✅ Update both live_id and assigned timestamp
+    $account->update([
+        'live_id' => $request->live_id,
+        'live_id_assigned_at' => now(), // <-- add this line
+    ]);
 
-        // ✅ Send notification to user
-        Notification::create([
-            'notifiable_id'   => $user->id,
-            'notifiable_type' => User::class,
-            'sender_id'       => auth()->guard('admin')->id(),
-            'sender_type'     => 'admin',
-            'title'           => 'Live ID Assigned',
-            'message'         => "A new Live ID ({$request->live_id}) has been assigned to your trading account.",
-            'is_read'         => 0,
-        ]);
+    Notification::create([
+        'notifiable_id'   => $user->id,
+        'notifiable_type' => User::class,
+        'sender_id'       => auth()->guard('admin')->id(),
+        'sender_type'     => 'admin',
+        'title'           => 'Live ID Assigned',
+        'message'         => "A new Live ID ({$request->live_id}) has been assigned to your trading account.",
+        'is_read'         => 0,
+    ]);
 
-        return redirect()->back()->with('success', 'Live ID assigned successfully!');
-    }
+    return redirect()->back()->with('success', 'Live ID assigned successfully!');
+}
 
-    // Example: If admin sends a reset link to a user
+
     public function sendResetLink(Request $request, $id)
     {
         $user = User::findOrFail($id);
 
-        // ✅ Your reset link logic goes here (e.g., Mail::to($user->email)->send(...))
-
-        // ✅ Send notification to the user
         Notification::create([
             'notifiable_id'   => $user->id,
             'notifiable_type' => User::class,

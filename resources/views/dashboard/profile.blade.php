@@ -46,12 +46,17 @@
             <h2 class="profile-section-title">Personal Details</h2>
             <div class="profile-info">
                 <label>Client ID:</label> <p>{{ $user->id }}</p>
+                
                 <label>Name:</label> <p>{{ $user->name }}</p>
                 <label>Email:</label> <p>{{ $user->email }}</p>
                 <label>Phone:</label> <p>{{ $user->profile->phone_code }} {{ $user->profile->phone_number }}</p>
                 <label>Country:</label> <p>{{ $user->profile->country }}</p>
                 <label>Birth Date:</label> <p>{{ $user->profile->birth_date ? $user->profile->birth_date->format('d-m-Y') : '-' }}</p>
-                <label>Promo Code:</label> <p>{{ $user->promo_code }}</p>
+                <label>Promo Code:</label> <p>{{ $user->promo_code ?? 'N/A' }}</p>
+                <!-- ✅ Added Created At field -->
+        <label>ID Created:</label> 
+        <p>{{ $user->created_at->format('d M Y, h:i A') }}</p>
+                
             </div>
         </div>
 
@@ -96,10 +101,6 @@
 
     </form>
 </div>
-
-
-
-
 </div>
 
 

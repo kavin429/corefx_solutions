@@ -29,17 +29,32 @@
             <thead>
                 <tr>
                     <th>#</th>
+                    <th>Verified At</th> {{-- ✅ Single merged column --}}
                     <th>Client</th>
                     <th>Identity Document</th>
                     <th>Identity Status</th>
                     <th>Address Document</th>
                     <th>Address Status</th>
+                    
                 </tr>
             </thead>
             <tbody>
                 @forelse($profiles as $profile)
                     <tr>
                         <td>{{ ($profiles->currentPage() - 1) * $profiles->perPage() + $loop->iteration }}</td>
+                        <td>
+                            @php
+                                $latest = max(
+                                    $profile->identity_verified_at ?? now()->subYears(50),
+                                    $profile->address_verified_at ?? now()->subYears(50)
+                                );
+                            @endphp
+                            @if($latest && $latest->gt(now()->subYears(40)))
+                                {{ $latest->format('d M Y, h:i A') }}
+                            @else
+                                -
+                            @endif
+                        </td>
                         <td>{{ $profile->user->name }}<br>{{ $profile->user->email }}</td>
 
                         {{-- Identity Document --}}
@@ -50,12 +65,12 @@
                                 -
                             @endif
                         </td>
+
                         <td>
                             <span class="badge {{ $profile->identity_status }}">
                                 {{ ucfirst($profile->identity_status) }}
                             </span>
 
-                            {{-- Show buttons only if pending --}}
                             @if($profile->identity_status === 'pending' && $profile->identity_document_path)
                                 <form action="{{ route('admin.verifications.approveIdentity', $profile) }}" method="POST" class="inline-form">
                                     @csrf
@@ -76,12 +91,12 @@
                                 -
                             @endif
                         </td>
+
                         <td>
                             <span class="badge {{ $profile->address_status }}">
                                 {{ ucfirst($profile->address_status) }}
                             </span>
 
-                            {{-- Show buttons only if pending --}}
                             @if($profile->address_status === 'pending' && $profile->address_document_path)
                                 <form action="{{ route('admin.verifications.approveAddress', $profile) }}" method="POST" class="inline-form">
                                     @csrf
@@ -93,10 +108,13 @@
                                 </form>
                             @endif
                         </td>
+
+                        {{-- ✅ Merged Verified Time --}}
+                        
                     </tr>
                 @empty
                     <tr>
-                        <td colspan="6">No verification requests found.</td>
+                        <td colspan="7">No verification requests found.</td>
                     </tr>
                 @endforelse
             </tbody>

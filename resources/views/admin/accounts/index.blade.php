@@ -32,6 +32,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Assigned On</th> {{-- ✅ new column --}}
                         <th>Live ID</th>                   
                         <th>Client</th>
                         <!--<th>Type</th>-->
@@ -44,6 +45,14 @@
                     @forelse ($accounts as $account)
                         <tr>
                             <td>{{ ($accounts->currentPage() - 1) * $accounts->perPage() + $loop->iteration }}</td>
+                            {{-- ✅ Display formatted assign date --}}
+                        <td>
+                            @if($account->live_id_assigned_at)
+                                {{ $account->live_id_assigned_at->format('d M Y, h:i A') }}
+                            @else
+                                <span class="text-muted">Not Assigned</span>
+                            @endif
+                        </td>
                             <td>{{ $account->live_id }}</td>
                             <td>{{ $account->user->name ?? 'N/A' }}</td>
                             <!--<td>{{ ucfirst($account->type) }}</td>-->

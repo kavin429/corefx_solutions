@@ -30,7 +30,11 @@ class AccountController extends Controller
             });
         }
 
-        $accounts = $query->orderBy('id', 'desc')->paginate(100);
+        $accounts = $query
+    ->orderByDesc('live_id_assigned_at') // ✅ newest assigned first
+    ->orderByDesc('id') // fallback
+    ->paginate(100);
+
         $accounts->appends($request->only('search'));
 
         $users = User::all(); // needed for account creation dropdown

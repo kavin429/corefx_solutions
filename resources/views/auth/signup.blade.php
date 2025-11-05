@@ -91,7 +91,7 @@
           <div class="phone-row">
             <span id="flag" class="fi fi-lk"></span> <!-- default Sri Lanka -->
             <input id="phone_code" name="phone_code" class="code" readonly>
-            <input id="phone_number" name="phone_number" value="{{ old('phone_number') }}" required placeholder="771234567">
+            <input id="phone_number" name="phone_number" value="{{ old('phone_number') }}" required placeholder="">
           </div>
 
 
