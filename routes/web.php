@@ -314,7 +314,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard/verification', [VerificationController::class, 'index'])->name('verification.index');
     Route::post('/dashboard/verification/identity', [VerificationController::class, 'uploadIdentity'])->name('verification.uploadIdentity');
     Route::post('/dashboard/verification/address', [VerificationController::class, 'uploadAddress'])->name('verification.uploadAddress');
+    Route::post('/verification/upload-both', [VerificationController::class, 'uploadBoth'])
+    ->name('verification.uploadBoth');
+
 });
+
+
 
 
 Route::prefix('admin')->middleware(['auth:admin'])->group(function(){

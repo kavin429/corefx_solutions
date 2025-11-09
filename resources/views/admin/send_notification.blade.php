@@ -119,7 +119,11 @@
                             <tr>
                                 <td><input type="checkbox" name="selected[]" value="{{ $activity->id }}" class="activity-checkbox"></td>
                                 <td>{{ ($activities->currentPage() - 1) * $activities->perPage() + $loop->iteration }}</td>
-                                <td>{{ $activity->created_at->format('d-m-Y H:i') }}</td>                        
+                                <td>
+    <span class="user-time" data-utc="{{ $activity->created_at->toIso8601String() }}">
+        {{ $activity->created_at->format('d-m-Y H:i') }}
+    </span>
+</td>                        
                                 <td>{{ $activity->title }}</td>
                                 <td class="break-word">{{ $activity->message }}</td>
                                 <td>{{ optional($activity->notifiable)->name ?? 'User' }}</td>
@@ -184,7 +188,11 @@
                                         <input type="checkbox" name="selected[]" value="{{ $notification->id }}" class="notification-checkbox">
                                     </td>
                                     <td>{{ ($notifications->currentPage() - 1) * $notifications->perPage() + $loop->iteration }}</td>
-                                    <td>{{ $notification->created_at->format('d-m-Y H:i') }}</td>
+                                    <td>
+    <span class="user-time" data-utc="{{ $notification->created_at->toIso8601String() }}">
+        {{ $notification->created_at->format('d-m-Y H:i') }}
+    </span>
+</td>
                                     <td>{{ $notification->title }}</td>
                                     <td class="break-word">{{ $notification->message }}</td>
                                     <td> Client ID: {{ $notification->sender_id }}</td>
@@ -232,5 +240,8 @@
         document.querySelectorAll('.notification-checkbox').forEach(cb => cb.checked = this.checked);
     });
 </script>
+
+
+<script src="{{ asset('js/time.js') }}"></script>
 @endsection
 

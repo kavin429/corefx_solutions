@@ -66,9 +66,27 @@
                                     <tr><th>Phone</th><td>{{ $reg->phone }}</td></tr>
                                     <tr><th>Promo Code</th><td>{{ $reg->promo_code ?? '—' }}</td></tr>
                                     <tr><th>Biometrics</th><td>{{ $reg->wants_biometrics ? 'Yes' : 'No' }}</td></tr>
-                                    <tr><th>OTP Expires At</th><td>{{ $reg->otp_expires_at }}</td></tr>
+                                    <tr>
+    <th>OTP Expires At</th>
+    <td>
+        @if($reg->otp_expires_at)
+            <span class="user-time" data-utc="{{ $reg->otp_expires_at->toIso8601String() }}">
+                {{ $reg->otp_expires_at->format('Y-m-d H:i') }}
+            </span>
+        @else
+            -
+        @endif
+    </td>
+</tr>
                                     <tr><th>OTP Attempts</th><td>{{ $reg->otp_attempts }}</td></tr>
-                                    <tr><th>Created At</th><td>{{ $reg->created_at->format('Y-m-d H:i') }}</td></tr>
+                                    <tr>
+    <th>Created At</th>
+    <td>
+        <span class="user-time" data-utc="{{ $reg->created_at->toIso8601String() }}">
+            {{ $reg->created_at->format('Y-m-d H:i') }}
+        </span>
+    </td>
+</tr>
                                 </table>
                             </div>
                             <div class="modal-footer">
@@ -83,4 +101,6 @@
         <div class="alert alert-warning1">No pending registrations found.</div>
     @endif
 </div>
+
+<script src="{{ asset('js/time.js') }}"></script>
 @endsection

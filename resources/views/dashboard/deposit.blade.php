@@ -61,7 +61,13 @@
                 </select>
 
                 <label>Deposited Amount (USD)</label>
-                <input type="number" name="amount" placeholder="Enter deposited amount" required>
+<input type="number" 
+       name="amount" 
+       placeholder="Enter deposited amount (e.g., 100.25)" 
+       step="0.01" 
+       min="0" 
+       required>
+
 
                 <label>Select Deposit Method</label>
                 <select name="method" required>

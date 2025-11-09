@@ -102,7 +102,10 @@
                     <!-- Right Info -->
                     <div class="txn-right">
                         <p class="txn-balance">Avl Blnc: $ {{ number_format($transaction->account?->balance ?? 0, 2) }}</p>
-                        <p class="txn-date">{{ $transaction->created_at->format('d/m/y H:i:s') }}</p>
+                        <p class="txn-date user-time" data-utc="{{ $transaction->created_at->toIso8601String() }}">
+    {{ $transaction->created_at->format('d/m/y H:i:s') }}
+</p>
+
                         <p class="txn-method">Method: {{ $transaction->method ?? '-' }}</p>
                     </div>
                 </div>
@@ -118,4 +121,22 @@
         </div>
     @endif
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Convert UTC timestamps to user's local time
+    document.querySelectorAll(".user-time").forEach(el => {
+        const utcTime = el.getAttribute("data-utc");
+        if (utcTime) {
+            const localTime = new Date(utcTime);
+            el.textContent = localTime.toLocaleString([], { 
+                year: 'numeric', month: '2-digit', day: '2-digit',
+                hour: '2-digit', minute: '2-digit', second: '2-digit',
+                hour12: false
+            });
+        }
+    });
+});
+</script>
+
 @endsection

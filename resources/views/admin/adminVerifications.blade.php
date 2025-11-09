@@ -43,18 +43,21 @@
                     <tr>
                         <td>{{ ($profiles->currentPage() - 1) * $profiles->perPage() + $loop->iteration }}</td>
                         <td>
-                            @php
-                                $latest = max(
-                                    $profile->identity_verified_at ?? now()->subYears(50),
-                                    $profile->address_verified_at ?? now()->subYears(50)
-                                );
-                            @endphp
-                            @if($latest && $latest->gt(now()->subYears(40)))
-                                {{ $latest->format('d M Y, h:i A') }}
-                            @else
-                                -
-                            @endif
-                        </td>
+    @php
+        $latest = max(
+            $profile->identity_verified_at ?? now()->subYears(50),
+            $profile->address_verified_at ?? now()->subYears(50)
+        );
+    @endphp
+    @if($latest && $latest->gt(now()->subYears(40)))
+        <span class="user-time" data-utc="{{ $latest->toIso8601String() }}">
+            {{ $latest->format('d M Y, h:i A') }}
+        </span>
+    @else
+        -
+    @endif
+</td>
+
                         <td>{{ $profile->user->name }}<br>{{ $profile->user->email }}</td>
 
                         {{-- Identity Document --}}
@@ -128,4 +131,6 @@
         </div>
     @endif
 </div>
+
+<script src="{{ asset('js/time.js') }}"></script>
 @endsection

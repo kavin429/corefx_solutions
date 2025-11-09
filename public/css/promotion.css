@@ -428,15 +428,10 @@ header.scrolled .logo h2 {
   100% { background-position: 0% 50%; }
 }
 
-
-
-
 .container1{
     margin-top: 5%;
-    margin-bottom: 50px;
-    
-
-  padding: 40px 20px;
+    margin-bottom: 10px;  
+    padding: 40px 20px;
 }
 
 .container {
@@ -455,7 +450,7 @@ header.scrolled .logo h2 {
 hr {
   border: none;
   border-top: 1px solid #ddd;
-  margin: 50px 0;
+  margin-bottom: 20px;
 }
 
 /* ===== IMAGE STYLES ===== */
@@ -473,82 +468,62 @@ img:hover {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* ===== CAROUSEL WRAPPER ===== */
-.carousel {
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-inner {
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-  width: 100%;
-}
-
-.carousel-item {
-  flex: 0 0 100%;
-  opacity: 0;
-  transform: scale(0.98);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.carousel-item.active {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* ===== NAVIGATION BUTTONS ===== */
+/* ===== Carousel Control Buttons ===== */
 .carousel-control-prev,
 .carousel-control-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(111, 66, 193, 0.8);
-  color: #fff;
-  border: none;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
-  z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+    background: rgba(111, 66, 193, 0.7); /* Purple tone with transparency */
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    z-index: 5;
 }
 
+/* Add glow and scale on hover */
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  background: rgba(111, 66, 193, 1);
-  transform: translateY(-50%) scale(1.1);
+    background: linear-gradient(135deg, #6f42c1, #8a63d2);
+    box-shadow: 0 0 12px rgba(138, 99, 210, 0.6);
+    transform: translateY(-50%) scale(1.1);
 }
 
+/* Positioning */
 .carousel-control-prev {
-  left: 20px;
+    left: 25px;
 }
-
 .carousel-control-next {
-  right: 20px;
+    right: 25px;
 }
 
-/* ===== ICONS FOR BUTTONS ===== */
-.carousel-control-prev::before,
-.carousel-control-next::before {
-  content: '';
-  display: inline-block;
-  border: solid #fff;
-  border-width: 0 3px 3px 0;
-  padding: 6px;
+/* ===== Control Icons ===== */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1) brightness(1.5);
+    width: 25px;
+    height: 25px;
 }
 
-.carousel-control-prev::before {
-  transform: rotate(135deg);
-}
+/* Optional: Hide controls on small screens for cleaner layout */
+@media (max-width: 576px) {
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 20px;
+        height: 20px;
+        left: 10px;
+        right: 10px;
+    }
 
-.carousel-control-next::before {
-  transform: rotate(-45deg);
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 20px;
+        height: 20px;
+    }
 }
-
 
 
 /* ===== TRANSITION EFFECT FOR SECTIONS ===== */
@@ -591,6 +566,74 @@ img:hover {
     font-size: 1.6rem;
   }
 }
+
+/*-----------------------------------------*/
+
+/* ================================
+   🌟 Small Posters Dynamic Grid
+================================ */
+.custom-container3 {
+    padding: 0 10px;
+    text-align: center;
+}
+
+.poster-grid {
+    display: grid;
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* 🖼️ Poster style */
+.poster-item img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.poster-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.promo-description {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin-top: 8px;
+}
+
+/* 📱 Responsive behavior */
+@media (max-width: 992px) {
+    .poster-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 576px) {
+    .poster-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*-----------------------------------------*/
+/* Carousel Dots */
+.carousel-indicators [data-bs-target] {
+    background-color: #8a34db;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+}
+
 
 /* Footer Styles */
 .footer {
@@ -846,7 +889,7 @@ img:hover {
 
 
 .custom-container2 {
-    max-width: 700px; /* adjust as needed */
+    max-width: 1200px; /* adjust as needed */
 }
 
 .custom-container3 {

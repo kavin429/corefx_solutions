@@ -31,7 +31,12 @@
                 @forelse($withdrawals as $withdraw)
                 <tr>
                     <td>{{ ($withdrawals->currentPage() - 1) * $withdrawals->perPage() + $loop->iteration }}</td>
-                    <td>{{ $withdraw->created_at->format('d M Y, h:i A') }}</td>
+                    <td>
+    <span class="user-time" data-utc="{{ $withdraw->created_at->toIso8601String() }}">
+        {{ $withdraw->created_at->format('d M Y, h:i A') }}
+    </span>
+</td>
+
                     <td>{{ $withdraw->account->live_id ?? 'N/A' }}</td>
                     <td>{{ $withdraw->user->name ?? '-' }}</td>
                     <td style="text-align: right;">${{ number_format($withdraw->amount, 2) }}</td>
@@ -98,4 +103,6 @@
         {{ $withdrawals->links() }}
     </div>
 </div>
+
+<script src="{{ asset('js/time.js') }}"></script>
 @endsection

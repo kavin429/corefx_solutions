@@ -33,7 +33,12 @@
                 @forelse($deposits as $deposit)
                     <tr>
                         <td>{{ ($deposits->currentPage() - 1) * $deposits->perPage() + $loop->iteration }}</td>
-                        <td>{{ $deposit->created_at->format('d M Y, h:i A') }}</td>
+                        <td>
+    <span class="user-time" data-utc="{{ $deposit->created_at->toIso8601String() }}">
+        {{ $deposit->created_at->format('d M Y, h:i A') }}
+    </span>
+</td>
+
                         <td>{{ $deposit->user->name ?? 'N/A' }}</td>
                         <td>{{ $deposit->account->live_id ?? 'N/A' }}</td>
                         <td style="text-align: right;">${{ number_format($deposit->amount, 2) }}</td>
@@ -96,4 +101,5 @@
         </div>
     
     </div>
+    <script src="{{ asset('js/time.js') }}"></script>
 @endsection

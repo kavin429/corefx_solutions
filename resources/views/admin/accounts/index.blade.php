@@ -47,12 +47,15 @@
                             <td>{{ ($accounts->currentPage() - 1) * $accounts->perPage() + $loop->iteration }}</td>
                             {{-- ✅ Display formatted assign date --}}
                         <td>
-                            @if($account->live_id_assigned_at)
-                                {{ $account->live_id_assigned_at->format('d M Y, h:i A') }}
-                            @else
-                                <span class="text-muted">Not Assigned</span>
-                            @endif
-                        </td>
+    @if($account->live_id_assigned_at)
+        <span class="user-time" data-utc="{{ $account->live_id_assigned_at->toIso8601String() }}">
+            {{ $account->live_id_assigned_at->format('d M Y, h:i A') }}
+        </span>
+    @else
+        <span class="text-muted">Not Assigned</span>
+    @endif
+</td>
+
                             <td>{{ $account->live_id }}</td>
                             <td>{{ $account->user->name ?? 'N/A' }}</td>
                             <!--<td>{{ ucfirst($account->type) }}</td>-->
@@ -166,4 +169,5 @@
             {{ $accounts->links() }}
         </div>
     </div>
+    <script src="{{ asset('js/time.js') }}"></script>
 @endsection

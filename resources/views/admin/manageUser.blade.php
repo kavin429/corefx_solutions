@@ -102,7 +102,12 @@
                             <img src="{{ $user->profile->avatar_path ? Storage::url($user->profile->avatar_path) : asset('pics/adminPro.jpeg') }}" 
                                  class="profile-avatar mb-3" alt="Avatar">
                             <p><strong>ID:</strong> {{ $user->id }}</p>
-                            <p><strong>ID Created:</strong> {{ $user->created_at->format('d M Y, h:i A') }}</p>                      
+                            <p><strong>ID Created:</strong> 
+    <span class="user-time" data-utc="{{ $user->created_at->toIso8601String() }}">
+        {{ $user->created_at->format('d M Y, h:i A') }}
+    </span>
+</p>
+                      
                             <p><strong>Name:</strong> {{ $user->name }}</p>
                             <p><strong>Email:</strong> {{ $user->email }}</p>
                             <p><strong>Phone:</strong> {{ $user->profile->phone_code ?? '' }} {{ $user->profile->phone_number ?? '-' }}</p>

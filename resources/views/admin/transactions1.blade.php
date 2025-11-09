@@ -198,7 +198,12 @@
                 @forelse($transactions as $t)
                     <tr>
                         <td>{{ ($transactions->currentPage() - 1) * $transactions->perPage() + $loop->iteration }}</td>
-                        <td>{{ $t->created_at->format('d M Y, h:i A') }}</td>
+                        <td>
+    <span class="user-time" data-utc="{{ $t->created_at->toIso8601String() }}">
+        {{ $t->created_at->format('d M Y, h:i A') }}
+    </span>
+</td>
+
                         <td>{{ $t->account->live_id }}</td>
                         <td>{{ $t->user->name ?? 'N/A' }}</td>
 
@@ -410,4 +415,5 @@ $(document).ready(function() {
 </script>
 
 
+<script src="{{ asset('js/time.js') }}"></script>
 @endsection

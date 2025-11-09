@@ -55,7 +55,10 @@
                 <label>Promo Code:</label> <p>{{ $user->promo_code ?? 'N/A' }}</p>
                 <!-- ✅ Added Created At field -->
         <label>ID Created:</label> 
-        <p>{{ $user->created_at->format('d M Y, h:i A') }}</p>
+<p class="user-time" data-utc="{{ $user->created_at->toIso8601String() }}">
+    {{ $user->created_at->format('d M Y, h:i A') }} <!-- fallback -->
+</p>
+
                 
             </div>
         </div>
@@ -117,4 +120,33 @@ function togglePassword(fieldId, toggleElement) {
     }
 }
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Convert UTC timestamps to user's local time
+    document.querySelectorAll(".user-time").forEach(el => {
+        const utcTime = el.getAttribute("data-utc");
+        if (utcTime) {
+            const localTime = new Date(utcTime); // automatically uses browser timezone
+            el.textContent = localTime.toLocaleString([], { 
+                year: 'numeric', month: 'short', day: 'numeric',
+                hour: '2-digit', minute: '2-digit', hour12: true 
+            });
+        }
+    });
+
+    // Password toggle (existing)
+    window.togglePassword = function(fieldId, toggleElement) {
+        const input = document.getElementById(fieldId);
+        if (input.type === "password") {
+            input.type = "text";
+            toggleElement.textContent = "Hide";
+        } else {
+            input.type = "password";
+            toggleElement.textContent = "Show";
+        }
+    }
+});
+</script>
+
 @endsection

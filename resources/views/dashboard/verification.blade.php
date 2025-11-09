@@ -3,69 +3,72 @@
 
 @section('content')
 
-<!-- <div class="verification-container"> -->
+<h3 class="mb-4">Account Verification</h3>
 
-    <h3 class="mb-4">Account Verification</h3>
+@if(session('success'))
+    <div class="alert-success">{{ session('success') }}</div>
+@endif
 
-    @if(session('success'))
-        <div class="alert-success">{{ session('success') }}</div>
-    @endif
+<div class="verification-card">
 
-    <div class="verification-card">
+    <form action="{{ route('verification.uploadBoth') }}" method="POST" enctype="multipart/form-data" class="verification-form">
+        @csrf
+        <h4 class="section-title">Identity & Address Verification</h4>
 
-        {{-- Identity Verification --}}
-        <form action="{{ route('verification.uploadIdentity') }}" method="POST" enctype="multipart/form-data" class="verification-form">
-            @csrf
-            <h4 class="section-title">Identity Verification</h4>
+        {{-- ==============================
+            IDENTITY DOCUMENT SECTION
+        =============================== --}}
+        <label class="form-label">Government ID (NIC, Passport, or Driver’s License)</label>
 
-            @if(!$profile->identity_document_path || $profile->identity_status !== 'verified')
-                <label class="form-label">Upload Government ID (NIC, Passport, or Driver’s License.)</label>
-                <input type="file" name="identity_document" class="form-input" accept="image/*,application/pdf" required>
-                <button type="submit" class="btn btn-primary">Upload Identity Proof</button>
+        @if($profile->identity_document_path)
+            <div class="document-link">
+                <a href="{{ asset('storage/' . $profile->identity_document_path) }}" target="_blank">View Identity Document</a>
+            </div>
+            @if($profile->identity_status === 'verified')
+                <span class="badge verified">Identity Verified</span>
+            @elseif($profile->identity_status === 'rejected')
+                <span class="badge rejected">Identity Rejected</span>
+            @else
+                <span class="badge pending">Identity Pending</span>
             @endif
+        @endif
 
-            @if($profile->identity_document_path)
-                <div class="document-link">
-                    <a href="{{ asset('storage/' . $profile->identity_document_path) }}" target="_blank">View Uploaded Document</a>
-                </div>
+        {{-- Show upload only if not verified --}}
+        @if($profile->identity_status !== 'verified')
+            <input type="file" name="identity_document" class="form-input mt-2" accept="image/*,application/pdf">
+        @endif
 
-                @if($profile->identity_status === 'verified')
-                    <span class="badge verified">Verified</span>
-                @elseif($profile->identity_status === 'rejected')
-                    <span class="badge rejected">Rejected</span>
-                @else
-                    <span class="badge pending">Pending</span>
-                @endif
+        <hr>
+
+        {{-- ==============================
+            ADDRESS DOCUMENT SECTION
+        =============================== --}}
+        <label class="form-label">Address Proof (Utility Bill, Bank Statement, etc.)</label>
+
+        @if($profile->address_document_path)
+            <div class="document-link">
+                <a href="{{ asset('storage/' . $profile->address_document_path) }}" target="_blank">View Address Document</a>
+            </div>
+            @if($profile->address_status === 'verified')
+                <span class="badge verified">Address Verified</span>
+            @elseif($profile->address_status === 'rejected')
+                <span class="badge rejected">Address Rejected</span>
+            @else
+                <span class="badge pending">Address Pending</span>
             @endif
-        </form>
+        @endif
 
-        {{-- Address Verification --}}
-        <form action="{{ route('verification.uploadAddress') }}" method="POST" enctype="multipart/form-data" class="verification-form">
-            @csrf
-            <h4 class="section-title">Address Verification</h4>
+        {{-- Show upload only if not verified --}}
+        @if($profile->address_status !== 'verified')
+            <input type="file" name="address_document" class="form-input mt-2" accept="image/*,application/pdf">
+        @endif
 
-            @if(!$profile->address_document_path || $profile->address_status !== 'verified')
-                <label class="form-label">Upload Address Proof</label>
-                <input type="file" name="address_document" class="form-input" accept="image/*,application/pdf" required>
-                <button type="submit" class="btn btn-success">Upload Address Proof</button>
-            @endif
+        {{-- Upload button appears only if any document is NOT verified --}}
+        @if($profile->identity_status !== 'verified' || $profile->address_status !== 'verified')
+            <button type="submit" class="btn btn-primary mt-3">Upload Documents</button>
+        @endif
 
-            @if($profile->address_document_path)
-                <div class="document-link">
-                    <a href="{{ asset('storage/' . $profile->address_document_path) }}" target="_blank">View Uploaded Document</a>
+    </form>
 
-                </div>
-
-                @if($profile->address_status === 'verified')
-                    <span class="badge verified">Verified</span>
-                @elseif($profile->address_status === 'rejected')
-                    <span class="badge rejected">Rejected</span>
-                @else
-                    <span class="badge pending">Pending</span>
-                @endif
-            @endif
-        </form>
-
-    </div>
 </div>
 @endsection
