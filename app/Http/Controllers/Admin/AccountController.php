@@ -104,30 +104,31 @@ class AccountController extends Controller
     // Upload PNL and recalculate balance.
 
     public function uploadPNL(Request $request, Account $account)
-    {
-        $request->validate([
-            'pnl' => 'required|numeric',
-        ]);
+{
+    $request->validate([
+        'pnl' => 'required|numeric',
+    ]);
 
-        // Add the uploaded PNL to existing PNL
-        $account->pnl += $request->pnl;
+    // Set PNL directly (overwrite old value)
+    $account->pnl = $request->pnl;
 
-        // Recalculate balance: total deposits + pnl - total withdrawals
-        $totalDeposit = $account->transactions()
-                        ->where('type', 'deposit')
-                        ->where('status', 'completed')
-                        ->sum('amount');
+    // Recalculate balance
+    $totalDeposit = $account->transactions()
+                    ->where('type', 'deposit')
+                    ->where('status', 'completed')
+                    ->sum('amount');
 
-        $totalWithdrawal = $account->transactions()
-                        ->where('type', 'withdraw')
-                        ->where('status', 'completed')
-                        ->sum('amount');
+    $totalWithdrawal = $account->transactions()
+                    ->where('type', 'withdraw')
+                    ->where('status', 'completed')
+                    ->sum('amount');
 
-        $account->balance = $totalDeposit + $account->pnl - $totalWithdrawal;
+    $account->balance = $totalDeposit + $account->pnl - $totalWithdrawal;
 
-        $account->save();
+    $account->save();
 
-        return redirect()->back()->with('success', 'PNL uploaded and balance updated successfully!');
-    }
+    return redirect()->back()->with('success', 'PNL updated successfully!');
+}
+
 
 }

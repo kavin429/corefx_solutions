@@ -18,8 +18,8 @@ class VerificationController extends Controller
     public function uploadBoth(Request $request)
     {
         $request->validate([
-            'identity_document' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
-            'address_document'  => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:2048',
+            'identity_document' => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:5120',
+            'address_document'  => 'nullable|file|mimes:jpg,jpeg,png,pdf|max:5120',
         ]);
 
         $user = auth()->user();

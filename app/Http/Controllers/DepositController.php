@@ -28,7 +28,7 @@ class DepositController extends Controller
             'account_id' => 'required|exists:accounts,id',
             'amount'     => 'required|numeric|min:0.01',
             'method'     => 'required|string',
-            'screenshot' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+            'screenshot' => 'nullable|image|mimes:jpg,jpeg,png|max:5120',
         ]);
 
         $account = Account::findOrFail($request->account_id);

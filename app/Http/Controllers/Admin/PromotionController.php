@@ -22,10 +22,10 @@ class PromotionController extends Controller
         $request->validate([
             'title' => 'nullable|string|max:255',
             'description' => 'nullable|string|max:1000',
-            'popup_image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
-            'poster_small' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
-            'poster_medium' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:4096',
-            'poster_xmedium' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:4096',
+            'popup_image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'poster_small' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'poster_medium' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'poster_xmedium' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
             'poster_large' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:8192',
         ]);
 
@@ -68,10 +68,10 @@ class PromotionController extends Controller
         $data = $request->validate([
             'title' => 'required|string|max:255',
             'description' => 'nullable|string|max:500',
-            'popup_image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
-            'poster_small' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:2048',
-            'poster_medium' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:4096',
-            'poster_xmedium' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:4096',
+            'popup_image' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'poster_small' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'poster_medium' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
+            'poster_xmedium' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:5120',
             'poster_large' => 'nullable|image|mimes:jpeg,png,jpg,webp|max:8192',
         ]);
 

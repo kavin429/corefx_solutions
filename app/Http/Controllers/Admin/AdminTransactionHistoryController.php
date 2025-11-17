@@ -85,7 +85,7 @@ if ($request->filled('search')) {
             'bank_address' => 'nullable|string|max:255',
             'xynder_id' => 'nullable|string|max:255',
             'binance_id' => 'nullable|string|max:255',
-            'screenshot' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+            'screenshot' => 'nullable|image|mimes:jpeg,png,jpg|max:5120',
         ]);
 
         $transaction->update([
@@ -127,7 +127,7 @@ public function store(Request $request)
         'upi_id' => 'nullable|string|max:255',
         'status' => 'required|in:pending,completed,failed',
         'note' => 'nullable|string|max:255',
-        'screenshot' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
+        'screenshot' => 'nullable|image|mimes:jpeg,png,jpg|max:5120',
     ]);
 
     $transaction = new Transaction($request->only([

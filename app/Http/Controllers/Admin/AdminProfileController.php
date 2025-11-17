@@ -30,7 +30,7 @@ class AdminProfileController extends Controller
         $request->validate([
             'name' => 'required|string|max:100',
             'email' => 'required|email|unique:admins,email,' . $admin->id,
-            'profile_picture' => 'nullable|image|max:2048',
+            'profile_picture' => 'nullable|image|max:5120',
         ]);
 
         $data = $request->only('name', 'email');
