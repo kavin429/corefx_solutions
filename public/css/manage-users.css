@@ -543,3 +543,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     padding: 8px;
   }
 }
+
+body.dark .form-control::placeholder {
+    color: #f0ecec70; /* dark grey placeholder */
+    opacity: 1;
+}
+
+

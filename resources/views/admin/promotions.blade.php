@@ -218,19 +218,19 @@
                             </div>
                         </div>
                         <div class="col-md-3">
-                            <label class="form-label fw-semibold">Small Poster (300x300)</label>
+                            <label class="form-label fw-semibold">Small Poster</label>
                             <input type="file" name="poster_small" class="form-control" accept="image/*">
                         </div>
                         <div class="col-md-3">
-                            <label class="form-label fw-semibold">Medium Poster (600x600)</label>
+                            <label class="form-label fw-semibold">Medium Poster</label>
                             <input type="file" name="poster_medium" class="form-control" accept="image/*">
                         </div>
                         <div class="col-md-3">
-                            <label class="form-label fw-semibold">X-Medium Poster (900x900)</label>
+                            <label class="form-label fw-semibold">X-Medium Poster</label>
                             <input type="file" name="poster_xmedium" class="form-control" accept="image/*">
                         </div>
                         <div class="col-md-3">
-                            <label class="form-label fw-semibold">Large Poster (1200x1200)</label>
+                            <label class="form-label fw-semibold">Large Poster</label>
                             <input type="file" name="poster_large" class="form-control" accept="image/*">
                         </div>
                     </div>

@@ -103,11 +103,10 @@
                                  class="profile-avatar mb-3" alt="Avatar">
                             <p><strong>ID:</strong> {{ $user->id }}</p>
                             <p><strong>ID Created:</strong> 
-    <span class="user-time" data-utc="{{ $user->created_at->toIso8601String() }}">
-        {{ $user->created_at->format('d M Y, h:i A') }}
-    </span>
-</p>
-                      
+                                <span class="user-time" data-utc="{{ $user->created_at->toIso8601String() }}">
+                                    {{ $user->created_at->format('d M Y, h:i A') }}
+                                </span>
+                            </p>                      
                             <p><strong>Name:</strong> {{ $user->name }}</p>
                             <p><strong>Email:</strong> {{ $user->email }}</p>
                             <p><strong>Phone:</strong> {{ $user->profile->phone_code ?? '' }} {{ $user->profile->phone_number ?? '-' }}</p>
@@ -181,35 +180,59 @@
             <div class="modal fade" id="liveIdModal{{ $user->id }}" tabindex="-1" aria-hidden="true">
                 <div class="modal-dialog"> 
                     <div class="modal-content">
+                        <!-- Assign / Update Live ID Form -->
                         <form action="{{ route('users.assignLiveId', $user->id) }}" method="POST">
                             @csrf
                             <div class="modal-header">
                                 <h5 class="modal-title">Assign / Update Live ID</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                             </div>
+                
                             <div class="modal-body text-start">
                                 <div class="mb-3">
                                     <label for="account_id_{{ $user->id }}" class="form-label">Select Account</label>
                                     <select name="account_id" id="account_id_{{ $user->id }}" class="form-select" required>
                                         @foreach($user->accounts->where('live_id', null) as $account)
-                                            <option value="{{ $account->id }}">{{ ucfirst($account->type) }} - {{ $account->id }}</option>
+                                        <option value="{{ $account->id }}">
+                                            {{ ucfirst($account->type) }} - {{ $account->id }}
+                                        </option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="live_id_{{ $user->id }}" class="form-label">Live ID</label>
-                                    <input type="text" name="live_id" id="live_id_{{ $user->id }}" class="form-control" placeholder="Enter Live ID" required>
+                                    <input type="text" name="live_id" id="live_id_{{ $user->id }}" class="form-control" placeholder="Enter Live ID">
                                 </div>
                             </div>
+                
                             <div class="modal-footer">
+                                <!-- Save / Assign Live ID -->
                                 <button type="submit" class="btn1 btn-success btn-sm">Save Live ID</button>
+
+                                <!-- Delete Selected Account -->
+                                <button type="button" class="btn1 btn-danger btn-sm"
+                                    onclick="event.preventDefault(); 
+                                    if(confirm('Are you sure you want to delete this account?')) {
+                                    let accountId = document.getElementById('account_id_{{ $user->id }}').value;
+                                    fetch('{{ url('admin/users/'.$user->id.'/delete-account') }}/'+accountId, {
+                                    method: 'DELETE',
+                                    headers: {
+                                    'X-CSRF-TOKEN': '{{ csrf_token() }}',
+                                    'Accept': 'application/json'
+                                    }
+                                    }).then(res => location.reload());
+                                    }">
+                                    Delete Account
+                                </button>
+
+                                <!-- Close Modal -->
                                 <button type="button" class="btn1 btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-
+            
             @empty
             <p class="text-center">No users found.</p>
         @endforelse

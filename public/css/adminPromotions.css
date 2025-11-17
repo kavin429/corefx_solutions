@@ -270,3 +270,41 @@ body.dark  .modal-header .modal-title {
         text-align: center;
     }
 }
+/* Horizontal scroll only */
+.table-responsive {
+    overflow-x: auto; /* enable horizontal scrolling */
+    overflow-y: hidden; /* disable vertical scrolling */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+}
+
+/* Horizontal scrollbar styling - Purple theme */
+.table-responsive::-webkit-scrollbar {
+    height: 4px; /* horizontal scrollbar height */
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f0e6ff; /* light purple track */
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #6a3dbb; /* purple thumb */
+    border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #8245c9; /* lighter purple on hover */
+}
+
+/* Dark mode scroll - Purple theme */
+body.dark .table-responsive::-webkit-scrollbar-track {
+    background: #1f0f2f; /* dark purple track */
+}
+
+body.dark .table-responsive::-webkit-scrollbar-thumb {
+    background: #9b59ff; /* bright purple thumb */
+}
+
+body.dark .table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #b072ff; /* lighter bright purple on hover */
+}

@@ -224,3 +224,15 @@ body.dark .modal-header .btn-close {
         text-align: center;
     }
 }
+
+/* Dark mode for search input only */
+body.dark input.form-control[name="search"] {
+    background-color: #1e112d; /* dark background */
+    color: #f0f0f0;           /* light text */
+    border: 1px solid #bc5bda;   /* dark border */
+}
+
+body.dark input.form-control[name="search"]::placeholder {
+    color: #aaa; /* lighter placeholder for contrast */
+    opacity: 1;  /* ensure placeholder is visible */
+}

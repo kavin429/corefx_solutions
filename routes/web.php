@@ -123,6 +123,9 @@ Route::prefix('admin')->middleware('auth:admin')->group(function() {
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
     // Assign / Update Live ID
     Route::post('/users/{user}/assign-live-id', [UserController::class, 'assignLiveId'])->name('users.assignLiveId');
+    Route::delete('/users/{user}/delete-account/{account}', [UserController::class, 'deleteAccount'])
+    ->name('users.deleteAccount');
+
 
 
     // Password reset requests

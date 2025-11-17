@@ -136,4 +136,19 @@ class UserController extends Controller
 
         return back()->with('success', 'Reset link sent and user notified.');
     }
+
+public function deleteAccount(User $user, Account $account)
+{
+    // Ensure the account belongs to the user
+    if ($account->user_id !== $user->id) {
+        abort(403, 'Unauthorized action.');
+    }
+
+    // Delete the account
+    $account->delete();
+
+    return response()->json(['success' => true]);
+}
+
+
 }
