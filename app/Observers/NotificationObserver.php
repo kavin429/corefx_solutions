@@ -31,12 +31,13 @@ class NotificationObserver
 
         foreach ($phones as $phone) {
             $response = Http::asForm()->post('https://app.notify.lk/api/v1/send', [
-                'user_id'   => env('NOTIFY_USER_ID'),
-                'api_key'   => env('NOTIFY_API_KEY'),
-                'sender_id' => env('NOTIFY_SENDER_ID'),
+                'user_id'   => config('notify.user_id'),
+                'api_key'   => config('notify.api_key'),
+                'sender_id' => config('notify.sender_id'),
                 'to'        => $phone,
                 'message'   => $msg,
             ]);
+
 
             \Log::info("Notify.lk SMS response to $phone: " . $response->body());
         }
