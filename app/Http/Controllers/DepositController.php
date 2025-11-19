@@ -58,7 +58,7 @@ class DepositController extends Controller
                 'sender_id'       => Auth::id(),
                 'sender_type'     => 'user',
                 'title'           => 'New Deposit Request',
-                'message'         => Auth::user()->email . ' submitted a deposit of $' . $deposit->amount,
+                'message'         => Auth::user()->name . ' submitted a deposit of $' . $deposit->amount,
                 'is_read'         => 0,
             ]);
         }

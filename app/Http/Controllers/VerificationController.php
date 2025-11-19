@@ -41,7 +41,7 @@ class VerificationController extends Controller
             // Notify admins
             $this->notifyAdmins(
                 'Identity Document Uploaded',
-                "{$user->email} uploaded an identity document for verification."
+                "{$user->name} uploaded an identity document for verification."
             );
         }
 
@@ -59,7 +59,7 @@ class VerificationController extends Controller
             // Notify admins
             $this->notifyAdmins(
                 'Address Document Uploaded',
-                "{$user->email} uploaded an address document for verification."
+                "{$user->name} uploaded an address document for verification."
             );
         }
 

@@ -68,7 +68,7 @@
                 <div id="collapseUsers" class="accordion-collapse collapse {{ $usersActive ? 'show' : '' }}" data-bs-parent="#sidebarAccordion">
                     <div class="accordion-body p-1">
                         <a href="{{ route('users.index') }}" class="sidebar-link {{ request()->routeIs('users.*') ? 'active' : '' }}">Manage Clients</a>
-                        <a href="{{ route('admin.verifications') }}" class="sidebar-link {{ request()->routeIs('admin.verifications') ? 'active' : '' }}">User Verifications</a>
+                        <a href="{{ route('admin.verifications') }}" class="sidebar-link {{ request()->routeIs('admin.verifications') ? 'active' : '' }}">Client Verifications</a>
                         <!-- 🔹 New Pending Registrations link -->
             <a href="{{ route('pending.index') }}" 
                class="sidebar-link {{ request()->routeIs('pending.*') ? 'active' : '' }}">

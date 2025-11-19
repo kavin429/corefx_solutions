@@ -138,7 +138,7 @@ td.center {
     
     <div class="company-info">
         <p><strong>Infinity Trade Solutions LTD</strong></p>
-        <p>+44 73 6652 5041</p>
+        <p>+44 74 4143 0900</p>
         <p>20-22 Wenlock Road, London, England, N1 7GU</p>
         <p><strong>support@infinitytradesolution.com</strong></p>
     </div>
@@ -156,18 +156,19 @@ td.center {
 <h2>Transaction Statement</h2>
 
 <table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Date</th>
-            <th>Live ID</th>
-            <th>Client</th>
-            <th>Credited</th>
-            <th>Debited</th>
-            <th>Transaction Type</th>
-            <th>Status</th>
-        </tr>
-    </thead>
+<thead>
+    <tr>
+        <th style="text-align:center;">#</th>
+        <th style="text-align:center;">Date</th>
+        <th style="text-align:center;">Live ID</th>
+        <th style="text-align:center;">Client</th>
+        <th style="text-align:center;">Credited (USD)</th>
+        <th style="text-align:center;">Debited (USD)</th>
+        <th style="text-align:center;">Transaction Type</th>
+        <th style="text-align:center;">Status</th>
+    </tr>
+</thead>
+
     <tbody>
         @php $counter = 1; @endphp
         @foreach($transactions as $txn)

@@ -60,17 +60,18 @@
             background-color: #fafafa;
         }
 
-        .badge {
-            display: inline-block;
-            padding: 2px 5px;
-            border-radius: 3px;
-            font-size: 10px;
-            font-weight: bold;
-            text-align: center;
-            color: #000;
-            border: 1px solid #000;
-            background: transparent;
-        }
+.badge {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    border: none;          /* <-- remove outline */
+    background: transparent;
+}
+
 
         .text-right { text-align: right; }
 
@@ -97,7 +98,7 @@
 
         <div class="client-info">
             <p><strong>Infinity Trade Solutions LTD</strong></p>
-        <p>+44 73 6652 5041</p>
+        <p>+44 74 4143 0900</p>
         <p>20-22 Wenlock Road, London, England, N1 7GU</p>
         <p><strong>support@infinitytradesolution.com</strong></p>
         </div>
@@ -108,14 +109,14 @@
     <table>
         <thead>
             <tr>
-                <th>#</th>
-                <th>Date</th>
-                <th>Live ID</th>
-                <th>Client</th>
-                <th>Credited</th>
-                <th>Debited</th>
-                <th>Method</th>
-                <th>Status</th>
+                <th style="text-align:center;">#</th>
+                <th style="text-align:center;">Date</th>
+                <th style="text-align:center;">Live ID</th>
+                <th style="text-align:center;">Client</th>
+                <th style="text-align:center;">Credited (USD)</th>
+                <th style="text-align:center;">Debited (USD)</th>
+                <th style="text-align:center;">Method</th>
+                <th style="text-align:center;">Status</th>
             </tr>
         </thead>
         <tbody>
@@ -127,28 +128,29 @@
                 <td>{{ $t->user->name ?? 'N/A' }}</td>
                 <td class="text-right">
                     @if($t->type !== 'withdraw')
-                        ${{ number_format($t->amount, 2) }}
+                        {{ number_format($t->amount, 2) }}
                     @else
                         -
                     @endif
                 </td>
                 <td class="text-right">
                     @if($t->type === 'withdraw')
-                        ${{ number_format($t->amount, 2) }}
+                        {{ number_format($t->amount, 2) }}
                     @else
                         -
                     @endif
                 </td>
                 <td class="text-capitalize">{{ $t->method ?? '-' }}</td>
-                <td>
-                    @if($t->status === 'completed')
-                        <span class="badge">Success</span>
-                    @elseif($t->status === 'failed')
-                        <span class="badge">Unsuccess</span>
-                    @else
-                        <span class="badge">Pending</span>
-                    @endif
-                </td>
+<td>
+    @if($t->status === 'completed')
+        <span class="badge badge-no-border">Success</span>
+    @elseif($t->status === 'failed')
+        <span class="badge badge-no-border">Unsuccess</span>
+    @else
+        <span class="badge badge-no-border">Pending</span>
+    @endif
+</td>
+
             </tr>
             @empty
             <tr>

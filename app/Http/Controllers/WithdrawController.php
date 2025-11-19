@@ -62,7 +62,7 @@ class WithdrawController extends Controller
                 'sender_id'       => Auth::id(),
                 'sender_type'     => 'user',
                 'title'           => 'New Withdraw Request',
-                'message'         => Auth::user()->email . " requested a withdrawal of \${$transaction->amount}.",
+                'message'         => Auth::user()->name . " requested a withdrawal of \${$transaction->amount}.",
                 'is_read'         => 0,
             ]);
         }

@@ -756,12 +756,11 @@ form select:focus {
   }
 }
 
-
-/* Dark Mode Toggle */
+/* Floating Dark Mode Toggle */
 .dark-toggle {
   position: fixed;
-  right: 20px;
-  bottom: 20px;
+  left: 20px;
+  bottom: 20px;   /* stays at bottom */
   background: #111;
   color: #fff;
   border: none;

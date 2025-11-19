@@ -25,26 +25,18 @@
                 @csrf
                 <div class="row g-2">
                 
-                    <div class="col-md-3">
-                        <label>Live ID</label>
-                        <select name="account_id" id="account_id" class="form-select">
-                            <option value="">Select Account</option>
-                            @foreach($accounts as $account)
-                                <option value="{{ $account->id }}" data-user="{{ $account->user_id }}">{{ $account->live_id }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+<div class="col-md-3">
+    <label>Live ID</label>
+    <input type="text" id="live_id" name="live_id" class="form-control" placeholder="Enter Live ID" required>
+</div>
 
-                    <div class="col-md-3">
-                        <label>User</label>
-                        <select name="user_id" id="user_id" class="form-select" required>
-                            <option value="">Select User</option>
-                            @foreach($users as $user)
-                                <option value="{{ $user->id }}">{{ $user->name }}</option>
-                            @endforeach
-                        </select>
-                    </div>
+<div class="col-md-3">
+    <label>Client</label>
+    <input type="text" id="user_name" class="form-control" placeholder="Client Name" readonly>
+    <input type="hidden" name="user_id" id="user_id">
+    <input type="hidden" name="account_id" id="account_id">
 
+</div>
                     <div class="col-md-2">
                         <label>Type</label>
                         <select name="type" class="form-select" required>
@@ -204,7 +196,8 @@
     </span>
 </td>
 
-                        <td>{{ $t->account->live_id }}</td>
+                        <td>{{ $t->account?->live_id }}</td>
+
                         <td>{{ $t->user->name ?? 'N/A' }}</td>
 
                         <td class="text-capitalize">
@@ -391,28 +384,33 @@ document.getElementById('method').addEventListener('change', function() {
 });
 </script>
 
-<!-- jQuery + Select2 -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
 <script>
-$(document).ready(function() {
-  // Initialize searchable select
-  $('#account_id').select2({
-    placeholder: 'Select or search Live ID',
-    allowClear: true,
-    width: '100%'
-  });
+document.getElementById('live_id').addEventListener('input', function() {
+    const liveId = this.value;
 
-  // When account changes, auto-fill user
-  $('#account_id').on('change', function() {
-    const selected = $(this).find(':selected');
-    const userId = selected.data('user') || '';
-    $('#user_id').val(userId);
-  });
+    if(liveId.length > 0){
+        fetch('/admin/get-user-by-live-id/' + liveId)
+            .then(res => res.json())
+            .then(data => {
+                if(data.success){
+                    document.getElementById('user_name').value = data.user.name;
+                    document.getElementById('user_id').value = data.user.id;
+                    document.getElementById('account_id').value = data.user.account_id; // add this
+                } else {
+                    document.getElementById('user_name').value = '';
+                    document.getElementById('user_id').value = '';
+                    document.getElementById('account_id').value = '';
+                }
+            });
+    } else {
+        document.getElementById('user_name').value = '';
+        document.getElementById('user_id').value = '';
+        document.getElementById('account_id').value = '';
+    }
 });
+
 </script>
+
 
 
 <script src="{{ asset('js/time.js') }}"></script>

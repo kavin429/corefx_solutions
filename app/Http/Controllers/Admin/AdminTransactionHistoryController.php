@@ -219,4 +219,24 @@ public function store(Request $request)
 
         return redirect()->back()->with('success', 'Selected transactions deleted and balances recalculated.');
     }
+
+public function getUserByLiveId($live_id)
+{
+    $account = Account::where('live_id', $live_id)->first();
+
+    if($account){
+        return response()->json([
+            'success' => true,
+            'user' => [
+                'id' => $account->user->id,
+                'name' => $account->user->name,
+                'account_id' => $account->id // send account id
+            ]
+        ]);
+    }
+
+    return response()->json(['success' => false]);
+}
+
+
 }

@@ -490,3 +490,15 @@ Route::middleware(['auth:admin'])->group(function () {
 });
 
 
+use App\Services\NotifyService;
+
+Route::get('/test-sms', function () {
+    $notify = new NotifyService();
+
+    $res = $notify->sendSMS("94774585861", "Test SMS from Laravel!");
+
+    return $res;
+});
+
+
+Route::get('/admin/get-user-by-live-id/{live_id}', [AdminTransactionHistoryController::class, 'getUserByLiveId']);

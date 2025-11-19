@@ -836,7 +836,7 @@ img:hover {
 .back-to-top {
   position: fixed;
   bottom: 90px;   /* moved up so it doesn’t overlap */
-  right: 25px;
+  right: 35px;
   width: 45px;
   height: 45px;
   border: none;
@@ -866,7 +866,7 @@ img:hover {
 /* Floating Dark Mode Toggle */
 .dark-toggle {
   position: fixed;
-  right: 20px;
+  left: 20px;
   bottom: 20px;   /* stays at bottom */
   background: #111;
   color: #fff;
