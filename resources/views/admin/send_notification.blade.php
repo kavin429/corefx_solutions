@@ -35,22 +35,63 @@
             <textarea name="message" id="message" rows="4" class="form-control" required>{{ old('message') }}</textarea>
         </div>
 
-        <div class="mb-3">
-            <label class="form-label">Select Clients</label>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="selectAll" value="all">
-                <label class="form-check-label" for="selectAll">Send to All Users</label>
+<div class="mb-3">
+    <label class="form-label">Select Clients</label>
+
+    <!-- Search Input -->
+    <input type="text" id="userSearch" class="form-control mb-3" placeholder="Search by name or email">
+
+    <!-- Select All -->
+    <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" id="selectAll" value="all">
+        <label class="form-check-label" for="selectAll">Send to All Clients</label>
+    </div>
+
+    <!-- Users List (hidden initially) -->
+    <div id="usersList" style="display: none;">
+        @foreach($users as $user)
+            <div class="form-check user-item">
+                <input class="form-check-input user-checkbox" type="checkbox" name="users[]" value="{{ $user->id }}" id="user{{ $user->id }}">
+                <label class="form-check-label" for="user{{ $user->id }}">
+                    {{ $user->name }} ({{ $user->email }})
+                </label>
             </div>
-            <hr>
-            @foreach($users as $user)
-                <div class="form-check">
-                    <input class="form-check-input user-checkbox" type="checkbox" name="users[]" value="{{ $user->id }}" id="user{{ $user->id }}">
-                    <label class="form-check-label" for="user{{ $user->id }}">
-                        {{ $user->name }} ({{ $user->email }})
-                    </label>
-                </div>
-            @endforeach
-        </div>
+        @endforeach
+    </div>
+</div>
+
+<script>
+const searchInput = document.getElementById('userSearch');
+const usersList = document.getElementById('usersList');
+const userItems = document.querySelectorAll('.user-item');
+
+// Filter and show list on typing
+searchInput.addEventListener('keyup', function() {
+    const query = this.value.toLowerCase();
+    let hasVisible = false;
+
+    userItems.forEach(item => {
+        const label = item.querySelector('label').textContent.toLowerCase();
+        if(label.includes(query)) {
+            item.style.display = '';
+            hasVisible = true;
+        } else {
+            item.style.display = 'none';
+        }
+    });
+
+    // Show or hide the container based on matches
+    usersList.style.display = hasVisible ? 'block' : 'none';
+});
+
+// Select All functionality
+const selectAllCheckbox = document.getElementById('selectAll');
+selectAllCheckbox.addEventListener('change', function() {
+    const checked = this.checked;
+    document.querySelectorAll('.user-checkbox').forEach(cb => cb.checked = checked);
+});
+</script>
+
 
         <button type="submit" class="btn1 btn-primary">Send Notification</button>
     </form>

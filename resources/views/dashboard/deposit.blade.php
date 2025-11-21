@@ -73,10 +73,10 @@
                 <select name="method" required>
                     <option value="">-- Choose Method --</option>
                     <option value="binance">Binance</option>
-                    <option value="crypto">Crypto</option>
+                    <!--<option value="crypto">Crypto</option>-->
                     <option value="xynder">Xynder</option>
                     <option value="bank">Bank Transfer</option>
-                    <option value="card">Card Payment</option>
+                    <!--<option value="card">Card Payment</option>-->
                     <option value="upi">UPI</option>
                 </select>
 

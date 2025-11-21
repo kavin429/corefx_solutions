@@ -245,6 +245,7 @@ body.modal-open::before {
                 </ul>
             </li>
             <li><a href="{{ route('platform') }}">Platform</a></li>
+            <li><a href="{{ route('mutualfunds') }}">Mutual Funds</a></li>
             <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
             <li class="login-btn"><a href="{{ route('login') }}">Log In</a></li>
@@ -585,8 +586,6 @@ body.modal-open::before {
   </div>
 </section>
 
-<section id="faq">
-
 <!-- Place this where you want the ticker -->
 <div class="tradingview-widget-container">
   <div id="tv-tape"></div>
@@ -638,8 +637,7 @@ body.modal-open::before {
 </div>
 <!-- TradingView Widget END -->
 
-
-
+<section id="faq">
   <div class="faq-floating">
     <img src="{{ asset('pics/faq1.png') }}" alt="">
     <img src="{{ asset('pics/faq2.png') }}" alt="">

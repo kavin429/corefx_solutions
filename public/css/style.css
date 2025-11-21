@@ -1863,7 +1863,46 @@ body.dark-mode .feature-card:hover i {
   background: linear-gradient(90deg, #2575FC, #6A11CB);             /* Darker purple on hover */
 }
 
+/* ===============================
+   HIGHLIGHTED PRICING CARD - DARK MODE
+================================= */
 
+body.dark-mode .pricing-card.highlight-card {
+  border: 2px solid #a96bff;             /* lighter purple border for dark */
+  background: rgba(55, 0, 110, 0.6);    /* semi-transparent dark purple bg */
+  box-shadow: 0 10px 30px rgba(169, 107, 255, 0.3);
+}
+
+body.dark-mode .pricing-card.highlight-card .price {
+  color: #d9b5ff;                        /* lighter purple text */
+}
+
+body.dark-mode .pricing-card.highlight-card .btn {
+  background: linear-gradient(90deg, #661eed, #8b52f5); /* purple gradient */
+  color: #fff;
+  border: none;
+}
+
+body.dark-mode .pricing-card.highlight-card .btn:hover {
+  background: linear-gradient(90deg, #7725fc, #a96bff); /* slightly lighter purple on hover */
+}
+
+/* Features list */
+body.dark-mode .pricing-card.highlight-card ul li {
+  background: rgba(65, 0, 130, 0.6);
+  color: #cfcfcf;
+  border-color: transparent;
+}
+
+body.dark-mode .pricing-card.highlight-card ul li::before {
+  color: #9b6dff;
+}
+
+body.dark-mode .pricing-card.highlight-card ul li:hover {
+  background:rgba(75, 1, 148, 0.6);
+  border-color: #9b6dff;
+  box-shadow: 0 4px 12px rgba(155, 109, 255, 0.25);
+}
 
 /* ===== Testimonial Section ===== */
 #testimonials {

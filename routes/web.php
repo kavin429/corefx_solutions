@@ -502,3 +502,8 @@ Route::get('/test-sms', function () {
 
 
 Route::get('/admin/get-user-by-live-id/{live_id}', [AdminTransactionHistoryController::class, 'getUserByLiveId']);
+
+
+Route::get('/mutualfunds', function () {
+    return view('mutualfunds');
+})->name('mutualfunds');

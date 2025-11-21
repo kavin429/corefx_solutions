@@ -45,6 +45,7 @@
                     </ul>
                 </li>
             <li><a href="{{ route('platform') }}">Platform</a></li>
+            <li><a href="{{ route('mutualfunds') }}">Mutual Funds</a></li>
             <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
             <li class="login-btn"><a href="{{ route('login') }}">Log In</a></li>

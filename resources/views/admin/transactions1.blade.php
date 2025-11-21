@@ -179,10 +179,10 @@
                     <th>Type</th>
                     <th>Amount</th>
                     <th>Method</th>
-                    <th>Status</th>
-                    <!--<th>Beneficiary / Details</th>-->
+
+                    <th>Details</th>
                     <th>Screenshot</th>
-                    
+                    <th>Status</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -209,32 +209,35 @@
                         </td>
                         <td style="text-align: right;">${{ number_format($t->amount, 2) }}</td>
                         <td class="text-capitalize">{{ $t->method ?? '-' }}</td>
-                        <td>
-                            @if($t->status === 'completed')
-                                <span class="badge bg-success">Success</span>
-                            @elseif($t->status === 'failed')
-                                <span class="badge bg-danger">Unsuccess</span>
-                            @else
-                                <span class="badge bg-warning text-dark">Pending</span>
-                            @endif
-                        </td>
-                        <!--<td>
-                            @if($t->method === 'bank')
-                                {{ $t->beneficiary_name }}<br>
-                                {{ $t->bank_name }}<br>
-                                {{ $t->account_number }}<br>
-                                {{ $t->ifsc }}<br>
-                                {{ $t->bank_address }}
-                            @elseif($t->method === 'xynder')
-                                {{ $t->beneficiary_name }}<br>
-                                Xynder ID: {{ $t->xynder_id }}
-                            @elseif($t->method === 'binance')
-                                {{ $t->beneficiary_name }}<br>
-                                Binance ID: {{ $t->binance_id }}<br>
-                            @else
-                                {{ $t->beneficiary_name ?? '-' }}
-                            @endif
-                        </td>-->
+
+<td>
+    @if($t->type === 'withdraw')
+        @if($t->method === 'bank')
+            Name: {{ $t->beneficiary_name }}<br>
+            Bank: {{ $t->bank_name }}<br>
+            Account: {{ $t->account_number }}<br>
+            IFSC: {{ $t->ifsc }}<br>
+            Address: {{ $t->bank_address }}
+        @elseif($t->method === 'xynder')
+            Name: {{ $t->beneficiary_name }}<br>
+            Xynder ID: {{ $t->xynder_id }}
+        @elseif($t->method === 'binance')
+            Name: {{ $t->beneficiary_name }}<br>
+            Binance ID: {{ $t->binance_id }}
+        @elseif($t->method === 'upi')
+            Name: {{ $t->beneficiary_name }}<br>
+            UPI ID: {{ $t->upi_id }}
+        @else
+            Name: {{ $t->beneficiary_name ?? '-' }}
+        @endif
+    @else
+        {{-- If not withdraw, show blank or something else --}}
+        -
+    @endif
+</td>
+
+                        
+
                         <td>
                             @if($t->screenshot_path)
                                 <a href="{{ asset('storage/'.$t->screenshot_path) }}" target="_blank">
@@ -242,6 +245,16 @@
                                 </a>
                             @else
                                 -
+                            @endif
+                        </td>
+
+                        <td>
+                            @if($t->status === 'completed')
+                                <span class="badge bg-success">Success</span>
+                            @elseif($t->status === 'failed')
+                                <span class="badge bg-danger">Unsuccess</span>
+                            @else
+                                <span class="badge bg-warning text-dark">Pending</span>
                             @endif
                         </td>
                         
