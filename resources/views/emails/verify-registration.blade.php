@@ -44,14 +44,14 @@
 </head>
 <body>
   <div class="email-container">
-    <h3>Infinity Trade Solutions LTD — Email Verification</h3>
+    <h3>Trinity Global Capital LTD — Email Verification</h3>
     <p>Enter the below OTP to verify your email address.</p>
     <h1>{{ $otp }}</h1>
     <p>This code will expire in <strong>5 minutes</strong>.</p>
     <p>If you didn't request this, ignore this email.</p>
     <hr>
     <p>Thank you</p>
-    <small>Infinity Trade Solutions LTD</small>
+    <small>Trinity Global Capital LTD</small>
   </div>
 </body>
 </html>

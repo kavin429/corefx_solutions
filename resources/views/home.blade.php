@@ -517,17 +517,22 @@ body.modal-open::before {
   </div>
 </section>
 
+ <!-- Partner Section -->
+  <section class="partner-section">
  <!-- Partner Logos Slider -->
   <div class="partner-slider">
     <div class="partner-track">
         <!-- Logos (duplicate for infinite loop) -->
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/ethereum.png" alt="Ethereum">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/onramp.png" alt="Onramp">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/upi.png" alt="UPI">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/usdt.png" alt="USDT">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/visa.png" alt="Visa">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/mastercard.png" alt="Mastercard">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">  
+        <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
 
       </div>
     </div>
@@ -758,8 +763,7 @@ body.modal-open::before {
   </div>
 </section>
 
-  <!-- Partner Section -->
-  <section class="partner-section">
+ 
 
     
 
