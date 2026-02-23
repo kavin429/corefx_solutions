@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="pics/icon.png" href="pics/Infinity1.png" />
+  <title>Trinity Global Capital LTD</title>
+  <link rel="icon" type="pics/icon.png" href="pics/icon1.png" />
   <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -14,7 +14,7 @@
 rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
+<link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet">
 <style>
 /* ===============================
    🌟 Promotion Popup (FXM Style)
@@ -217,12 +217,14 @@ body.modal-open::before {
 </div>
 @endif
 
+
+
 <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-        <a href="{{ route('home') }}">
+        <!--<a href="{{ route('home') }}">
             <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
-        </a>
+        </a>-->TRINITY GLOBAL CAPITAL
     </div>
 
     <div class="hamburger" onclick="toggleMenu()">
@@ -245,7 +247,7 @@ body.modal-open::before {
                 </ul>
             </li>
             <li><a href="{{ route('platform') }}">Platform</a></li>
-            <li><a href="{{ route('mutualfunds') }}">Mutual Funds</a></li>
+            <!--<li><a href="{{ route('mutualfunds') }}">Mutual Funds</a></li> -->
             <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
             <li class="login-btn"><a href="{{ route('login') }}">Log In</a></li>
@@ -264,20 +266,64 @@ body.modal-open::before {
     <span></span><span></span><span></span><span></span><span></span>
   </div>
 
-  <div class="hero-content scroll-animate">
-    <h1 id="hero-title" class="gradient-text">Access The Unlimited Leverage</h1>
-    <p id="hero-text" class="gradient-text-small">Enter the world of limitless possibilities</p>
+ 
+
+  <div class="hero-image scroll-animate">
+    <img src="{{ asset('pics/HeroImg1.png') }}" alt="Trading Illustration">
+  </div>
+
+   <div class="hero-content scroll-animate">
+<h1 id="hero-title" class="gradient-text">Empower Your Trading Journey</h1>
+<p id="hero-text" class="gradient-text-small">Where strategy meets opportunity without limits</p>
 
     <div class="hero-buttons">
       <a href="{{ route('signup') }}">Get Started</a>
      <!-- <a href="#" id="watchVideoBtn">Watch Video</a> -->
     </div>
   </div>
-
-  <div class="hero-image scroll-animate">
-    <img src="{{ asset('pics/cover4.png') }}" alt="Trading Illustration">
-  </div>
 </section>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright">
+    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+      </a></div>
+  <script type="text/javascript" 
+  src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500 Index"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "US 100 Cash CFD"
+    },
+    {
+      "proName": "FX_IDC:EURUSD",
+      "title": "EUR to USD"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "Bitcoin"
+    },
+    {
+      "proName": "BITSTAMP:ETHUSD",
+      "title": "Ethereum"
+    }
+  ],
+  "colorTheme": "dark",
+  "locale": "en",
+  "largeChartUrl": "",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "displayMode": "adaptive"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
 
 <!-- ===== VIDEO POPUP MODAL ===== 
 <div id="videoPopup" class="video-popup">
@@ -302,24 +348,40 @@ body.modal-open::before {
     <!-- Left Side: Company Info -->
 <div class="about-info">
   <div class="about-grid">
+
+      <!-- Stats Cards -->
+    <div class="about-stats">
+      <div class="stat-card green-dark">
+        <h3><span class="counter" data-target="95">0</span>%</h3>
+        <p>Client Satisfaction</p>
+      </div>
+      <div class="stat-card green-emerald">
+        <h3><span class="counter" data-target="90">0</span>%</h3>
+        <p>Transparency</p>
+      </div>
+      <div class="stat-card green-olive">
+        <h3><span class="counter" data-target="85">0</span>%</h3>
+        <p>Trading Success</p>
+      </div>
+    </div>
     
-    <!-- Company Image -->
+        <!-- Company Image -->
     <div class="about-image">
-      <img src="{{ asset('pics/about1.webp') }}" alt="About ITrade Solutions LTD">
+      <img src="{{ asset('pics/about1.png') }}" alt="About ITrade Solutions LTD">
     </div>
     
     <!-- Content -->
     <div class="about-text">
-      <h2>About <span>Infinity Trade Solutions</span></h2>
+      <h2>About <span>Trinity Global Capital</span></h2>
       <p>
-        Infinity Trade Solutions LTD is a leading trading company offering innovative solutions for individuals, 
+        Trinity Global Capital LTD is a leading trading company offering innovative solutions for individuals, 
         institutions, and businesses worldwide. We provide diverse financial instruments, 
         advanced technology, and transparent services to empower clients in achieving their 
         investment goals. With a focus on customer support and a commitment to excellence, 
-        Infinity Trade Solutions LTD is your trusted partner in the dynamic world of trading.
+        Trinity Global Capital LTD is your trusted partner in the dynamic world of trading.
       </p>
       <p>
-        Infinity Trade Solutions LTD is committed to providing exceptional customer service. 
+        Trinity Global Capital LTD is committed to providing exceptional customer service. 
         Our dedicated support team 
         is available 24/7 to assist clients with any queries, technical issues, or account-related 
         matters. We ensure prompt and personalized support, allowing you to focus on your trading 
@@ -328,21 +390,9 @@ body.modal-open::before {
       <a href="{{ route('about') }}" class="about-btn">More About Us</a>
     </div>
 
-    <!-- Stats Cards -->
-    <div class="about-stats">
-      <div class="stat-card black show">
-        <h3><span class="counter" data-target="95">0</span>%</h3>
-        <p>Client Satisfaction</p>
-      </div>
-      <div class="stat-card blue show">
-        <h3><span class="counter" data-target="90">0</span>%</h3>
-        <p>Transparency</p>
-      </div>
-      <div class="stat-card purple show">
-        <h3><span class="counter" data-target="85">0</span>%</h3>
-        <p>Trading Success</p>
-      </div>
-    </div>
+
+
+
 
   </div>
 </div>
@@ -351,25 +401,25 @@ body.modal-open::before {
     <!-- Right Side: Features -->
     <div class="about-features">
       <div class="feature-card">
-        <i class="fas fa-user-tie"></i>
+        <i class="ti ti-user-check"></i>
         <h3>Experienced</h3>
         <p>Our team of seasoned professionals brings years 
           of expertise to deliver top-notch services and support.</p>
       </div>
       <div class="feature-card">
-        <i class="fas fa-users"></i>
+       <i class="ti ti-users"></i>
         
         <h3>Professionals</h3>
         <p>Our dedicated team of skilled experts is 
           committed to providing personalized guidance and analysis.</p>
       </div>
       <div class="feature-card">
-        <i class="fas fa-clock"></i>
+        <i class="ti ti-clock"></i>
         <h3>Always Available</h3>
         <p>Our platform offers 24/7 accessibility, ensuring you can trade anytime, anywhere.</p>
       </div>
       <div class="feature-card">
-        <i class="fas fa-shield-alt"></i>
+        <i class="ti ti-shield-lock"></i>
         <h3>We're Responsible</h3>
         <p>We prioritize safety, compliance, and ethical practices, ensuring responsible trading environments.</p>
       </div>
@@ -391,28 +441,28 @@ body.modal-open::before {
   <h2>Trading <span>Products</span></h2>
   <div class="products-slider">
     <div class="product-card">
-      <img src="{{ asset('pics/forex.png') }}" class="product-img" alt="Product 1"> 
+      
       <h3>Forex</h3>
       <p>The foreign exchange market (Forex) is the largest and most liquid market in the world, 
         open 24 hours a day, five days a week.</p>
       <a href="{{ route('forex') }}" class="arrow-link">Learn More</a>
     </div>
     <div class="product-card">
-      <img src="{{ asset('pics/matel.png') }}" class="product-img" alt="Product 2">
+      
       <h3>Metals</h3>
       <p>Precious metals like gold, silver, platinum, and palladium 
         are considered safe-haven assets, widely used by traders.</p>
       <a href="{{ route('metals') }}" class="arrow-link">Learn More</a>
     </div>
     <div class="product-card">
-      <img src="{{ asset('pics/indices.png') }}" class="product-img" alt="Indices Product">
+      
       <h3>Indices</h3>
       <p>Stock market indices represent the performance of groups of leading companies 
         across global economies. Popular indices like S&P 500, NASDAQ, and FTSE provide exposure.</p>
       <a href="{{ route('indices') }}" class="arrow-link">Learn More</a>
     </div>
     <div class="product-card">
-      <img src="{{ asset('pics/crypto.png') }}" class="product-img" alt="product 4">
+      
       <h3>Crypto Currency</h3>
       <p>Cryptocurrencies are decentralized digital assets built on blockchain technology. 
         Popular coins like Bitcoin, and Ripple are known for high volatility and growth potential.</p>
@@ -433,14 +483,14 @@ body.modal-open::before {
       <div class="step-number">1</div>
       <div class="step-content">
         <h3>Create Account</h3>
-        <p>Sign up and open your live trading account with Infinity Trade Solutions LTD.</p>
+        <p>Sign up and open your live trading account with Trinity Global Capital LTD.</p>
       </div>
     </div>
     <div class="step right">
       <div class="step-number">2</div>
       <div class="step-content">
         <h3>Verify</h3>
-        <p>Upload your documents to verify your account with Infinity Trade Solutions LTD.</p>
+        <p>Upload your documents to verify your account with Trinity Global Capital LTD.</p>
       </div>
     </div>
     <div class="step left">
@@ -465,6 +515,25 @@ body.modal-open::before {
       </div>
     </div>
   </div>
+</section>
+
+ <!-- Partner Logos Slider -->
+  <div class="partner-slider">
+    <div class="partner-track">
+        <!-- Logos (duplicate for infinite loop) -->
+        <img src="https://www.tradegloballtd.com/assets/images/logos3/ethereum.png" alt="Ethereum">
+        <img src="https://www.tradegloballtd.com/assets/images/logos3/onramp.png" alt="Onramp">
+        <img src="https://www.tradegloballtd.com/assets/images/logos3/upi.png" alt="UPI">
+        <img src="https://www.tradegloballtd.com/assets/images/logos3/usdt.png" alt="USDT">
+        <img src="https://www.tradegloballtd.com/assets/images/logos3/visa.png" alt="Visa">
+        <img src="https://www.tradegloballtd.com/assets/images/logos3/mastercard.png" alt="Mastercard">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">  
+
+      </div>
+    </div>
+
+  <!-- Bottom Cave -->
+  <div class="cave-bottom">
 </section>
 
 
@@ -518,28 +587,44 @@ body.modal-open::before {
 
       <!-- Card 3 -->
         <div class="testimonial-card">
-          <p>Infinity Trade Solutions LTD offers advanced tools and a simple interface that make trading easier. 
+          <p>Trinity Global Capital LTD offers advanced tools and a simple interface that make trading easier. 
             The mobile-friendly design helps me monitor trades anytime. With fast execution, 
             and strong security, I feel safe while trading on this platform.</p>
           <div class="client-info">
-            <img src="{{ asset('pics/profile3.jpg') }}" alt="Client">
+            <img src="{{ asset('pics/p2.jpg') }}" alt="Client">
             <div>
-              <h4>Ravi Menon</h4>
+              <h4>Vivaan Patel</h4>
               <span>Kochi, India</span>
             </div>
            
           </div>
         </div>
 
+        <!-- Card 2 -->
+        <div class="testimonial-card">
+          <p>As a beginner, I learned quickly with Trinity Global Capital. 
+            The platform is simple yet powerful, & support is always professional. 
+            Trading feels smooth, and I trust them. 
+            Trinity Global Capital gave me confidence to grow steadily as a trader.</p>
+          <div class="client-info">
+            <img src="{{ asset('pics/p1.jpg') }}" alt="Client">
+            <div>
+              <h4>Aaliyah Maryam</h4>
+              <span>Dubai, UAE</span>
+            </div>
+          
+          </div>
+           </div>
+
         <!-- Add more cards as needed -->
         <div class="testimonial-card">
-          <p>I’ve been trading with Infinity Trade Solutions LTD for months and love the reliability. 
+          <p>I’ve been trading with Trinity Global Capital LTD for months and love the reliability. 
             The platform is transparent, withdrawals are smooth, and support is responsive. 
             It has built my confidence and made trading a stress-free and rewarding experience.</p>
           <div class="client-info">
-            <img src="{{ asset('pics/profile.jpg') }}" alt="Client">
+            <img src="{{ asset('pics/p4.jpg') }}" alt="Client">
             <div>
-              <h4>Sathya Priya</h4>
+              <h4>Arjun Sharma</h4>
               <span>Mumbai, India</span>
             </div>
           
@@ -548,34 +633,21 @@ body.modal-open::before {
 
         <!-- Card 1 -->
         <div class="testimonial-card">
-          <p>I admire Infinity Trade Solutions LTD’s combination of tools and support. 
+          <p>I admire Trinity Global Capital LTD's combination of tools and support. 
             Trading is fast, deposits and withdrawals are hassle-free, and transparency builds trust. 
             It truly feels like a safe and professional environment for long-term trading success and growth.
             <div class="client-info">
-            <img src="{{ asset('pics/profile2.jpg') }}" alt="Client">
+            <img src="{{ asset('pics/p3.jpg') }}" alt="Client">
             <div>
-              <h4>Fatima Al Mansoori</h4>
+              <h4>Zara Al Nahyan</h4>
               <span>Abu Dhabi, UAE</span>
             </div>
            
           </div>
         </div>
 
-        <!-- Card 2 -->
-        <div class="testimonial-card">
-          <p>As a beginner, I learned quickly with Infinity Trade Solutions LTD. 
-            The platform is simple yet powerful, and support is always professional. 
-            Trading feels smooth, and I trust them completely. 
-            Infinity Trade Solutions LTD gave me confidence to grow steadily as a trader.</p>
-          <div class="client-info">
-            <img src="{{ asset('pics/profile1.jpg') }}" alt="Client">
-            <div>
-              <h4>Aisha Rahman</h4>
-              <span>Dubai, UAE</span>
-            </div>
-          
-          </div>
-        </div>
+        
+       
 
 
         
@@ -595,47 +667,7 @@ body.modal-open::before {
   </div>
 </div>
 
-<!-- TradingView Widget BEGIN -->
-<div class="tradingview-widget-container">
-  <div class="tradingview-widget-container__widget"></div>
-  <div class="tradingview-widget-copyright">
-    <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
-      </a></div>
-  <script type="text/javascript" 
-  src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-  {
-  "symbols": [
-    {
-      "proName": "FOREXCOM:SPXUSD",
-      "title": "S&P 500 Index"
-    },
-    {
-      "proName": "FOREXCOM:NSXUSD",
-      "title": "US 100 Cash CFD"
-    },
-    {
-      "proName": "FX_IDC:EURUSD",
-      "title": "EUR to USD"
-    },
-    {
-      "proName": "BITSTAMP:BTCUSD",
-      "title": "Bitcoin"
-    },
-    {
-      "proName": "BITSTAMP:ETHUSD",
-      "title": "Ethereum"
-    }
-  ],
-  "colorTheme": "light",
-  "locale": "en",
-  "largeChartUrl": "",
-  "isTransparent": false,
-  "showSymbolLogo": true,
-  "displayMode": "adaptive"
-}
-  </script>
-</div>
-<!-- TradingView Widget END -->
+
 
 <section id="faq">
   <div class="faq-floating">
@@ -720,7 +752,7 @@ body.modal-open::before {
 
     <!-- Right Side Image -->
     <div class="faq-image">
-      <img src="{{ asset('pics/faq (2).png') }}" alt="FAQ Illustration">
+      <img src="{{ asset('pics/faq12.png') }}" alt="FAQ Illustration">
     </div>
 
   </div>
@@ -731,24 +763,7 @@ body.modal-open::before {
 
     
 
- <!-- Partner Logos Slider -->
-  <div class="partner-slider">
-    <div class="partner-track">
-        <!-- Logos (duplicate for infinite loop) -->
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/ethereum.png" alt="Ethereum">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/onramp.png" alt="Onramp">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/upi.png" alt="UPI">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/usdt.png" alt="USDT">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/visa.png" alt="Visa">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/mastercard.png" alt="Mastercard">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">  
 
-      </div>
-    </div>
-
-  <!-- Bottom Cave -->
-  <div class="cave-bottom">
-</section>
 
 
 <!-- Footer -->
@@ -757,7 +772,7 @@ body.modal-open::before {
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-      <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">
+     <!-- <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">-->
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -804,9 +819,9 @@ body.modal-open::before {
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 74 4143 0900</li>
-        <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
-        <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
+        <li> <i class="fas fa-phone"></i>  +61 861 865 931</li>
+        <li><i class="fas fa-envelope"></i>  support@trinityglobalcapitalltd.com</li>
+        <li><i class="fas fa-building"></i>  1 Balloon Street, Manchester, M4 4BE, United Kingdom</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
     </div>
@@ -815,7 +830,7 @@ body.modal-open::before {
   <!-- Legal -->
   <div class="footer-legal">
     <h3>legal</h3>
-    <p> This Website is Owned by Infinity Trade Solutions LTD. 
+    <p> This Website is Owned by Trinity Global Capital LTD. 
       The objects of the Company are all subject matters not forbidden by International Business Companies 
       (Amendment and Consolidation).</p>
     <h3>General Risk Warning</h3>
@@ -826,18 +841,18 @@ body.modal-open::before {
     <h3>Risk disclosure</h3>
     <p>Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. Infinity Trade Solutions LTD 
+      You should seek independent advice before making any investment decisions. Trinity Global Capital LTD 
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
       China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Infinity Trade Solutions LTD 
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Trinity Global Capital LTD 
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
       explain the reason why (Terms and conditions).</p>
   </div>
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© Infinity Trade Solutions LTD - 09711441</p>
+    <p>© Trinity Global Capital LTD - 15669711</p>
     <div class="footer-social">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -847,10 +862,10 @@ body.modal-open::before {
   </div>
 </footer>
 
-<!-- Dark Mode Toggle -->
+<!-- Dark Mode Toggle 
 <button id="darkModeToggle" class="dark-toggle">
   🌙
-</button>
+</button> -->
 
 <!-- Back to Top Button -->
 <button id="backToTop" class="back-to-top">
@@ -884,7 +899,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script src="{{ asset('js/test.js') }}"></script>
 
-<!--Start of Tawk.to Script-->
+<!--Start of Tawk.to Script
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -896,7 +911,7 @@ s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
-<!--End of Tawk.to Script-->
+End of Tawk.to Script-->
 
 </body>
 </html>

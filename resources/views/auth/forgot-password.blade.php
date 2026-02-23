@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
+  <title>Trinity Global Capital LTD</title>
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon1.png') }}" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
@@ -20,66 +20,42 @@
     }
 
     body {
-      background: linear-gradient(135deg, #f5f0ff, #ede6fa);
+      background: linear-gradient(135deg, #006832, #155840 , #013120);
       color: #3b2a5a;
       transition: all 0.3s ease;
-    }
-
-    body.dark-mode {
-      background: linear-gradient(135deg, #1e1e2f, #2a143d);
-      color: #e4e4e7;
     }
 
     .card {
       border: none;
       border-radius: 12px;
-      background: #ffffff;
+      background: #ffffff28;
       box-shadow: 0 4px 12px rgba(75, 0, 130, 0.15);
       transition: all 0.3s ease;
     }
 
-    body.dark-mode .card {
-      background: #2b2b3c;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-    }
-
     .card h3 {
       font-weight: 600;
-      color: #4b2a82;
-    }
-
-    body.dark-mode .card h3 {
-      color: #d9bfff;
+      color: #a7ffdc;
     }
 
     .form-label {
       font-weight: 500;
-      color: #3b2a5a;
-    }
-
-    body.dark-mode .form-label {
-      color: #ccc;
+      color: #ffffff;
     }
 
     .form-control {
-      border: 1px solid #d0bdf4;
+      border: 1px solid #bdf4e7;
       border-radius: 8px;
       padding: 0.6rem 0.75rem;
       font-size: 0.95rem;
       transition: all 0.3s ease-in-out;
-      background: #fff;
-      color: #3b2a5a;
+      background: #ffffff15;
+      color: #e4e2e8;
     }
 
     .form-control:focus {
-      border-color: #7d3cff;
-      box-shadow: 0 0 6px rgba(125, 60, 255, 0.3);
-    }
-
-    body.dark-mode .form-control {
-      background: #3a3a4c;
-      color: #e0e0e0;
-      border-color: #555;
+      border-color: #3cff80;
+      box-shadow: 0 0 6px rgba(60, 255, 115, 0.3);
     }
 
     .text-danger.small {
@@ -88,7 +64,7 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #7d3cff, #5a1d9e);
+      background: linear-gradient(135deg, #3cffc1, #489e1d);
       border: none;
       border-radius: 8px;
       padding: 0.6rem;
@@ -96,68 +72,25 @@
       transition: background 0.3s ease-in-out;
     }
 
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #6c2ddb, #4b1b8f);
-    }
-
-    body.dark-mode .btn-primary {
-      background: linear-gradient(135deg, #9c6fff, #7d52c2);
-    }
-
     .alert-success {
-      background: #e9d7ff;
-      border: 1px solid #c7aaff;
-      color: #4b1b8f;
+      background: #d7ffee;
+      border: 1px solid #aaffd0;
+      color: #0b5233;
       border-radius: 8px;
       font-weight: 500;
     }
 
-    body.dark-mode .alert-success {
-      background: #4b2a82;
-      border-color: #7d3cff;
-      color: #fff;
-    }
-
     .card a {
-      color: #6a3dbb;
+      color: #3dbb86;
       text-decoration: none;
       font-weight: 500;
     }
 
     .card a:hover {
       text-decoration: underline;
-      color: #4b1b8f;
+      color: #4b8f1b;
     }
 
-    body.dark-mode .card a {
-      color: #bfa1ff;
-    }
-
-    body.dark-mode .card a:hover {
-      color: #e0c3ff;
-    }
-
-    .dark-toggle {
-      position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #111;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 22px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      transition: all 0.3s ease;
-      z-index: 1200;
-    }
-
-    .dark-toggle:hover {
-      background: #333;
-      transform: scale(1.1);
-    }
   </style>
 </head>
 <body class="bg-light d-flex justify-content-center align-items-center" style="min-height:100vh;">
@@ -205,8 +138,8 @@
     </div>
   </div>
 
-  <!-- Dark Mode Toggle -->
-  <button id="darkModeToggle" class="dark-toggle">🌙</button>
+  <!-- Dark Mode Toggle
+  <button id="darkModeToggle" class="dark-toggle">🌙</button>  -->
 
   @if(!$canReset)
   <script>

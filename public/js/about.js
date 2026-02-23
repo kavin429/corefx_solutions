@@ -89,7 +89,9 @@ const cards = document.querySelectorAll('.card');
   });
 
   // Dark Mode Toggle
-  const toggleBtn = document.getElementById("darkModeToggle");
+const toggleBtn = document.getElementById("darkModeToggle");
+
+if (toggleBtn) {
 
   // Check saved theme
   if (localStorage.getItem("theme") === "dark") {
@@ -97,37 +99,44 @@ const cards = document.querySelectorAll('.card');
     toggleBtn.textContent = "☀️";
   }
 
-toggleBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
+  toggleBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
 
-  if (document.body.classList.contains("dark-mode")) {
-    toggleBtn.textContent = "☀️";
-    localStorage.setItem("theme", "dark");
-  } else {
-    toggleBtn.textContent = "🌙";
-    localStorage.setItem("theme", "light");
-  }
-});
+    if (document.body.classList.contains("dark-mode")) {
+      toggleBtn.textContent = "☀️";
+      localStorage.setItem("theme", "dark");
+    } else {
+      toggleBtn.textContent = "🌙";
+      localStorage.setItem("theme", "light");
+    }
+  });
 
+}
 
 //up button 
+
 // Back to Top Button
 const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 300) {
-    backToTop.classList.add("show");
-  } else {
-    backToTop.classList.remove("show");
-  }
-});
+if (backToTop) {
 
-backToTop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
   });
-});
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+
+}
+
 
 
 // Toggle full menu

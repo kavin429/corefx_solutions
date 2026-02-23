@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
+  <title>Trinity Global Capital LTD</title>
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon1.png') }}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
@@ -21,9 +21,9 @@
 <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-        <a href="{{ route('home') }}">
+        <!--<a href="{{ route('home') }}">
             <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
-        </a>
+        </a>-->TRINITY GLOBAL CAPITAL
     </div>
 
   <div class="hamburger" onclick="toggleMenu()">
@@ -46,7 +46,7 @@
               </ul>
           </li>
           <li><a href="{{ route('platform') }}">Platform</a></li>
-          <li><a href="{{ route('mutualfunds') }}">Mutual Funds</a></li> 
+          <!--<li><a href="{{ route('mutualfunds') }}">Mutual Funds</a></li>-->
             <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
             <li class="login-btn"><a href="{{ route('login') }}">Log In</a></li>
@@ -93,12 +93,13 @@
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-      <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">
+     <!-- <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">-->
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
+       
       </div>
     </div>
 
@@ -106,10 +107,10 @@
     <div class="footer-col">
       <h4>Trading Products</h4>
       <ul>
-        <li><a href="#">Forex</a></li>
-        <li><a href="#">Metals</a></li>
-        <li><a href="#">Indices</a></li>
-        <li><a href="#">Crypto currency</a></li>
+        <li><a href="{{ route('forex') }}">Forex</a></li>
+        <li><a href="{{ route('metals') }}">Metals</a></li>
+        <li><a href="{{ route('indices') }}">Indices</a></li>
+        <li><a href="{{ route('crypto') }}">Crypto currency</a></li>
       </ul>
     </div>
 
@@ -128,9 +129,10 @@
     <div class="footer-col">
       <h4>Others</h4>
       <ul>
-        <li><a href="#">Platform</a></li>
-        <li><a href="#">About us</a></li>
-        <li><a href="#">Contact us</a></li>
+        <li><a href="{{ route('platform') }}">Platform</a></li>
+        <li><a href="{{ route('about') }}">About us</a></li>
+        <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
+        <li><a href="{{ route('contact') }}">Contact us</a></li>
       </ul>
     </div>
 
@@ -138,10 +140,10 @@
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 74 4143 0900</li>
-        <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
-        <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
-       
+        <li> <i class="fas fa-phone"></i>  +61 861 865 931</li>
+        <li><i class="fas fa-envelope"></i>  support@trinityglobalcapitalltd.com</li>
+        <li><i class="fas fa-building"></i>  1 Balloon Street, Manchester, M4 4BE, United Kingdom</li>
+        <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
     </div>
   </div>
@@ -149,28 +151,29 @@
   <!-- Legal -->
   <div class="footer-legal">
     <h3>legal</h3>
-    <p> This Website is Owned by Infinity Trade Solutions LTD. The objects of the Company are all subject 
-      matters not forbidden by International Business Companies (Amendment and Consolidation).</p>
+    <p> This Website is Owned by Trinity Global Capital LTD. 
+      The objects of the Company are all subject matters not forbidden by International Business Companies 
+      (Amendment and Consolidation).</p>
     <h3>General Risk Warning</h3>
-    <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as they carry 
-      a high degree of risk to your capital. Please ensure that you fully understand the risks involved, taking 
-      into account your investments objectives and level of experience, before trading, and if necessary, 
-      seek independent advice. Please read the full Risk Disclosure.</p>
+    <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as 
+      they carry a high degree of risk to your capital. Please ensure that you fully understand 
+      the risks involved, taking into account your investments objectives and level of experience, 
+      before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.</p>
     <h3>Risk disclosure</h3>
-    <p>Past performance is not indicative of future results. The information on our website is provided for 
-      informational purposes only and should not be construed as investment advice. You should seek independent 
-      advice before making any investment decisions. Infinity Trade Solutions LTD does not accept clients from 
-      the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, China, Congo, Cuba, Egypt, Guinea, 
-      Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, Mali, Moldova, Nicaragua, 
-      Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, Syria, Tunisia, Turkey, Vanuatu, 
-      Venezuela, Yemen, and Zimbabwe. Infinity Trade Solutions LTD may reject any applicant from any 
-      jurisdiction at their sole discretion without the requirement to explain the reason why 
-      (Terms and conditions).</p>
+    <p>Past performance is not indicative of future results. The information on our website is provided 
+      for informational purposes only and should not be construed as investment advice. 
+      You should seek independent advice before making any investment decisions. Trinity Global Capital LTD 
+      does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
+      China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
+      Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Trinity Global Capital LTD 
+      may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
+      explain the reason why (Terms and conditions).</p>
   </div>
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© Infinity Trade Solutions LTD - 09711441</p>
+    <p>© Trinity Global Capital LTD - 15669711</p>
     <div class="footer-social">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -180,10 +183,10 @@
   </div>
 </footer>
 
-<!-- Dark Mode Toggle -->
+<!-- Dark Mode Toggle 
 <button id="darkModeToggle" class="dark-toggle">
   🌙
-</button>
+</button> -->
 
 <script src="{{ asset('js/login.js') }}"></script>
 

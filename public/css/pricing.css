@@ -4,13 +4,13 @@
 .container h2 {
     font-size: 1.5rem;
     text-align: left;
-    color: #3b2a5a;
-    margin-bottom: 1rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #d8bfff;
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    border-color: #024b27;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
 }
 
 body.dark .container h2 {
@@ -23,7 +23,7 @@ body.dark .container h2 {
    Buttons
 ===================== */
 .container .btn-primary {
-    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     border: none;
     color: #fff;
     font-weight: 500;
@@ -34,7 +34,7 @@ body.dark .container h2 {
 }
 
 .container .btn-primary:hover {
-    background: linear-gradient(135deg, #5a32a0, #8446c5);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 /* Custom btn1 buttons */
@@ -53,12 +53,12 @@ body.dark .container h2 {
 
 /* Warning */
 .btn1.btn-warning {
-    background: linear-gradient(135deg, #8446c5, #9b5de5);
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
 }
 
 .btn1.btn-warning:hover {
-    background: linear-gradient(135deg, #6a3dbb, #8245c9);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 /* Danger */
@@ -77,23 +77,6 @@ body.dark .container h2 {
     padding: 0.25rem 0.5rem;
 }
 
-/* Dark mode for btn1 */
-body.dark .btn1.btn-warning {
-    background: linear-gradient(135deg, #8446c5, #9b5de5);
-}
-
-body.dark .btn1.btn-warning:hover {
-    background: linear-gradient(135deg, #6a3dbb, #8245c9);
-}
-
-body.dark .btn1.btn-danger {
-    background: linear-gradient(135deg, #9f2a28, #7a1c1a);
-}
-
-body.dark .btn1.btn-danger:hover {
-    background: linear-gradient(135deg, #7a1c1a, #5d1514);
-}
-
 /* =====================
    Table Styles
 ===================== */
@@ -104,7 +87,7 @@ table.table {
 }
 
 table.table thead th {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    background: linear-gradient(135deg, #3e7c55, #0e4812);
     color: #fff;
     text-align: center;
     vertical-align: middle;
@@ -117,33 +100,24 @@ table.table tbody td {
     padding: 0.5rem;
 }
 
+/* Table Rows */
+.table tbody tr:nth-child(even) {
+    background-color: #003513;
+}
+
 table.table tbody tr:hover {
-    background-color: #f3f0ff;
+    background-color: #082b20;
+}
+
+.table tbody td {
+    background-color: #0759341b;
+    color: #ffffff;
+    border-left: 2px solid #044a22;
 }
 
 .table-bordered th,
 .table-bordered td {
-    border: 1px solid #dee2e6;
-}
-
-/* Dark mode table */
-body.dark table.table thead th {
-    background: #5e2a86;
-    color: #f1e9ff;
-}
-
-body.dark table.table tbody td {
-    background-color: #2a1546;
-    color: #e9dfff;
-    border-color: rgba(255,255,255,0.1);
-}
-
-body.dark table.table tbody tr:nth-child(even) {
-    background-color: #331b57;
-}
-
-body.dark table.table tbody tr:hover {
-    background-color: #3c1f66;
+    border: 1px solid #1c824a;
 }
 
 /* =====================
@@ -151,18 +125,20 @@ body.dark table.table tbody tr:hover {
 ===================== */
 .modal-dialog {
     max-width: 450px;
+    background: #003513;
 }
 
 .modal-content {
     border-radius: 10px;
     padding: 0;
     transition: all 0.2s ease;
+    background: #003513;
 }
 
 .modal-header {
-    background-color: #6a3dbb;
     color: #fff;
     border-bottom: none;
+    background: #003513;
 }
 
 .modal-title {
@@ -172,28 +148,35 @@ body.dark table.table tbody tr:hover {
 
 .modal-body {
     padding: 1rem;
+    background: #003513;
+    color: #000000;
 }
 
 .modal-body input,
 .modal-body select,
 .modal-body textarea {
     border-radius: 6px;
-    border: 1px solid #d0b3ff;
     padding: 6px 10px;
     width: 100%;
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     transition: border-color 0.2s ease;
-    background-color: #fff;
-    color: #000;
+    background-color: #1d4126;
+    color: #d3d3d3;
+    border: 1px solid #0a652d;
 }
 
 .modal-body input:focus,
 .modal-body select:focus,
 .modal-body textarea:focus {
-    border-color: #9b5de5;
+  border-color: #28c071;
+  box-shadow: 0 0 4px rgba(13, 173, 53, 0.4);
     outline: none;
-    box-shadow: 0 0 0 0.15rem rgba(155,93,229,0.25);
+}
+
+.form-control::placeholder {
+    color: #f0ececd2 !important; /* dark grey placeholder */
+    opacity: 1; 
 }
 
 .modal-footer {
@@ -201,16 +184,17 @@ body.dark table.table tbody tr:hover {
     justify-content: flex-end;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
+    background: #003513;
 }
 
 .modal-footer .btn-primary {
-    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
     border: none;
 }
 
 .modal-footer .btn-primary:hover {
-    background: linear-gradient(135deg, #5a32a0, #8446c5);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 .modal-footer .btn-secondary {
@@ -220,51 +204,6 @@ body.dark table.table tbody tr:hover {
 
 .modal-footer .btn-secondary:hover {
     background-color: #5c636a;
-}
-
-/* Dark mode modal */
-body.dark .modal-content {
-    background-color: #2a1546;
-    color: #e9dfff;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.5);
-}
-
-body.dark .modal-header {
-    background-color: #5a3d7a;
-}
-
-body.dark .modal-title {
-    color: #e9dfff;
-}
-
-body.dark .modal-body input,
-body.dark .modal-body select,
-body.dark .modal-body textarea {
-    background-color: #331b57;
-    border-color: #5a3d7a;
-    color: #e9dfff;
-}
-
-body.dark .modal-body input::placeholder,
-body.dark .modal-body textarea::placeholder,
-body.dark .modal-body select::placeholder {
-    color: rgba(255,255,255,0.5);
-}
-
-body.dark .modal-footer .btn-primary {
-    background: linear-gradient(135deg, #8e5de5, #6a3dbb);
-}
-
-body.dark .modal-footer .btn-primary:hover {
-    background: linear-gradient(135deg, #7a4ad0, #5a32a0);
-}
-
-body.dark .modal-footer .btn-secondary {
-    background-color: #462a57;
-}
-
-body.dark .modal-footer .btn-secondary:hover {
-    background-color: #3c1f66;
 }
 
 /* =====================

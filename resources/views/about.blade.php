@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
+  <title>Trinity Global Capital LTD</title>
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon1.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/about.css') }}">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" 
-rel="stylesheet">
-
+rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
@@ -21,9 +20,9 @@ rel="stylesheet">
     <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-        <a href="{{ route('home') }}">
+        <!--<a href="{{ route('home') }}">
             <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
-        </a>
+        </a>-->TRINITY GLOBAL CAPITAL
     </div>
 
   <div class="hamburger" onclick="toggleMenu()">
@@ -46,7 +45,7 @@ rel="stylesheet">
                     </ul>
                 </li>
             <li><a href="{{ route('platform') }}">Platform</a></li>
-            <li><a href="{{ route('mutualfunds') }}">Mutual Funds</a></li>            
+           <!-- <li><a href="{{ route('mutualfunds') }}">Mutual Funds</a></li>  -->          
             <li><a href="{{ route('promotion.show') }}">Promotions</a></li>
             <li><a href="{{ route('contact') }}">Contact Us</a></li>
             <li class="login-btn"><a href="{{ route('login') }}">Log In</a></li>
@@ -58,11 +57,11 @@ rel="stylesheet">
   <!-- ===== HERO SECTION ===== -->
   <section class="hero">
     <video autoplay muted loop playsinline class="hero-video">
-      <source src="pics/cover_video.mp4" type="video/mp4">
+      <source src="pics/AboutVideo.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1> <span>Infinity Trade Solutions LTD</span></h1>
+      <h1> <span>Trinity Global Capital LTD</span></h1>
       <p>One of the leading financial venture firms revolutionizing online forex trading.</p>
     </div>
   </section>
@@ -72,14 +71,14 @@ rel="stylesheet">
   <div class="who-container">
     <!-- Left Side Image -->
     <div class="who-image">
-      <img src="{{ asset('pics/about1.webp') }}" alt="About Tradefxm">
+      <img src="{{ asset('pics/about1.png') }}" alt="About Tradefxm">
     </div>
 
     <!-- Right Side Text -->
     <div class="who-content">
       <h2 class="section-title">Who We Are</h2>
       <p class="who-text">
-        Infinity Trade Solutions LTD was founded by a diverse group of financial experts in 2015 with 
+        Trinity Global Capital LTD was founded by a diverse group of financial experts in 2024 with 
         the vision of building a financial platform where every individual can play 
         a crucial role in the forex industry.
       </p>
@@ -91,7 +90,7 @@ rel="stylesheet">
       <!-- Cards -->
       <div class="who-cards">
         <div class="who-card">
-          <img src="{{ asset('pics/vission.png') }}" alt="Vision">
+           <i class="ti ti-eye who-icon"></i>
           <h3>Our Vision</h3>
           <p>
             To revolutionize forex by delivering innovative investment approaches, 
@@ -99,7 +98,7 @@ rel="stylesheet">
           </p>
         </div>
         <div class="who-card">
-          <img src="{{ asset('pics/mission1.png') }}" alt="Commitment">
+           <i class="ti ti-target-arrow who-icon"></i>
           <h3>Our Commitment</h3>
           <p>
             We focus on customer success by providing advanced tools, learning 
@@ -143,74 +142,6 @@ rel="stylesheet">
   </div>
 </section>
 
-<!-- Font Awesome CDN -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
-
-<!-- ===== HIGHLIGHT CARDS ===== -->
-<section class="highlights-section">
-  <div class="container grid-cards">
-
-    <!-- Card 1 -->
-    <div class="card fade-in">
-        <h3>Financial Products</h3>
-      <img src="{{ asset('pics/financial.png') }}" alt="Financial Products">
-      
-      <p>
-        We sincerely understand the importance of diversification. To protect our customers from investment risks, 
-        we offer seven types of trading products with over 200+ individual securities to trade with. 
-        Furthermore, we have integrated Cryptocurrency exchange to our platform. 
-        Traders can enjoy trading future generation currencies, along with classical products.
-      </p>
-    </div>
-
-    <!-- Card 2 -->
-    <div class="card fade-in">
-        <h3>Customer Satisfaction</h3>
-      <img src="{{ asset('pics/customer_service.png') }}" alt="Customer Satisfaction">
-      
-      <p>
-        Earning loyalty and outstanding customer satisfaction is our top priority. 
-        We have secured a customer service team that is available 24 hours during Monday to Friday, 
-        in case you need any assistance. To improve and enhance our client-facing services, we always welcome 
-        incoming opinions and suggestions from you.ve our services.
-      </p>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card fade-in">
-        <h3>Our Professional Team</h3>
-      <img src="{{ asset('pics/team.png') }}" alt="Our Team">
-      
-      <p>
-        A diverse group of finance and investment professionals committed to helping 
-        our clients achieve success in forex trading. 
-        We are a collection of professionals from the finance and investment sectors. 
-        We are knowledgeable in all the intricacies of forex trading and we are happy to assist 
-        all stakeholders to guarantee the best experiences.
-      </p>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="card fade-in">
-             <h3>Technology</h3>
-      <img src="{{ asset('pics/technology.png') }}" alt="Technology">
- 
-      <p>
-       We are a forward-thinking forex brokerage that aims to revolutionize the forex industry. 
-       We have the finest technology setup for our clients to trade safely and successfully. 
-       Our payment system is conducted with reputable third parties, ensuring high-level 
-       security when we handle your money. 
-       We are constantly striving to explore better solutions that we can add to our business 
-       that will benefit you, as well as our company.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-
     <!-- Partner Section -->
   <section class="partner-section">
  <!-- Partner Logos Slider -->
@@ -230,7 +161,73 @@ rel="stylesheet">
 
   <!-- Bottom Cave -->
   <div class="cave-bottom">
+</section> 
+
+<!-- ===== HIGHLIGHT CARDS ===== -->
+<section class="highlights-section">
+  <div class="container grid-cards">
+
+    <!-- Card 1 -->
+    <div class="card fade-in">
+        <h3>Financial Products</h3>
+      <img src="{{ asset('pics/a3.png') }}" alt="Financial Products">
+      
+      <p>
+        We sincerely understand the importance of diversification. To protect our customers from investment risks, 
+        we offer seven types of trading products with over 200+ individual securities to trade with. 
+        Furthermore, we have integrated Cryptocurrency exchange to our platform. 
+        Traders can enjoy trading future generation currencies, along with classical products.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card fade-in">
+        <h3>Customer Satisfaction</h3>
+      <img src="{{ asset('pics/a2.png') }}" alt="Customer Satisfaction">
+      
+      <p>
+        Earning loyalty and outstanding customer satisfaction is our top priority. 
+        We have secured a customer service team that is available 24 hours during Monday to Friday, 
+        in case you need any assistance. To improve and enhance our client-facing services, we always welcome 
+        incoming opinions and suggestions from you.ve our services.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card fade-in">
+        <h3>Our Professional Team</h3>
+      <img src="{{ asset('pics/a4.png') }}" alt="Our Team">
+      
+      <p>
+        A diverse group of finance and investment professionals committed to helping 
+        our clients achieve success in forex trading. 
+        We are a collection of professionals from the finance and investment sectors. 
+        We are knowledgeable in all the intricacies of forex trading and we are happy to assist 
+        all stakeholders to guarantee the best experiences.
+      </p>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="card fade-in">
+             <h3>Technology</h3>
+      <img src="{{ asset('pics/a1.png') }}" alt="Technology">
+ 
+      <p>
+       We are a forward-thinking forex brokerage that aims to revolutionize the forex industry. 
+       We have the finest technology setup for our clients to trade safely and successfully. 
+       Our payment system is conducted with reputable third parties, ensuring high-level 
+       security when we handle your money. 
+       We are constantly striving to explore better solutions that we can add to our business 
+       that will benefit you, as well as our company.
+      </p>
+    </div>
+
+  </div>
 </section>
+
+
+
+
 
 <!-- Footer -->
 <footer class="footer">
@@ -238,7 +235,7 @@ rel="stylesheet">
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-      <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">
+     <!-- <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">-->
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -285,9 +282,9 @@ rel="stylesheet">
     <div class="footer-col">
       <h4>Contact Info</h4>
       <ul>
-        <li> <i class="fas fa-phone"></i>  +44 74 4143 0900</li>
-        <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
-        <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
+        <li> <i class="fas fa-phone"></i>  +61 861 865 931</li>
+        <li><i class="fas fa-envelope"></i>  support@trinityglobalcapitalltd.com</li>
+        <li><i class="fas fa-building"></i>  1 Balloon Street, Manchester, M4 4BE, United Kingdom</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
     </div>
@@ -296,29 +293,29 @@ rel="stylesheet">
   <!-- Legal -->
   <div class="footer-legal">
     <h3>legal</h3>
-    <p> This Website is Owned by Infinity Trade Solutions LTD. 
+    <p> This Website is Owned by Trinity Global Capital LTD. 
       The objects of the Company are all subject matters not forbidden by International Business Companies 
       (Amendment and Consolidation).</p>
     <h3>General Risk Warning</h3>
-    <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as they carry 
-      a high degree of risk to your capital. Please ensure that you fully understand the risks involved, 
-      taking into account your investments objectives and level of experience, before trading, and if necessary, 
-      seek independent advice. Please read the full Risk Disclosure.</p>
+    <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as 
+      they carry a high degree of risk to your capital. Please ensure that you fully understand 
+      the risks involved, taking into account your investments objectives and level of experience, 
+      before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.</p>
     <h3>Risk disclosure</h3>
     <p>Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. Infinity Trade Solutions LTD 
+      You should seek independent advice before making any investment decisions. Trinity Global Capital LTD 
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
-      China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya,
+      China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Infinity Trade Solutions LTD 
-      may reject any applicant from any jurisdiction at their sole discretion without the requirement 
-      to explain the reason why (Terms and conditions).</p>
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Trinity Global Capital LTD 
+      may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
+      explain the reason why (Terms and conditions).</p>
   </div>
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© Infinity Trade Solutions LTD - 09711441</p>
+    <p>© Trinity Global Capital LTD - 15669711</p> 
     <div class="footer-social">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -328,10 +325,10 @@ rel="stylesheet">
   </div>
 </footer>
 
-<!-- Dark Mode Toggle -->
+<!-- Dark Mode Toggle 
 <button id="darkModeToggle" class="dark-toggle">
   🌙
-</button>
+</button> -->
 
 <!-- Back to Top Button -->
 <button id="backToTop" class="back-to-top">
@@ -341,7 +338,7 @@ rel="stylesheet">
 
 <script src="{{ asset('js/about.js') }}"></script>
 
-<!--Start of Tawk.to Script-->
+<!--Start of Tawk.to Script
 <script type="text/javascript">
 var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
 (function(){
@@ -352,7 +349,7 @@ s1.charset='UTF-8';
 s1.setAttribute('crossorigin','*');
 s0.parentNode.insertBefore(s1,s0);
 })();
-</script>
+</script> -->
 <!--End of Tawk.to Script-->
 
 

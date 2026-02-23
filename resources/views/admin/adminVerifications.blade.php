@@ -12,13 +12,13 @@
     {{-- Search Form --}}
     <form action="{{ route('admin.verifications') }}" method="GET" class="mb-4">
         <div class="row g-2 align-items-end">
-            <div class="col-md-7">
+            <div class="col-md-9">
                 <input type="text" name="search" value="{{ request('search') }}" class="form-control" placeholder="Enter name or email">
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <button type="submit" class="btn btn-primary w-100">Search</button>
             </div>
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <a href="{{ route('admin.verifications') }}" class="btn btn-secondary w-100">Reset</a>
             </div>
         </div>

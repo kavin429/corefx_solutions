@@ -83,6 +83,6 @@ class DepositController extends Controller
             ]);
         }
 
-        return redirect()->back()->with('success', 'Live ID request sent to Support Infinity Trade Solutions LTD!');
+        return redirect()->back()->with('success', 'Live ID request sent to Support Trinity Global Capital LTD!');
     }
 }

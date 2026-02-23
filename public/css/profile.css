@@ -4,37 +4,30 @@
 
  h3 {
     font-weight: 600;
-    color: #4b3e6b;
+    color: #ffffff !important;
     padding: 1rem 1.5rem;
     border: solid 1px;
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 22px;
-    border-color: #cdb0e0;
-}
-
-body.dark-mode h3 {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    border-color: #1b0629;
+    border-color: #002f10;
 }
 
 /* Container for the entire profile page */
 .profile-container {
-    max-width: 950px;
     width: 100%;
     margin: 2rem auto;
     
 }
 
-
-
 /* Profile card styling */
 .profile-card {
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 12px;
     padding: 1.5rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
     margin-bottom: 2rem;
     transition: transform 0.2s;
+    color: #fff;
 }
 
 .profile-card:hover {
@@ -46,19 +39,19 @@ body.dark-mode h3 {
     font-size: 1.3rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #029665;
     padding-bottom: 0.5rem;
 }
 
 /* Profile avatar */
 .profile-avatar {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     display: block;
     margin: 0 auto 1rem auto;
-    border: 3px solid #9046e5;
+    border: 3px solid #298443;
 }
 
 /* File input and password input styling */
@@ -66,12 +59,13 @@ body.dark-mode h3 {
 .profile-card input[type="password"] {
     width: 100%;
     padding: 0.5rem 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #00973c;
     border-radius: 8px;
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
     font-size: 0.95rem;
     transition: border-color 0.2s;
+    background: #c5cdc813;
 }
 
 .profile-card input[type="file"] {
@@ -80,14 +74,14 @@ body.dark-mode h3 {
 
 .profile-card input[type="file"]:focus,
 .profile-card input[type="password"]:focus {
-    border-color: #9b46e5;
+    border-color: #1edd6a;
     outline: none;
 }
 
 /* Buttons inside profile cards */
 .profile-card button {
-    background: linear-gradient(90deg, #864bc5, #4a7acd); 
-    color: #fff;
+    background: linear-gradient(135deg, #28d19e, #68e437);
+    color: #000000;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 8px;
@@ -97,7 +91,7 @@ body.dark-mode h3 {
 }
 
 .profile-card button:hover {
-    background: linear-gradient(90deg, #47439c, #4c295f);
+    background: linear-gradient(45deg, #68e437 , #28d19e);
 }
 
 /* Container for buttons in form */
@@ -111,8 +105,8 @@ body.dark-mode h3 {
 
 /* Change Password button */
 .profile-card .form-buttons button {
-    background: linear-gradient(90deg, #864bc5, #4a7acd); 
-    color: #fff;
+    background: linear-gradient(135deg, #28d19e, #68e437); 
+    color: #040404;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 8px;
@@ -123,8 +117,8 @@ body.dark-mode h3 {
 
 /* Forgot Password button (styled as link/button) */
 .profile-card .form-buttons .forgot-btn {
-    background: linear-gradient(90deg, #864bc5, #4a7acd);
-    color: #fff;
+    background: linear-gradient(135deg, #28d19e, #68e437);
+    color: #111111;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     text-align: center;
@@ -137,7 +131,7 @@ body.dark-mode h3 {
 /* Hover effect for both */
 .profile-card .form-buttons button:hover,
 .profile-card .form-buttons .forgot-btn:hover {
-    background: linear-gradient(90deg, #47439c, #4c295f);
+    background: linear-gradient(45deg,#68e437 , #28d19e);
     transform: translateY(-1px);
 }
 
@@ -173,12 +167,12 @@ body.dark-mode h3 {
 
 .profile-info label {
     font-weight: 600;
-    color: #555;
+    color: #ffffff;
 }
 
 .profile-info p {
     margin: 0;
-    color: #333;
+    color: #ffffff;
 }
 
 /* Form group spacing */
@@ -199,14 +193,12 @@ body.dark-mode h3 {
     .profile-info label {
         font-weight: 600;
         font-size: 0.9rem; /* slightly smaller text */
-        color: #666;
         margin-bottom: 0.25rem;
     }
 
     .profile-info p {
         margin: 0 0 0.5rem 0;
         font-size: 0.9rem;
-        color: #444;
     }
 
     .profile-avatar {
@@ -238,107 +230,14 @@ body.dark-mode h3 {
     position: absolute;
     right: 10px;
     cursor: pointer;
-    color: #831abc8e;
+    color: #1abc898e;
     font-size: 0.9rem;
     user-select: none;
 }
 
-/* =========================
-   Profile Page - Dark Theme
-   (apply with body.dark-mode)
-========================= */
-
-body.dark-mode {
-    background: #121212;
-    color: #e4e4e7;
-}
-
-/* Profile Card */
-body.dark-mode .profile-card {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    border-radius: 12px;
-    padding: 1.5rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
-}
-
-body.dark-mode .profile-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.8);
-}
-
-/* Section Titles */
-body.dark-mode .profile-section-title {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    border-bottom: 1px solid #333;
-    padding-bottom: 0.5rem;
-    color: #cfcfcf;
-}
-
-/* Avatar */
-body.dark-mode .profile-avatar {
-    border: 3px solid #7c3aed;
-}
-
-/* Labels and text */
-body.dark-mode .profile-info label {
-    font-weight: 600;
-    color: #bbb;
-}
-
-body.dark-mode .profile-info p {
-    color: #e4e4e7;
-}
-
-/* Inputs */
-body.dark-mode .profile-card input[type="file"],
-body.dark-mode .profile-card input[type="password"] {
-    background: #1e1e2f;
-    border: 1px solid #444;
-    color: #e4e4e7;
-}
-
-body.dark-mode .profile-card input[type="file"]:focus,
-body.dark-mode .profile-card input[type="password"]:focus {
-    border-color: #7c3aed;
-    outline: none;
-}
-
-/* Password toggle */
-body.dark-mode .toggle-password {
-    color: #a855f7;
-}
-
-/* Buttons */
-body.dark-mode .profile-card button, 
-body.dark-mode .profile-card .form-buttons .forgot-btn {
-    background: linear-gradient(90deg, #7c3aed, #5b21b6);
-    color: #fff;
-    border: none;
-}
-
-body.dark-mode .profile-card button:hover,
-body.dark-mode .profile-card .form-buttons .forgot-btn:hover {
-    background: linear-gradient(90deg, #5b21b6, #7c3aed);
-}
-
-/* Form group */
-body.dark-mode .form-group {
-    margin-bottom: 1rem;
-}
 
 /* Responsive (dark stays same) */
 @media (max-width: 768px) {
-    body.dark-mode .profile-info {
-        grid-template-columns: 1fr;
-    }
-
-    body.dark-mode .profile-avatar {
-        width: 100px;
-        height: 100px;
-    }
-
     .profile-section-title {
         text-align: center;
     }

@@ -7,18 +7,14 @@
 ========================= */
  h3 {
     font-weight: 600;
-    color: #4b3e6b;
+    color: #ffffff !important;
     padding: 1rem 1.5rem;
     border: solid 1px;
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 22px;
-    border-color: #cdb0e0;
+    border-color: #002f10;
 }
 
-body.dark-mode h3 {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    border-color: #1b0629;
-}
 
 /* =========================
    Cards Styling
@@ -28,6 +24,7 @@ body.dark-mode h3 {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     transition: transform 0.2s, box-shadow 0.2s;
+    color: #fff;
 }
 
 .card:hover {
@@ -44,7 +41,7 @@ body.dark-mode h3 {
 
 /* Notifications (Blue) */
 .card-header.bg-primary {
-    background-color: #7c3aed;
+    background-color: #2a0964;
 }
 
 /* Activities (Green) */
@@ -59,16 +56,18 @@ body.dark-mode h3 {
     border: none;
     padding: 0.5rem 0.75rem;
     margin: 0;
+    color: #fff;
 }
 
 .list-group-item {
-    background: linear-gradient(135deg, #f3e8ff, #e0f2fe);
-    border: 1px solid #ffffff;
+    background: linear-gradient(135deg, #48ba51, #024911);
+    border: 1px solid #055b27;
     margin-bottom: 0.8rem;
     border-radius: 12px;
     padding: 1rem 1.25rem;
     box-shadow: 0 3px 6px rgba(0,0,0,0.05);
     transition: transform 0.2s, box-shadow 0.2s;
+    color: #fff !important;
 }
 
 .list-group-item:last-child {
@@ -82,14 +81,14 @@ body.dark-mode h3 {
 
 /* Unread/important */
 .list-group-item.fw-bold {
-    background: linear-gradient(135deg, #e0f2fe, #f3e8ff );
-    border-left: 4px solid #7c3aed;
+    background: linear-gradient(135deg,  #02491d , #48ba50);
+    border-left: 4px solid #0f9360;
     font-weight: 600;
 }
 
 /* Title */
 .list-group-item strong {
-    color: #1f2937;
+    color: #ffffff !important;
     font-size: 1rem;
     display: inline-block;
     margin-bottom: 0.3rem;
@@ -99,14 +98,14 @@ body.dark-mode h3 {
 .list-group-item small {
     display: block;
     margin-top: 0.25rem;
-    color: #6b7280 !important;
+    color: #c8c8ca !important;
     font-size: 0.85rem;
 }
 
 /* Empty State */
 .list-group-item:only-child {
     text-align: center;
-    color: #58637a;
+    color: #cacbcd;
     font-style: italic;
 }
 
@@ -117,65 +116,29 @@ body.dark-mode h3 {
     padding: 0.5rem 1rem;
 }
 
-/* =========================
-   Dark Mode
-========================= */
-body.dark-mode .card {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    background: #1e1e2f;
-    color: #f5f5f5;
-}
 
-body.dark-mode .card-header.bg-primary {
-    background-color: #9d72ff;
-}
-
-body.dark-mode .card-header.bg-success {
-    background-color: #22c55e;
-}
-
-body.dark-mode .list-group-item {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    border: 1px solid #2d2d2d;
-    color: #e4e4e7;
-}
-
-body.dark-mode .list-group-item.fw-bold {
-    background: linear-gradient(135deg, #2d1f3d, #1e293b);
-    border-left: 4px solid #9d72ff;
-}
-
-body.dark-mode .list-group-item strong {
-    color: #cfcaff;
-}
-
-body.dark-mode .list-group-item small {
-    color: #9ca3af !important;
-}
 
 .card .card-header { 
-    color: #150a1f;
-    background: linear-gradient(135deg, #9cd7fe, #c899fa );
+    color: #ffffff;
+    background: linear-gradient(135deg, #02a340, #014416 );
 }
 
-body.dark-mode .card .card-header { 
-    color: #f8f1ff;
-    background: linear-gradient(135deg, #021929, #260c47 );
-}
 
 /* =========================
    Search Form
 ========================= */
 form.d-flex input.form-control {
     border-radius: 8px;
-    border: 1px solid #ccc;
     padding: 0.5rem 0.75rem;
     transition: all 0.2s;
+        background: #c5cdc813;
+    color: #ffff;
+    border: 1px solid #00973c;
 }
 
 form.d-flex input.form-control:focus {
-    border-color: #8f63ff;
-    box-shadow: 0 0 0 0.15rem rgba(108, 99, 255, 0.2);
+    border-color: #1edd6a;
+    box-shadow: 0 0 0 0.15rem rgba(99, 255, 208, 0.2);
     outline: none;
 }
 
@@ -185,54 +148,29 @@ form.d-flex a {
     padding: 0.45rem 0.9rem;
     font-weight: 500;
     transition: all 0.2s ease;
-    background: linear-gradient(90deg, #864bc5, #4a7acd);
+    background: linear-gradient(135deg, #28d19e, #68e437);
+    color: #0c0c0c;
 }
 
 form.d-flex button:hover,
 form.d-flex a:hover {
     transform: translateY(-2px);
-    background: linear-gradient(90deg, #47439c, #4c295f);
+    background: linear-gradient(45deg, #68e437 , #28d19e);
+    color: #0c0c0c;
 }
 
-/* =========================
-   Search Form
-========================= */
-body.dark-mode form.d-flex input.form-control {
-    background: #1d1d1d;
-    border: 1px solid #333;
-    color: #eee;
-}
 
-body.dark-mode form.d-flex input.form-control:focus {
-    border-color: #9d72ff;
-    box-shadow: 0 0 0 0.15rem rgba(157, 114, 255, 0.25);
-}
-
-body.dark-mode form.d-flex button,
-body.dark-mode form.d-flex a {
-    background: linear-gradient(90deg, #7c3aed, #5b21b6);
-    color: #fff;
-    border: none;
-}
-
-body.dark-mode form.d-flex button:hover,
-body.dark-mode form.d-flex a:hover {
-     background: linear-gradient(90deg, #5b21b6, #7c3aed);
-}
 
 /* Placeholder color */
 .form-control::placeholder {
-    color: #888;        /* light gray */
+    color: #d3d1d1 !important;        /* light gray */
     opacity: 1;         /* ensures full opacity across browsers */
 }
 
-/* Dark mode version (if you want different color in dark theme) */
-body.dark-mode .form-control::placeholder {
-    color: #bbb;        /* lighter gray for dark backgrounds */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(42%) sepia(93%) saturate(500%) hue-rotate(90deg);
 }
-
-input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(40%) sepia(80%) saturate(500%) hue-rotate(250deg);}
-
 
     @media (max-width: 576px) {
         form.d-flex {

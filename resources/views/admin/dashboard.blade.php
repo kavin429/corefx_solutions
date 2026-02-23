@@ -54,27 +54,31 @@
 
 <div class="row g-3">
     <div class="col-md-6">
-        <div class="card">
+        <div class="card chart-card">
             <h6 class="mb-3">Monthly Client Registrations</h6>
-            <canvas id="usersBarChart"></canvas>
+            <div class="chart-container">
+                <canvas id="usersBarChart"></canvas>
+            </div>
         </div>
     </div>
+
     <div class="col-md-6">
-        <div class="card">
+        <div class="card chart-card">
             <h6 class="mb-3">Accounts by Type</h6>
-            <canvas id="accountsPieChart"></canvas>
+            <div class="chart-container">
+                <canvas id="accountsPieChart"></canvas>
+            </div>
         </div>
     </div>
 </div>
 
-<!-- Chart.js -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script>
     // -------- Bar Chart --------
     const usersCtx = document.getElementById('usersBarChart').getContext('2d');
     const gradientUsers = usersCtx.createLinearGradient(0, 0, 0, 400);
-    gradientUsers.addColorStop(0, 'rgba(161, 44, 207, 0.8)');
-    gradientUsers.addColorStop(1, 'rgba(155, 89, 182, 0.3)');
+    gradientUsers.addColorStop(0, 'rgba(44, 207, 79, 0.8)');
+    gradientUsers.addColorStop(1, 'rgba(89, 182, 118, 0.3)');
 
     new Chart(usersCtx, {
         type: 'bar',
@@ -84,36 +88,37 @@
                 label: 'Users',
                 data: {!! json_encode($monthlyUsers) !!},
                 backgroundColor: gradientUsers,
-                borderColor: 'rgba(155, 89, 182, 1)',
+                borderColor: 'rgb(89, 182, 136)',
                 borderWidth: 1,
                 borderRadius: 8,
-                hoverBackgroundColor: 'rgba(155, 89, 182, 1)'
+                hoverBackgroundColor: 'rgb(89, 182, 131)'
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,   // ✅ Important
             plugins: {
                 legend: { display: false }
             },
             scales: {
                 y: {
                     beginAtZero: true,
-                    ticks: { stepSize: 1, color: '#9870e3ff' },
+                    ticks: { stepSize: 1, color: 'rgb(233, 252, 241)' },
                     grid: {
                         drawBorder: false,
-                        color: '#9870e3ff',
+                        color: 'rgba(255,255,255,0.1)',
                         borderDash: [3, 3]
                     }
                 },
                 x: {
-                    ticks: { color: '#9870e3ff' },
+                    ticks: { color: '#fff' },
                     grid: { display: false }
                 }
             }
         }
     });
 
-    // -------- Pie Chart --------
+    // -------- Doughnut Chart --------
     const accountsCtx = document.getElementById('accountsPieChart').getContext('2d');
 
     new Chart(accountsCtx, {
@@ -123,14 +128,14 @@
             datasets: [{
                 data: {!! json_encode($accountCounts) !!},
                 backgroundColor: [
-                    'rgba(155, 89, 182, 0.8)',
-                    'rgba(200, 132, 255, 0.8)'
+                    'rgba(89, 182, 117, 0.8)',
+                    'rgba(132, 255, 177, 0.8)'
                 ],
                 hoverBackgroundColor: [
-                    'rgba(155, 89, 182, 1)',
-                    'rgba(200, 132, 255, 1)'
+                    'rgb(105, 182, 89)',
+                    'rgb(132, 255, 204)'
                 ],
-                borderColor: '#fff',
+                borderColor: '#a6e9cb',
                 borderWidth: 2,
                 hoverOffset: 10,
                 cutout: '60%'
@@ -138,17 +143,22 @@
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,   // ✅ Important
             plugins: {
                 legend: {
                     position: 'right',
-                    labels: { color: '#7f5fbaff', padding: 20, boxWidth: 20 }
+                    labels: { 
+                        color: '#fff', 
+                        padding: 20, 
+                        boxWidth: 20 
+                    }
                 },
                 tooltip: {
-                    backgroundColor: 'rgba(84, 68, 90, 0.9)',
+                    backgroundColor: 'rgba(42, 87, 56, 0.9)',
                     titleColor: '#fff',
                     bodyColor: '#fff',
                     bodySpacing: 6,
-                    padding: 10 // ✅ Correct for Chart.js v4
+                    padding: 10
                 }
             }
         }

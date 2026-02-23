@@ -2,8 +2,6 @@
 <link rel="stylesheet" href="{{ asset('css/adminTransactions.css') }}">
 
 
-@section('title', 'Infinity Trade Solutions LTD')
-
 @section('content')
 <div class="container-fluid"> 
     <h2>New Transaction</h2>

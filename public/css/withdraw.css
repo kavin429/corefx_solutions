@@ -7,7 +7,7 @@
 #withdrawForm {
     margin: 1rem auto;
     padding: 2rem 1.3rem;
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 16px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 
@@ -15,52 +15,51 @@
 
  h3 {
     font-weight: 600;
-    color: #4b3e6b;
+    color: #ffffff !important;
     padding: 1rem 1.5rem;
     border: solid 1px;
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 22px;
-    border-color: #cdb0e0;
+    border-color: #002f10;
 }
-
-body.dark-mode h3 {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    border-color: #1b0629;
-}
-
-
 
 /* ---------------------- Inputs ---------------------- */
 .withdraw-input {
     width: 100%;
     padding: 0.75rem 1rem;
     border-radius: 12px;
-    border: 1px solid #d1d5db;
+    border: 1px solid;
+    border-color: #46966a;
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
+    background: #1f1f1f27;
+    color: #fff;
 }
 
 .withdraw-input:focus {
-    border-color: #7c3aed;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+    border-color: #3aed8b;
+    box-shadow: 0 0 0 3px rgba(58, 237, 171, 0.2);
     outline: none;
 }
 
 /* ---------------------- Labels ---------------------- */
-.withdraw-form-container label {
+label {
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
-    color: #374151;
+    color: #ffffff !important;
+    
 }
 
 /* ---------------------- Select Fields ---------------------- */
 .withdraw-input[type="select"], select.withdraw-input {
     appearance: none;
-    background: #fff url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M5%207L0.669872%200.25H9.33013L5%207Z%22%20fill%3D%22%237c3aed%22/%3E%3C/svg%3E") no-repeat right 1rem center;
+    background: #1f1f1f27;
     background-size: 12px;
     padding-right: 2.5rem;
     cursor: pointer;
+    color: #6e706f;
+    border-color: #46966a;
 }
 
 /* ---------------------- Dynamic Fields ---------------------- */
@@ -79,8 +78,8 @@ body.dark-mode h3 {
     width: 100%;
     padding: 0.85rem;
     font-size: 1.1rem;
-    background: linear-gradient(90deg, #9d72ff, #4a7acd);
-    color: #fff;
+    background: linear-gradient(135deg, #28d19e, #68e437);
+    color: #060606;
     font-weight: 600;
     border: none;
     border-radius: 12px;
@@ -91,8 +90,9 @@ body.dark-mode h3 {
 }
 
 .withdraw-button:hover {
-    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+    background: linear-gradient(45deg, #68e437 , #28d19e);
     transform: translateY(-2px);
+    color: #060606;
 }
 
 /* ---------------------- Responsive ---------------------- */
@@ -104,68 +104,4 @@ body.dark-mode h3 {
     h3 {
         text-align: center;
     }
-}
-
-/* =========================
-   Dark Mode for Withdraw Form
-   Apply with: body.dark-mode
-========================= */
-body.dark-mode #withdrawForm  {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    color: #e4e4e7;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.6);
-}
-
-
-/* ---------- Inputs & Select ---------- */
-body.dark-mode .withdraw-input {
-    background: #1d1d2a;
-    border: 1px solid #2d2d2d;
-    color: #e4e4e7;
-}
-
-body.dark-mode .withdraw-input::placeholder {
-    color: #888;
-}
-
-body.dark-mode .withdraw-input:focus {
-    border-color: #7c3aed;
-    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.3);
-    background: #252536;
-    outline: none;
-}
-
-body.dark-mode select.withdraw-input {
-    background: #1d1d2a url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D%2210%22%20height%3D%227%22%20viewBox%3D%220%200%2010%207%22%20fill%3D%22none%22%20xmlns%3D%22http://www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M5%207L0.669872%200.25H9.33013L5%207Z%22%20fill%3D%22%239d72ff%22/%3E%3C/svg%3E") no-repeat right 1rem center;
-    background-size: 12px;
-    color: #e4e4e7;
-}
-
-/* Disabled option style */
-body.dark-mode select.withdraw-input option[value=""] {
-    color: #666;
-}
-
-/* ---------- Labels ---------- */
-body.dark-mode .withdraw-form-container label {
-    color: #cfcfcf;
-}
-
-/* ---------- Dynamic Fields ---------- */
-body.dark-mode .withdraw-field {
-    background: #181820;
-    padding: 1rem;
-    border-radius: 12px;
-    border: 1px solid #2d2d2d;
-}
-
-/* ---------- Buttons ---------- */
-body.dark-mode .withdraw-button {
-    background: linear-gradient(90deg, #7c3aed, #5b21b6);
-    color: #fff;
-}
-
-body.dark-mode .withdraw-button:hover {
-    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
-    transform: translateY(-2px);
 }

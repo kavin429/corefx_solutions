@@ -15,28 +15,24 @@
 
  h3 {
     font-weight: 600;
-    color: #4b3e6b;
+    color: #ffffff !important;
     padding: 1rem 1.5rem;
     border: solid 1px;
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 22px;
-    border-color: #cdb0e0;
-}
-
-body.dark-mode h3 {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    border-color: #1b0629;
+    border-color: #002f10;
 }
 
 /* =======================
    Card Styling
 ======================= */
 .verification-card {
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 15px 35px rgba(0,0,0,0.08);
     transition: transform 0.3s, box-shadow 0.3s;
+    color: #ffffff;
 }
 
 .verification-card:hover {
@@ -55,8 +51,8 @@ body.dark-mode h3 {
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 1rem;
-    color: #4b3e6b;
-    border-left: 4px solid #9d72ff;
+    color: #ffffff;
+    border-left: 4px solid #06985e;
     padding-left: 0.75rem;
 }
 
@@ -64,22 +60,22 @@ body.dark-mode h3 {
     display: block;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #555;
+    color: #e6e6e6;
 }
 
 .form-input {
     width: 100%;
     padding: 0.85rem 1rem;
     border-radius: 10px;
-    border: 1px solid #6e119a;
+    border: 1px solid #119a4f;
     font-size: 1rem;
     margin-bottom: 1.2rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-input:focus {
-    border-color: #7c3aed;
-    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.2);
+    border-color: #3aedb7;
+    box-shadow: 0 0 0 4px rgba(58, 237, 142, 0.2);
     outline: none;
 }
 
@@ -88,7 +84,7 @@ body.dark-mode h3 {
 ======================= */
 .document-link a {
     text-decoration: none;
-    color: #9d72ff;
+    color: #72ff91;
     font-weight: 600;
     display: inline-block;
     margin-bottom: 0.75rem;
@@ -96,7 +92,7 @@ body.dark-mode h3 {
 }
 
 .document-link a:hover {
-    color: #4a3ea6;
+    color: #3ea669;
     text-decoration: underline;
 }
 
@@ -146,23 +142,25 @@ body.dark-mode h3 {
 }
 
 .btn-primary {
-    background: linear-gradient(90deg, #9d72ff, #4a7acd);
-    color: #fff;
+    background: linear-gradient(135deg, #28d19e, #68e437);
+    color: #000000;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+    background: linear-gradient(45deg, #68e437 , #28d19e);
     transform: translateY(-2px);
+    color: #000000;
 }
 
 .btn-success {
-    background: linear-gradient(90deg, #9d72ff, #4a7acd);
-    color: #fff;
+     background: linear-gradient(135deg, #28d19e, #68e437);
+    color: #030303;
 }
 
 .btn-success:hover {
-    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+    background: linear-gradient(45deg, #68e437 , #28d19e);
     transform: translateY(-2px);
+    color: #000000;
 }
 
 /* =======================
@@ -195,85 +193,6 @@ body.dark-mode h3 {
     h3 {
         text-align: center;
     }
-}
-
-/* =======================
-   🌙 Dark Mode Theme
-======================= */
-.dark-mode {
-    background: #0b0f1a;
-    color: #e4e4e7;
-}
-
-/* Container */
-.dark-mode .verification-container {
-    color: #e4e4e7;
-}
-
-.dark-mode .form-label {
-    color: #d1d5db; /* light gray for readability */
-}
-
-/* Section Title */
-.dark-mode .section-title {
-    color: #cfcfff;
-    border-left-color: #7c3aed;
-}
-
-/* Form Input */
-.dark-mode .form-input {
-    background: #1a1b27;
-    border: 1px solid #4a3ea6;
-    color: #f3f4f6;
-}
-
-.dark-mode .form-input:focus {
-    border-color: #9d72ff;
-    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.4);
-}
-
-/* Document Links */
-.dark-mode .document-link a {
-    color: #9d72ff;
-}
-
-.dark-mode .document-link a:hover {
-    color: #c084fc;
-}
-
-/* Badges */
-.dark-mode .badge.verified {
-    background-color: #059669;
-}
-
-.dark-mode .badge.rejected {
-    background-color: #b91c1c;
-}
-
-.dark-mode .badge.pending {
-    background-color: #d97706;
-    color: #fff;
-}
-
-/* Buttons */
-.dark-mode .btn-primary,
-.dark-mode .btn-success {
-    background: linear-gradient(90deg, #7c3aed, #5b21b6);
-}
-
-.dark-mode .btn-primary:hover,
-.dark-mode .btn-success:hover {
-     background: linear-gradient(90deg, #5b21b6, #7c3aed);
-}
-
-/* Alerts */
-.dark-mode .alert-success {
-    background: #064e3b;
-    color: #a7f3d0;
-}
-
-.dark-mode .verification-card {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
 }
 
 /* Target the address upload button */

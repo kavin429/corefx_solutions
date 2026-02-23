@@ -12,34 +12,35 @@ html, body {
   touch-action: pan-y; /* allows only vertical scroll */
 }
 
-/* ===== Scrollbar Styling ===== */
+:root {
+  --primary-green: #00ff88;
+  --secondary-green: #2d5a27;
+  --accent-blue: #00d4ff;
+  --warm-yellow: #ffeb3b;
+  --deep-forest: #0a1a0a;
+  --light-mint: #e8fff0;
+  --glow-green: rgba(0, 255, 136, 0.3);
+  --glow-blue: rgba(0, 212, 255, 0.3);
+}
+
+/* ===== Scrollbar Styling (Dark Green Theme) ===== */
 ::-webkit-scrollbar {
   width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f2e9fa; /* light violet background */
+  background: #e6f4ea;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* purple gradient */
+  background: linear-gradient(135deg, #065f46, #064e3b);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  background: linear-gradient(135deg, #047857, #065f46);
 }
-
-/* Dark mode support */
-body.dark ::-webkit-scrollbar-track {
-  background: #1e1e2f;
-}
-
-body.dark ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #7c3aed, #5b21b6);
-}
-
 /* ---------- adminBlade.css ---------- */
 * {
   font-family: 'Calibri', 'Trebuchet MS', 'Segoe UI', sans-serif;
@@ -48,7 +49,7 @@ body.dark ::-webkit-scrollbar-thumb {
 /* ---------- Body ---------- */
 body {
     margin: 0;
-    background: #f3f0ff; /* Light purple background */
+    background: #050f05; /* Light purple background */
     color: #3b2a5a;      /* Dark purple text */
     transition: background 0.3s, color 0.3s;
 }
@@ -60,8 +61,8 @@ body {
     left: 0;
     width: 250px;
     height: 100vh;
-    background: linear-gradient(135deg, #f3e5ff, #e0ccff);
-    color: #240c40;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    color: #ffffff;
     padding: 1rem;
     overflow-y: auto;
     transition: all 0.3s ease;
@@ -72,7 +73,7 @@ body {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border: 2px solid #240c40;;
+    border: 2px solid #1f9874;;
 } 
 
 /* ---------- Accordion Items ---------- */
@@ -88,7 +89,7 @@ body {
 /* Accordion Buttons - general style */
 .sidebar .accordion-button {
     background: none;
-    color: #240c40;
+    color: #ffffff;
     font-weight: 500;
     padding: 0.75rem 1rem;
     border-radius: 6px;
@@ -100,18 +101,18 @@ body {
 /* Collapsed state */
 .sidebar .accordion-button.collapsed {
     background: transparent;
-    color: #240c40;
+    color: #ffffff;
 }
 
 /* Expanded state */
 .sidebar .accordion-button:not(.collapsed) {
-    background: #d4affe; /* Slightly lighter purple when expanded */
-    color: #130820;
+    background: #2d3d35; /* Slightly lighter purple when expanded */
+    color: #ffffff;
 }
 
 /* Hover effect for both states */
 .sidebar .accordion-button:hover {
-    background: #e1c6ff; /* Subtle hover purple */
+    background: #3b6942;/* Subtle hover purple */
     transform: translateX(3px); /* Slight shift on hover */
 }
 
@@ -122,7 +123,7 @@ body {
 
 /* Accordion collapse content */
 .sidebar .accordion-collapse {
-    background: rgba(255, 255, 255, 0.05); 
+    background: #2c4e314b; 
     transition: max-height 0.3s ease;
 }
 
@@ -135,7 +136,7 @@ body {
 
 /* Links inside accordion body */
 .sidebar .accordion-body .sidebar-link {
-    color: #5c1ba7;
+    color: #ffffff;
     text-decoration: none;
     padding: 0.35rem 0.5rem;
     border-radius: 4px;
@@ -144,14 +145,14 @@ body {
 }
 
 .sidebar .accordion-body .sidebar-link:hover {
-    background: #e1c6ff;
-    color: #5c1ba7;
+    background: #3b6942;
+    color: #ffffff;
 }
 
 /* Active link */
 .sidebar .accordion-body .sidebar-link.active {
-    background: #e1c6ff;
-    color: #5c1ba7;
+    background: #3b6942;
+    color: #ffffff;
 }
 
 /* Scrollbar styling */
@@ -168,7 +169,7 @@ body {
 .sidebar-link {
     display: block;
     padding: 0.5rem 1rem;
-    color: #240c40;
+    color: #ffffff;
     border-radius: 6px;
     margin-bottom: 0.25rem;
     text-decoration: none;
@@ -177,8 +178,8 @@ body {
 
 .sidebar-link:hover,
 .sidebar-link.active {
-    background: #d4affe;  /* Highlight */
-    color: #5c1ba7;
+    background: #3b6942;
+    color: #ffffff;
 }
 
 /* ---------- Main Content ---------- */
@@ -190,7 +191,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     margin-bottom: 1rem;
@@ -199,7 +200,7 @@ body {
 /* Topbar greeting */
 .topbar-greeting {
     font-size: 1.8rem;
-    color: #3b2a5a;
+    color: #ffffff;
     padding: 10px 0;
 }
 
@@ -213,15 +214,15 @@ body {
     height: 36px;
     border: none;
     border-radius: 6px;
-    background: #f3f0ff;
-    color: #5b3e96;
+    background: #047338;
+    color: #ffffff;
     font-size: 1.2rem;
     cursor: pointer;
     transition: background 0.3s, color 0.3s;
 }
 
 .topbar-icons .topbar-btn:hover {
-    background: #5b3e96;
+    background: #3e9660;
     color: #fff;
 }
 
@@ -250,7 +251,7 @@ body {
     box-shadow: 0 4px 10px rgba(155, 89, 182, 0.1);
     padding: 1.5rem;
     text-align: center;
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
     color: #3b2a5a;
 }
 
@@ -275,7 +276,7 @@ body {
 .card h6 {
     font-weight: 500;       /* Medium weight for labels */
     font-size: 1rem;        /* Label size */
-    color: #5c1ba7;         /* Purple text for labels */
+    color: #b3ffda;         /* Purple text for labels */
     margin-bottom: 0.5rem;
     text-transform: uppercase; /* Optional: uppercase labels */
     letter-spacing: 0.5px;     /* Small spacing for cleaner look */
@@ -285,7 +286,7 @@ body {
 .card h5 {
     font-weight: 700;       /* Bold numbers */
     font-size: 2rem;        /* Main numbers */
-    color: #3b2a5a;         /* Dark purple text */
+    color: #b3ffda;         /* Dark purple text */
     margin: 0;
 }
 
@@ -308,7 +309,7 @@ body {
 
 .card h3:hover, .card h5:hover {
     transform: scale(1.05);
-    color: #8e44ad; /* highlight on hover */
+    color: #ddfff2; /* highlight on hover */
 }
 
 /* Optional: text alignment inside nested cards */
@@ -318,82 +319,23 @@ body {
     justify-content: center;
     align-items: center;
     border: solid 1.5px;
-    border-color: #e1c7ff;
+    border-color: #c7ffde;
 }
-
-/* ---------- Dark Mode Cards ---------- */
-body.dark .align-cards > .col-md-4 > .card {
-    background: linear-gradient(135deg, #2a1546, #3c1f66); /* Dark purple gradient */
-    color: #e9dfff; /* Light text */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-}
-
-/* Card general text in dark mode */
-body.dark .card h6 {
-    color: #c7aaff; /* Lighter purple for labels */
-}
-
-body.dark .card h3, 
-body.dark .card h5 {
-    color: #ffffff; /* White for numbers */
-}
-
-/* Nested cards (Deposits / Withdrawals) in dark mode */
-body.dark .card .row .card {
-    background: #4d2786; /* Default dark nested card */
-    color: #fff;
-}
-
-body.dark .card .row .card.bg-success {
-    background:linear-gradient(135deg, #2a1546, #3c1f66); /* Keep green for deposits */
-    color: #fff;
-}
-
-body.dark .card .row .card.bg-danger {
-    background:linear-gradient(135deg, #2a1546, #3c1f66); /* Keep red for withdrawals */
-    color: #fff;
-}
-
-/* Nested card text in dark mode */
-body.dark .card .row .card h6 {
-    color: #e0c6ff; /* lighter purple labels */
-}
-
-body.dark .card .row .card h5 {
-    color: #fff; /* White numbers */
-}
-
-/* Hover effect in dark mode */
-body.dark .card h3:hover, 
-body.dark .card h5:hover {
-    transform: scale(1.05);
-    color: #ebbffc; /* Highlight on hover in dark mode */
-}
-
 
 
 /* ---------- Card Icon Styles ---------- */
 .card-icon {
-    color: #fff;
-    border: solid 1.5px #8e44ad;
+    color: #052f1b;
+    border: solid 1.5px #052f1b;
     border-radius: 50%;
     padding: 15px;
     margin: 1rem auto 1rem auto; /* center horizontally with top/bottom spacing */
-    background: #8e44ad;
+    background: #c9fee5;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     font-size: 2rem; /* adjust icon size */
 }
-
-body.dark .card-icon {
-    color: #fff;                     /* icon color */
-    background: #5e2a86;             /* darker purple background */
-    border-color: #8b5de0;           /* border color for dark mode */
-}
-
-
-
 
 /* ---------- Responsive ---------- */
 @media (max-width: 767.98px) {
@@ -411,11 +353,14 @@ body.dark .card-icon {
     right: 10px;
     margin: 0;
     width: 280px;
+    color: #fcfcfc;
 }
 
 #notificationModal .modal-content {
     border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(59, 42, 90, 0.3);
+    box-shadow: 0 3px 8px rgba(42, 90, 73, 0.3);
+    color: #ccffe9 !important;
+    background: #050f05;
 }
 
 #notificationModal .modal-header {
@@ -434,8 +379,9 @@ body.dark .card-icon {
     font-size: 0.8rem;
     border-radius: 4px;
     margin-bottom: 2px;
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
-    color: #3b2a5a;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    color: #ffffff;
+    border-color: #00ab5b;
 }
 
 #notificationModal .btn-close {
@@ -456,162 +402,11 @@ body.dark .card-icon {
     background: transparent;
 }
 
-#accountsPieChart {
-    height: 215px; /* Adjust as needed */
-    max-height: 215px;
-}
 
-/* ---------- adminBlade-dark.css ---------- */
-
-/* ---------- Body ---------- */
-body.dark {
-    background: linear-gradient(135deg, #1a0b2e, #2a1546);
-    color: #e9dfff;
-    transition: background 0.3s, color 0.3s;
-}
-
-/* ---------- Sidebar Base ---------- */
-body.dark .sidebar {
-    background: linear-gradient(180deg, #2a1546, #3c1f66);
-    color: #e9dfff;
-}
-
-body.dark .sidebar .profile-pic {
-    border: 2px solid #e9dfff;
-}
-
-/* ---------- Accordion Items ---------- */
-body.dark .sidebar .accordion-item {
-    background: transparent;
-}
-
-body.dark .sidebar .accordion-button {
-    background: none;
-    color: #e9dfff;
-}
-
-body.dark .sidebar .accordion-button.collapsed {
-    color: #e9dfff;
-}
-
-body.dark .sidebar .accordion-button:not(.collapsed) {
-    background: linear-gradient(90deg, #6a3dbb, #4d2786);
-    color: #fff;
-}
-
-body.dark .sidebar .accordion-button:hover {
-    background: linear-gradient(90deg, #5a2f9c, #3c1f66);
-    transform: translateX(3px);
-}
-
-body.dark .sidebar .accordion-button i {
-    color: #c7aaff;
-}
-
-/* Accordion collapse & body */
-body.dark .sidebar .accordion-collapse {
-    background: rgba(255, 255, 255, 0.05);
-}
-
-body.dark .sidebar .accordion-body {
-    color: #c7aaff;
-}
-
-body.dark .sidebar .accordion-body .sidebar-link {
-    color: #c7aaff;
-}
-
-body.dark .sidebar .accordion-body .sidebar-link:hover {
-    background: linear-gradient(90deg, #6a3dbb, #4d2786);
-    color: #fff;
-}
-
-body.dark .sidebar .accordion-body .sidebar-link.active {
-    background: linear-gradient(90deg, #8b5de0, #6a3dbb);
-    color: #fff;
-}
-
-/* ---------- Sidebar Links ---------- */
-body.dark .sidebar-link {
-    color: #e9dfff;
-}
-
-body.dark .sidebar-link:hover,
-body.dark .sidebar-link.active {
-    background: linear-gradient(90deg, #6a3dbb, #4d2786);
-    color: #fff;
-}
-
-/* ---------- Main Content ---------- */
-body.dark .main {
-    background: transparent;
-    color: #e9dfff;
-}
-
-/* ---------- Topbar ---------- */
-body.dark .topbar {
-    background: linear-gradient(135deg, #2a1546, #3c1f66);
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.6);
-}
-
-body.dark .topbar-greeting {
-    color: #c7aaff;
-}
-
-/* Topbar icons */
-body.dark .topbar-icons .topbar-btn {
-    background: linear-gradient(135deg, #4d2786, #6a3dbb);
-    color: #fff;
-}
-
-body.dark .topbar-icons .topbar-btn:hover {
-    background: linear-gradient(135deg, #6a3dbb, #8b5de0);
-    color: #fff;
-}
-
-/* Notification badge */
-body.dark .notification-badge {
-    background: #ff4c6a;
-    border: 1px solid #2a1546;
-}
-
-/* ---------- Cards ---------- */
-body.dark .card {
-    background: linear-gradient(135deg, #2a1546, #3c1f66);
-    color: #e9dfff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-}
-
-/* ---------- Notifications ---------- */
-body.dark #notificationModal .modal-content {
-    background: linear-gradient(135deg, #2a1546, #3c1f66);
-    color: #e9dfff;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.7);
-}
-
-body.dark #notificationModal .list-group-item {
-    background: linear-gradient(135deg, #3c1f66, #4d2786);
-    color: #e9dfff;
-}
-
-body.dark #notificationModal .btn-close {
+#notificationModal .btn-close {
     filter: invert(1);
 }
 
-/* ---------- Scrollbars ---------- */
-body.dark .sidebar::-webkit-scrollbar-thumb {
-    background: rgba(200, 160, 255, 0.4);
-}
-
-body.dark .sidebar::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-/* ---------- Chart ---------- */
-body.dark #accountsPieChart {
-    background: transparent;
-}
 
 /* --------------------- Responsive Styles --------------------- */
 
@@ -723,10 +518,10 @@ body.dark #accountsPieChart {
     padding: 0 12px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: #4b3e6b; /* dark purple */
-    background-color: #f3e5ff; /* light purple */
+    color: #d4fde8; /* dark purple */
+    background-color: #013214; /* light purple */
     border-radius: 8px;
-    border: 1px solid #d0b3ff;
+    border: 1px solid #3fb054;
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap; /* prevent wrapping */
@@ -737,70 +532,42 @@ body.dark #accountsPieChart {
 .pagination li.next a {
     font-weight: 600;
     color: #fff;
-    background-color: #8e44ad; /* strong purple */
+    background-color: #44ad73; /* strong purple */
 }
 
 .pagination li.previous a:hover,
 .pagination li.next a:hover {
-    background-color: #7d3c98;
+    background-color: #3c986d;
     color: #fff;
 }
 
 /* ---------- Hover Effect ---------- */
 .pagination li a:hover:not(.active) {
-    background-color: #e0ccff;
-    color: #240c40;
+    background-color: #083816;
+    color: #ffffff;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* ---------- Active Page ---------- */
 .pagination li.active span {
-    background-color: #8e44ad; /* strong purple */
-    color: #fff;
+    background-color: #44ad73; /* strong purple */
+    color: #070707;
     font-weight: 600;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
 }
 
 /* ---------- Disabled State ---------- */
 .pagination li.disabled span {
-    background-color: #f8f9fa;
-    color: #ccc;
+    background-color: #767676;
+    color: #000000;
     cursor: not-allowed;
-    border-color: #e0e0e0;
+    border-color: #0c0c0c;
 }
 
-/* ---------- Dark Mode ---------- */
-body.dark .pagination li a,
-body.dark .pagination li span {
-    background-color: #2a1546;
-    color: #e9dfff;
-    border: 1px solid #5a3d99;
-}
-
-body.dark .pagination li a:hover:not(.active) {
-    background-color: #3c1f66;
-    color: #fff;
-}
-
-body.dark .pagination li.active span {
-    background-color: #5e2a86;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-body.dark .pagination li.previous a,
-body.dark .pagination li.next a {
-    background-color: #5e2a86;
-}
-
-body.dark .pagination li.previous a:hover,
-body.dark .pagination li.next a:hover {
-    background-color: #4c216d;
-}
 
 /* Light mode (default Bootstrap look) */
 .text-muted {
-    color: #6c757d !important;
+    color: #e0e0e0 !important;
 }
 
 /* Dark mode override */
@@ -813,5 +580,16 @@ body.dark-mode small.text-muted {
     color: #a0a0a0 !important;
 }
 
+.chart-card {
+    height: 420px;
+}
 
+.chart-container {
+    position: relative;
+    height: 320px;
+}
 
+/* Horizontal scrollbar styling - Purple theme */
+.table-responsive::-webkit-scrollbar {
+    height: 4px; /* horizontal scrollbar height */
+}

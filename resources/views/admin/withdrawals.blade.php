@@ -91,7 +91,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="7" class="text-center text-gray-500">No withdrawals found.</td>
+                    <td colspan="9" class="text-center text-gray-500">No withdrawals found.</td>
                 </tr>
                 @endforelse
             </tbody>

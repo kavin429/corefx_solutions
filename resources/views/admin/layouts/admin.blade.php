@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Infinity Trade Solutions LTD')</title>
-    <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}" />
+    <title>@yield('title', 'Trinity Global Capital LTD')</title>
+    <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon1.png') }}" />
     
     <!-- Bootstrap & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -130,10 +130,10 @@
 
             <!-- Icons -->
             <div class="topbar-icons d-flex align-items-center gap-2">
-                <!-- Dark Mode Toggle -->
+                <!-- Dark Mode Toggle 
                 <button class="topbar-btn" id="darkModeToggle" title="Toggle Dark Mode">
                     <i class="bi bi-moon"></i>
-                </button>
+                </button> -->
 
                 <!-- Notifications -->
                 <button type="button" class="topbar-btn position-relative" id="notificationToggle" data-bs-toggle="modal" data-bs-target="#notificationModal" title="Notifications">

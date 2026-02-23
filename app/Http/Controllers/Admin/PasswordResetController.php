@@ -29,18 +29,18 @@ class PasswordResetController extends Controller
             // Send email
             Mail::raw(
                 "Hello {$user->name},\n\n".
-                "We have reset your password for your account at Infinity Trade Solutions LTD.\n\n".
+                "We have reset your password for your account at Trinity Global Capital LTD.\n\n".
                 "Your new login credentials are:\n".
                 "-----------------------------------\n".
                 "Email: {$user->email}\n".
                 "Password: {$newPassword}\n".
                 "-----------------------------------\n\n".
                 "For security reasons, we recommend that you log in immediately and change your password.\n\n".
-                "Thank you for being a valued member of Infinity Trade Solutions LTD.\n".
-                "— The Infinity Trade Solutions LTD Team",
+                "Thank you for being a valued member of Trinity Global Capital LTD.\n".
+                "— The Trinity Global Capital LTD Team",
                 function ($message) use ($user) {
                     $message->to($user->email)
-                            ->subject('Infinity Trade Solutions LTD - Password Reset Notification');
+                            ->subject('Trinity Global Capital LTD - Password Reset Notification');
                 }
             );
 

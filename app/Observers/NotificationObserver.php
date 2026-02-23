@@ -23,8 +23,7 @@ class NotificationObserver
 
         // Multiple fixed numbers
         $phones = [
-            '94779895511',
-            '94713900050',
+            '94774585861',
         ];
 
         $msg = $notification->message ?? $notification->title;

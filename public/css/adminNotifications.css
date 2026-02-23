@@ -7,7 +7,6 @@ body{
 }
 /* ---------- General Container ---------- */
 .container {
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0.1rem 1rem;
     color: #333;
@@ -18,20 +17,15 @@ body{
 .container h2 {
     font-size: 1.5rem;
     text-align: left;
-    color: #3b2a5a;
+    color: #ffffff;
     margin-bottom: 2rem;
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #d8bfff;
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    border-color: #024b27;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
 }
 
-body.dark .container h2{
-    color: #e9dfff;
-    background:  linear-gradient(135deg, #2a1546, #3c1f66);
-    border-color: #6f41aa;
-}
 
 h3 {
     font-size: 1.5rem;
@@ -41,29 +35,33 @@ h3 {
 /* ---------- Form Inputs ---------- */
 form .form-control {
     border-radius: 6px;
-    border: 1px solid #ccc;
     padding: 0.5rem 0.75rem;
     font-size: 0.95rem;
     width: 100%;
     transition: all 0.3s ease;
+      background-color: #1d4126;
+  color: #f9f9f9;
+  border: 1px solid #0a652d;
 }
 
 form .form-control:focus {
-    border-color: #8e44ad;
-    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.2);
+    border-color: #23ae56;
+    box-shadow: 0 0 5px rgba(179, 255, 206, 0.4);
     outline: none;
 }
 
 /* ---------- Form Labels ---------- */
-.form-label {
+.form-label,
+.form-check-label {
     font-weight: 500;
     margin-bottom: 0.3rem;
     display: block;
+    color: #fff !important;
 }
 
 /* ---------- Buttons ---------- */
 .btn-primary {
-    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
     padding: 0.5rem 1.2rem;
     border-radius: 6px;
@@ -74,7 +72,7 @@ form .form-control:focus {
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #732d91, #8e44ad);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 /* ---------- Alerts ---------- */
@@ -116,21 +114,27 @@ form .form-control:focus {
 }
 
 .table th {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
-    color: #fff;
+    background: linear-gradient(135deg, #3e7c55, #0e4812);
+    color: #fff !important;
     font-weight: 600;
     position: sticky;
     top: 0;
     z-index: 2;
-    border-bottom: 2px solid #7d3c98;
+    border-bottom: 2px solid #044a22;
 }
 
 .table tbody tr:nth-child(even) {
-    background-color: #f9f4ff;
+    background-color: #003513;
 }
 
 .table tbody tr:hover {
-    background-color: #f0e6ff;
+    background-color: #082b20;
+}
+
+.table tbody td {
+    background-color: #0759341b;
+    color: #d7d6d6;
+    border-left: 2px solid #044a22 !important;
 }
 
 /* Word wrap for long messages */
@@ -159,105 +163,12 @@ form .form-control:focus {
     color: #fff;
 }
 
-/* ---------- Dark Mode ---------- */
-/* ---------- Dark Mode Page Text & Inputs ---------- */
-body.dark {
-    background-color: #1a0b2e;
-    color: #e9dfff;
-}
-
-/* Headings */
-body.dark h2,
-body.dark h3 {
-    color: #e9dfff;
-}
-
-/* Paragraphs and other text */
-body.dark p,
-body.dark label,
-body.dark .form-check-label,
-body.dark .text-muted {
-    color: #dcd6f7;
-}
-
-/* Form inputs */
-body.dark input.form-control,
-body.dark textarea.form-control {
-    background-color: #2a1546;
-    color: #e9dfff;
-    border-color: #5a3d99;
-}
-
-body.dark input.form-control:focus,
-body.dark textarea.form-control:focus {
-    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.3);
-}
-
-/* Checkboxes & radio labels */
-body.dark .form-check-input {
-    background-color: #3c1f66;
-    border-color: #5a3d99;
-}
-
-body.dark .form-check-input:checked {
-    background-color: #8e44ad;
-    border-color: #8e44ad;
-}
-
-/* Buttons */
-body.dark .btn-primary {
-    background: linear-gradient(135deg, #5e2a86, #3c1f66);
-    color: #fff;
-}
-
-body.dark .btn-primary:hover {
-    background: linear-gradient(135deg, #3c1f66, #5e2a86);
-}
-
-/* Alerts */
-body.dark .alert-success {
-    background-color: #2e462e;
-    color: #c2f0c2;
-}
-
-body.dark .alert-danger {
-    background-color: #462a2a;
-    color: #f2c2c2;
-}
 
 /* Horizontal rules */
-body.dark hr {
+hr {
     border-color: rgba(255,255,255,0.2);
 }
 
-body.dark .table th {
-    background: linear-gradient(135deg, #5e2a86, #3c1f66);
-    color: #f1e9ff;
-}
-
-body.dark .table td {
-    background-color: #2a1546;
-    color: #e9dfff;
-    border-color: rgba(255,255,255,0.1);
-}
-
-body.dark .table tbody tr:nth-child(even) {
-    background-color: #331b57;
-}
-
-body.dark .table tbody tr:hover {
-    background-color: #3c1f66;
-}
-
-body.dark .badge.bg-success {
-    background-color: #28a745;
-    color: #fff;
-}
-
-body.dark .badge.bg-secondary {
-    background-color: #6c757d;
-    color: #fff;
-}
 
 /* ---------- Responsive Table ---------- */
 .table-responsive {
@@ -311,11 +222,12 @@ body.dark .badge.bg-secondary {
 
 /* ---------- Notification Filter Form ---------- */
 form.mb-4 {
-    background-color: #f5f7fa;
+    background-color: #2c433c41;
     padding: 1rem 1.5rem;
     border-radius: 8px;
     margin-bottom: 2rem;
     box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    color: #fff;
 }
 
 form.mb-4 .form-label {
@@ -326,7 +238,7 @@ form.mb-4 .form-label {
 form.mb-4 .form-control,
 form.mb-4 .form-select {
     border-radius: 6px;
-    border: 1px solid #ccc;
+    border: 1px solid #137b40;
     padding: 0.45rem 0.75rem;
     font-size: 0.95rem;
     transition: all 0.3s ease;
@@ -334,8 +246,8 @@ form.mb-4 .form-select {
 
 form.mb-4 .form-control:focus,
 form.mb-4 .form-select:focus {
-    border-color: #8e44ad;
-    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.2);
+    border-color: #23ae56;
+    box-shadow: 0 0 5px rgba(179, 255, 206, 0.4);
     outline: none;
 }
 
@@ -354,24 +266,6 @@ form.mb-4 button {
     }
 }
 
-/* Dark Mode */
-body.dark form.mb-4 {
-    background-color: #2a1546;
-    color: #e9dfff;
-}
-
-body.dark form.mb-4 .form-control,
-body.dark form.mb-4 .form-select {
-    background-color: #3c1f66;
-    color: #e9dfff;
-    border-color: #5a3d99;
-}
-
-body.dark form.mb-4 .form-control:focus,
-body.dark form.mb-4 .form-select:focus {
-    box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.3);
-}
-
 /* ---------- Filter Buttons ---------- */
 .btn1 {
     padding: 0.45rem 1rem;
@@ -387,12 +281,12 @@ body.dark form.mb-4 .form-select:focus {
 
 /* Primary/Secondary Buttons */
 .btn1.btn-secondary {
-    background-color: #8e44ad;
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
 }
 
 .btn1.btn-secondary:hover {
-    background-color: #732d91;
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 /* Light Buttons (Reset) */
@@ -404,26 +298,6 @@ body.dark form.mb-4 .form-select:focus {
 
 .btn1.btn-light:hover {
     background-color: #e0e0e0;
-}
-
-/* Dark Mode */
-body.dark .btn1.btn-secondary {
-    background-color: #5e2a86;
-    color: #fff;
-}
-
-body.dark .btn1.btn-secondary:hover {
-    background-color: #3c1f66;
-}
-
-body.dark .btn1.btn-light {
-    background-color: #462a57;
-    color: #e9dfff;
-    border: 1px solid #5a3d99;
-}
-
-body.dark .btn1.btn-light:hover {
-    background-color: #3c1f66;
 }
 
 /* Dark mode placeholder text style */
@@ -443,6 +317,11 @@ body.dark .btn1.btn-light:hover {
 
 /* Change calendar icon color */
 input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(40%) sepia(80%) saturate(500%) hue-rotate(250deg);
+    filter: invert(42%) sepia(93%) saturate(500%) hue-rotate(90deg);
     cursor: pointer;
+}
+
+/* Horizontal scrollbar styling - Purple theme */
+.table-responsive::-webkit-scrollbar {
+    height: 4px; /* horizontal scrollbar height */
 }

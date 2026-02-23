@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Infinity Trade Solutions LTD')</title>
-    <link rel="icon" type="image/png" href="{{ asset('pics/Infinity1.png') }}">
+    <title>@yield('title', 'Trinity Global Capital LTD')</title>
+    <link rel="icon" type="image/png" href="{{ asset('pics/icon1.png') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ asset('css/clientDashboard.css') }}" rel="stylesheet">
@@ -76,7 +76,7 @@
             <h2 class="welcome">Hi, {{ auth()->user()->name }}</h2>
             </div>
             <div class="top-icons d-flex align-items-center gap-2">
-                <i class="bi bi-moon fs-4 theme-toggle" id="theme-toggle"></i>
+               <!-- <i class="bi bi-moon fs-4 theme-toggle" id="theme-toggle"></i> -->
             <!-- Notification Button -->
             <button type="button" class="btn1 position-relative" id="notificationToggle" data-bs-toggle="modal" data-bs-target="#notificationModal">
                 <i class="bi bi-bell fs-4"></i>

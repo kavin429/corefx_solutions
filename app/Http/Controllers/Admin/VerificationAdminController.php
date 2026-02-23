@@ -48,7 +48,7 @@ class VerificationAdminController extends Controller
             'sender_id' => auth()->guard('admin')->id(),
             'sender_type' => 'admin',
             'title' => 'Identity Verified',
-            'message' => 'Your identity document has been approved by Infinity Trade Solutions LTD.',
+            'message' => 'Your identity document has been approved by Trinity Global Capital LTD.',
             'is_read' => 0,
         ]);
 
@@ -70,7 +70,7 @@ class VerificationAdminController extends Controller
             'sender_id' => auth()->guard('admin')->id(),
             'sender_type' => 'admin',
             'title' => 'Identity Rejected',
-            'message' => 'Your identity document has been rejected by Infinity Trade Solutions LTD.',
+            'message' => 'Your identity document has been rejected by Trinity Global Capital LTD.',
             'is_read' => 0,
         ]);
 
@@ -95,7 +95,7 @@ class VerificationAdminController extends Controller
             'sender_id' => auth()->guard('admin')->id(),
             'sender_type' => 'admin',
             'title' => 'Address Verified',
-            'message' => 'Your address document has been approved by Infinity Trade Solutions LTD.',
+            'message' => 'Your address document has been approved by Trinity Global Capital LTD.',
             'is_read' => 0,
         ]);
 
@@ -117,7 +117,7 @@ class VerificationAdminController extends Controller
             'sender_id' => auth()->guard('admin')->id(),
             'sender_type' => 'admin',
             'title' => 'Address Rejected',
-            'message' => 'Your address document has been rejected by Infinity Trade Solutions LTD.',
+            'message' => 'Your address document has been rejected by Trinity Global Capital LTD.',
             'is_read' => 0,
         ]);
 

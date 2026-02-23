@@ -8,19 +8,13 @@
 
  h3 {
     font-weight: 600;
-    color: #4b3e6b;
+    color: #ffffff !important;
     padding: 1rem 1.5rem;
     border: solid 1px;
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 22px;
-    border-color: #cdb0e0;
+    border-color: #002f10;
 }
-
-body.dark-mode h3 {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    border-color: #1b0629;
-}
-
 
 /* =========================
    Deposit Methods Styles
@@ -36,21 +30,14 @@ body.dark-mode h3 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: #471276;
+    color: #caffee;
 }
 
 .deposit-form h6 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: #471276;
-}
-
-body.dark-mode .deposit-methods h6 {
-    color: #bc79ff;
-}
-body.dark-mode .deposit-form h6 {
-    color: #bc79ff;
+    color: #caffee;
 }
 
 .deposit-method {
@@ -58,36 +45,24 @@ body.dark-mode .deposit-form h6 {
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 1rem;
-    border: 1px solid rgba(140, 107, 255, 0.25);
+    border: 1px solid rgba(107, 255, 191, 0.25);
     border-radius: 8px;
-    background: #f9f7ff;
+    background: #002512;
     font-size: 0.95rem;
     transition: all 0.3s ease;
 }
 
-body.dark-mode .deposit-method {
-    background: linear-gradient(145deg, #1b1531, #17112a);
-    border: 1px solid rgba(160, 120, 255, 0.25);
-}
-
 .deposit-method span {
     word-break: break-word;
-    color: #3e2d75;
+    color: #ffffff;
 }
 
-body.dark-mode .deposit-method span {
-    color: #dcd2ff;
-}
 
 .deposit-method i {
     cursor: pointer;
-    color: #7a5eff;
+    color: #5effdc;
     font-size: 1.1rem;
     transition: transform 0.2s ease, color 0.2s ease;
-}
-
-body.dark-mode .deposit-method i {
-    color: #b6a4ff;
 }
 
 .deposit-method i:hover {
@@ -96,8 +71,8 @@ body.dark-mode .deposit-method i {
 
 .copy-tooltip {
     position: absolute;
-    background: #9b8bee;
-    color: #fff;
+    background: #c9fff6;
+    color: #00180d !important;
     font-size: 0.75rem;
     padding: 6px 12px;
     border-radius: 4px;
@@ -178,8 +153,8 @@ body.dark-mode .deposit-method i {
 
 .deposit-form input:focus,
 .deposit-form select:focus {
-    border-color: #8c6bff;
-    box-shadow: 0 0 0 3px rgba(140, 107, 255, 0.15);
+    border-color: #1edd6a;
+    outline: none;
 }
 
 /* ---------- Submit Button ---------- */
@@ -188,8 +163,8 @@ body.dark-mode .deposit-method i {
 }
 
 .deposit-btn {
-    background: linear-gradient(90deg, #9d72ff, #4a7acd);
-    color: #fff;
+    background: linear-gradient(135deg, #28d19e, #68e437);
+    color: #000000;
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
@@ -206,7 +181,8 @@ body.dark-mode .deposit-method i {
 
 .deposit-btn:hover {
     transform: translateY(-2px);
-    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+    background: linear-gradient(45deg, #68e437 , #28d19e);
+    color: #00180d;
 }
 
 /* ---------- Screenshot Preview ---------- */
@@ -220,67 +196,34 @@ body.dark-mode .deposit-method i {
    🌞 LIGHT THEME (Default)
 ================================================== */
 body:not(.dark-mode) .deposit-form {
-    background: #ffffff;
-    border: 1px solid rgba(140, 107, 255, 0.15);
+    background: #002511;
+    border: 1px solid rgba(0, 155, 80, 0.15);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 body:not(.dark-mode) .deposit-form label {
-    color: #3e2d75;
+    color: #ffffff;
 }
 
 body:not(.dark-mode) .deposit-form input,
 body:not(.dark-mode) .deposit-form select,
 body:not(.dark-mode) .deposit-form input[type="file"] {
-    background: #faf8ff;
-    border: 1px solid rgba(140, 107, 255, 0.15);
-    color: #2d2b38;
+    background: #c5cdc813;
+    color: #ffff;
+    border: 1px solid #00973c;
 }
 
 body:not(.dark-mode) .deposit-form input::placeholder {
-    color: #8b7cbb;
-}
-
-/* ==================================================
-   🌙 DARK MODE (Activated by body.dark-mode)
-================================================== */
-body.dark-mode .deposit-form {
-    background: linear-gradient(145deg, #1b1531, #17112a);
-    border: 1px solid rgba(160, 120, 255, 0.25);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
-}
-
-body.dark-mode .deposit-form label {
-    color: #dcd2ff;
-}
-
-body.dark-mode .deposit-form input,
-body.dark-mode .deposit-form select,
-body.dark-mode .deposit-form input[type="file"] {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(160, 120, 255, 0.25);
-    color: #f2ecff;
-}
-
-body.dark-mode .deposit-form input::placeholder {
-    color: #b9a3ff;
-}
-
-body.dark-mode .deposit-btn {
-    background: linear-gradient(90deg, #7c3aed, #5b21b6);
-}
-
-body.dark-mode .deposit-btn:hover {
-    background: linear-gradient(90deg, #5a3ea6, #3b2a56);
+    color: #bababc;
 }
 
 /* =========================================
    DARK MODE CUSTOM SELECT DROPDOWN STYLING
 ========================================= */
-body.dark-mode select {
-    background-color: #1f1838 !important;
-    color: #e8deff !important;
-    border: 1px solid rgba(164, 122, 255, 0.35);
+select {
+    background: #ffffff0d !important;
+    border: 1px solid rgba(120, 255, 199, 0.25) !important;
+    color: #726e6e !important;
     appearance: none; /* remove default arrow */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -295,27 +238,7 @@ body.dark-mode select {
     transition: all 0.3s ease;
 }
 
-/* On hover/focus */
-body.dark-mode select:hover,
-body.dark-mode select:focus {
-    background-color: #271d4b !important;
-    border-color: #b38cff !important;
-    box-shadow: 0 0 0 3px rgba(164, 122, 255, 0.2);
-}
 
-/* Dropdown options */
-body.dark-mode select option {
-    background-color: #1f1838;
-    color: #f0e7ff;
-}
-
-/* When disabled */
-body.dark-mode select:disabled {
-    background-color: #2a214b;
-    color: #8e7ccc;
-    opacity: 0.6;
-    cursor: not-allowed;
-}
 
 
 /* =========================
@@ -359,48 +282,4 @@ body.dark-mode select:disabled {
      .card-body h6 {
         text-align: center;
 }
-}
-
-/* =========================
-   Dark Mode
-========================= */
-body.dark-mode {
-    background: #121212;
-    color: #e4e4e7;
-}
-
-body.dark-mode .card {
-    background: #1f1f2a;
-    border: 1px solid #2c2c3c;
-}
-
-
-
-body.dark-mode .alert-success {
-    background: #065f46;
-    color: #d1fae5;
-    border: 1px solid #10b981;
-}
-
-body.dark-mode .alert-danger {
-    background: #991b1b;
-    color: #fee2e2;
-    border: 1px solid #f87171;
-}
-
-body.dark-mode label {
-    color: #d1d5db;
-}
-
- .card-body h6 {
-    font-size: 1.3rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-
-    color: #471276;
-}
-
-body.dark-mode  .card-body h6 {
-    color: #bc79ff;
 }

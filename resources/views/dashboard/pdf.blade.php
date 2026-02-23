@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Infinity Trade Solutions LTD - Transaction Invoice</title>
+    <title>Trinity Global Capital LTD - Transaction Invoice</title>
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
@@ -131,16 +131,16 @@ td.center {
 
 <header>
     <div class="logo">
-    <img src="{{ public_path('pics/Infinity1.png') }}">
+    <!--<img src="{{ public_path('pics/Infinity1.png') }}"> -->
 
 </div>
 
     
     <div class="company-info">
-        <p><strong>Infinity Trade Solutions LTD</strong></p>
-        <p>+44 74 4143 0900</p>
-        <p>20-22 Wenlock Road, London, England, N1 7GU</p>
-        <p><strong>support@infinitytradesolution.com</strong></p>
+            <p><strong>Trinity Global Capital LTD</strong></p>
+        <p>+61 861 865 931</p>
+        <p>1 Balloon Street, Manchester, M4 4BE, United Kingdom</p>
+        <p><strong>support@trinityglobalcapitalltd.com</strong></p>
     </div>
 </header>
 
@@ -223,9 +223,9 @@ td.center {
     </tfoot>
 </table>
 <br>
-<p class="footer-note">If you have any questions about this statement, please contact <strong>accounts@infinitytradesolution.com </strong></p>
+<p class="footer-note">If you have any questions about this statement, please contact <strong>accounts@trinityglobalcapitalltd.com </strong></p>
 <br>
-<p class="footer-note">This is a system-generated statement from Infinity Trade Solutions LTD.</p>
+<p class="footer-note">This is a system-generated statement from Trinity Global Capital LTD.</p>
 
 <script type="text/php">
 if (isset($pdf)) {

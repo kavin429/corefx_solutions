@@ -2,55 +2,41 @@
    Container & Page Title
 ===================== */
 .container {
-    max-width: 1200px;
     margin: 0 auto;
 }
 
 .container h2 {
     font-size: 1.5rem;
     text-align: left;
-    color: #3b2a5a;
-    margin-bottom: 1rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #d8bfff;
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    border-color: #024b27;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
 }
 
-body.dark .container h2 {
-    color: #e9dfff;
-    background:  linear-gradient(135deg, #2a1546, #3c1f66);
-    border-color: #6f41aa;
-}
 
 /* =====================
    Form Styles
 ===================== */
 form input.form-control {
     border-radius: 8px;
-    border: 1px solid #d0b3ff;
     padding: 0.5rem 0.75rem;
     font-size: 0.9rem;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+        background-color: #1d4126;
+    color: #d3d3d3;
+    border: 1px solid #0a652d;
 }
 
 form input.form-control:focus {
-    border-color: #9b5de5;
+  border-color: #28c071;
+  box-shadow: 0 0 4px rgba(13, 173, 53, 0.4);
     outline: none;
-    box-shadow: 0 0 0 0.15rem rgba(155, 93, 229, 0.25);
 }
 
-body.dark form input.form-control {
-    background-color: #331b57;
-    color: #e9dfff;
-    border-color: #5a3d7a;
-}
-
-body.dark form input.form-control:focus {
-    border-color: #9b5de5;
-    box-shadow: 0 0 0 0.15rem rgba(155, 93, 229, 0.3);
-}
 
 /* =====================
    Buttons
@@ -72,12 +58,12 @@ body.dark form input.form-control:focus {
 .btn1.btn-sm.btn-primary {
     font-size: 0.75rem;
     padding: 0.35rem 0.75rem;
-    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
 }
 
 .btn1.btn-sm.btn-primary:hover {
-    background: linear-gradient(135deg, #5a32a0, #8446c5);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 /* Danger (Delete) */
@@ -98,38 +84,13 @@ body.dark form input.form-control:focus {
     padding: 0.45rem 1rem;
     border-radius: 6px;
     font-weight: 500;
-    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
     border: none;
 }
 
 .btn.btn-success:hover {
-    background: linear-gradient(135deg, #5a32a0, #8446c5);
-}
-
-/* Dark mode buttons */
-body.dark .btn1.btn-sm.btn-primary {
-    background: linear-gradient(135deg, #8e5de5, #6a3dbb);
-}
-
-body.dark .btn1.btn-sm.btn-primary:hover {
-    background: linear-gradient(135deg, #7a4ad0, #5a32a0);
-}
-
-body.dark .btn1.btn-sm.btn-danger {
-    background: linear-gradient(135deg, #9f2a28, #7a1c1a);
-}
-
-body.dark .btn1.btn-sm.btn-danger:hover {
-    background: linear-gradient(135deg, #7a1c1a, #5d1514);
-}
-
-body.dark .btn.btn-success {
-    background: linear-gradient(135deg, #8e5de5, #6a3dbb);
-}
-
-body.dark .btn.btn-success:hover {
-    background: linear-gradient(135deg, #7a4ad0, #5a32a0);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 /* =====================
@@ -151,7 +112,7 @@ body.dark .btn.btn-success:hover {
 }
 
 .table thead th {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    background: linear-gradient(135deg, #3e7c55, #0e4812);
     color: #fff;
     text-align: center;
     padding: 0.75rem;
@@ -163,11 +124,10 @@ body.dark .btn.btn-success:hover {
 .table tbody td {
     text-align: center;
     padding: 0.5rem;
-    border-bottom: 1px solid #f8e6ff;
 }
 
 .table tbody tr:hover {
-    background-color: #ddbaea;
+    background-color: #082b20;
     transition: background 0.3s;
 }
 
@@ -184,19 +144,13 @@ body.dark .btn.btn-success:hover {
 /* Inputs inside table */
 .table input[type="text"] {
     width: 100%;
-
-    border: 1px solid #d0b3ff;
-    border-radius: 6px;
+    border: 1px solid #b3ffc6;
+    border-radius: 6pxrgb(179, 255, 202);
     padding: 0.25rem 0.5rem;
     font-size: 0.85rem;
     margin: 0.2rem;
 }
 
-body.dark .table input[type="text"] {
-    background-color: #331b57;
-    border-color: #5a3d7a;
-    color: #e9dfff;
-}
 
 /* Actions buttons inside table */
 .table td form {
@@ -208,25 +162,22 @@ body.dark .table input[type="text"] {
     margin: 0.1rem 0;
 }
 
-/* Dark mode table */
-body.dark .table thead th {
-    background: #5e2a86;
-    color: #f1e9ff;
+/* Table Rows */
+.table tbody tr:nth-child(even) {
+    background-color: #003513;
 }
 
-body.dark .table tbody td {
-    background-color: #2a1546;
-    color: #e9dfff;
-    border-color: rgba(255,255,255,0.1);
+.table tbody td {
+    background-color: #0759341b;
+    color: #ffffff;
+    border-left: 2px solid #044a22;
 }
 
-body.dark .table tbody tr:nth-child(even) {
-    background-color: #331b57;
+.form-control::placeholder {
+    color: #f0ececd2 !important; /* dark grey placeholder */
+    opacity: 1;
 }
 
-body.dark .table tbody tr:hover {
-    background-color: #3c1f66;
-}
 
 /* =====================
    Alerts
@@ -271,9 +222,11 @@ body.dark .alert {
 }
 
 /* Dark mode placeholder text for form inputs */
-body.dark input::placeholder,
+body.dark input::placeholder, 
 body.dark textarea::placeholder,
 body.dark select::placeholder {
     color: rgba(255, 255, 255, 0.6); /* Light gray for dark mode */
     opacity: 1; /* Ensure opacity works across browsers */
 }
+
+

@@ -12,32 +12,23 @@ html, body {
   touch-action: pan-y; /* allows only vertical scroll */
 }
 
-/* ===== Scrollbar Styling ===== */
+/* ===== Scrollbar Styling (Dark Green Theme) ===== */
 ::-webkit-scrollbar {
   width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f2e9fa; /* light violet background */
+  background: #e6f4ea;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* purple gradient */
+  background: linear-gradient(135deg, #065f46, #064e3b);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #7c3aed, #5b21b6);
-}
-
-/* Dark mode support */
-body.dark-mode ::-webkit-scrollbar-track {
-  background: #1e1e2f;
-}
-
-body.dark-mode ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #7c3aed, #5b21b6);
+  background: linear-gradient(135deg, #047857, #065f46);
 }
 
 * {
@@ -49,7 +40,7 @@ body.dark-mode ::-webkit-scrollbar-thumb {
 ========================= */
 body {
     margin: 0;
-    background: #f9f5fb;
+    background: #001008;
     color: #333;
 }
 
@@ -67,8 +58,8 @@ a {
     top: 0;
     width: 250px;
     height: 100vh; /* Full viewport height */
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
-    color: #2e1147;
+    background: linear-gradient(135deg, #0b3d2e, #265314);
+    color: #ebfff8;
     padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
@@ -115,7 +106,7 @@ a {
 
 .sidebar nav a:hover,
 .sidebar nav a.active {
-    background: #d1a1fb;
+    background: #1b7939;
 }
 
 /* =========================
@@ -128,7 +119,7 @@ a {
 }
 
 .topbar {
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     padding: 1rem 1.5rem;
     border-radius: 22px;
     display: flex;
@@ -138,11 +129,12 @@ a {
     margin: 0.5rem;
 }
 
-.topbar .welcome h2 {
+.topbar .welcome {
     margin: 0;
     font-size: 1.5rem;
     font-weight: 600;
     border: none;
+    color: #ebfff8 !important;
 }
 
 .top-icons {
@@ -162,13 +154,13 @@ a {
     width: 40px;
     height: 40px;
     font-size: 1.2rem;
-    color: #421054;
+    color: #ebfff8;
     background: transparent;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     transition: color 0.3s, background 0.3s;
-    background: rgb(251, 244, 255);
+    background: #1b7939;
 }
 
 /* Hover effect */
@@ -176,8 +168,8 @@ a {
 .logout-icon:hover,
 #sidebar-toggle:hover,
 .btn1:hover {
-    color: #edddf8;
-    background: rgb(113, 39, 150);
+    color: #ddf8f3;
+    background: #0e411e;
 }
 
 /* Make logout form inline-flex */
@@ -219,7 +211,7 @@ a {
 
 /* ===== Card Styling ===== */
 .card {
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-radius: 22px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     padding: 1.5rem;
@@ -235,13 +227,13 @@ a {
 .card h5 {
     margin: 0.5rem 0;
     font-weight: 500;
-    color: #555;
+    color: #e2e2e2;
 }
 
 .card h3 {
     margin: 0;
     font-weight: 700;
-    color: #111;
+    color: #2aff9f;
 }
 
 /* ===== Circle Icon ===== */
@@ -253,7 +245,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color:  #03150b;
     font-size: 1.5rem;
 }
 
@@ -281,7 +273,7 @@ a {
     border: none;
     padding: 6px 10px;
     border-radius: 6px;
-    color: #421054;
+    color: #ebfff8;
     font-size: 1.2rem;
     cursor: pointer;
     display: none; /* hidden by default */
@@ -335,131 +327,12 @@ a {
     
 }
 
-/* =========================
-   Dark Theme
-   (apply with body.dark-mode)
-========================= */
-body.dark-mode {
-    background: #121212;
-    color: #e4e4e7;
-}
-
-/* Sidebar */
-body.dark-mode .sidebar {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    color: #e4e4e7;
-}
-
-body.dark-mode .sidebar nav a {
-    color: #e4e4e7;
-}
-
-body.dark-mode .sidebar nav a:hover,
-body.dark-mode .sidebar nav a.active {
-    background: rgba(124, 58, 237, 0.2);
-}
-
-/* Topbar */
-body.dark-mode .topbar {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-}
-
-
-/* Dark Mode Support */
-body.dark-mode .top-icons i,
-body.dark-mode .logout-icon,
-body.dark-mode #sidebar-toggle,
-body.dark-mode .btn1 {
-    color: #e6d7f3;              /* light lavender text/icon */
-    background: #402553;         /* deep purple background */
-
-}
-
-/* Optional hover effect for dark mode */
-body.dark-mode .top-icons i:hover,
-body.dark-mode .logout-icon:hover,
-body.dark-mode #sidebar-toggle:hover,
-body.dark-mode .btn1:hover {
-    background: #5808a9;
-    color: #ffffff;
-}
-
-/* Cards */
-body.dark-mode .card {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    color: #e4e4e7;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-}
-
-body.dark-mode .card h5 {
-    color: #cfcfcf;
-}
-
-body.dark-mode .card h3 {
-    color: #fff;
-}
-
-/* Circle Icons */
-body.dark-mode .balance-icon {
-    background: linear-gradient(135deg, #7c3aed, #5b21b6);
-}
-body.dark-mode .income-icon {
-    background: linear-gradient(135deg, #9333ea, #6d28d9);
-}
-body.dark-mode .outcome-icon {
-    background: linear-gradient(135deg, #9626d3, #5c198f);
-}
-
-/* Notification Modal */
-body.dark-mode #notificationModal .modal-content {
-    background: #1e1e2f;
-    color: #e4e4e7;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.7);
-}
-
-body.dark-mode #notificationModal .modal-header {
-    background: linear-gradient(135deg, #2a143d, #1e1e2f);
-    border-bottom: 1px solid #333;
-    color: #e4e4e7;
-}
-
-body.dark-mode #notificationModal .list-group-item {
-    background: #2a143d;
-    color: #e4e4e7;
-}
-
-body.dark-mode #notificationModal .list-group-item:hover {
-    background: rgba(124, 58, 237, 0.2);
-}
-
-/* Delete Button */
-body.dark-mode #notificationModal .deleteNotifBtn {
-    color: #f87171;
-    border: 1px solid #f87171;
-    background: transparent;
-}
-
-body.dark-mode #notificationModal .deleteNotifBtn:hover {
-    background: rgba(248, 113, 113, 0.1);
-    color: #fca5a5;
-    border-color: #fca5a5;
-}
 
 /* Light mode (default Bootstrap look) */
 .text-muted {
-    color: #6c757d !important;
+    color: #dadada !important;
 }
 
-/* Dark mode override */
-body.dark-mode .text-muted {
-    color: #b5b5b5 !important;  /* softer gray for dark backgrounds */
-}
-
-/* Optional: make it a little dimmer for timestamps */
-body.dark-mode small.text-muted {
-    color: #a0a0a0 !important;
-}
 
 /* Default (light mode) */
 #notificationModal .btn-close {
@@ -472,33 +345,24 @@ body.dark-mode small.text-muted {
     opacity: 1;
 }
 
-/* Dark mode */
-body.dark-mode #notificationModal .btn-close {
-    filter: invert(1) brightness(1.2); /* turns icon white for dark mode */
-    opacity: 0.8;
-}
-
-body.dark-mode #notificationModal .btn-close:hover {
-    opacity: 1;
-}
 
 
 /* Circle Icons - Purple Glow */
 .balance-icon {
-    background: linear-gradient(135deg, #7c3aed, #5b21b6);
+    background: #c6ffd4;
 }
 
 .income-icon {
-    background: linear-gradient(135deg, #9333ea, #6d28d9);
+    background: #c6ffd4;
 }
 
 .outcome-icon {
-    background: linear-gradient(135deg, #9626d3, #5c198f);
+    background: #c6ffd4;
 }
 
 .pnl-icon {
-    background: linear-gradient(135deg, #8b5cf6, #6d28d9); /* purple gradient */
-    color: #fff; /* icon color for contrast */
+    background: #c6ffd4; /* purple gradient */
+    color: #03150b; /* icon color for contrast */
 }
 
 /* =========================
@@ -517,12 +381,13 @@ body.dark-mode #notificationModal .btn-close:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
     border: none;
     overflow: hidden;
+    color: #fff;
 }
 
 #notificationModal .modal-header {
     padding: 0.4rem 0.6rem;
     font-size: 0.9rem;
-    background:  linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     border-bottom: 1px solid #eee;
 }
 
@@ -530,6 +395,7 @@ body.dark-mode #notificationModal .btn-close:hover {
     max-height: 250px;
     overflow-y: auto;
     padding: 0.4rem 0.6rem;
+    background: #0b271f;
 }
 
 #notificationModal .list-group-item {
@@ -540,12 +406,14 @@ body.dark-mode #notificationModal .btn-close:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #faf6fc;
+    background: #163a28;
     transition: background 0.2s ease;
+    color: #e8ffed;
+    border-color: #047857;
 }
 
 #notificationModal .list-group-item:hover {
-    background: #f7f7fb;
+    background: #0c2a1e;
 }
 
 /* =========================
@@ -596,10 +464,10 @@ body.dark-mode #notificationModal .btn-close:hover {
     padding: 0 12px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: #4b3e6b; /* dark purple */
-    background-color: #f3e5ff; /* light purple */
+    color: #cbffe2; /* dark purple */
+    background-color: #0e251a; /* light purple */
     border-radius: 8px;
-    border: 1px solid #d0b3ff;
+    border: 1px solid #264b45;
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap; /* prevent wrapping */
@@ -610,25 +478,25 @@ body.dark-mode #notificationModal .btn-close:hover {
 .pagination li.next a {
     font-weight: 600;
     color: #fff;
-    background-color: #8e44ad; /* strong purple */
+    background-color: #173b29; /* strong purple */
 }
 
 .pagination li.previous a:hover,
 .pagination li.next a:hover {
-    background-color: #7d3c98;
+    background-color: #0f2516;
     color: #fff;
 }
 
 /* ---------- Hover Effect ---------- */
 .pagination li a:hover:not(.active) {
-    background-color: #e0ccff;
-    color: #240c40;
+    background-color: #0e3926;
+    color: #c7ffe0;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* ---------- Active Page ---------- */
 .pagination li.active span {
-    background-color: #8e44ad; /* strong purple */
+    background-color: #44ad60; /* strong purple */
     color: #fff;
     font-weight: 600;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
@@ -636,45 +504,14 @@ body.dark-mode #notificationModal .btn-close:hover {
 
 /* ---------- Disabled State ---------- */
 .pagination li.disabled span {
-    background-color: #f8f9fa;
-    color: #ccc;
+    background-color: #3b3b3b;
+    color: #686868;
     cursor: not-allowed;
-    border-color: #e0e0e0;
-}
-
-/* ---------- Dark Mode ---------- */
-body.dark-mode .pagination li a,
-body.dark-mode .pagination li span {
-    background-color: #2a1546;
-    color: #e9dfff;
-    border: 1px solid #5a3d99;
-}
-
-body.dark-mode .pagination li a:hover:not(.active) {
-    background-color: #3c1f66;
-    color: #fff;
-}
-
-body.dark-mode .pagination li.active span {
-    background-color: #5e2a86;
-    color: #fff;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
-body.dark-mode .pagination li.previous a,
-body.dark-mode .pagination li.next a {
-    background-color: #5e2a86;
-}
-
-body.dark-mode .pagination li.previous a:hover,
-body.dark-mode .pagination li.next a:hover {
-    background-color: #4c216d;
+    border-color: #4e4c4c;
 }
 
 /* ---------- Live ID Dropdown ---------- */
 .liveid-dropdown {
-    max-width: 950px;
-   
     margin-top: 1px;
     margin-bottom: 2rem;
 }
@@ -683,44 +520,46 @@ body.dark-mode .pagination li.next a:hover {
     font-weight: 600;
     margin-bottom: 0.5rem;
     display: block;
-    color: #371357;
+    color: #ffffff;
 }
 
 .liveid-dropdown select.form-select {
-    width: 102%;
+    width: 100%;
     padding: 0.5rem 0.75rem;
-    border: 1px solid #ad8cd9;
+    border: 1px solid #2d4331;
     border-radius: 10px;
-    background: linear-gradient(135deg, #e0f2fe, #e3c7fe);
+    background: linear-gradient(135deg, #0b3d2e, #265314);
     font-size: 0.95rem;
     transition: border 0.3s, box-shadow 0.3s;
+    color: #fff;
 }
 
 .liveid-dropdown select.form-select:focus {
     outline: none;
-    border-color: #8641e1; /* blue highlight */
-    box-shadow: 0 0 0 2px rgba(137, 65, 225, 0.2);
+    border-color: #1a623a; /* blue highlight */
+    box-shadow: 0 0 0 2px rgba(65, 225, 137, 0.2);
 }
 
 /* ---------- Live ID Details Box ---------- */
 #liveIdDetails {
     display: none; /* default hidden */
-    background-color: #f7f7f7;
+    background-color: #1b1b1b;
     padding: 1rem 1.25rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(31, 7, 62, 0.08);
     max-width: 400px;
     transition: all 0.3s ease;
+    color: #fff;
 }
 
 #liveIdDetails p {
     margin: 0.4rem 0;
     font-size: 0.95rem;
-    color: #271738;
+    color: #f9f9f9 !important;
 }
 
 #liveIdDetails strong {
-    color: #111827;
+    color: #f7f7f7;
 }
 
 /* Hover effect (optional) */
@@ -728,37 +567,10 @@ body.dark-mode .pagination li.next a:hover {
     box-shadow: 0 6px 18px rgba(31, 4, 58, 0.12);
 }
 
-/* Dark mode support */
-body.dark-mode #liveIdDetails {
-    background-color: #2a2a3a;
-    color: #f5f5f5;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-body.dark-mode .liveid-dropdown label,
-body.dark-mode #liveIdDetails strong {
-    color: #f5f5f5;
-}
-
-body.dark-mode .liveid-dropdown select.form-select {
-    background: linear-gradient(135deg, #1e1e2f, #2a143d);
-    color: #f5f5f5;
-    border: 1px solid #240f3f;
-}
-
-body.dark-mode .liveid-dropdown select.form-select:focus {
-    border-color: #ad64ed;
-    box-shadow: 0 0 0 2px rgba(164, 100, 237, 0.2);
-}
 
 .liveid-dropdown select.form-select option {
-    background: #f2e9fa;
-    color: #200a3b;
-}
-
-body.dark-mode .liveid-dropdown select.form-select option {
-    background: #200a3b;
-    color:#f2e9fa;
+    background: #252525;
+    color: #ffffff;
 }
 
 /* =====================================
@@ -801,7 +613,7 @@ body.dark-mode .liveid-dropdown select.form-select option {
   .topbar .welcome h2 {
     font-size: 2rem;
     font-weight: 700;
-    color: #3a005f;
+
   }
 
   .top-icons {

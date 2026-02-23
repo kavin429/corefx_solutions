@@ -5,13 +5,13 @@
 h3 {
     font-size: 1.5rem;
     text-align: left;
-    color: #3b2a5a;
+    color: #ffffff;
     margin-bottom: 2rem;
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #d8bfff;
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    border-color: #024b27;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
 }
 
 body.dark h3 {
@@ -33,25 +33,24 @@ body.dark h3 {
 /* ---------- Cards ---------- */
 .profile-card {
     width: 100%;
-    max-width: 480px;
-    background: linear-gradient(135deg, #f3e5ff, #e0ccff);
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
     border-radius: 12px;
     padding: 2rem 1.5rem;
-    box-shadow: 0 4px 12px rgba(155, 89, 182, 0.15);
+    box-shadow: 0 4px 12px rgba(89, 182, 108, 0.15);
     transition: transform 0.3s, box-shadow 0.3s;
     text-align: left;
 }
 
 .profile-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 18px rgba(155, 89, 182, 0.25);
+    box-shadow: 0 6px 18px rgba(89, 182, 142, 0.25);
 }
 
 /* ---------- Headings ---------- */
 .profile-card h4 {
     font-size: 1.6rem;
     font-weight: 600;
-    color: #3b2a5a;
+    color: #ffffff;
     margin-bottom: 1.5rem;
     text-align: center;
 }
@@ -62,7 +61,7 @@ body.dark h3 {
     margin: 0 auto 1rem auto;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #9b59b6;
+    border: 3px solid #59b678;
     width: 120px;
     height: 120px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
@@ -77,17 +76,22 @@ body.dark h3 {
 .form-control {
     width: 100%;
     padding: 0.55rem 0.85rem;
-    border: 1px solid #ccc;
     border-radius: 8px;
     font-size: 0.95rem;
     transition: border 0.3s ease, box-shadow 0.3s ease;
-    background-color: #fff;
-    color: #3b2a5a;
+      background-color: #1d4126 !important;
+  color: #f9f9f9 !important;
+  border: 1px solid #0a652d !important;
+}
+
+label{
+    color: #fff !important;
+    margin-bottom: 0.5rem;
 }
 
 .form-control:focus {
-    border-color: #9b59b6;
-    box-shadow: 0 0 0 3px rgba(155, 89, 182, 0.2);
+  border-color: #28c071;
+  box-shadow: 0 0 4px rgba(13, 173, 53, 0.4);
     outline: none;
 }
 
@@ -103,23 +107,23 @@ body.dark h3 {
 }
 
 .btn-primary {
-    background-color: #9b59b6;
+   background: linear-gradient(135deg, #1f6333, #5de59f);
     border: none;
     color: #fff;
 }
 
 .btn-primary:hover {
-    background-color: #7f3fb8;
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 .btn-warning {
-    background-color: #9b59b6;
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     border: none;
     color: #fff;
 }
 
 .btn-warning:hover {
-    background-color: #7f3fb8;
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 /* ---------- Responsive Styles ---------- */
@@ -151,37 +155,4 @@ body.dark h3 {
     h4 {
         font-size: 1.4rem;
     }
-}
-
-/* ---------- Dark Mode ---------- */
-body.dark .profile-card {
-    background: linear-gradient(135deg, #2a1546, #3c1f66);
-    color: #e9dfff;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-body.dark .form-control {
-    background-color: #2a1546;
-    color: #e9dfff;
-    border: 1px solid #6a3dbb;
-}
-
-body.dark .btn-primary {
-    background-color: #6a3dbb;
-}
-
-body.dark .btn-primary:hover {
-    background-color: #8b5de0;
-}
-
-body.dark .btn-warning {
-    background-color: #6a3dbb;
-}
-
-body.dark .btn-warning:hover {
-    background-color: #8b5de0;
-}
-
-body.dark h4 {
-    color: #c7aaff;
 }

@@ -20,21 +20,21 @@ body {
 .main1 h2 {
     font-size: 1.5rem;
     text-align: left;
-    color: #3b2a5a;
+    color: #ffffff;
     margin-bottom: 2rem;
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #d8bfff;
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    border-color: #024b27;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
 }
 
 /* ===========================
    Card Styles
 =========================== */
 .card1 {
-    background: linear-gradient(135deg, #f3e5ff, #e0ccff);
-    border: 1px solid #2b2e3a;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border: 1px solid #2b3a30;
     border-radius: 12px;
     padding: 15px 20px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -42,17 +42,17 @@ body {
 
 .card1:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(140, 82, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(82, 255, 157, 0.3);
 }
 
 .card1 h5 {
-    color: #0b0b0b;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 600;
 }
 
 .card1 p {
-    color: #6b21a8;
+    color: #d1d1d1;
     font-size: 0.9rem;
     margin: 0;
 }
@@ -78,12 +78,12 @@ body {
 }
 
 .btn-primary, button.btn-primary {
-    background-color: #8b5cf6;
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
 }
 .btn-primary:hover, button.btn-primary:hover {
-    background-color: #7c3aed;
-    box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+    background: linear-gradient(135deg, #32a063, #7bc546);
+    box-shadow: 0 0 10px rgba(92, 246, 143, 0.5);
 }
 
 .btn-danger, button.btn-danger {
@@ -138,44 +138,44 @@ div > *:not(:last-child) {
    Tables
 =========================== */
 .table {
-    color: #111;
+    color: #ffffff;
     border-collapse: collapse;
     width: 100%;
 }
 
 .table th {
-    background: #e5e7eb;
-    color: #1f2937;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    color: #ffffff !important;
     padding: 8px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #034e2c !important;
 }
 
 .table td {
-    background: #fff;
-    color: #111;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    color: #ffffff !important;
     padding: 8px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #02572e !important;
 }
 
 /* ===========================
    Modals
 =========================== */
 .modal-content {
-    background-color: #fff;
-    color: #111;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    color: #ffffff !important;
     border-radius: 10px;
-    border: 1px solid #d1d5db;
+    border: 1px solid #02572e;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header, .modal-footer {
-    border-color: #d1d5db;
+    border-color: #045e3d;
 }
 
 .modal-title {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #8b5cf6;
+    color: #ffffff;
 }
 
 .btn-close {
@@ -203,153 +203,6 @@ div > *:not(:last-child) {
     .modal-dialog {
         max-width: 90%;
     }
-}
-
-/* ===========================
-   🌑 Dark Theme
-=========================== */
-body.dark {
-    background-color: #0f1117;
-    color: #eaeaea;
-    font-family: 'Poppins', sans-serif;
-}
-
-body.dark .main1 h2 {
-    color: #e9dfff;
-    background:  linear-gradient(135deg, #2a1546, #3c1f66);
-    border-color: #6f41aa;
-}
-
-body.dark .card1 {
-    background: linear-gradient(135deg, #2a1546, #3c1f66);
-    border: 1px solid #2c2f3c;
-    border-radius: 12px;
-    padding: 15px 20px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-body.dark .card1:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(140, 82, 255, 0.3);
-}
-
-body.dark .card1 h5 {
-    color: #f3f4f6;
-}
-
-body.dark .card1 p {
-    color: #a78bfa;
-}
-
-/* Buttons */
-body.dark .btn,
-body.dark button.btn-sm {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 6px;
-    font-weight: 500;
-    font-size: 0.85rem;
-    padding: 6px 12px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 90px;
-}
-
-body.dark .btn-primary,
-body.dark button.btn-primary {
-    background-color: #5b3dd1;
-    color: #fff;
-}
-body.dark .btn-primary:hover,
-body.dark button.btn-primary:hover {
-    background-color: #4f29a6;
-    transform: translateY(-2px);
-    box-shadow: 0 0 8px rgba(91, 61, 209, 0.6);
-}
-
-body.dark .btn-danger,
-body.dark button.btn-danger {
-    background-color: #dc2626;
-    color: #fff;
-}
-body.dark .btn-danger:hover,
-body.dark button.btn-danger:hover {
-    background-color: #b91c1c;
-    transform: translateY(-2px);
-    box-shadow: 0 0 8px rgba(220, 38, 38, 0.6);
-}
-
-body.dark .btn-secondary,
-body.dark button.btn-secondary {
-    background-color: #374151;
-    color: #d1d5db;
-}
-body.dark .btn-secondary:hover,
-body.dark button.btn-secondary:hover {
-    background-color: #4b5563;
-    box-shadow: 0 0 8px rgba(75, 85, 99, 0.5);
-}
-
-/* Spacing between buttons */
-body.dark div > *:not(:last-child) {
-    margin-right: 8px;
-}
-
-/* Alerts */
-body.dark .alert-success {
-    background-color: #16a34a;
-    color: #fff;
-}
-
-body.dark .alert-danger {
-    background-color: #dc2626;
-    color: #fff;
-}
-
-body.dark .alert-warning {
-    background-color: #650bf5;
-    color: #fff;
-}
-
-/* Tables */
-body.dark .table th {
-    background: #2a2d3c;
-    color: #cbd5e1;
-    border: 1px solid #2b2e3a;
-}
-
-body.dark .table td {
-    background: #1e2130;
-    color: #e5e7eb;
-    border: 1px solid #2b2e3a;
-}
-
-/* Modals */
-body.dark .modal-content {
-    background-color: #1f2230;
-    color: #f3f4f6;
-    border-radius: 10px;
-    border: 1px solid #2c2f3c;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
-}
-
-body.dark .modal-header,
-body.dark .modal-footer {
-    border-color: #2c2f3c;
-}
-
-body.dark .modal-title {
-    color: #c4b5fd;
-}
-
-body.dark .btn-close {
-    filter: invert(80%);
-    opacity: 0.8;
-}
-body.dark .btn-close:hover {
-    opacity: 1;
 }
 
 /* Responsive */

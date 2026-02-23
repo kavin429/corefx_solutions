@@ -10,14 +10,14 @@ class AdminSeeder extends Seeder
 {
     public function run()
     {
-        $adminEmail = 'admin@gmail.com';
+        $adminEmail = 'trinityglobalcapital@gmail.com';
 
         // Check if admin already exists
         if (!Admin::where('email', $adminEmail)->exists()) {
             Admin::create([
                 'name' => 'Admin',
                 'email' => $adminEmail,
-                'password' => Hash::make('Admin@123'), // password is hashed automatically
+                'password' => Hash::make('Admin@1234'), // password is hashed automatically
             ]);
         }
     }

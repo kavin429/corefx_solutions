@@ -6,7 +6,6 @@
 
 .container {
     padding: 2rem 1rem;
-    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -14,13 +13,13 @@
 .container h2 {
     font-size: 1.5rem;
     text-align: left;
-    color: #3b2a5a;
+    color: #ffffff;
     margin-bottom: 2rem;
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #d8bfff;
-    background:  linear-gradient(135deg, #f3e5ff, #e0ccff);
+    border-color: #024b27;
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
 }
 
 body.dark .container h2{
@@ -61,12 +60,12 @@ body.dark .container h2{
 }
 
 .btn-primary, .btn1.btn-primary {
-    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+        background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
     border: none;
 }
 .btn-primary:hover, .btn1.btn-primary:hover {
-    background: linear-gradient(135deg, #5a32a0, #8446c5);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 .btn-secondary, .btn1.btn-secondary {
@@ -79,12 +78,12 @@ body.dark .container h2{
 }
 
 .btn-success {
-    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
     border: none;
 }
 .btn-success:hover {
-    background: linear-gradient(135deg, #5a32a0, #8446c5);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 
 .btn-danger {
@@ -107,12 +106,12 @@ body.dark .container h2{
 }
 
 .table thead th {
-    background: linear-gradient(135deg, #9b59b6, #8e44ad);
+    background: linear-gradient(135deg, #3e7c55, #0e4812);
     color: white;
     font-weight: 600;
     text-transform: uppercase;
     padding: 0.75rem;
-    border-bottom: 2px solid #7d3c98;
+    border-bottom: 2px solid  #044a22;
 }
 
 .table th, .table td {
@@ -122,11 +121,16 @@ body.dark .container h2{
 }
 
 .table tbody tr:nth-child(even) {
-    background-color: #fdf6ff;
+  background-color: #003513;
 }
 
 .table tbody tr:hover {
-    background-color: #f0e6ff;
+    background-color: #082b20;
+}
+.table tbody td {
+    background-color: #0759341b;
+    color: #ffffff;
+    border-left: 2px solid #044a22;
 }
 
 .table img {
@@ -140,7 +144,7 @@ body.dark .container h2{
 /* ---------- Modal ---------- */
 .modal-content {
     border-radius: 10px;
-    background: linear-gradient(135deg, #f3e5ff, #e0ccff);
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     border: none;
     overflow: hidden;
@@ -151,16 +155,16 @@ body.dark .container h2{
 }
 
 .modal-header.bg-primary {
-    background: linear-gradient(135deg, #a682ea, #ad6ef9);
+    background: linear-gradient(135deg, #0f2e1c, #2c431b);
 }
 
 .modal-header .modal-title {
     font-weight: 600;
-    color: #242323;
+    color: #ffffff;
 }
 
 .modal-header .btn-close {
-    color: #1e1033;
+    color: #d6d0df;
     filter: invert(1);
     opacity: 0.8;
 }
@@ -170,26 +174,40 @@ body.dark .container h2{
 
 .modal-body .form-control {
     border-radius: 6px;
-    border: 1px solid #d0b3ff;
+
     padding: 4px 8px;
     font-size: 0.85rem;
     transition: all 0.2s ease;
+        background-color: #1d4126;
+    color: #d3d3d3;
+    border: 1px solid #0a652d;
 }
 .modal-body .form-control:focus {
-    border-color: #9b5de5;
-    box-shadow: 0 0 0 0.15rem rgba(155,93,229,0.25);
+  border-color: #28c071;
+  box-shadow: 0 0 4px rgba(13, 173, 53, 0.4);
+    outline: none;
+}
+
+.modal-body .form-label,
+.form-check-label {
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #f0ececd2 !important; /* dark grey placeholder */
+    opacity: 1;
 }
 
 /* Modal Buttons */
 .modal-footer .btn-primary {
-    background: linear-gradient(135deg, #6a3dbb, #9b5de5);
+    background: linear-gradient(135deg, #1f6333, #5de59f);
     color: #fff;
     border-radius: 10px;
     padding: 10px 14px;
     border: none;
 }
 .modal-footer .btn-primary:hover {
-    background: linear-gradient(135deg, #5a32a0, #8446c5);
+    background: linear-gradient(135deg, #32a063, #7bc546);
 }
 .modal-footer .btn-secondary {
     background-color: #6c757d;
@@ -288,23 +306,25 @@ body.dark  .modal-header .modal-title {
 }
 
 .table-responsive::-webkit-scrollbar-thumb {
-    background: #6a3dbb; /* purple thumb */
+    background: #3dbb5a; /* purple thumb */
     border-radius: 4px;
 }
 
 .table-responsive::-webkit-scrollbar-thumb:hover {
-    background: #8245c9; /* lighter purple on hover */
+    background: #45c971; /* lighter purple on hover */
 }
 
 /* Dark mode scroll - Purple theme */
 body.dark .table-responsive::-webkit-scrollbar-track {
-    background: #1f0f2f; /* dark purple track */
+    background: #0f2f22; /* dark purple track */
 }
 
 body.dark .table-responsive::-webkit-scrollbar-thumb {
-    background: #9b59ff; /* bright purple thumb */
+    background: #59ffac; /* bright purple thumb */
 }
 
 body.dark .table-responsive::-webkit-scrollbar-thumb:hover {
-    background: #b072ff; /* lighter bright purple on hover */
+    background: #72ff91; /* lighter bright purple on hover */
 }
+
+

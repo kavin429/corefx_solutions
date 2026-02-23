@@ -30,7 +30,7 @@
  
         <!-- Select Account -->
         <div class="mb-4">
-            <label class="block text-gray-700 font-semibold mb-2">Select Account</label>
+            <label class="block font-semibold mb-2">Select Account</label>
             <select name="account_id" class="withdraw-input" required>
                 <option value="">-- Choose Account --</option>
                 @foreach(auth()->user()->accounts as $account)
@@ -43,13 +43,13 @@
 
         <!-- Amount -->
         <div class="mb-4">
-            <label class="block text-gray-700 font-semibold mb-2">Amount to Withdraw (USD)</label>
+            <label class="block font-semibold mb-2">Amount to Withdraw (USD)</label>
             <input type="number" name="amount" step="0.01" class="withdraw-input" required>
         </div>
 
         <!-- Beneficiary Name -->
         <div class="mb-4">
-            <label class="block text-gray-700 font-semibold mb-2">Beneficiary Name</label>
+            <label class="block font-semibold mb-2">Beneficiary Name</label>
             <input type="text" name="beneficiary_name" class="withdraw-input" required>
         </div>
 
@@ -57,7 +57,7 @@
 
         <!-- Withdrawal Method -->
         <div class="mb-4">
-            <label class="block text-gray-700 font-semibold mb-2">Select Withdrawal Method</label>
+            <label class="block font-semibold mb-2">Select Withdrawal Method</label>
             <select name="method" id="withdrawal_method" class="withdraw-input" required>
                 <option value="">-- Select Method --</option>
                 <option value="binance">Binance</option>
@@ -69,28 +69,28 @@
 
         <!-- Dynamic Fields -->
         <div id="binance_fields" class="withdraw-field">
-            <label class="block text-gray-700 font-semibold mb-2">Wallet Address (BEP 20)</label>
+            <label class="block font-semibold mb-2">Wallet Address (BEP 20)</label>
             <input type="text" name="binance_id" class="withdraw-input">
         </div>
 
         <div id="upi_fields" class="withdraw-field">
-            <label class="block text-gray-700 font-semibold mb-2">UPI ID</label>
+            <label class="block font-semibold mb-2">UPI ID</label>
             <input type="text" name="upi_id" class="withdraw-input">
         </div>
 
         <div id="bank_fields" class="withdraw-field">
-            <label class="block text-gray-700 font-semibold mb-2">Bank Name</label>
+            <label class="block font-semibold mb-2">Bank Name</label>
             <input type="text" name="bank_name" class="withdraw-input mb-3">
 
-            <label class="block text-gray-700 font-semibold mb-2">Account Number</label>
+            <label class="block font-semibold mb-2">Account Number</label>
             <input type="text" name="bank_account_number" class="withdraw-input mb-3">
 
-            <label class="block text-gray-700 font-semibold mb-2">IFSC / Bank Address</label>
+            <label class="block font-semibold mb-2">IFSC / Bank Address</label>
             <input type="text" name="ifsc" class="withdraw-input">
         </div>
 
         <div id="xynder_fields" class="withdraw-field">
-            <label class="block text-gray-700 font-semibold mb-2">Xynder ID</label>
+            <label class="block font-semibold mb-2">Xynder ID</label>
             <input type="text" name="xynder_id" class="withdraw-input">
         </div>
 
