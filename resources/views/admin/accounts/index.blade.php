@@ -3,8 +3,6 @@
 
     <link rel="stylesheet" href="{{ asset('css/adminAccounts.css') }}">
 
-    @section('title', 'Infinity Trade Solutions LTD')
-
     @section('content')
     <div class="container-fluid">
         <h2>Manage Accounts</h2>

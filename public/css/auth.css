@@ -65,7 +65,7 @@ body, html {
    2) HEADER / NAVIGATION
    ========================================================= */
 .logo img {
-  height: 50px;
+  height: 60px;
   /* adjust as needed */
   width: auto;
   display: block;
@@ -869,7 +869,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(42%) sepia(93%) saturate(500%) hue-rotate(90deg);
 }
 .logo img {
-    height: 50px;           /* adjust as needed */
+    height: 60px;           /* adjust as needed */
     width: auto;
     display: block;
 }

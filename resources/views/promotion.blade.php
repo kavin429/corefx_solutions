@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinity Global Capital LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon1.png') }}"/>
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/TrinityLogo1.png') }}"/>
 
   <!-- ✅ Add this line -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,9 +23,9 @@
 <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-        <!--<a href="{{ route('home') }}">
-            <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
-        </a>-->TRINITY GLOBAL CAPITAL
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Infinity Trade Logo" class="logo-img">
+        </a>
     </div>
 
   <div class="hamburger" onclick="toggleMenu()">
@@ -229,7 +229,7 @@
 
       <!-- Column 1: Logo + Social -->
       <div class="footer-col footer-brand">
-        <!-- <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">-->
+        <img src="{{ asset('pics/TrinityLogo.png') }}" alt="Tradefx Logo" class="footer-logo">
         <div class="footer-social">
           <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>

@@ -14,8 +14,8 @@
 
   <!-- Header -->
   <header class="bg-white shadow-md w-full flex items-center px-8 py-4">
-      <!--<img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="h-12"> --> 
-      <span class="brand-title">TRINITY GLOBAL CAPITAL</span>
+      <img src="{{ asset('pics/TrinityLogo.png') }}" alt="Infinity Trade Logo" class="h-12"> 
+      <!--<span class="brand-title">TRINITY GLOBAL CAPITAL</span>-->
       <nav>
       <ul class="menu" id="navMenu">
           <li><a href="{{ route('home') }}">Go to Website</a></li>

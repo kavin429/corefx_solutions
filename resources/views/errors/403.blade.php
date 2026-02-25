@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>403 | Forbidden Access - Infinity Trade Solutions LTD</title>
+  <title>403 | Forbidden Access - Trinity Global Capital LTD </title>
   <style>
     body { margin:0; padding:0; font-family: 'Tomorrow', sans-serif; height:100vh; background-image: linear-gradient(to top, #2e1753, #1f1746, #131537, #0d1028, #050819); display:flex; justify-content:center; align-items:center; overflow:hidden; }
     .text { position:absolute; top:10%; color:#fff; text-align:center; }
@@ -46,7 +46,7 @@
 </div>
 
 <footer>
-  &copy; Infinity Trade Solutions LTD - 09711441
+  &copy; Trinity Global Capital LTD - 15669711
 </footer>
 
 <script>

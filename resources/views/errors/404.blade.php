@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 | Page Not Found - Infinity Trade Solutions LTD</title>
+<title>404 | Page Not Found - Trinity Global Capital LTD</title>
 <style>
   body{
   margin:0;
@@ -120,7 +120,7 @@ footer{
 </div>
 
 <footer>
-  &copy; Infinity Trade Solutions LTD - 09711441
+  &copy; Trinity Global Capital LTD - 15669711
 </footer>
 
 <script>

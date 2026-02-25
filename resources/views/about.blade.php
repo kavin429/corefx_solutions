@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinity Global Capital LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon1.png') }}" />
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/TrinityLogo1.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/about.css') }}">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,9 +20,9 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
     <!-- ===== HEADER ===== -->
 <header>
     <div class="logo">
-        <!--<a href="{{ route('home') }}">
-            <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
-        </a>-->TRINITY GLOBAL CAPITAL
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Infinity Trade Logo" class="logo-img">
+        </a>
     </div>
 
   <div class="hamburger" onclick="toggleMenu()">
@@ -142,26 +142,29 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
   </div>
 </section>
 
-    <!-- Partner Section -->
+<!-- Partner Section -->
   <section class="partner-section">
  <!-- Partner Logos Slider -->
   <div class="partner-slider">
     <div class="partner-track">
         <!-- Logos (duplicate for infinite loop) -->
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/ethereum.png" alt="Ethereum">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/onramp.png" alt="Onramp">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/upi.png" alt="UPI">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/usdt.png" alt="USDT">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/visa.png" alt="Visa">
-        <img src="https://www.tradegloballtd.com/assets/images/logos3/mastercard.png" alt="Mastercard">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">  
+        <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+        <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
 
       </div>
     </div>
 
   <!-- Bottom Cave -->
   <div class="cave-bottom">
-</section> 
+</section>
 
 <!-- ===== HIGHLIGHT CARDS ===== -->
 <section class="highlights-section">
@@ -235,7 +238,7 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-     <!-- <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">-->
+     <img src="{{ asset('pics/TrinityLogo.png') }}" alt="Tradefx Logo" class="footer-logo">
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>

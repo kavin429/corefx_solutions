@@ -181,26 +181,19 @@ h4 {
   .partner-track img {
     height: 30px;
   }
-}
+} 
 
 /* =========================================================
    2) HEADER / NAVIGATION
    ========================================================= */
 .logo img {
-  height: 50px;
+  height: 60px;
   /* adjust as needed */
   width: auto;
   display: block;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #16e0aa, #11ffbc, #85ffdc);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
+
 
 @media (max-width: 768px) {
   .logo img {
@@ -1122,7 +1115,7 @@ header.scrolled .menu a:hover {
 }
 
 .logo img {
-  height: 50px;
+  height: 60px;
   /* adjust as needed */
   width: auto;
   display: block;
