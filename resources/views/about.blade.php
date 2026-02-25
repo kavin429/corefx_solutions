@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinity Global Capital LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/TrinityLogo1.png') }}" />
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Trinitylogo1.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/about.css') }}">
   <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -238,7 +238,7 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-     <img src="{{ asset('pics/TrinityLogo.png') }}" alt="Tradefx Logo" class="footer-logo">
+     <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Tradefx Logo" class="footer-logo">
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>

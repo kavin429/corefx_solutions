@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Trinity Global Capital LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icony1.png') }}" />
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Trinitylogo1.png') }}" />
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="{{ asset('css/adminLogin.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
 
   <!-- Header -->
   <header class="bg-white shadow-md w-full flex items-center px-8 py-4">
-      <img src="{{ asset('pics/TrinityLogo.png') }}" alt="Infinity Trade Logo" class="h-12"> 
+      <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Infinity Trade Logo" class="h-12"> 
       <!--<span class="brand-title">TRINITY GLOBAL CAPITAL</span>-->
       <nav>
       <ul class="menu" id="navMenu">

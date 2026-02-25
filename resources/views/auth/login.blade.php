@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <title>Trinity Global Capital LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/TrinityLogo1.png') }}" />
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Trinitylogo1.png') }}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="{{ asset('css/login.css') }}">
@@ -22,7 +22,7 @@
 <header>
     <div class="logo">
         <a href="{{ route('home') }}">
-            <img src="{{ asset('pics/TrinityLogo.png') }}" alt="Infinity Trade Logo" class="logo-img">
+            <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Infinity Trade Logo" class="logo-img">
         </a>
     </div>
 
@@ -93,7 +93,7 @@
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-     <img src="{{ asset('pics/TrinityLogo.png') }}" alt="Tradefx Logo" class="footer-logo">
+     <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Tradefx Logo" class="footer-logo">
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
