@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trinity Global Capital LTD</title>
+  <title>CORE FINANCE LIMITED</title>
   <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Trinitylogo1.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/platform.css') }}">
 
@@ -38,7 +38,7 @@
         <li><a href="{{ route('home') }}">Home</a></li>
         <li><a href="{{ route('about') }}">About Us</a></li>
         <li class="dropdown">
-          <a href="#">Trading Products ▾</a>
+          <a href="#">Trading Products &#9662;</a>
           <ul class="dropdown-menu">
             <li><a href="{{ route('forex') }}">Forex</a></li>
             <li><a href="{{ route('metals') }}">Metals</a></li>
@@ -54,64 +54,64 @@
       </ul>
     </nav>
 
-  </header>
+  </header>  <!-- PLATFORM + DOWNLOAD LAYOUT -->
+  <section class="platform-layout">
+    <div class="container platform-layout-grid">
 
-  <!-- PLATFORM SECTION -->
+      <div class="platform-left">
+        <section class="platform-section">
+          <h1 class="page-title">CORE FINANCE LIMITED Financial Services Platform</h1>
+          <p class="page-desc">
+              The CORE FINANCE LIMITED platform is designed to provide efficient and secure
+  access to professional accounting, bookkeeping, tax consultancy, and financial
+  management services. Our system enables clients to manage financial records,
+  monitor reports, and access essential documentation through a user-friendly interface.
+  <br/><br/>
+  Built for individuals and businesses alike, the platform ensures accuracy,
+  confidentiality, and compliance with UK regulations. With secure data protection,
+  streamlined reporting tools, and reliable support, we help our clients make
+  informed financial decisions and maintain long-term financial stability.
+          </p>
+        </section>
+      </div>
 
-  <section class="platform-section">
-    <div class="container">
-      <h1 class="page-title">Trinity Global Capital LTD Trading Platform</h1>
-      <p class="page-desc">
-        The Trinity Global Capital LTD platform is designed to give traders lightning-fast execution,
-        advanced charting tools,
-        and access to multiple asset classes including Forex, Crypto, Metals, and Indices.
-        Available on desktop and mobile so you can trade anytime, anywhere.
-      </p>
-    </div>
-  </section>
+      <div class="platform-right">
+        <section class="cta padding-top padding-bottom bg-color">
+          <div class="cta__wrapper">
+            <div class="cta__newsletter justify-content-center">
+              <div class="cta__newsletter-inner aos-init aos-animate" data-aos="fade-up" data-aos-duration="1000">
+                <div class="cta__subscribe">
+                  <h2><span>Download</span> Our Platform</h2>
 
+                  <div class="store-list">
+                    <div class="store store-row">
+                      <a href="{{ url('/download/android') }}">
+                        <img src="{{ asset('pics/googlePlay.png') }}" alt="Download for Android">
+                      </a>
+                    </div>
 
-  <section class="cta padding-top padding-bottom  bg-color">
-    <div class="container">
-      <div class="cta__wrapper">
-        <div class="cta__newsletter justify-content-center">
-          <div class="cta__newsletter-inner aos-init aos-animate"
-            data-aos="fade-up" data-aos-duration="1000">
+                    <div class="store store-row">
+                      <a href="{{ url('/download/windows') }}">
+                        <img src="{{ asset('pics/windowsStore.png') }}" alt="Download for Windows">
+                      </a>
+                    </div>
 
-            <div class="cta__subscribe">
-              <h2 style="text-align:center"> <span>Download</span> Our Platform</h2>
-              <div class="row">
-                <!-- Android APK -->
-                <div class="col-4 store">
-                  <a href="{{ url('/download/android') }}">
-                    <img src="{{ asset('pics/googlePlay.png') }}" alt="Download for Android" style="width:250px;">
-                  </a>
-                </div>
+                    <div class="store store-row">
+                      <a href="{{ url('/download/ios') }}">
+                        <img src="{{ asset('pics/appStore.png') }}" alt="Download for iOS">
+                      </a>
+                    </div>
+                  </div>
 
-                <!-- Windows EXE -->
-                <div class="col-4 store">
-                  <a href="{{ url('/download/windows') }}">
-                    <img src="{{ asset('pics/windowsStore.png') }}" alt="Download for Windows" style="width:250px;">
-                  </a>
-                </div>
-
-                <!-- iOS App Store -->
-                <div class="col-4 store">
-                  <a href="{{ url('/download/ios') }}">
-                    <img src="{{ asset('pics/appStore.png') }}" alt="Download for iOS" style="width:250px;">
-                  </a>
                 </div>
               </div>
-
             </div>
           </div>
-        </div>
+        </section>
       </div>
 
     </div>
-    </div>
   </section>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
@@ -124,6 +124,7 @@
           <a href="#"><i class="fab fa-instagram"></i></a>
           <a href="#"><i class="fab fa-linkedin-in"></i></a>
           <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
 
         </div>
       </div>
@@ -166,8 +167,8 @@
         <h4>Contact Info</h4>
         <ul>
           <li> <i class="fas fa-phone"></i> +61 861 865 931</li>
-          <li><i class="fas fa-envelope"></i> support@trinityglobalcapitalltd.com</li>
-          <li><i class="fas fa-building"></i> 1 Balloon Street, Manchester, M4 4BE, United Kingdom</li>
+          <li><i class="fas fa-envelope"></i> support@corefinanceltd.com</li>
+          <li><i class="fas fa-building"></i> 9 Scott Court, 50 Silverthorne Road, London, United Kingdom, SW8 3HD</li>
           <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
         </ul>
       </div>
@@ -175,48 +176,93 @@
 
     <!-- Legal -->
     <div class="footer-legal">
-      <h3>legal</h3>
-      <p> This Website is Owned by Trinity Global Capital LTD.
-        The objects of the Company are all subject matters not forbidden by International Business Companies
-        (Amendment and Consolidation).</p>
-      <h3>General Risk Warning</h3>
-      <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as
-        they carry a high degree of risk to your capital. Please ensure that you fully understand
-        the risks involved, taking into account your investments objectives and level of experience,
-        before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.</p>
-      <h3>Risk disclosure</h3>
-      <p>Past performance is not indicative of future results. The information on our website is provided
-        for informational purposes only and should not be construed as investment advice.
-        You should seek independent advice before making any investment decisions. Trinity Global Capital LTD
-        does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic,
-        China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya,
-        Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan,
-        Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Trinity Global Capital LTD
-        may reject any applicant from any jurisdiction at their sole discretion without the requirement to
-        explain the reason why (Terms and conditions).</p>
+      <div class="legal-titles">
+        <h3 class="legal-title" data-target="legal-desc">Legal</h3>
+        <h3 class="legal-title" data-target="risk-warning-desc">General Risk Warning</h3>
+        <h3 class="legal-title" data-target="risk-disclosure-desc">Risk Disclosure</h3>
+      </div>
+
+      <div class="legal-desc-container">
+        <p id="legal-desc" class="legal-desc">
+          This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.
+          The objects of the Company are all subject matters not forbidden by International Business Companies
+          (Amendment and Consolidation).
+        </p>
+
+        <p id="risk-warning-desc" class="legal-desc">
+          Trading leveraged products such as Forex and CFDs may not be suitable for all investors as
+          they carry a high degree of risk to your capital. Please ensure that you fully understand
+          the risks involved, taking into account your investments objectives and level of experience,
+          before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.
+        </p>
+
+        <p id="risk-disclosure-desc" class="legal-desc">
+          Past performance is not indicative of future results. The information on our website is provided
+          for informational purposes only and should not be construed as investment advice.
+          You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
+          does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic,
+          China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya,
+          Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan,
+          Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
+          may reject any applicant from any jurisdiction at their sole discretion without the requirement to
+          explain the reason why (Terms and conditions).
+        </p>
+      </div>
     </div>
 
     <!-- Bottom -->
     <div class="footer-bottom">
-      <p>© Trinity Global Capital LTD - 15669711</p>
-      <div class="footer-social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-      </div>
+      <p>&copy; CORE FINANCE LIMITED - 10956602</p>
+      <section class="partner-section">
+        <div class="partner-slider">
+          <div class="partner-track">
+            <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+            <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+          </div>
+        </div>
+      </section>
     </div>
   </footer>
 
+  <script>
+    const titles = document.querySelectorAll('.legal-title');
+    const descriptions = document.querySelectorAll('.legal-desc');
+
+    titles.forEach(title => {
+      title.addEventListener('click', () => {
+        const targetId = title.dataset.target;
+        const desc = document.getElementById(targetId);
+
+        const isActive = title.classList.contains('active');
+
+        titles.forEach(t => t.classList.remove('active'));
+        descriptions.forEach(d => {
+          d.style.display = 'none';
+        });
+
+        if (!isActive) {
+          title.classList.add('active');
+          if (desc) desc.style.display = 'block';
+        }
+      });
+    });
+  </script>
+
   <!-- Dark Mode Toggle 
 <button id="darkModeToggle" class="dark-toggle">
-  🌙
+  Ã°Å¸Å’â„¢
 </button> -->
 
   <!-- Back to Top Button -->
-  <button id="backToTop" class="back-to-top">
-    ↑
-  </button>
+  <button id="backToTop" class="back-to-top">&#8593;</button>
 
 
   <script src="{{ asset('js/platform.js') }}"></script>
@@ -238,3 +284,5 @@ s0.parentNode.insertBefore(s1,s0);
 </body>
 
 </html>
+
+

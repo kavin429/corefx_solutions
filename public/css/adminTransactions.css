@@ -10,9 +10,9 @@
 
 /* Card */
 .card {
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #246a6f, #46938a);
     border-radius: 12px;
-    border: 1px solid #06451e;
+    border: 1px solid #063745;
     padding: 20px;
     margin-bottom: 0.5rem;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
@@ -25,7 +25,7 @@
     font-weight: 600;
     color: #ffffff;
     margin-bottom: 15px;
-    border-bottom: 2px solid #06451e;
+    border-bottom: 2px solid #063745;
     padding-bottom: 5px;
 }
 
@@ -38,9 +38,9 @@
 /* Inputs & Selects */
 .card input.form-control,
 .card select.form-select {
-  background-color: #1d4126;
+  background-color: #234f56;
   color: #f9f9f9;
-  border: 1px solid #0a652d;
+  border: 1px solid #0a6065;
   border-radius: 8px;
   padding: 8px 12px;
   transition: 0.3s;
@@ -51,7 +51,7 @@
 .select2-container--default .select2-selection--single {
   background-color: #4b4b4b !important;
   color: #f9f9f9 !important;
-  border: 1px solid #06451e !important;
+  border: 1px solid #063745 !important;
   border-radius: 8px !important;
   padding: 6px 14px !important;
   height: 40px !important; /* taller height */
@@ -76,8 +76,8 @@
 /* Hover + focus effect */
 .select2-container--default .select2-selection--single:hover,
 .select2-container--default.select2-container--focus .select2-selection--single {
-  border-color: #28c071;
-  box-shadow: 0 0 4px rgba(13, 173, 53, 0.4);
+  border-color: #18cad7;
+  box-shadow: 0 0 4px rgba(13, 168, 173, 0.4);
 }
 
 /* Dropdown panel */
@@ -87,7 +87,7 @@
 }
 
 .select2-container--default .select2-results__option--highlighted[aria-selected] {
-  background-color: #0dad52;
+  background-color: #0dada5;
   color: #fff;
 }
 
@@ -103,22 +103,22 @@
 
 .card input.form-control:focus,
 .card select.form-select:focus {
-    border-color: #23ae56;
-    box-shadow: 0 0 5px rgba(179, 255, 206, 0.4);
+    border-color: #2399ae;
+    box-shadow: 0 0 5px rgba(179, 255, 251, 0.4);
     outline: none;
 }
 
 
 /* Buttons */
 .card button.btn {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff !important;
     border: none !important;
 
 }
 
 .card button.btn:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 /* Hidden fields 
@@ -172,8 +172,8 @@
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 /* Alerts */
@@ -186,9 +186,9 @@
 }
 
 .alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background-color: #aff5ef;
+    color: #155753;
+    border: 1px solid #00fdf8;
 }
 
 .alert-danger {
@@ -210,8 +210,8 @@ form.mb-3 input.form-control,
 form.mb-3 select.form-control {
     padding: 0.35rem 0.5rem;
     border-radius: 6px;
-    border: 1px solid #0f6932 !important;
-      background-color: #1d4126;
+    border: 1px solid #0f6968 !important;
+      background-color: #234f56;
   color: #f9f9f9;
   
 }
@@ -233,13 +233,13 @@ form.mb-3 a.btn1 {
 
 /* Button Colors */
 form.mb-3 button.btn1.btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
 }
 
 form.mb-3 button.btn1.btn-primary:hover {
-   background: linear-gradient(135deg, #32a063, #7bc546);
+   background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 form.mb-3 a.btn1.btn-secondary {
@@ -253,12 +253,12 @@ form.mb-3 a.btn1.btn-secondary:hover {
 }
 
 form.mb-3 a.btn1.btn-success {
-   background: linear-gradient(135deg, #1f6333, #5de59f);
+   background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
 }
 
 form.mb-3 a.btn1.btn-success:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 
@@ -281,34 +281,34 @@ form.mb-3 a.btn1.btn-success:hover {
 
 /* Table Header */
 .table th {
-    background: linear-gradient(135deg, #3e7c55, #0e4812);
+    background: linear-gradient(135deg, #3e797c, #105358);
     color: #ffffff;
     font-weight: 600;
     position: sticky;
     top: 0;
     z-index: 2;
-    border-bottom: 2px solid #044a22;
+    border-bottom: 2px solid #066062;
 }
 
 /* Table Rows */
 .table tbody tr:nth-child(even) {
-    background-color: #003513;
+    background-color: #014446;
 }
 
 .table tbody tr:hover {
-    background-color: #082b20;
+    background-color: #08292b;
 }
 
 .table tbody td {
-    background-color: #0759341b;
+    background-color: #0752591b;
     color: #ffffff;
-    border-left: 2px solid #044a22;
+    border-left: 2px solid #066062;
 }
 
 /* Table Images */
 .table img {
     border-radius: 6px;
-    border: 1px solid #044a22;
+    border: 1px solid #066062;
     transition: transform 0.2s;
 }
 
@@ -325,7 +325,7 @@ form.mb-3 a.btn1.btn-success:hover {
     text-align: center;
 }
 
-.bg-success { background-color: #28a745; color: #fff; }
+.bg-success { background-color: #2894a7; color: #fff; }
 .bg-warning { background-color: #ffc107; color: #212529; }
 .bg-danger  { background-color: #dc3545; color: #fff; }
 .bg-secondary { background-color: #6c757d; color: #fff; }
@@ -348,12 +348,12 @@ form.mb-3 a.btn1.btn-success:hover {
 
 /* Primary Button */
 .btn1.btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f) !important;
+    background: linear-gradient(135deg, #1f5d63, #47dde7) !important;
     color: #fff;
 }
 
 .btn1.btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546) !important;
+    background: linear-gradient(135deg, #32a09e, #46c5c5) !important;
     color: #fff;
 }
 
@@ -381,12 +381,12 @@ form.mb-3 a.btn1.btn-success:hover {
 
 /* Success Button (if needed) */
 .btn1.btn-success {
-    background-color: #28a745;
+    background-color: #2894a7;
     color: #fff;
 }
 
 .btn1.btn-success:hover {
-    background-color: #218838;
+    background-color: #218888;
     color: #fff;
 }
 

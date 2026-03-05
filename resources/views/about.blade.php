@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trinity Global Capital LTD</title>
+  <title>CORE FINANCE LIMITED</title>
   <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Trinitylogo1.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/about.css') }}">
   <!-- Font Awesome for icons -->
@@ -61,7 +61,7 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1> <span>Trinity Global Capital LTD</span></h1>
+      <h1> <span>CORE FINANCE LIMITED</span></h1>
       <p>One of the leading financial venture firms revolutionizing online forex trading.</p>
     </div>
   </section>
@@ -69,43 +69,45 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
 <!-- ===== WHO WE ARE SECTION ===== -->
 <section class="who-section" id="who-we-are">
   <div class="who-container">
-    <!-- Left Side Image -->
-    <div class="who-image">
-      <img src="{{ asset('pics/about1.png') }}" alt="About Tradefxm">
-    </div>
-
-    <!-- Right Side Text -->
+    <!-- Left Side Text -->
     <div class="who-content">
-      <h2 class="section-title">Who We Are</h2>
+      <h1 class="section-title">Who We Are</h1>
       <p class="who-text">
-        Trinity Global Capital LTD was founded by a diverse group of financial experts in 2024 with 
-        the vision of building a financial platform where every individual can play 
-        a crucial role in the forex industry.
+        CORE FINANCE LIMITED is a United Kingdom registered private limited company,
+  incorporated on 11 September 2017. The company is officially registered
+  with Companies House under company number 10956602.
       </p>
       <p class="who-text">
-        We integrate advanced technology, cryptocurrency trading, and a true ECN 
-        pricing model, offering competitive opportunities for traders worldwide.
+        Our core business activities include accounting and auditing services,
+  bookkeeping, tax consultancy, and financial management solutions,
+  supporting individuals and businesses with professional financial expertise.
       </p>
 
       <!-- Cards -->
       <div class="who-cards">
         <div class="who-card">
-           <i class="ti ti-eye who-icon"></i>
-          <h3>Our Vision</h3>
+           <i class="ti ti-building-bank who-icon"></i>
+          <h3>Our Mission</h3>
           <p>
-            To revolutionize forex by delivering innovative investment approaches, 
-            competitive spreads, and sustainable opportunities.
+            To deliver reliable accounting, tax consultancy, and financial 
+      management services with integrity, precision, and full regulatory compliance.
           </p>
         </div>
         <div class="who-card">
-           <i class="ti ti-target-arrow who-icon"></i>
+           <i class="ti ti-shield-check who-icon"></i>
           <h3>Our Commitment</h3>
           <p>
-            We focus on customer success by providing advanced tools, learning 
-            resources, and up-to-date market analysis for a win-win outcome.
+            We are committed to supporting individuals and businesses with 
+      transparent financial solutions, professional guidance, and 
+      long-term strategic growth planning.
           </p>
         </div>
       </div>
+    </div>
+
+    <!-- Right Side Image -->
+    <div class="who-image">
+      <img src="{{ asset('pics/about1.png') }}" alt="About Tradefxm">
     </div>
   </div>
 </section>
@@ -142,94 +144,81 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
   </div>
 </section>
 
-<!-- Partner Section -->
-  <section class="partner-section">
- <!-- Partner Logos Slider -->
-  <div class="partner-slider">
-    <div class="partner-track">
-        <!-- Logos (duplicate for infinite loop) -->
-        <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
 
-      </div>
-    </div>
-
-  <!-- Bottom Cave -->
-  <div class="cave-bottom">
-</section>
 
 <!-- ===== HIGHLIGHT CARDS ===== -->
 <section class="highlights-section">
   <div class="container grid-cards">
 
     <!-- Card 1 -->
-    <div class="card fade-in">
-        <h3>Financial Products</h3>
-      <img src="{{ asset('pics/a3.png') }}" alt="Financial Products">
-      
-      <p>
-        We sincerely understand the importance of diversification. To protect our customers from investment risks, 
-        we offer seven types of trading products with over 200+ individual securities to trade with. 
-        Furthermore, we have integrated Cryptocurrency exchange to our platform. 
-        Traders can enjoy trading future generation currencies, along with classical products.
-      </p>
+    <div class="card fade-in row-card">
+      <h3>Financial Products</h3>
+      <div class="card-row">
+        <img src="{{ asset('pics/a33.png') }}" alt="Financial Products">
+        <div class="card-copy">
+          <p>
+            We sincerely understand the importance of diversification. To protect our customers from investment risks,
+            we offer seven types of trading products with over 200+ individual securities to trade with.
+            Furthermore, we have integrated Cryptocurrency exchange to our platform.
+            Traders can enjoy trading future generation currencies, along with classical products.
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Card 2 -->
-    <div class="card fade-in">
-        <h3>Customer Satisfaction</h3>
-      <img src="{{ asset('pics/a2.png') }}" alt="Customer Satisfaction">
-      
-      <p>
-        Earning loyalty and outstanding customer satisfaction is our top priority. 
-        We have secured a customer service team that is available 24 hours during Monday to Friday, 
-        in case you need any assistance. To improve and enhance our client-facing services, we always welcome 
-        incoming opinions and suggestions from you.ve our services.
-      </p>
+    <div class="card fade-in row-card">
+      <h3>Customer Satisfaction</h3>
+      <div class="card-row reverse">
+        <img src="{{ asset('pics/a55.png') }}" alt="Customer Satisfaction">
+        <div class="card-copy">
+          <p>
+            Earning loyalty and outstanding customer satisfaction is our top priority.
+            We have secured a customer service team that is available 24 hours during Monday to Friday,
+            in case you need any assistance. To improve and enhance our client-facing services, we always welcome
+            incoming opinions and suggestions from you.ve our services.
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Card 3 -->
-    <div class="card fade-in">
-        <h3>Our Professional Team</h3>
-      <img src="{{ asset('pics/a4.png') }}" alt="Our Team">
-      
-      <p>
-        A diverse group of finance and investment professionals committed to helping 
-        our clients achieve success in forex trading. 
-        We are a collection of professionals from the finance and investment sectors. 
-        We are knowledgeable in all the intricacies of forex trading and we are happy to assist 
-        all stakeholders to guarantee the best experiences.
-      </p>
+    <div class="card fade-in row-card">
+      <h3>Our Professional Team</h3>
+      <div class="card-row">
+        <img src="{{ asset('pics/a4.png') }}" alt="Our Team">
+        <div class="card-copy">
+          <p>
+            A diverse group of finance and investment professionals committed to helping
+            our clients achieve success in forex trading.
+            We are a collection of professionals from the finance and investment sectors.
+            We are knowledgeable in all the intricacies of forex trading and we are happy to assist
+            all stakeholders to guarantee the best experiences.
+          </p>
+        </div>
+      </div>
     </div>
 
     <!-- Card 4 -->
-    <div class="card fade-in">
-             <h3>Technology</h3>
-      <img src="{{ asset('pics/a1.png') }}" alt="Technology">
- 
-      <p>
-       We are a forward-thinking forex brokerage that aims to revolutionize the forex industry. 
-       We have the finest technology setup for our clients to trade safely and successfully. 
-       Our payment system is conducted with reputable third parties, ensuring high-level 
-       security when we handle your money. 
-       We are constantly striving to explore better solutions that we can add to our business 
-       that will benefit you, as well as our company.
-      </p>
+    <div class="card fade-in row-card">
+      <h3>Technology</h3>
+      <div class="card-row reverse">
+        <img src="{{ asset('pics/a3.png') }}" alt="Technology">
+        <div class="card-copy">
+          <p>
+            We are a forward-thinking forex brokerage that aims to revolutionize the forex industry.
+            We have the finest technology setup for our clients to trade safely and successfully.
+            Our payment system is conducted with reputable third parties, ensuring high-level
+            security when we handle your money.
+            We are constantly striving to explore better solutions that we can add to our business
+            that will benefit you, as well as our company.
+          </p>
+        </div>
+      </div>
     </div>
 
   </div>
 </section>
-
-
-
 
 
 <!-- Footer -->
@@ -244,6 +233,7 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
        
       </div>
     </div>
@@ -286,47 +276,94 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +61 861 865 931</li>
-        <li><i class="fas fa-envelope"></i>  support@trinityglobalcapitalltd.com</li>
-        <li><i class="fas fa-building"></i>  1 Balloon Street, Manchester, M4 4BE, United Kingdom</li>
+        <li><i class="fas fa-envelope"></i>  support@corefinanceltd.com</li>
+        <li><i class="fas fa-building"></i>  9 Scott Court, 50 Silverthorne Road, London, United Kingdom, SW8 3HD</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
     </div>
   </div>
 
   <!-- Legal -->
-  <div class="footer-legal">
-    <h3>legal</h3>
-    <p> This Website is Owned by Trinity Global Capital LTD. 
+ <div class="footer-legal">
+  <div class="legal-titles">
+    <h3 class="legal-title" data-target="legal-desc">Legal</h3>
+    <h3 class="legal-title" data-target="risk-warning-desc">General Risk Warning</h3>
+    <h3 class="legal-title" data-target="risk-disclosure-desc">Risk Disclosure</h3>
+  </div>
+
+  <div class="legal-desc-container">
+    <p id="legal-desc" class="legal-desc">
+      This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.  
       The objects of the Company are all subject matters not forbidden by International Business Companies 
-      (Amendment and Consolidation).</p>
-    <h3>General Risk Warning</h3>
-    <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as 
+      (Amendment and Consolidation).
+    </p>
+
+    <p id="risk-warning-desc" class="legal-desc">
+      Trading leveraged products such as Forex and CFDs may not be suitable for all investors as 
       they carry a high degree of risk to your capital. Please ensure that you fully understand 
       the risks involved, taking into account your investments objectives and level of experience, 
-      before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.</p>
-    <h3>Risk disclosure</h3>
-    <p>Past performance is not indicative of future results. The information on our website is provided 
+      before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.
+    </p>
+
+    <p id="risk-disclosure-desc" class="legal-desc">
+      Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. Trinity Global Capital LTD 
+      You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
       China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Trinity Global Capital LTD 
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
-      explain the reason why (Terms and conditions).</p>
+      explain the reason why (Terms and conditions).
+    </p>
   </div>
+</div>
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© Trinity Global Capital LTD - 15669711</p> 
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
+    <p>� CORE FINANCE LIMITED - 10956602</p>
+    <section class="partner-section">
+      <div class="partner-slider">
+        <div class="partner-track">
+          <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+        </div>
+      </div>
+    </section>
   </div>
 </footer>
+
+<script>
+const titles = document.querySelectorAll('.legal-title');
+const descriptions = document.querySelectorAll('.legal-desc');
+
+titles.forEach(title => {
+  title.addEventListener('click', () => {
+    const targetId = title.dataset.target;
+    const desc = document.getElementById(targetId);
+
+    const isActive = title.classList.contains('active');
+
+    titles.forEach(t => t.classList.remove('active'));
+    descriptions.forEach(d => {
+      d.style.display = 'none';
+    });
+
+    if (!isActive) {
+      title.classList.add('active');
+      if (desc) desc.style.display = 'block';
+    }
+  });
+});
+</script>
 
 <!-- Dark Mode Toggle 
 <button id="darkModeToggle" class="dark-toggle">
@@ -358,5 +395,6 @@ s0.parentNode.insertBefore(s1,s0);
 
 </body>
 </html>
+
 
 

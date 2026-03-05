@@ -234,7 +234,7 @@
             </div>
             
             @empty
-            <p class="text-center">No users found.</p>
+           <p class="text-center no-users-text">No users found.</p>
         @endforelse
     </div>
 

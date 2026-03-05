@@ -23,12 +23,12 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #065f46, #064e3b);
+  background: linear-gradient(135deg, #06585f, #06484e);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #047857, #065f46);
+  background: linear-gradient(135deg, #046978, #065f5f);
 }
 
 * {
@@ -58,7 +58,7 @@ a {
     top: 0;
     width: 250px;
     height: 100vh; /* Full viewport height */
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     color: #ebfff8;
     padding: 2rem 1rem;
     display: flex;
@@ -119,7 +119,7 @@ a {
 }
 
 .topbar {
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     padding: 1rem 1.5rem;
     border-radius: 22px;
     display: flex;
@@ -211,7 +211,7 @@ a {
 
 /* ===== Card Styling ===== */
 .card {
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     border-radius: 22px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     padding: 1.5rem;
@@ -387,7 +387,7 @@ a {
 #notificationModal .modal-header {
     padding: 0.4rem 0.6rem;
     font-size: 0.9rem;
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     border-bottom: 1px solid #eee;
 }
 
@@ -409,7 +409,7 @@ a {
     background: #163a28;
     transition: background 0.2s ease;
     color: #e8ffed;
-    border-color: #047857;
+    border-color: #046978;
 }
 
 #notificationModal .list-group-item:hover {
@@ -528,7 +528,7 @@ a {
     padding: 0.5rem 0.75rem;
     border: 1px solid #2d4331;
     border-radius: 10px;
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     font-size: 0.95rem;
     transition: border 0.3s, box-shadow 0.3s;
     color: #fff;

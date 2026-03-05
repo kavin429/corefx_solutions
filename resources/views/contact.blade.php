@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trinity Global Capital LTD</title>
+  <title>CORE FINANCE LIMITED</title>
   <link rel="icon" type="image/png" href="{{ asset('pics/Trinitylogo1.png') }}">
   <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 <body>
@@ -57,49 +57,59 @@
 </header>
 
 <!-- ======= Contact Section ======= -->
-<section class="contact-page container">
-    <h1 class="text-center mb-5 fw-bold text-dark">Contact Us</h1>
+<section class="contact-modern">
 
-    <div class="row g-5 align-items-start">
-        <!-- Contact Info -->
-        <div class="col-lg-5">
-            <div class="contact-info">
-                <h4>Get In Touch</h4>
+  <!-- ROW 1 : FULL WIDTH CONTACT CARD -->
+  <div class="contact-details">
+    <div class="contact-card">
 
-                <p>
-                    <i class="bi bi-telephone-fill text-purple me-2"></i> 
-                    +61 861 865 931
-                </p>
+  <h1 class="contact-title">Get In Touch</h1>
 
-                <p>
-                    <i class="bi bi-envelope-fill text-purple me-2"></i> 
-                    support@trinityglobalcapitalltd.com
-                </p>
+  <div class="contact-grid">
 
-                <hr>
-
-                <h5 class="fw-semibold text-dark mt-3">Our Office</h5>
-                <p>
-                    <strong>United Kingdom Office:</strong><br>
-                    1 Balloon Street, Manchester, M4 4BE, United Kingdom
-                </p>
-            </div>
-        </div>
-
-        <!-- Google Map -->
-        <div class="col-lg-7">
-            <div class="map-container">
-                <iframe 
-                    src="https://www.google.com/maps?q=1+Balloon+Street,+Manchester,+M4+4BE,+United+Kingdom&output=embed"
-                    width="100%" 
-                    height="400" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
+    <div class="contact-item">
+      <i class="bi bi-telephone-fill contact-icon"></i>
+      <div>
+        <span>Phone</span>
+        <p>+61 861 865 931</p>
+      </div>
     </div>
+
+    <div class="contact-item">
+      <i class="bi bi-envelope-fill contact-icon"></i>
+      <div>
+        <span>Email</span>
+        <p>support@corefinanceltd.com</p>
+      </div>
+    </div>
+
+    <div class="contact-item">
+      <i class="bi bi-geo-alt-fill contact-icon"></i>
+      <div>
+        <span>Our Office</span>
+        <p>
+          9 Scott Court, 50 Silverthorne Road,<br>
+          London, United Kingdom, SW8 3HD
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+  </div>
+
+  <!-- ROW 2 : FULL WIDTH MAP -->
+  <div class="map-full">
+    <iframe 
+      src="https://www.google.com/maps?q=9+Scott+Court,+50+Silverthorne+Road,+London,+SW8+3HD,+United+Kingdom&output=embed"
+      allowfullscreen="" 
+      loading="lazy"
+      style="border:0;" >
+      
+    </iframe>
+  </div>
+
 </section>
 
 <!-- Footer -->
@@ -114,6 +124,7 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
        
       </div>
     </div>
@@ -156,47 +167,96 @@
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +61 861 865 931</li>
-        <li><i class="fas fa-envelope"></i>  support@trinityglobalcapitalltd.com</li>
-        <li><i class="fas fa-building"></i>  1 Balloon Street, Manchester, M4 4BE, United Kingdom</li>
+        <li><i class="fas fa-envelope"></i>  support@corefinanceltd.com</li>
+        <li><i class="fas fa-building"></i>  9 Scott Court, 50 Silverthorne Road, London, United Kingdom, SW8 3HD</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
     </div>
   </div>
 
   <!-- Legal -->
-  <div class="footer-legal">
-    <h3>legal</h3>
-    <p> This Website is Owned by Trinity Global Capital LTD. 
+ <div class="footer-legal">
+  <div class="legal-titles">
+    <h3 class="legal-title" data-target="legal-desc">Legal</h3>
+    <h3 class="legal-title" data-target="risk-warning-desc">General Risk Warning</h3>
+    <h3 class="legal-title" data-target="risk-disclosure-desc">Risk Disclosure</h3>
+  </div>
+
+  <div class="legal-desc-container">
+    <p id="legal-desc" class="legal-desc">
+      This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.  
       The objects of the Company are all subject matters not forbidden by International Business Companies 
-      (Amendment and Consolidation).</p>
-    <h3>General Risk Warning</h3>
-    <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as 
+      (Amendment and Consolidation).
+    </p>
+
+    <p id="risk-warning-desc" class="legal-desc">
+      Trading leveraged products such as Forex and CFDs may not be suitable for all investors as 
       they carry a high degree of risk to your capital. Please ensure that you fully understand 
       the risks involved, taking into account your investments objectives and level of experience, 
-      before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.</p>
-    <h3>Risk disclosure</h3>
-    <p>Past performance is not indicative of future results. The information on our website is provided 
+      before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.
+    </p>
+
+    <p id="risk-disclosure-desc" class="legal-desc">
+      Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. Trinity Global Capital LTD 
+      You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
       China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Trinity Global Capital LTD 
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
-      explain the reason why (Terms and conditions).</p>
+      explain the reason why (Terms and conditions).
+    </p>
   </div>
+</div>
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© Trinity Global Capital LTD - 15669711</p>
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
+    <p>© CORE FINANCE LIMITED - 10956602</p>
+    <section class="partner-section">
+      <div class="partner-slider">
+        <div class="partner-track">
+          <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+        </div>
+      </div>
+    </section>
   </div>
+  
 </footer>
+<script>
+const titles = document.querySelectorAll('.legal-title');
+const descriptions = document.querySelectorAll('.legal-desc');
+
+titles.forEach(title => {
+  title.addEventListener('click', () => {
+    const targetId = title.dataset.target;
+    const desc = document.getElementById(targetId);
+
+    const isActive = title.classList.contains('active');
+
+    // close all first
+    titles.forEach(t => t.classList.remove('active'));
+    descriptions.forEach(d => {
+      d.style.display = 'none';
+    });
+
+    // open clicked one only
+    if (!isActive) {
+      title.classList.add('active');
+      if (desc) desc.style.display = 'block';
+    }
+  });
+});
+</script>
 
 <!-- Dark Mode Toggle
 <button id="darkModeToggle" class="dark-toggle">
@@ -228,3 +288,5 @@ s0.parentNode.insertBefore(s1,s0);
 <!--End of Tawk.to Script-->
 </body>
 </html>
+
+

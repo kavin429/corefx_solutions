@@ -19,7 +19,7 @@
     max-width: 1000px;      /* Limit width */
     margin: 2rem auto;      /* Center horizontally with margin */
     padding: 2rem;          /* Padding around the widget */
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     border-radius: 22px;    /* Rounded corners */
     box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Soft shadow */
 }

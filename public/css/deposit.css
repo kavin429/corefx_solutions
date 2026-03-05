@@ -11,9 +11,9 @@
     color: #ffffff !important;
     padding: 1rem 1.5rem;
     border: solid 1px;
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     border-radius: 22px;
-    border-color: #002f10;
+    border-color: #002c2f;
 }
 
 /* =========================
@@ -163,7 +163,7 @@
 }
 
 .deposit-btn {
-    background: linear-gradient(135deg, #28d19e, #68e437);
+    background: linear-gradient(135deg, #28c6d1, #30daea);
     color: #000000;
     border: none;
     border-radius: 10px;
@@ -181,7 +181,7 @@
 
 .deposit-btn:hover {
     transform: translateY(-2px);
-    background: linear-gradient(45deg, #68e437 , #28d19e);
+    background: linear-gradient(45deg, #37d3e4 , #28d1cb);
     color: #00180d;
 }
 
@@ -252,7 +252,7 @@ select {
 
 .alert-success {
     background: #d1fae5;
-    color: #065f46;
+    color: #065f5f;
     border: 1px solid #10b981;
 }
 

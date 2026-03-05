@@ -42,46 +42,21 @@ html, body {
   background: linear-gradient(135deg, #046978, #065f5f);
 }
 
-/* ========================
-   RESET & BASE
-======================== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* resources/css/login.css */
 
 * {
   font-family: 'Poppins' , sans-serif;
 }
 
-body {
-  color: #0b0b0b;
-  line-height: 1.6;
-  background: linear-gradient(135deg, #0a1a1a 0%, #1a2f2e 50%, #296c62 100%);
+/* ----- Global Styles ----- */
+body, html {
+    margin: 0; 
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a1a0a 0%, #355f35 50%, #0f1f0f 100%);
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
 
-ul {
-  list-style: none;
-}
-
-/* ========================
-   GLOBAL CONTAINERS
-======================== */
-.page-card {
-  border-radius: 12px;
-  margin-bottom: 50px;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 130px;
-  overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-}
 
 /* =========================================================
    2) HEADER / NAVIGATION
@@ -112,6 +87,7 @@ ul {
 header {
   width: 100%;
   padding: 15px 40px;
+  background: rgba(10, 26, 10, 0.8);
   position: fixed;
   top: 0;
   left: 0;
@@ -119,13 +95,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(135deg, #010707aa, #0a3a3faa);
-  backdrop-filter: blur(10px);
-  transition: background 0.3s ease;
 }
 
 header.scrolled {
-  background: rgba(1, 7, 7, 0.85);
+  background: rgba(10, 26, 10, 0.8);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -135,7 +108,7 @@ header.scrolled .menu a {
 }
 
 header.scrolled .menu a:hover {
-  color: #21aab4;
+  color: #85ffdc;
   /* make nav links dark for visibility */
 }
 
@@ -161,8 +134,7 @@ header.scrolled .menu a:hover {
 .menu {
   list-style: none;
   display: flex;
-  gap: 32px;
-  align-items: center;
+  gap: 28px;
 }
 
 .menu li {
@@ -170,54 +142,46 @@ header.scrolled .menu a:hover {
 }
 
 .menu a {
-  font-family: 'Poppins', sans-serif;
-  color: #ffffff;
-  padding: 0;
+  color: #fff;
+  padding: 10px 5px;
   font-size: 16px;
   font-weight: 500;
-  display: flex;
-  align-items: center;
-  gap: 6px;
   position: relative;
-  transition: all 0.3s ease;
 }
 
 .menu a::after {
-  display: none;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #14ebb2, #046978);
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
 }
 
 .menu a:hover {
-  color: #21aab4;
-  transform: scale(1.1);
-}
-
-.menu a img {
-  width: 18px;
-  height: 18px;
-  transition: transform 0.3s ease;
-}
-
-.menu a:hover img {
-  transform: scale(1.2);
+  color: #85ffdc;
 }
 
 /* Login Button */
 .login-btn a {
-  background: linear-gradient(135deg, #167b75, #06bee3);
-  color: #010707 !important;
-  padding: 6px 28px;
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+  color: #0c0c0c !important;
+  padding: 12px 26px;
   border-radius: 8px;
-  font-weight: 500;
-  border: 2px solid #00f0ff;
-  transition: all 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 600;
+  transition: 0.3s ease;
 }
 
 .login-btn a:hover {
-  background: linear-gradient(90deg, #00d4ff, #21aab4);
+  background: linear-gradient(90deg, #046978, #14ebb2);
   transform: scale(1.08);
-  color: #ffffff !important;
-  border-color: #21edf4;
-  box-shadow: 0 0 12px rgba(33, 180, 170, 0.8);
+  color: white !important;
 }
 
 /* Remove underline effect for login button */
@@ -236,13 +200,19 @@ header.scrolled .menu a:hover {
   top: 120%;
   left: 0;
   min-width: 220px;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
-  background: rgba(10, 63, 59, 0.85);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(33, 180, 170, 0.3);
+  /* Glass effect */
+  background: rgba(0, 50, 30, 0.75);
+  /* dark green semi-transparent */
+  backdrop-filter: blur(14px);
+  /* Glow border */
+  border: 1px solid rgba(0, 200, 100, 0.3);
+  /* green glow */
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(33, 180, 170, 0.25);
+    0 0 20px rgba(0, 200, 100, 0.25);
+  /* subtle green glow */
+
   animation: dropdownFade 0.35s ease forwards;
   z-index: 999;
 }
@@ -291,7 +261,7 @@ header.scrolled .menu a:hover {
   top: 50%;
   height: 0%;
   width: 3px;
-  background: linear-gradient(90deg, #21aab4, #21aab4);
+  background: linear-gradient(90deg, #21aab4, #2894a7);
   /* dark green gradient */
   border-radius: 4px;
   transform: translateY(-50%);
@@ -300,8 +270,10 @@ header.scrolled .menu a:hover {
 
 /* Hover effect for dropdown items */
 .dropdown-menu li a:hover {
-  background: rgba(33, 180, 170, 0.15);
-  color: #00d4ff;
+  background: rgba(0, 197, 200, 0.15);
+  /* subtle green highlight */
+  color: #b2ebf2;
+  /* light green text */
   padding-left: 28px;
 }
 
@@ -359,7 +331,6 @@ header.scrolled .menu a:hover {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-
 @media (max-width: 1200px) {
   .hamburger {
     display: flex;
@@ -377,7 +348,6 @@ header.scrolled .menu a:hover {
     text-align: center;
     animation: slideDown 0.4s ease forwards;
   }
-
   nav.active {
     display: flex;
     padding: 20px;
@@ -387,11 +357,9 @@ header.scrolled .menu a:hover {
     flex-direction: column;
     gap: 20px;
   }
-
   .menu li {
     width: 100%;
   }
-
   .menu li a {
     padding: 16px;
     border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -400,7 +368,6 @@ header.scrolled .menu a:hover {
   .dropdown-menu {
     display: none;
   }
-
   .dropdown.open .dropdown-menu {
     display: block;
   }
@@ -417,301 +384,300 @@ header.scrolled .menu a:hover {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ========================
-   HERO SECTION WITH VIDEO
-======================== */
-.hero {
-  position: relative;
-  height: 70vh;
+/* ---------- Login Root & Cards ---------- */
+.login-root {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.card {
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  padding: 10rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  transition: background 0.3s, color 0.3s;
+}
+
+.card h2 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #aaffc4 !important;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+/* ---------- Buttons ---------- */
+.card button {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 0.75rem;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background:#8826ff;
+  transition: all 0.3s ease;
+}
+
+.card button:hover {
+  background: #360276;
+}
+
+/* ---------- Manual Login Form ---------- */
+/* ----- Cards ----- */
+.login-root .card {
+  background: #ffffff13;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: left;
+  transition: background 0.3s, color 0.3s;
+  margin-top: 100px;
+  border: 1px solid #559e9d;
+}
+
+
+
+/* ----- Buttons ----- */
+button {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  text-align: center;
+  gap: 0.5rem;
+  transition: transform 0.2s, filter 0.2s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+#backToMethod2{
+  background: #5656ff;
+}
+
+#backToMethod2:hover {
+  background: #1f1f5d;
+}
+
+/* Specific button colors */
+#manualBtn {
+  background: #2563eb; /* Blue */
   color: #fff;
 }
 
-.hero-video {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  object-fit: cover;
-  z-index: -2;
+#manualBtn:hover {
+  background: #143989; /* Blue */
+  color: #fff;
 }
 
-.hero .overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  z-index: -1;
+#biometricBtn {
+  background: #33eade; /* Purple */
+  color: #fff;
 }
 
-.hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  text-shadow: 0 3px 10px rgba(0,0,0,0.8);
+#biometricBtn:hover {
+  background: #4b157c; /* Purple */
+  color: #fff;
 }
 
-.hero-content p {
-  font-size: 1.2rem;
-  opacity: 0.9;
+#signupBtn {
+  background: #1680a3; /* Green */
+  color: #fff;
 }
 
-/* ========================
-   PRODUCT DESCRIPTION
-======================== */
-.product-description {
-  padding: 60px 20px;
-  text-align: center;
-  background: linear-gradient(45deg, #07100d, #195152, #07100f);
+#signupBtn:hover {
+  background: #094245; /* Green */
+  color: #fff;
 }
 
-.product-description h2 {
-  font-size: 50px;
-  font-weight: 1000;
-    background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
+#signupBtn:hover {
+  background: #094245; /* Green */
+  color: #fff;
+}
+
+#signupBtn2 {
+  background: #1680a3; /* Green */
+  color: #fff;
+}
+
+#signupBtn2:hover {
+  background: #094245; /* Green */
+  color: #fff;
+}
+
+#loginBtn,
+#gotoSignup {
+  background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
+  color: #0f0f0f;
+}
+
+#loginBtn:hover
+#gotoSignup:hover {
+  background: linear-gradient(90deg, #046978, #14ebb2);
+  color: #fff;
+}
+
+/* ----- Password wrapper ----- */
+.password-wrapper {
   position: relative;
-  line-height: 1.3;
-  letter-spacing: -0.5px;
 }
 
-.product-description p {
-  max-width: 900px;
-  margin: auto;
-  line-height: 1.8;
-  font-size: 1rem;
-  color: #efefef;
-  text-align: justify;
+.toggle-password {
+  position: absolute;
+  top: 40%;
+  right: 13px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #62fe969d;
 }
 
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 0.95rem;
+  color: #efeeee;
 
-/* ========================
-   RESPONSIVE DESIGN
-======================== */
-
-/* Tablets (≤ 992px) */
-@media (max-width: 992px) {
-  /* Hero Section */
-  .hero {
-    height: 60vh;
-    padding: 0 20px;
-  }
-
-  .hero-content h1 {
-    font-size: 2.2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-
-  /* Product Description */
-  .product-description {
-    padding: 40px 15px;
-  }
-
-  .product-description h2 {
-    font-size: 1.8rem;
-  }
-
-  .product-description p {
-    font-size: 0.95rem;
-  }
-
-  /* Footer */
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-  }
 }
 
-/* Mobiles (≤ 768px) */
-@media (max-width: 768px) {
-
-
-
-  /* Navigation */
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  /* Hero Section */
-  .hero {
-    height: 55vh;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-content p {
-    font-size: 0.9rem;
-  }
-
-  /* Product Description */
-  .product-description {
-    padding: 30px 15px;
-  }
-
-  .product-description h2 {
-    font-size: 1.5rem;
-  }
-
-  .product-description p {
-    font-size: 0.9rem;
-  }
-
-  /* Footer */
-  .footer-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-    text-align: center;
-  }
-
-  .footer-social {
-    text-align: center;
-  }
-}
-
-/* Extra Small Mobiles (≤ 480px) */
-@media (max-width: 480px) {
-
-
-
-
-  /* Hero */
-  .hero {
-    height: 50vh;
-  }
-  
-  .hero-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .hero-content p {
-    font-size: 0.85rem;
-  }
-
-  /* Product Description */
-  .product-description h2 {
-    font-size: 1.3rem;
-  }
-
-  .product-description p {
-    font-size: 0.85rem;
-  }
-
-  /* Footer */
-  .footer {
-    padding: 30px 15px 15px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    gap: 8px;
-    font-size: 0.75rem;
-  }
-}
-
-
-.partner-section {
-  position: relative;
-  /* mint background */
-  overflow: hidden;
-}
-
-/* ===== Logo Slider ===== */
-.partner-slider {
-  overflow: hidden;
+/* ----- Inputs ----- */
+.card input {
   width: 100%;
-  margin: 0%;
-  padding: 20px;
-  background: transparent;
-
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #99f7f9;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  transition: border 0.3s, background 0.3s;
+  background: #f0f3f20e;
+  color: #fff;
 }
 
-.partner-track img {
-  height: 40px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+input:focus {
+  border-color: #63e8f1;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(99,102,241,0.3);
 }
 
-.partner-track img:hover {
-  transform: scale(1.1);
+
+/* ----- Error ----- */
+.error {
+    border: 1px solid #B91C1C;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+    display: none; /* hidden initially */
+    background: #ffdfdf;
+    color: red;
 }
 
-.partner-track {
+/* ----- Links ----- */
+.links {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.links a {
+  color: #25eba9;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+  color: #54efe5;;
+}
+
+
+
+/* ----- Back buttons ----- */
+.back-btn {
+  background: none;
+  border: none;
+  color: gray;
+ 
+  margin-top: 1rem;
+}
+
+/* ----- Flex buttons wrapper ----- */
+.buttons {
   display: flex;
-  gap: 50px;
-  align-items: center;
-  animation: slideRight 20s linear infinite;
-  animation-play-state: running;
-  /* default running */
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.partner-track.paused {
-  animation-play-state: paused;
-  /* stop animation when class added */
+/* ----- Responsive ----- */
+@media (max-width: 540px) {
+  .login-root .card {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
 }
 
-/* ===== Animation Keyframes ===== */
-@keyframes slideRight {
+/* ---------- Card Animation ---------- */
+.login-root .card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeIn 0.5s forwards;
+}
+
+/* Trigger animation when card becomes visible */
+#methodSelection,
+#manualLogin,
+#biometricLogin {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: cardFadeIn 0.5s forwards;
+}
+
+/* Fade in + slide up */
+@keyframes cardFadeIn {
   0% {
-    transform: translateX(-50%);
+    opacity: 0;
+    transform: translateY(30px);
   }
-
   100% {
-    transform: translateX(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-/* =========================
-   Responsive Design
-========================= */
-@media (max-width: 992px) {
-  .partner-track {
-    gap: 50px;
-  }
-
-  .partner-track img {
-    height: 50px;
-  }
+/* Optional: stagger animation for multiple cards */
+.login-root .card:nth-child(1) {
+  animation-delay: 0.1s;
 }
 
-@media (max-width: 768px) {
-  .partner-track {
-    gap: 40px;
-  }
-
-  .partner-track img {
-    height: 40px;
-  }
+.login-root .card:nth-child(2) {
+  animation-delay: 0.2s;
 }
 
-@media (max-width: 576px) {
-  .partner-section {
-    padding: 40px 0;
-  }
-
-  .partner-track {
-    gap: 30px;
-  }
-
-  .partner-track img {
-    height: 30px;
-  }
+.login-root .card:nth-child(3) {
+  animation-delay: 0.3s;
 }
+
 
 /* Footer Styles */
 .footer {
@@ -823,117 +789,56 @@ header.scrolled .menu a:hover {
 
 /* ================= LEGAL SECTION ================= */
 .footer-legal {
-  background: transparent;
-  color: #fff;
-  padding: 20px 12px;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
+  color: #ccc;
+  padding: 10px 5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+  line-height: 1.7;
 }
 
-.legal-titles {
-  display: flex;
-  gap: 20px;
-  justify-content: center; /* center row */
-  flex-wrap: wrap;
-}
-
-/* Each title with same fixed width */
-.legal-title {
-  flex: 0 1 280px;
-  text-align: center;
-  margin: 0;
+.footer-legal h3 {
   font-size: 16px;
-  padding: 10px 20px;
-  border-radius: 30px;
-  border: 2px solid #00f0ff; 
   font-weight: 600;
-  color: #010707;
-  background: linear-gradient(135deg, #167b75, #06bee3);
-  transition: all 0.3s ease;
-  cursor: pointer;
+  margin-bottom: 20px;
+  color: #8bf6b8;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-
-/* Hover effect */
-.legal-title:hover {
-  background: linear-gradient(90deg, #00d4ff, #21aab4);
-  color: #ffffff !important;
-  transform: scale(1.08);
-  border-color: #21edf4; /* brighter on hover */
-  box-shadow: 0 0 12px rgba(33, 180, 170, 0.8); /* glow effect */
+.footer-legal h3::after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 2px;
+  background: linear-gradient(90deg, #11cbaf, #25fc9b);
+  margin-top: 6px;
+  border-radius: 2px;
 }
 
-/* Active state */
-.legal-title.active {
-  background: linear-gradient(90deg, #00aaff, #00d4ff);
-  color: #fff;
+.footer-legal p {
+  margin-bottom: 18px;
+  color: #bbb;
+  text-align: justify;
 }
 
-.legal-desc-container {
-  margin-top: 14px;
-  max-width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
+.footer-legal p:last-child {
+  margin-bottom: 0;
+  /* no gap after last paragraph */
 }
 
-.legal-desc-container .legal-desc {
-  font-size: 13px; /* smaller font size */
-  line-height: 1.5; /* keep it readable */
-  color: #e0e0e0; /* optional: softer color for readability */
-  margin-top: 5px;
-}
-
-.legal-desc {
-  display: none;
-  margin-top: 8px;
-  line-height: 1.6;
-  color: #d7f5f2;
-  text-align: center;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   .footer-legal {
-    padding: 16px 10px;
-  }
-
-  .legal-titles {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .legal-title {
-    flex: 1 1 auto;
-    width: 100%;
-    max-width: none;
-    padding: 10px 14px;
-    font-size: 14px;
-    border-radius: 12px;
-  }
-
-  .legal-desc-container {
-    margin-top: 10px;
-  }
-
-  .legal-desc-container .legal-desc,
-  .legal-desc {
-    font-size: 12px;
-    line-height: 1.55;
-    text-align: left;
-  }
-}
-
-@media (max-width: 500px) {
-  .legal-title {
     font-size: 13px;
-    padding: 9px 12px;
+    padding: 30px 15px;
   }
 
-  .legal-desc-container .legal-desc,
-  .legal-desc {
-    font-size: 11.5px;
+  .footer-legal h3 {
+    font-size: 15px;
   }
 }
+
 /* Bottom */
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -941,24 +846,12 @@ header.scrolled .menu a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: nowrap;
-  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .footer-bottom p {
   font-size: 13px;
   color: #888;
-  flex-shrink: 0;
-}
-
-.footer-bottom .partner-section {
-  flex: 1;
-  min-width: 0;
-}
-
-.footer-bottom .partner-slider {
-  padding: 0;
-  background: transparent;
 }
 
 .footer-bottom .footer-social {
@@ -1000,55 +893,6 @@ header.scrolled .menu a:hover {
     text-align: left;
     /* optional if needed inside container */
   }
-}
-
-
-
-/* Back to Top Button */
-.back-to-top {
-  position: fixed;
-  bottom: 70px;
-  /* moved up so it doesn’t overlap */
-  right: 30px;
-  width: 45px;
-  height: 45px;
-  border: none;
-  border-radius: 50%;
-  background: black;
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.4s ease;
-  z-index: 1100;
-  box-shadow: 0 4px 12px rgba(38, 58, 47, 0.3);
-}
-
-.back-to-top.show {
-  opacity: 1;
-  visibility: visible;
-}
-
-.back-to-top:hover {
-
-  transform: scale(1.1);
-}
-
-/* ========================
-   FADE ANIMATIONS
-======================== */
-.fade-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
-  will-change: opacity, transform;
-}
-
-.fade-section.show {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 .logo img {

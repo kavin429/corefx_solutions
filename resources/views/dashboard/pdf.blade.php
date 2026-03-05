@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Trinity Global Capital LTD - Transaction Invoice</title>
+    <title>CORE FINANCE LIMITED - Transaction Invoice</title>
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
@@ -137,10 +137,10 @@ td.center {
 
     
     <div class="company-info">
-            <p><strong>Trinity Global Capital LTD</strong></p>
+            <p><strong>CORE FINANCE LIMITED</strong></p>
         <p>+61 861 865 931</p>
         <p>1 Balloon Street, Manchester, M4 4BE, United Kingdom</p>
-        <p><strong>support@trinityglobalcapitalltd.com</strong></p>
+        <p><strong>support@corefinanceltd.com</strong></p>
     </div>
 </header>
 
@@ -225,7 +225,7 @@ td.center {
 <br>
 <p class="footer-note">If you have any questions about this statement, please contact <strong>accounts@trinityglobalcapitalltd.com </strong></p>
 <br>
-<p class="footer-note">This is a system-generated statement from Trinity Global Capital LTD.</p>
+<p class="footer-note">This is a system-generated statement from CORE FINANCE LIMITED.</p>
 
 <script type="text/php">
 if (isset($pdf)) {

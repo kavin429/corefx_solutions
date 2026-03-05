@@ -130,7 +130,7 @@ class UserController extends Controller
             'sender_id'       => auth()->guard('admin')->id(),
             'sender_type'     => 'admin',
             'title'           => 'Password Reset Link Sent',
-            'message'         => "Trinity Global Capital LTD has sent you a password reset link to your registered email address.",
+            'message'         => "CORE FINANCE LIMITED has sent you a password reset link to your registered email address.",
             'is_read'         => 0,
         ]);
 

@@ -13,13 +13,13 @@ html, body {
 }
 
 :root {
-  --primary-green: #00ff88;
+  --primary-green: #00fbff;
   --secondary-green: #2d5a27;
   --accent-blue: #00d4ff;
   --warm-yellow: #ffeb3b;
   --deep-forest: #0a1a0a;
   --light-mint: #e8fff0;
-  --glow-green: rgba(0, 255, 136, 0.3);
+  --glow-green: rgba(0, 255, 238, 0.3);
   --glow-blue: rgba(0, 212, 255, 0.3);
 }
 
@@ -29,17 +29,17 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e6f4ea;
+  background: #e6f2f4;
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #065f46, #064e3b);
+  background: linear-gradient(135deg, #065f5b, #064e4d);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #047857, #065f46);
+  background: linear-gradient(135deg, #047870, #065e5f);
 }
 /* ---------- adminBlade.css ---------- */
 * {
@@ -49,7 +49,7 @@ html, body {
 /* ---------- Body ---------- */
 body {
     margin: 0;
-    background: #050f05; /* Light purple background */
+    background: #050f0f; /* Light purple background */
     color: #3b2a5a;      /* Dark purple text */
     transition: background 0.3s, color 0.3s;
 }
@@ -61,7 +61,7 @@ body {
     left: 0;
     width: 250px;
     height: 100vh;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b3e43);
     color: #ffffff;
     padding: 1rem;
     overflow-y: auto;
@@ -73,9 +73,17 @@ body {
     width: 80px;
     height: 80px;
     object-fit: cover;
-    border: 2px solid #1f9874;;
-} 
+    border-radius: 50%;
+    border: 3px solid #00fbff;
+    box-shadow: 0 0 10px #00fbff,
+                0 0 20px rgba(0, 251, 255, 0.6);
+    transition: 0.3s ease;
+}
 
+.sidebar .profile-pic:hover {
+    box-shadow: 0 0 15px #00fbff,
+                0 0 30px rgba(0, 251, 255, 0.9);
+}
 /* ---------- Accordion Items ---------- */
 .sidebar .accordion-item {
     background: transparent;       /* Sidebar purple background */
@@ -112,7 +120,7 @@ body {
 
 /* Hover effect for both states */
 .sidebar .accordion-button:hover {
-    background: #3b6942;/* Subtle hover purple */
+    background: #437682;/* Subtle hover purple */
     transform: translateX(3px); /* Slight shift on hover */
 }
 
@@ -145,13 +153,13 @@ body {
 }
 
 .sidebar .accordion-body .sidebar-link:hover {
-    background: #3b6942;
+    background: #3b6369;
     color: #ffffff;
 }
 
 /* Active link */
 .sidebar .accordion-body .sidebar-link.active {
-    background: #3b6942;
+    background: #3b6669;
     color: #ffffff;
 }
 
@@ -178,7 +186,7 @@ body {
 
 .sidebar-link:hover,
 .sidebar-link.active {
-    background: #3b6942;
+    background: #3b6669;
     color: #ffffff;
 }
 
@@ -191,7 +199,7 @@ body {
 
 /* Topbar */
 .topbar {
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #125f5f, #1b3f43);
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     margin-bottom: 1rem;
@@ -214,7 +222,7 @@ body {
     height: 36px;
     border: none;
     border-radius: 6px;
-    background: #047338;
+    background: #07a6a8;
     color: #ffffff;
     font-size: 1.2rem;
     cursor: pointer;
@@ -222,7 +230,7 @@ body {
 }
 
 .topbar-icons .topbar-btn:hover {
-    background: #3e9660;
+    background: #3e8f96;
     color: #fff;
 }
 
@@ -251,7 +259,7 @@ body {
     box-shadow: 0 4px 10px rgba(155, 89, 182, 0.1);
     padding: 1.5rem;
     text-align: center;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #226e7d, #1b4043);
     color: #3b2a5a;
 }
 
@@ -276,7 +284,7 @@ body {
 .card h6 {
     font-weight: 500;       /* Medium weight for labels */
     font-size: 1rem;        /* Label size */
-    color: #b3ffda;         /* Purple text for labels */
+    color: #b3f9ff;         /* Purple text for labels */
     margin-bottom: 0.5rem;
     text-transform: uppercase; /* Optional: uppercase labels */
     letter-spacing: 0.5px;     /* Small spacing for cleaner look */
@@ -309,7 +317,7 @@ body {
 
 .card h3:hover, .card h5:hover {
     transform: scale(1.05);
-    color: #ddfff2; /* highlight on hover */
+    color: #b9e7ed; /* highlight on hover */
 }
 
 /* Optional: text alignment inside nested cards */
@@ -319,18 +327,18 @@ body {
     justify-content: center;
     align-items: center;
     border: solid 1.5px;
-    border-color: #c7ffde;
+    border-color: #c7fffc;
 }
 
 
 /* ---------- Card Icon Styles ---------- */
 .card-icon {
-    color: #052f1b;
-    border: solid 1.5px #052f1b;
+    color: #05282f;
+    border: solid 1.5px #052f28;
     border-radius: 50%;
     padding: 15px;
     margin: 1rem auto 1rem auto; /* center horizontally with top/bottom spacing */
-    background: #c9fee5;
+    background: #c9fef6;
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -359,7 +367,7 @@ body {
 #notificationModal .modal-content {
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(42, 90, 73, 0.3);
-    color: #ccffe9 !important;
+    color: #ccfeff !important;
     background: #050f05;
 }
 
@@ -379,9 +387,9 @@ body {
     font-size: 0.8rem;
     border-radius: 4px;
     margin-bottom: 2px;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433c);
     color: #ffffff;
-    border-color: #00ab5b;
+    border-color: #00a3ab;
 }
 
 #notificationModal .btn-close {
@@ -518,10 +526,10 @@ body {
     padding: 0 12px;
     font-size: 0.875rem;
     font-weight: 500;
-    color: #d4fde8; /* dark purple */
-    background-color: #013214; /* light purple */
+    color: #d4fdfc; /* dark purple */
+    background-color: #012f32; /* light purple */
     border-radius: 8px;
-    border: 1px solid #3fb054;
+    border: 1px solid #3fb0a3;
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap; /* prevent wrapping */
@@ -532,25 +540,25 @@ body {
 .pagination li.next a {
     font-weight: 600;
     color: #fff;
-    background-color: #44ad73; /* strong purple */
+    background-color: #44adab; /* strong purple */
 }
 
 .pagination li.previous a:hover,
 .pagination li.next a:hover {
-    background-color: #3c986d;
+    background-color: #3c9895;
     color: #fff;
 }
 
 /* ---------- Hover Effect ---------- */
 .pagination li a:hover:not(.active) {
-    background-color: #083816;
+    background-color: #083835;
     color: #ffffff;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
 /* ---------- Active Page ---------- */
 .pagination li.active span {
-    background-color: #44ad73; /* strong purple */
+    background-color: #44adad; /* strong purple */
     color: #070707;
     font-weight: 600;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);

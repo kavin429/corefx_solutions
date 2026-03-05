@@ -431,7 +431,8 @@ header.scrolled .logo h2 {
 
 /* Footer Styles */
 .footer {
-  background: linear-gradient(135deg, #0a0a1a 40%, #1a0033 100%);
+  background: radial-gradient(circle at center, #021b1b 0%, #033032 50%, #0a6969 100%);
+  /* dark green gradient */
   color: #fff;
   padding: 60px 25px 20px;
   line-height: 1.6;

@@ -97,10 +97,10 @@
         </div>
 
         <div class="client-info">
-            <p><strong>Trinity Global Capital LTD</strong></p>
+            <p><strong>CORE FINANCE LIMITED</strong></p>
         <p>+61 861 865 931</p>
         <p>1 Balloon Street, Manchester, M4 4BE, United Kingdom</p>
-        <p><strong>support@trinityglobalcapitalltd.com</strong></p>
+        <p><strong>support@corefinanceltd.com</strong></p>
         </div>
     </div>
 
@@ -182,7 +182,7 @@
     </p>
     <br>
     <p class="footer-note">
-        This is a system-generated statement from Trinity Global Capital LTD.
+        This is a system-generated statement from CORE FINANCE LIMITED.
     </p>
 
 <script type="text/php">

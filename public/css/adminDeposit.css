@@ -19,8 +19,8 @@
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #215a53);
 }
 
 /* Alerts */
@@ -33,9 +33,9 @@
 }
 
 .alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background-color: #aff5ef;
+    color: #155753;
+    border: 1px solid #00fdf8;
 }
 
 .alert-danger {
@@ -61,34 +61,34 @@
 
 /* Table Header */
 .table th {
-   background: linear-gradient(135deg, #3e7c55, #0e4812);
+   background: linear-gradient(135deg, #3e797c, #105358);
     color: #ffffff;
     font-weight: 600;
     position: sticky;
     top: 0;
     z-index: 2;
-    border-bottom: 2px solid #044a22;
+    border-bottom: 2px solid #066062;
 }
 
 /* Table Rows */
 .table tbody tr:nth-child(even) {
-     background-color: #003513;
+     background-color: #014446;
 }
 
 .table tbody tr:hover {
-    background-color: #082b20;
+    background-color: #08292b;
 }
 
 .table tbody td {
-    background-color: #0759341b;
+    background-color: #0752591b;
     color: #ffffff;
-    border-left: 2px solid #044a22;
+    border-left: 2px solid #066062;
 }
 
 /* Table Images */
 .table img.img-thumbnail {
     border-radius: 6px;
-    border: 1px solid  #044a22;
+    border: 1px solid  #066062;
     transition: transform 0.2s;
 }
 
@@ -106,7 +106,7 @@
 }
 
 .bg-success { 
-    background-color: #28a745; color: #fff; 
+    background-color: #2894a7; color: #fff; 
 }
 
 .bg-warning { 
@@ -130,13 +130,13 @@
 } 
 
 .btn-success {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
 }
 
 .btn-success:hover { 
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .btn-danger {
@@ -193,7 +193,7 @@
     position: sticky;
     top: 0;
     z-index: 2;
-    border-bottom: 2px solid #093720;
+    border-bottom: 2px solid #093637;
 }
 
 /* Horizontal scrollbar styling - Purple theme */

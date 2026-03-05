@@ -18,16 +18,16 @@
     color: #ffffff !important;
     padding: 1rem 1.5rem;
     border: solid 1px;
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     border-radius: 22px;
-    border-color: #002f10;
+    border-color: #002c2f;
 }
 
 /* =======================
    Card Styling
 ======================= */
 .verification-card {
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     border-radius: 16px;
     padding: 2rem;
     box-shadow: 0 15px 35px rgba(0,0,0,0.08);
@@ -52,7 +52,7 @@
     font-weight: 700;
     margin-bottom: 1rem;
     color: #ffffff;
-    border-left: 4px solid #06985e;
+    border-left: 4px solid #069698;
     padding-left: 0.75rem;
 }
 
@@ -67,14 +67,14 @@
     width: 100%;
     padding: 0.85rem 1rem;
     border-radius: 10px;
-    border: 1px solid #119a4f;
+    border: 1px solid #11989a;
     font-size: 1rem;
     margin-bottom: 1.2rem;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .form-input:focus {
-    border-color: #3aedb7;
+    border-color: #3aeded;
     box-shadow: 0 0 0 4px rgba(58, 237, 142, 0.2);
     outline: none;
 }
@@ -84,7 +84,7 @@
 ======================= */
 .document-link a {
     text-decoration: none;
-    color: #72ff91;
+    color: #72efff;
     font-weight: 600;
     display: inline-block;
     margin-bottom: 0.75rem;
@@ -92,7 +92,7 @@
 }
 
 .document-link a:hover {
-    color: #3ea669;
+    color: #3ea3a6;
     text-decoration: underline;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .badge.verified {
-    background-color: #28a745;
+    background-color: #2894a7;
     color: #fff;
 }
 
@@ -142,23 +142,23 @@
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #28d19e, #68e437);
+    background: linear-gradient(135deg, #28c6d1, #30daea);
     color: #000000;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(45deg, #68e437 , #28d19e);
+    background: linear-gradient(45deg, #37d3e4 , #28d1cb);
     transform: translateY(-2px);
     color: #000000;
 }
 
 .btn-success {
-     background: linear-gradient(135deg, #28d19e, #68e437);
+     background: linear-gradient(135deg, #28c6d1, #30daea);
     color: #030303;
 }
 
 .btn-success:hover {
-    background: linear-gradient(45deg, #68e437 , #28d19e);
+    background: linear-gradient(45deg, #37d3e4 , #28d1cb);
     transform: translateY(-2px);
     color: #000000;
 }
@@ -168,7 +168,7 @@
 ======================= */
 .alert-success {
     background: #d1fae5;
-    color: #065f46;
+    color: #065f5f;
     padding: 0.85rem 1rem;
     border-radius: 12px;
     margin-bottom: 1.5rem;

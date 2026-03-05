@@ -158,7 +158,7 @@ public function store(Request $request)
         'sender_id' => auth()->guard('admin')->id(),
         'sender_type' => 'admin',
         'title' => "New $transactionType Transaction",
-        'message' => "A $transactionType transaction of amount {$transaction->amount} has been $status by the Trinity Global Capital LTD.",
+        'message' => "A $transactionType transaction of amount {$transaction->amount} has been $status by the CORE FINANCE LIMITED.",
         'is_read' => 0,
     ]);
 

@@ -18,8 +18,8 @@
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 body.dark .container h2{
@@ -38,9 +38,9 @@ body.dark .container h2{
     margin-bottom: 1.5rem;
 }
 .alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background-color: #aff5ef;
+    color: #155753;
+    border: 1px solid #00fdf8;
 }
 .alert-danger {
     background-color: #f8d7da;
@@ -60,12 +60,12 @@ body.dark .container h2{
 }
 
 .btn-primary, .btn1.btn-primary {
-        background: linear-gradient(135deg, #1f6333, #5de59f);
+        background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
 }
 .btn-primary:hover, .btn1.btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .btn-secondary, .btn1.btn-secondary {
@@ -78,12 +78,12 @@ body.dark .container h2{
 }
 
 .btn-success {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
 }
 .btn-success:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .btn-danger {
@@ -106,12 +106,12 @@ body.dark .container h2{
 }
 
 .table thead th {
-    background: linear-gradient(135deg, #3e7c55, #0e4812);
+    background: linear-gradient(135deg, #3e797c, #105358);
     color: white;
     font-weight: 600;
     text-transform: uppercase;
     padding: 0.75rem;
-    border-bottom: 2px solid  #044a22;
+    border-bottom: 2px solid  #066062;
 }
 
 .table th, .table td {
@@ -121,16 +121,16 @@ body.dark .container h2{
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #003513;
+  background-color: #014446;
 }
 
 .table tbody tr:hover {
-    background-color: #082b20;
+    background-color: #08292b;
 }
 .table tbody td {
-    background-color: #0759341b;
+    background-color: #0752591b;
     color: #ffffff;
-    border-left: 2px solid #044a22;
+    border-left: 2px solid #066062;
 }
 
 .table img {
@@ -144,7 +144,7 @@ body.dark .container h2{
 /* ---------- Modal ---------- */
 .modal-content {
     border-radius: 10px;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     border: none;
     overflow: hidden;
@@ -155,7 +155,7 @@ body.dark .container h2{
 }
 
 .modal-header.bg-primary {
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 .modal-header .modal-title {
@@ -178,13 +178,13 @@ body.dark .container h2{
     padding: 4px 8px;
     font-size: 0.85rem;
     transition: all 0.2s ease;
-        background-color: #1d4126;
+        background-color: #234f56;
     color: #d3d3d3;
-    border: 1px solid #0a652d;
+    border: 1px solid #0a6065;
 }
 .modal-body .form-control:focus {
-  border-color: #28c071;
-  box-shadow: 0 0 4px rgba(13, 173, 53, 0.4);
+  border-color: #18cad7;
+  box-shadow: 0 0 4px rgba(13, 168, 173, 0.4);
     outline: none;
 }
 
@@ -200,14 +200,14 @@ body.dark .container h2{
 
 /* Modal Buttons */
 .modal-footer .btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border-radius: 10px;
     padding: 10px 14px;
     border: none;
 }
 .modal-footer .btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 .modal-footer .btn-secondary {
     background-color: #6c757d;
@@ -324,7 +324,7 @@ body.dark .table-responsive::-webkit-scrollbar-thumb {
 }
 
 body.dark .table-responsive::-webkit-scrollbar-thumb:hover {
-    background: #72ff91; /* lighter bright purple on hover */
+    background: #72efff; /* lighter bright purple on hover */
 }
 
 

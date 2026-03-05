@@ -25,15 +25,15 @@ body {
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 /* ===========================
    Card Styles
 =========================== */
 .card1 {
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
     border: 1px solid #2b3a30;
     border-radius: 12px;
     padding: 15px 20px;
@@ -78,12 +78,12 @@ body {
 }
 
 .btn-primary, button.btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
 }
 .btn-primary:hover, button.btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
-    box-shadow: 0 0 10px rgba(92, 246, 143, 0.5);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
+    box-shadow: 0 0 10px rgba(92, 241, 246, 0.5);
 }
 
 .btn-danger, button.btn-danger {
@@ -120,7 +120,7 @@ div > *:not(:last-child) {
 }
 
 .alert-success {
-    background-color: #16a34a;
+    background-color: #1680a3;
     color: #fff;
 }
 
@@ -130,8 +130,11 @@ div > *:not(:last-child) {
 }
 
 .alert-warning1 {
-    background-color: #8c0bf5;
-    color: #fff;
+    border: 1px solid #00d4ff;
+    color: #12c7d8 !important;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-weight: 600 !important;
 }
 
 /* ===========================
@@ -144,32 +147,32 @@ div > *:not(:last-child) {
 }
 
 .table th {
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
     color: #ffffff !important;
     padding: 8px;
-    border: 1px solid #034e2c !important;
+    border: 1px solid #03454e !important;
 }
 
 .table td {
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
     color: #ffffff !important;
     padding: 8px;
-    border: 1px solid #02572e !important;
+    border: 1px solid #025057 !important;
 }
 
 /* ===========================
    Modals
 =========================== */
 .modal-content {
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
     color: #ffffff !important;
     border-radius: 10px;
-    border: 1px solid #02572e;
+    border: 1px solid #025057;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .modal-header, .modal-footer {
-    border-color: #045e3d;
+    border-color: #04515e;
 }
 
 .modal-title {

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404 | Page Not Found - Trinity Global Capital LTD</title>
+<title>404 | Page Not Found - CORE FINANCE LIMITED</title>
 <style>
   body{
   margin:0;
@@ -120,7 +120,7 @@ footer{
 </div>
 
 <footer>
-  &copy; Trinity Global Capital LTD - 15669711
+  &copy; CORE FINANCE LIMITED - 10956602
 </footer>
 
 <script>

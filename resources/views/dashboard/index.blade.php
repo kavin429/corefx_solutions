@@ -28,7 +28,7 @@
   }
 
   #inactiveOverlay .modal-box {
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     padding: 2rem;
     border-radius: 1rem;
     max-width: 400px;
@@ -383,7 +383,7 @@
     }
 
     .tradingview-widget-wrapper {
-      background: linear-gradient(135deg, #0b3d2e, #265314);
+      background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
       border-radius: 10px;
       padding: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);

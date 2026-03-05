@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trinity Global Capital LTD</title>
+  <title>Corefx Solutions</title>
   <link rel="icon" type="pics/icon.png" href="pics/Trinitylogo1.png" />
   <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -258,28 +258,19 @@ body.modal-open::before {
 <!-- ===== HERO SECTION ===== -->
 <section class="hero">
 
-  <div class="trading-shapes">
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span>
-  </div>
-
- 
-
-  <div class="hero-image scroll-animate">
-    <img src="{{ asset('pics/HeroImg1.png') }}" alt="Trading Illustration">
-  </div>
-
    <div class="hero-content scroll-animate">
-<h1 id="hero-title" class="gradient-text">Empower Your Trading Journey</h1>
+<h1 id="hero-title" class="gradient-text">Empower Your Trading Journey to Success</h1>
 <p id="hero-text" class="gradient-text-small">Where strategy meets opportunity without limits</p>
 
     <div class="hero-buttons">
       <a href="{{ route('signup') }}">Get Started</a>
      <!-- <a href="#" id="watchVideoBtn">Watch Video</a> -->
     </div>
+  </div>
+
+
+  <div class="hero-image scroll-animate">
+    <img src="{{ asset('pics/test.png') }}" alt="Trading Illustration">
   </div>
 </section>
 
@@ -369,62 +360,121 @@ body.modal-open::before {
     <div class="about-image">
       <img src="{{ asset('pics/about1.png') }}" alt="About ITrade Solutions LTD">
     </div>
-    
-    <!-- Content -->
-    <div class="about-text">
-      <h2>About <span>Trinity Global Capital</span></h2>
-      <p>
-        Trinity Global Capital LTD is a leading trading company offering innovative solutions for individuals, 
-        institutions, and businesses worldwide. We provide diverse financial instruments, 
-        advanced technology, and transparent services to empower clients in achieving their 
-        investment goals. With a focus on customer support and a commitment to excellence, 
-        Trinity Global Capital LTD is your trusted partner in the dynamic world of trading.
-      </p>
-      <p>
-        Trinity Global Capital LTD is committed to providing exceptional customer service. 
-        Our dedicated support team 
-        is available 24/7 to assist clients with any queries, technical issues, or account-related 
-        matters. We ensure prompt and personalized support, allowing you to focus on your trading 
-        strategies without interruptions.
-      </p>
+
+
+  </div>
+ <div class="about-text">
+      <h2>About <span>CORE FINANCE LIMITED</span></h2>
+
+<p>
+  CORE FINANCE LIMITED is a globally focused trading company delivering innovative 
+  financial solutions to individuals, institutions, and businesses. We provide access 
+  to a wide range of financial instruments including Forex, Crypto, Metals, and Indices, 
+  supported by advanced trading technology and transparent operations.
+</p>
+
+<p>
+  Our mission is to empower clients to achieve their investment goals through 
+  secure platforms, competitive trading conditions, and real-time market insights. 
+  We prioritize integrity, performance, and long-term partnerships in the dynamic 
+  world of global financial markets.
+</p>
+
+<p>
+  At CORE FINANCE LIMITED, client satisfaction comes first. Our professional support 
+  team is available 24/7 to assist with account management, technical guidance, 
+  and trading inquiries — ensuring a smooth and uninterrupted trading experience.
+</p>
       <a href="{{ route('about') }}" class="about-btn">More About Us</a>
     </div>
 
+      <!-- Right Side: Features -->
 
+</div>
+<div class="circle-container">
+  <!-- SVG lines connecting cards -->
+  <svg class="connect-lines" width="100%" height="100%">
+    <path class="line-top-right" />
+    <path class="line-right-bottom" />
+    <path class="line-bottom-left" />
+    <path class="line-left-top" />
+  </svg>
 
+  <!-- Cards -->
+  <div class="feature-card top">
+    <i class="ti ti-user-check"></i>
+    <h3>Experienced</h3>
+    <p>Our team of seasoned professionals brings years of expertise to deliver top-notch services and support.</p>
+  </div>
 
+  <div class="feature-card right">
+    <i class="ti ti-users"></i>
+    <h3>Professionals</h3>
+    <p>Our dedicated team of skilled experts is committed to providing personalized guidance and analysis.</p>
+  </div>
 
+  <div class="feature-card bottom">
+    <i class="ti ti-clock"></i>
+    <h3>Always Available</h3>
+    <p>Our platform offers 24/7 accessibility, ensuring you can trade anytime, anywhere.</p>
+  </div>
+
+  <div class="feature-card left">
+    <i class="ti ti-shield-lock"></i>
+    <h3>We're Responsible</h3>
+    <p>We prioritize safety, compliance, and ethical practices, ensuring responsible trading environments.</p>
   </div>
 </div>
-
-
-    <!-- Right Side: Features -->
-    <div class="about-features">
-      <div class="feature-card">
-        <i class="ti ti-user-check"></i>
-        <h3>Experienced</h3>
-        <p>Our team of seasoned professionals brings years 
-          of expertise to deliver top-notch services and support.</p>
-      </div>
-      <div class="feature-card">
-       <i class="ti ti-users"></i>
-        
-        <h3>Professionals</h3>
-        <p>Our dedicated team of skilled experts is 
-          committed to providing personalized guidance and analysis.</p>
-      </div>
-      <div class="feature-card">
-        <i class="ti ti-clock"></i>
-        <h3>Always Available</h3>
-        <p>Our platform offers 24/7 accessibility, ensuring you can trade anytime, anywhere.</p>
-      </div>
-      <div class="feature-card">
-        <i class="ti ti-shield-lock"></i>
-        <h3>We're Responsible</h3>
-        <p>We prioritize safety, compliance, and ethical practices, ensuring responsible trading environments.</p>
-      </div>
-    </div>
   </div>
+  <script>
+    // JavaScript to dynamically connect lines between cards
+const container = document.querySelector('.circle-container');
+const lines = {
+  topRight: document.querySelector('.line-top-right'),
+  rightBottom: document.querySelector('.line-right-bottom'),
+  bottomLeft: document.querySelector('.line-bottom-left'),
+  leftTop: document.querySelector('.line-left-top'),
+};
+
+function connectCards() {
+  const top = document.querySelector('.feature-card.top').getBoundingClientRect();
+  const right = document.querySelector('.feature-card.right').getBoundingClientRect();
+  const bottom = document.querySelector('.feature-card.bottom').getBoundingClientRect();
+  const left = document.querySelector('.feature-card.left').getBoundingClientRect();
+  const svgRect = container.getBoundingClientRect();
+
+  function setCurve(line, start, end) {
+    const x1 = start.x - svgRect.left;
+    const y1 = start.y - svgRect.top;
+    const x2 = end.x - svgRect.left;
+    const y2 = end.y - svgRect.top;
+
+    const midX = (x1 + x2) / 2;
+    const midY = (y1 + y2) / 2;
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const dist = Math.hypot(dx, dy) || 1;
+
+    const nx = -dy / dist;
+    const ny = dx / dist;
+    const curveStrength = Math.min(70, Math.max(28, dist * 0.12));
+
+    const cx = midX + nx * curveStrength;
+    const cy = midY + ny * curveStrength;
+
+    line.setAttribute('d', `M ${x1} ${y1} Q ${cx} ${cy} ${x2} ${y2}`);
+  }
+
+  setCurve(lines.topRight, {x: top.left + top.width/2, y: top.top + top.height/2}, {x: right.left + right.width/2, y: right.top + right.height/2});
+  setCurve(lines.rightBottom, {x: right.left + right.width/2, y: right.top + right.height/2}, {x: bottom.left + bottom.width/2, y: bottom.top + bottom.height/2});
+  setCurve(lines.bottomLeft, {x: bottom.left + bottom.width/2, y: bottom.top + bottom.height/2}, {x: left.left + left.width/2, y: left.top + left.height/2});
+  setCurve(lines.leftTop, {x: left.left + left.width/2, y: left.top + left.height/2}, {x: top.left + top.width/2, y: top.top + top.height/2});
+}
+
+// Run on load and on resize
+window.addEventListener('load', connectCards);
+window.addEventListener('resize', connectCards);
+    </script>
 </section>
 
 <section id="products">
@@ -517,29 +567,6 @@ body.modal-open::before {
   </div>
 </section>
 
- <!-- Partner Section -->
-  <section class="partner-section">
- <!-- Partner Logos Slider -->
-  <div class="partner-slider">
-    <div class="partner-track">
-        <!-- Logos (duplicate for infinite loop) -->
-        <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
-        <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
-
-      </div>
-    </div>
-
-  <!-- Bottom Cave -->
-  <div class="cave-bottom">
-</section>
 
 
 <!-- Pricing / Account Types -->
@@ -575,92 +602,101 @@ body.modal-open::before {
     <a href="{{ route('login') }}" class="btn">Be Our Client</a>
   </div>
 
-  <!-- Dots Navigation -->
-<div class="testimonial-dots">
-  <span class="active"></span>
-  <span></span>
-  <span></span>
-  <span></span>
-</div>
+ 
 
 
   <div class="testimonial-wrapper">
 
-    <!-- Track -->
-    <div class="testimonial-container">
-      <div class="testimonial-track">
+  <div class="testimonial-container">
+    <div class="testimonial-track">
+
+      <!-- Card 1 -->
+      <div class="testimonial-card">
+        <div class="client-top">
+          <img src="{{ asset('pics/client2.jpg') }}" alt="Daniel Thompson">
+          <h4>Daniel Thompson</h4>
+          <span class="location">London, United Kingdom</span>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+          </div>
+        </div>
+        <p>
+          CORE FINANCE LIMITED delivers exceptional trading conditions. 
+          The execution speed is impressive, and the analytics tools help 
+          me make informed decisions. It’s a reliable platform for serious traders.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="testimonial-card">
+        <div class="client-top">
+          <img src="{{ asset('pics/client.webp') }}" alt="Fatima Hassan">
+          <h4>Fatima Hassan</h4>
+          <span class="location">Doha, Qatar</span>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+        </div>
+        <p>
+          The platform is very user-friendly and secure. 
+          Deposits and withdrawals are processed smoothly, 
+          and customer support is available whenever I need help.
+        </p>
+      </div>
 
       <!-- Card 3 -->
-        <div class="testimonial-card">
-          <p>Trinity Global Capital LTD offers advanced tools and a simple interface that make trading easier. 
-            The mobile-friendly design helps me monitor trades anytime. With fast execution, 
-            and strong security, I feel safe while trading on this platform.</p>
-          <div class="client-info">
-            <img src="{{ asset('pics/p2.jpg') }}" alt="Client">
-            <div>
-              <h4>Vivaan Patel</h4>
-              <span>Kochi, India</span>
-            </div>
-           
+      <div class="testimonial-card">
+        <div class="client-top">
+          <img src="{{ asset('pics/client3.webp') }}" alt="Rahul Mehta">
+          <h4>Rahul Mehta</h4>
+          <span class="location">Chennai, India</span>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star-half-o"></i>
+            <i class="fa fa-star-o"></i>
           </div>
         </div>
-
-        <!-- Card 2 -->
-        <div class="testimonial-card">
-          <p>As a beginner, I learned quickly with Trinity Global Capital. 
-            The platform is simple yet powerful, & support is always professional. 
-            Trading feels smooth, and I trust them. 
-            Trinity Global Capital gave me confidence to grow steadily as a trader.</p>
-          <div class="client-info">
-            <img src="{{ asset('pics/p1.jpg') }}" alt="Client">
-            <div>
-              <h4>Aaliyah Maryam</h4>
-              <span>Dubai, UAE</span>
-            </div>
-          
-          </div>
-           </div>
-
-        <!-- Add more cards as needed -->
-        <div class="testimonial-card">
-          <p>I’ve been trading with Trinity Global Capital LTD for months and love the reliability. 
-            The platform is transparent, withdrawals are smooth, and support is responsive. 
-            It has built my confidence and made trading a stress-free and rewarding experience.</p>
-          <div class="client-info">
-            <img src="{{ asset('pics/p4.jpg') }}" alt="Client">
-            <div>
-              <h4>Arjun Sharma</h4>
-              <span>Mumbai, India</span>
-            </div>
-          
-          </div>
-        </div>
-
-        <!-- Card 1 -->
-        <div class="testimonial-card">
-          <p>I admire Trinity Global Capital LTD's combination of tools and support. 
-            Trading is fast, deposits and withdrawals are hassle-free, and transparency builds trust. 
-            It truly feels like a safe and professional environment for long-term trading success and growth.
-            <div class="client-info">
-            <img src="{{ asset('pics/p3.jpg') }}" alt="Client">
-            <div>
-              <h4>Zara Al Nahyan</h4>
-              <span>Abu Dhabi, UAE</span>
-            </div>
-           
-          </div>
-        </div>
-
-        
-       
-
-
-        
-
-
+        <p>
+          I appreciate the transparency and advanced charting tools. 
+          The mobile trading experience is smooth, and I can monitor 
+          markets anytime without issues.
+        </p>
       </div>
+
+      <!-- Card 4 -->
+      <div class="testimonial-card">
+        <div class="client-top">
+          <img src="{{ asset('pics/client1.avif') }}" alt="Olivia Martinez">
+          <h4>Olivia Martinez</h4>
+          <span class="location">Madrid, Spain</span>
+          <div class="stars">
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+            <i class="fa fa-star"></i>
+          </div>
+        </div>
+        <p>
+          Trading with CORE FINANCE LIMITED has been a great experience. 
+          The interface is modern, execution is reliable, and 
+          I feel confident managing my investments here.
+        </p>
+      </div>
+
     </div>
   </div>
+</div>
 </section>
 
 <!-- Place this where you want the ticker -->
@@ -675,101 +711,128 @@ body.modal-open::before {
 
 
 <section id="faq">
-  <div class="faq-floating">
-    <img src="{{ asset('pics/faq1.png') }}" alt="">
-    <img src="{{ asset('pics/faq2.png') }}" alt="">
-    <img src="{{ asset('pics/faq3.png') }}" alt="">
-  </div>
 
   <div class="faq-wrapper">
-    
-    <!-- Left Side FAQ -->
-    <div class="faq-container">
+
+    <!-- Full Width FAQ -->
+    <div class="faq-container full-width">
       <h2>Most Common <span>FAQs</span></h2>
 
       <!-- FAQ Item -->
       <div class="faq-item active">
         <button class="faq-question">
-          What Are CFD's?
-          <span class="faq-icon">−</span>
+          What Is CFD Trading?
+          <span class="faq-icon">&#9650;</span> <!-- ▲ -->
         </button>
         <div class="faq-answer">
           <p>
-            Contract for Difference (CFD) is a derivative financial instrument that allows you to
-            speculate on the price movements of assets without owning them. You can profit from
-            rising and falling markets by taking long or short positions.
-          </p>
+  A Contract for Difference (CFD) is a financial derivative that allows traders to speculate on the price movements of various assets — such as forex, stocks, indices, commodities, and cryptocurrencies — without actually owning the underlying asset.
+
+  Instead of purchasing the asset itself, you enter into an agreement with a broker to exchange the difference in the asset’s price between the time the contract is opened and when it is closed.
+
+  CFDs allow traders to profit in both rising and falling markets by taking either a <strong>long position</strong> (buy) if they expect the price to increase, or a <strong>short position</strong> (sell) if they expect the price to decrease. <br/><br/>
+
+  One of the key advantages of CFD trading is the use of <strong>leverage</strong>, which enables traders to control larger positions with a smaller amount of capital. However, while leverage can increase potential profits, it also significantly increases the level of risk.
+
+  CFDs are popular among traders because they offer flexibility, access to global markets, fast execution, and the ability to hedge existing investments. Proper risk management strategies such as stop-loss and take-profit orders are strongly recommended when trading CFDs.
+</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question">
           What Trading Platform Do You Offer?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon">&#9660;</span> <!-- ▼ -->
         </button>
         <div class="faq-answer">
           <p>
-            We provide a secure, user-friendly trading platform with advanced tools for both
-            beginners and professionals.
-          </p>
+  We offer a powerful and secure multi-asset trading platform designed to meet the needs of both beginner and professional traders. Our platform provides real-time market data, advanced charting tools, and a wide range of technical indicators to help you analyze market movements with precision.
+
+  Traders can access multiple asset classes including Forex, commodities, indices, stocks, and cryptocurrencies — all from a single intuitive interface. The platform supports instant trade execution, flexible order types (market, limit, stop-loss, take-profit), and customizable trading layouts.
+
+  <br/> <br/>Our system is built with high-level encryption technology to ensure maximum security of your funds and personal data. It is accessible via desktop, web browser, and mobile devices, allowing you to trade anytime, anywhere.
+
+  Whether you are just starting your trading journey or managing advanced strategies, our platform provides the performance, stability, and tools required to trade with confidence.
+</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question">
           How Do I Open A Trading Account?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon">&#9660;</span>
         </button>
         <div class="faq-answer">
           <p>
-            Opening an account is simple: complete registration, verify your ID, and fund your
-            account.
-          </p>
+  Opening a trading account with us is a simple and secure process. First, complete the online registration form by providing your basic personal information. Once registered, you will need to verify your identity by submitting valid identification documents (such as a passport or national ID) and proof of address, in compliance with regulatory requirements.
+
+  After verification is approved, you can fund your account using one of our secure payment methods, including bank transfer, credit/debit card, or supported online payment systems. Once your deposit is confirmed, you can access the trading platform, explore available markets, and begin trading immediately.
+
+  Our support team is available to assist you throughout the entire onboarding process to ensure a smooth and hassle-free experience.
+</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question">
           What Is Online Trading, How It Work?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon">&#9660;</span>
         </button>
         <div class="faq-answer">
           <p>
-            Online trading lets you buy/sell financial instruments over the internet with instant
-            market access.
-          </p>
+  Online trading is the process of buying and selling financial instruments such as Forex, stocks, commodities, indices, and cryptocurrencies through an internet-based trading platform. Instead of contacting a broker by phone, traders can access global markets instantly using a computer or mobile device.
+
+  The process works by placing buy (long) or sell (short) orders based on your market analysis and trading strategy. When you open a trade, you speculate on the price movement of an asset. If the market moves in your favor, you can close the trade to realize a profit. If it moves against you, a loss may occur.
+
+  Modern trading platforms provide real-time pricing, advanced charting tools, risk management features, and instant execution to help traders make informed decisions efficiently.
+</p>
         </div>
       </div>
 
       <div class="faq-item">
         <button class="faq-question">
           What Risk Management Tools Are Available?
-          <span class="faq-icon">+</span>
+          <span class="faq-icon">&#9660;</span>
         </button>
         <div class="faq-answer">
           <p>
-            We offer stop-loss, take-profit, and trailing stop orders to protect your capital and
-            lock in profits.
-          </p>
+  We provide a comprehensive range of risk management tools to help traders protect their capital and manage market exposure effectively. These tools include Stop-Loss orders, which automatically close a trade at a predetermined loss level, and Take-Profit orders, which secure profits once a target price is reached.
+
+  Additionally, Trailing Stop orders allow traders to lock in profits dynamically as the market moves in their favor. Margin monitoring tools and real-time account analytics are also available to help you maintain control over your risk levels.
+
+  While these tools are designed to support disciplined trading, we strongly encourage traders to apply proper risk management strategies and never risk more than they can afford to lose.
+</p>
         </div>
       </div>
-    </div>
 
-    <!-- Right Side Image -->
-    <div class="faq-image">
-      <img src="{{ asset('pics/faq12.png') }}" alt="FAQ Illustration">
     </div>
 
   </div>
 </section>
 
- 
 
-    
+<script>
+  const faqItems = document.querySelectorAll(".faq-item");
 
+  faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
 
+    question.addEventListener("click", () => {
 
+      faqItems.forEach(i => {
+        if (i !== item) {
+          i.classList.remove("active");
+          i.querySelector(".faq-icon").innerHTML = "▼";
+        }
+      });
 
+      item.classList.toggle("active");
+
+      const icon = item.querySelector(".faq-icon");
+      icon.innerHTML = item.classList.contains("active") ? "▲" : "▼";
+    });
+  });
+</script>
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-container">
@@ -782,6 +845,7 @@ body.modal-open::before {
         <a href="#"><i class="fab fa-instagram"></i></a>
         <a href="#"><i class="fab fa-linkedin-in"></i></a>
         <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
        
       </div>
     </div>
@@ -824,48 +888,96 @@ body.modal-open::before {
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +61 861 865 931</li>
-        <li><i class="fas fa-envelope"></i>  support@trinityglobalcapitalltd.com</li>
-        <li><i class="fas fa-building"></i>  1 Balloon Street, Manchester, M4 4BE, United Kingdom</li>
+        <li><i class="fas fa-envelope"></i>  support@corefinanceltd.com</li>
+        <li><i class="fas fa-building"></i>  9 Scott Court, 50 Silverthorne Road, London, United Kingdom, SW8 3HD</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
     </div>
   </div>
 
   <!-- Legal -->
-  <div class="footer-legal">
-    <h3>legal</h3>
-    <p> This Website is Owned by Trinity Global Capital LTD. 
+ <div class="footer-legal">
+  <div class="legal-titles">
+    <h3 class="legal-title" data-target="legal-desc">Legal</h3>
+    <h3 class="legal-title" data-target="risk-warning-desc">General Risk Warning</h3>
+    <h3 class="legal-title" data-target="risk-disclosure-desc">Risk Disclosure</h3>
+  </div>
+
+  <div class="legal-desc-container">
+    <p id="legal-desc" class="legal-desc">
+      This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.  
       The objects of the Company are all subject matters not forbidden by International Business Companies 
-      (Amendment and Consolidation).</p>
-    <h3>General Risk Warning</h3>
-    <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as 
+      (Amendment and Consolidation).
+    </p>
+
+    <p id="risk-warning-desc" class="legal-desc">
+      Trading leveraged products such as Forex and CFDs may not be suitable for all investors as 
       they carry a high degree of risk to your capital. Please ensure that you fully understand 
       the risks involved, taking into account your investments objectives and level of experience, 
-      before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.</p>
-    <h3>Risk disclosure</h3>
-    <p>Past performance is not indicative of future results. The information on our website is provided 
+      before trading, and if necessary, seek independent advice. Please read the full Risk Disclosure.
+    </p>
+
+    <p id="risk-disclosure-desc" class="legal-desc">
+      Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. Trinity Global Capital LTD 
+      You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
       China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. Trinity Global Capital LTD 
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
-      explain the reason why (Terms and conditions).</p>
+      explain the reason why (Terms and conditions).
+    </p>
   </div>
+</div>
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© Trinity Global Capital LTD - 15669711</p>
-    <div class="footer-social">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
+    <p>© CORE FINANCE LIMITED - 10956602</p>
+    <section class="partner-section">
+      <div class="partner-slider">
+        <div class="partner-track">
+          <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c1.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c2.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c3.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c4.png') }}" alt="Trading Icon 3">
+          <img src="{{ asset('pics/c5.png') }}" alt="Trading Icon 3">
+        </div>
+      </div>
+    </section>
   </div>
+  
 </footer>
+<script>
+const titles = document.querySelectorAll('.legal-title');
+const descriptions = document.querySelectorAll('.legal-desc');
 
+titles.forEach(title => {
+  title.addEventListener('click', () => {
+    const targetId = title.dataset.target;
+    const desc = document.getElementById(targetId);
+
+    const isActive = title.classList.contains('active');
+
+    // close all first
+    titles.forEach(t => t.classList.remove('active'));
+    descriptions.forEach(d => {
+      d.style.display = 'none';
+    });
+
+    // open clicked one only
+    if (!isActive) {
+      title.classList.add('active');
+      if (desc) desc.style.display = 'block';
+    }
+  });
+});
+</script>
 <!-- Dark Mode Toggle 
 <button id="darkModeToggle" class="dark-toggle">
   🌙
@@ -902,6 +1014,108 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <script src="{{ asset('js/test.js') }}"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll(".stat-card .counter");
+  if (!counters.length) return;
+
+  function runCounter(counter) {
+    if (counter.dataset.done === "1") return;
+    counter.dataset.done = "1";
+
+    const target = Number(counter.getAttribute("data-target")) || 0;
+    let current = 0;
+    const step = Math.max(1, Math.ceil(target / 80));
+
+    const tick = () => {
+      current += step;
+      if (current < target) {
+        counter.textContent = current;
+        requestAnimationFrame(tick);
+      } else {
+        counter.textContent = target;
+      }
+    };
+
+    counter.textContent = "0";
+    tick();
+  }
+
+  const cards = document.querySelectorAll(".stat-card");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const counter = entry.target.querySelector(".counter");
+          if (counter) runCounter(counter);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach((card) => io.observe(card));
+  } else {
+    counters.forEach(runCounter);
+  }
+
+  // Backup trigger for first render
+  setTimeout(() => counters.forEach(runCounter), 300);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.__heroSliderRunning) return;
+  window.__heroSliderRunning = true;
+
+  const titleEl = document.getElementById("hero-title");
+  const textEl = document.getElementById("hero-text");
+  if (!titleEl || !textEl) return;
+
+  const slides = [
+    {
+      title: "Empower Your Trading Journey to Success",
+      text: "Where strategy meets opportunity without limits"
+    },
+    {
+      title: "Trade Smarter, Build Stronger Every Day",
+      text: "Advanced tools and live insights crafted for your success"
+    },
+    {
+      title: "Begin Your Journey to Financial Independence",
+      text: "Join a global network of motivated traders"
+    }
+  ];
+
+  let index = 0;
+  const animateTo = (nextIndex) => {
+    titleEl.classList.remove("zoom-in");
+    textEl.classList.remove("zoom-in");
+    titleEl.classList.add("zoom-out");
+    textEl.classList.add("zoom-out");
+
+    setTimeout(() => {
+      index = nextIndex % slides.length;
+      titleEl.classList.remove("zoom-out");
+      textEl.classList.remove("zoom-out");
+      titleEl.textContent = slides[index].title;
+      textEl.textContent = slides[index].text;
+      titleEl.classList.add("zoom-in");
+      textEl.classList.add("zoom-in");
+    }, 400);
+  };
+
+  setInterval(() => animateTo(index + 1), 3000);
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const steps = document.querySelectorAll("#create-account .step");
+  if (!steps.length) return;
+
+  steps.forEach((step, i) => {
+    setTimeout(() => step.classList.add("show"), i * 200);
+  });
+});
+</script>
 
 <!--Start of Tawk.to Script
 <script type="text/javascript">

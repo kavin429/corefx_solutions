@@ -27,51 +27,47 @@
 
 
   const slides = [
-{
-  title: "Unlock Limitless Trading Power",
-  text: "Step into a world where opportunities have no boundaries"
-},
-{
-  title: "Trade Intelligently, Grow Confidently",
-  text: "Powerful tools and real-time insights designed for success"
-},
-{
-  title: "Start Your Path to Financial Freedom",
-  text: "Become part of a global community of ambitious traders"
-}
+    {
+      title: "Unleash Your Trading Potential with Confidence",
+      text: "Enter a space where opportunities know no limits"
+    },
+    {
+      title: "Trade Smarter, Build Stronger Every Day",
+      text: "Advanced tools and live insights crafted for your success"
+    },
+    {
+      title: "Begin Your Journey to Financial Independence",
+      text: "Join a global network of motivated traders"
+    }
   ];
 
   let index = 0;
   const titleEl = document.getElementById("hero-title");
   const textEl = document.getElementById("hero-text");
 
-  function showSlide(i, direction = "right") {
-    index = (i + slides.length) % slides.length;
+  if (titleEl && textEl && slides.length) {
+    function showSlide(i) {
+      index = (i + slides.length) % slides.length;
 
-    // Add fade-out class
-    titleEl.classList.add("fade-out");
-    textEl.classList.add("fade-out");
+      titleEl.classList.remove("zoom-in");
+      textEl.classList.remove("zoom-in");
+      titleEl.classList.add("zoom-out");
+      textEl.classList.add("zoom-out");
 
-    // After fade-out, swap text & fade-in
-    setTimeout(() => {
-      titleEl.textContent = slides[index].title;
-      textEl.textContent = slides[index].text;
+      setTimeout(() => {
+        titleEl.classList.remove("zoom-out");
+        textEl.classList.remove("zoom-out");
 
-      titleEl.classList.remove("fade-out");
-      textEl.classList.remove("fade-out");
+        titleEl.textContent = slides[index].title;
+        textEl.textContent = slides[index].text;
 
-      if (direction === "left") {
-        titleEl.classList.add("fade-in-left");
-        textEl.classList.add("fade-in-left");
-      } else {
-        titleEl.classList.add("fade-in-right");
-        textEl.classList.add("fade-in-right");
-      }
-    }, 400); // wait until fade-out finishes
+        titleEl.classList.add("zoom-in");
+        textEl.classList.add("zoom-in");
+      }, 400);
+    }
+
+    setInterval(() => showSlide(index + 1), 3000);
   }
-
-  // Auto rotate
-  setInterval(() => showSlide(index + 1, "right"), 3000);
 
   //header
 
@@ -301,6 +297,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const steps = document.querySelectorAll(".step");
+  const createAccount = document.querySelector("#create-account");
+  if (!createAccount || !steps.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -308,33 +306,41 @@ document.addEventListener("DOMContentLoaded", () => {
         steps.forEach((step, index) => {
           setTimeout(() => step.classList.add("show"), index * 300);
         });
-      } else {
-        steps.forEach((step) => step.classList.remove("show"));
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.1, rootMargin: "0px 0px -10% 0px" });
 
-  observer.observe(document.querySelector("#create-account"));
+  observer.observe(createAccount);
 });
 
 // plan section
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".pricing-card");
-
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        cards.forEach((card, index) => {
-          setTimeout(() => card.classList.add("show"), index * 250);
-        });
-        // Stop observing after first trigger
-        obs.disconnect();
-      }
-    });
-  }, { threshold: 0.1 }); // lower threshold so mobile works too
-
+  if (!cards.length) return;
   const section = document.querySelector("#pricing");
-  if (section) observer.observe(section);
+
+  const revealCards = () => {
+    cards.forEach((card, index) => {
+      setTimeout(() => card.classList.add("show"), index * 250);
+    });
+  };
+
+  if ("IntersectionObserver" in window && section) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          revealCards();
+          obs.disconnect();
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -10% 0px" });
+    observer.observe(section);
+  } else {
+    revealCards();
+  }
+
+  // Fallback in case observer doesn't fire on first load.
+  setTimeout(revealCards, 300);
 });
 
 
@@ -556,22 +562,24 @@ const closeVideo = document.getElementById("closeVideo");
 
 const videoURL = "https://www.youtube.com/embed/xHU5MHuUSKI?autoplay=1&mute=1";
 
-watchBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  popup.style.display = "flex";
-  setTimeout(() => {
-    videoFrame.src = videoURL;
-  }, 300);
-});
+if (watchBtn && popup && videoFrame && closeVideo) {
+  watchBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    popup.style.display = "flex";
+    setTimeout(() => {
+      videoFrame.src = videoURL;
+    }, 300);
+  });
 
-closeVideo.addEventListener("click", () => {
-  popup.style.display = "none";
-  videoFrame.src = "";
-});
-
-popup.addEventListener("click", (e) => {
-  if (e.target === popup) {
+  closeVideo.addEventListener("click", () => {
     popup.style.display = "none";
     videoFrame.src = "";
-  }
-});
+  });
+
+  popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+      popup.style.display = "none";
+      videoFrame.src = "";
+    }
+  });
+}

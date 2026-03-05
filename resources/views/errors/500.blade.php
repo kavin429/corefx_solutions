@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>500 | Server Error - Trinity Global Capital LTD</title>
+  <title>500 | Server Error - CORE FINANCE LIMITED</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 <style>
   body{
@@ -121,7 +121,7 @@ footer{
 </div>
 
 <footer>
-  &copy; Trinity Global Capital LTD - 15669711
+  &copy; CORE FINANCE LIMITED - 10956602
 </footer>
 
 <script>

@@ -3,9 +3,9 @@
     color: #ffffff !important;
     padding: 1rem 1.5rem;
     border: solid 1px;
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     border-radius: 22px;
-    border-color: #002f10;
+    border-color: #002c2f;
 }
 
 /* =========================
@@ -42,14 +42,14 @@ form.d-flex a {
     padding: 0.45rem 0.9rem;
     font-weight: 500;
     transition: all 0.2s ease;
-    background: linear-gradient(135deg, #28d19e, #68e437);
+    background: linear-gradient(135deg, #28c6d1, #30daea);
     color: #000000;
 }
 
 form.d-flex button:hover,
 form.d-flex a:hover {
     transform: translateY(-2px);
-    background: linear-gradient(45deg, #68e437 , #28d19e);
+    background: linear-gradient(45deg, #37d3e4 , #28d1cb);
     color: #000000;
 }
 
@@ -75,7 +75,7 @@ form.d-flex a:hover {
 
 /* Header */
 .table1 thead {
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     color: #dcffee;
 }
 
@@ -131,7 +131,7 @@ form.d-flex a:hover {
 }
 
 .card1 .card-header {
-    background: linear-gradient(135deg, #0b3d2e, #265314);
+    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
     color: #ffffff;
     font-weight: 600;
     border-bottom: none;
@@ -165,7 +165,7 @@ form.d-flex a:hover {
    Buttons
 ========================= */
 .btn-success {
-    background: linear-gradient(135deg, #28d19e, #68e437);
+    background: linear-gradient(135deg, #28c6d1, #30daea);
     color: rgb(1, 1, 1);
     border-radius: 8px;
     padding: 0.5rem 1rem;
@@ -174,7 +174,7 @@ form.d-flex a:hover {
 }
 
 .btn-success:hover {
-    background: linear-gradient(45deg, #68e437 , #28d19e);
+    background: linear-gradient(45deg, #37d3e4 , #28d1cb);
     transform: translateY(-2px);
     color: rgb(1, 1, 1);
 }

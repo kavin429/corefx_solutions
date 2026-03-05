@@ -9,8 +9,8 @@
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 body.dark .container h2 {
@@ -23,7 +23,7 @@ body.dark .container h2 {
    Buttons
 ===================== */
 .container .btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     border: none;
     color: #fff;
     font-weight: 500;
@@ -34,7 +34,7 @@ body.dark .container h2 {
 }
 
 .container .btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 /* Custom btn1 buttons */
@@ -53,12 +53,12 @@ body.dark .container h2 {
 
 /* Warning */
 .btn1.btn-warning {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
 }
 
 .btn1.btn-warning:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 /* Danger */
@@ -87,7 +87,7 @@ table.table {
 }
 
 table.table thead th {
-    background: linear-gradient(135deg, #3e7c55, #0e4812);
+    background: linear-gradient(135deg, #3e797c, #105358);
     color: #fff;
     text-align: center;
     vertical-align: middle;
@@ -102,17 +102,17 @@ table.table tbody td {
 
 /* Table Rows */
 .table tbody tr:nth-child(even) {
-    background-color: #003513;
+    background-color: #014446;
 }
 
 table.table tbody tr:hover {
-    background-color: #082b20;
+    background-color: #08292b;
 }
 
 .table tbody td {
-    background-color: #0759341b;
+    background-color: #0752591b;
     color: #ffffff;
-    border-left: 2px solid #044a22;
+    border-left: 2px solid #066062;
 }
 
 .table-bordered th,
@@ -125,20 +125,20 @@ table.table tbody tr:hover {
 ===================== */
 .modal-dialog {
     max-width: 450px;
-    background: #003513;
+    background: #014446;
 }
 
 .modal-content {
     border-radius: 10px;
     padding: 0;
     transition: all 0.2s ease;
-    background: #003513;
+    background: #014446;
 }
 
 .modal-header {
     color: #fff;
     border-bottom: none;
-    background: #003513;
+    background: #014446;
 }
 
 .modal-title {
@@ -148,7 +148,7 @@ table.table tbody tr:hover {
 
 .modal-body {
     padding: 1rem;
-    background: #003513;
+    background: #014446;
     color: #000000;
 }
 
@@ -161,16 +161,16 @@ table.table tbody tr:hover {
     margin-bottom: 0.5rem;
     font-size: 0.9rem;
     transition: border-color 0.2s ease;
-    background-color: #1d4126;
+    background-color: #234f56;
     color: #d3d3d3;
-    border: 1px solid #0a652d;
+    border: 1px solid #0a6065;
 }
 
 .modal-body input:focus,
 .modal-body select:focus,
 .modal-body textarea:focus {
-  border-color: #28c071;
-  box-shadow: 0 0 4px rgba(13, 173, 53, 0.4);
+  border-color: #18cad7;
+  box-shadow: 0 0 4px rgba(13, 168, 173, 0.4);
     outline: none;
 }
 
@@ -184,17 +184,17 @@ table.table tbody tr:hover {
     justify-content: flex-end;
     gap: 0.5rem;
     padding: 0.75rem 1rem;
-    background: #003513;
+    background: #014446;
 }
 
 .modal-footer .btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
 }
 
 .modal-footer .btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .modal-footer .btn-secondary {

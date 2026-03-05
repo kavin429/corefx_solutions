@@ -21,16 +21,16 @@
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 
 /* ---------- Alerts ---------- */
 .alert-success {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
+    background-color: #aff5ef;
+    border-color: #00fdf8;
+    color: #155753;
     padding: 0.6rem 1rem;
     border-radius: 6px;
     margin-bottom: 1.5rem;
@@ -49,7 +49,7 @@
     border-collapse: collapse;
     min-width: 700px;
     border-radius: 8px;
-    background-color: #00281c; /* Light mode table bg */
+    background-color: #014c4e; /* Light mode table bg */
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
@@ -67,19 +67,19 @@
     position: sticky;
     top: 0;
     z-index: 1;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
     color: #ffffff;
 }
 
 /* Table Cells */
 .verification-table td {
     border-bottom: 1px solid #e0d6f5;
-    background-color: #00250a; 
+    background-color: #002523; 
 }
 
 /* ---------- Links ---------- */
 .verification-table a {
-    color: #ddffed;
+    color: #ddfeff;
     text-decoration: none;
     font-weight: 500;
 }
@@ -102,9 +102,9 @@
 }
 
 .badge.verified {
-    background-color: #e9ffee;
+    background-color: #e9fffe;
     padding: 0.5rem;
-    color: #02390f;
+    color: #023939;
 }
 
 .badge.pending {
@@ -128,7 +128,7 @@
 }
 
 .btn.approve {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
     padding: 0.35rem 0.75rem;
@@ -139,7 +139,7 @@
 }
 
 .btn.approve:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .btn.reject {
@@ -194,7 +194,7 @@
     background-color: #ffffff10;
     width: 100%;
     color: #ffffff;
-    border: 1px solid #004f26;
+    border: 1px solid #004f4c;
     border-radius: 6px;
     padding: 0.5rem 0.75rem;
     transition: all 0.3s ease;
@@ -205,8 +205,8 @@
 }
 
 .admin-verifications-container form input.form-control:focus {
-    border-color: #3dbb76;
-    box-shadow: 0 0 0 0.15rem rgba(93, 229, 184, 0.25);
+    border-color: #3dbbb5;
+    box-shadow: 0 0 0 0.15rem rgba(93, 229, 224, 0.25);
     outline: none;
 }
 
@@ -221,13 +221,13 @@
 
 /* Primary Search Button */
 .admin-verifications-container form .btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     border: none;
     color: #fff;
 }
 
 .admin-verifications-container form .btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 /* Reset Button */

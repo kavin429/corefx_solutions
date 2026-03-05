@@ -19,8 +19,8 @@
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 /* ---------- Alerts ---------- */
@@ -34,9 +34,9 @@
 }
 
 .alert-success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #c3e6cb;
+    background-color: #aff5ef;
+    color: #155753;
+    border: 1px solid #00fdf8;
 }
 
 .alert-danger {
@@ -55,14 +55,14 @@ form.mb-3.d-flex input.form-control {
     flex: 1;
     border-radius: 6px;
     padding: 6px 12px;
-    border: 1px solid #023b0c;
+    border: 1px solid #02383b;
     font-size: 0.9rem;
-    background: #00270e00;
+    background: #00242700;
 }
 
 form.mb-3.d-flex input.form-control:focus {
-    border-color: #013e21;
-    box-shadow: 0 0 0 0.2rem rgba(24, 59, 42, 0.25);
+    border-color: #013e3e;
+    box-shadow: 0 0 0 0.2rem rgba(24, 58, 59, 0.25);
     outline: none;
 }
 
@@ -76,13 +76,13 @@ form.mb-3.d-flex .btn1 {
 }
 
 form.mb-3.d-flex .btn1.btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
 }
 
 form.mb-3.d-flex .btn1.btn-primary:hover {
-   background: linear-gradient(135deg, #32a063, #7bc546);
+   background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 form.mb-3.d-flex .btn1.btn-secondary {
@@ -119,7 +119,7 @@ form.mb-3.d-flex .btn1.btn-secondary:hover {
 
 /* Table Header */
 .table th {
-    background: linear-gradient(135deg, #3e7c55, #0e4812);
+    background: linear-gradient(135deg, #3e797c, #105358);
     color: #ffffff;
     font-weight: 600;
     position: sticky;
@@ -130,15 +130,15 @@ form.mb-3.d-flex .btn1.btn-secondary:hover {
 
 /* Table Rows */
 .table tbody tr:nth-child(even) {
-    background-color: #003513;
+    background-color: #014446;
 }
 
 .table tbody tr:hover {
-    background-color: #082b20;
+    background-color: #08292b;
 }
 
 .table tbody td {
-    background-color: #0759341b;
+    background-color: #0752591b;
     color: #ffffff;
 }
 
@@ -165,13 +165,13 @@ form.mb-3.d-flex .btn1.btn-secondary:hover {
 }
 
 .table td.d-flex .btn-success {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
 }
 
 .table td.d-flex .btn-success:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .table td.d-flex .btn-danger {
@@ -185,13 +185,13 @@ form.mb-3.d-flex .btn1.btn-secondary:hover {
 }
 
 .table td.d-flex .btn-info {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
 }
 
 .table td.d-flex .btn-info:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .btn1.btn-secondary {
@@ -211,7 +211,7 @@ form.mb-3.d-flex .btn1.btn-secondary:hover {
 /* ---------- Modals ---------- */
 .modal-content {
     border-radius: 10px;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     transition: all 0.2s ease;
     
@@ -255,7 +255,7 @@ form.mb-3.d-flex .btn1.btn-secondary:hover {
 
 /* Modal Buttons */
 .modal-footer .btn1.btn-primary {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
     border: none;
     border-radius: 10px;
@@ -264,7 +264,7 @@ form.mb-3.d-flex .btn1.btn-secondary:hover {
 }
 
 .modal-footer .btn1.btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .modal-footer .btn1.btn-secondary {

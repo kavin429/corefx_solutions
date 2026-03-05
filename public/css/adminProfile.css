@@ -10,8 +10,8 @@ h3 {
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 body.dark h3 {
@@ -33,7 +33,7 @@ body.dark h3 {
 /* ---------- Cards ---------- */
 .profile-card {
     width: 100%;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
     border-radius: 12px;
     padding: 2rem 1.5rem;
     box-shadow: 0 4px 12px rgba(89, 182, 108, 0.15);
@@ -79,9 +79,9 @@ body.dark h3 {
     border-radius: 8px;
     font-size: 0.95rem;
     transition: border 0.3s ease, box-shadow 0.3s ease;
-      background-color: #1d4126 !important;
+      background-color: #234f56 !important;
   color: #f9f9f9 !important;
-  border: 1px solid #0a652d !important;
+  border: 1px solid #0a6065 !important;
 }
 
 label{
@@ -90,8 +90,8 @@ label{
 }
 
 .form-control:focus {
-  border-color: #28c071;
-  box-shadow: 0 0 4px rgba(13, 173, 53, 0.4);
+  border-color: #18cad7;
+  box-shadow: 0 0 4px rgba(13, 168, 173, 0.4);
     outline: none;
 }
 
@@ -107,23 +107,23 @@ label{
 }
 
 .btn-primary {
-   background: linear-gradient(135deg, #1f6333, #5de59f);
+   background: linear-gradient(135deg, #1f5d63, #47dde7);
     border: none;
     color: #fff;
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .btn-warning {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     border: none;
     color: #fff;
 }
 
 .btn-warning:hover {
-    background: linear-gradient(135deg, #32a063, #7bc546);
+    background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 /* ---------- Responsive Styles ---------- */

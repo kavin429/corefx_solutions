@@ -18,8 +18,8 @@
     padding: 1rem;
     border: solid 1px;
     border-radius: 8px;
-    border-color: #024b27;
-    background: linear-gradient(135deg, #0f2e1c, #2c431b);
+    border-color: #02404b;
+    background: linear-gradient(135deg, #0f2c2e, #1b433e);
 }
 
 /* ---------- Table Container ---------- */
@@ -48,7 +48,7 @@
 
 /* ---------- Light Mode Header ---------- */
 .withdraw-table th {
-    background: linear-gradient(135deg, #3e7c55, #0e4812);
+    background: linear-gradient(135deg, #3e797c, #105358);
     color: #ffffff;
     font-weight: 600;
     position: sticky;
@@ -60,15 +60,15 @@
 
 /* ---------- Light Mode Body Rows ---------- */
 .withdraw-table tbody tr:nth-child(even) {
-   background-color: #003513;
+   background-color: #014446;
 }
 
 .withdraw-table tbody tr:hover {
-    background-color: #082b20;
+    background-color: #08292b;
 }
 
 .withdraw-table tbody td {
-    background-color: #0759341b;
+    background-color: #0752591b;
     color: #ffffff;
 }
 
@@ -85,7 +85,7 @@
 }
 
 .status-approved {
-    background: linear-gradient(135deg, #28a745, #218838);
+    background: linear-gradient(135deg, #2894a7, #218888);
     color: #fff;
     padding: 0.35rem 0.75rem;
     border-radius: 12px;
@@ -120,11 +120,11 @@
 }
 
 .btn-accept {
-    background: linear-gradient(135deg, #1f6333, #5de59f);
+    background: linear-gradient(135deg, #1f5d63, #47dde7);
     color: #fff;
 }
 .btn-accept:hover {
-     background: linear-gradient(135deg, #32a063, #7bc546);
+     background: linear-gradient(135deg, #32a09e, #46c5c5);
 }
 
 .btn-reject {

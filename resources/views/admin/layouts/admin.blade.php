@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@yield('title', 'Trinity Global Capital LTD')</title>
+    <title>@yield('title', 'CORE FINANCE LIMITED')</title>
     <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Trinitylogo1.png') }}" />
     
     <!-- Bootstrap & Icons -->
