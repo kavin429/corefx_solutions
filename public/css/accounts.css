@@ -23,7 +23,7 @@
 ========================= */
 form.d-flex input.form-control { 
     border-radius: 8px;
-    border: 1px solid #00973c;
+    border: 1px solid #008d97;
     padding: 0.5rem 0.5rem;
     transition: all 0.2s;
     background: #c5cdc813;
@@ -148,7 +148,7 @@ form.d-flex a:hover {
 ========================= */
 .form-control {
     border-radius: 8px;
-    border: 1px solid #00973c !important;
+    border: 1px solid #008d97 !important;
     padding: 0.5rem 0.75rem;
     transition: border 0.2s, box-shadow 0.2s;
     background: #c5cdc813 !important;
@@ -156,7 +156,7 @@ form.d-flex a:hover {
 }
 
 .form-control:focus {
-    border-color: #1edd6a !important;
+    border-color: #1edadd !important;
     box-shadow: 0 0 0 0.2rem rgba(99, 255, 198, 0.25) !important;
     outline: none;
 }

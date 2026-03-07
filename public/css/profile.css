@@ -59,7 +59,7 @@
 .profile-card input[type="password"] {
     width: 100%;
     padding: 0.5rem 0.75rem;
-    border: 1px solid #00973c;
+    border: 1px solid #008d97;
     border-radius: 8px;
     margin-top: 0.25rem;
     margin-bottom: 0.5rem;
@@ -74,7 +74,7 @@
 
 .profile-card input[type="file"]:focus,
 .profile-card input[type="password"]:focus {
-    border-color: #1edd6a;
+    border-color: #1edadd;
     outline: none;
 }
 

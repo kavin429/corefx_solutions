@@ -165,6 +165,14 @@ document.addEventListener("DOMContentLoaded", () => {
     return window.innerWidth <= 768 ? 1 : 2;
   }
 
+  function isMobileStackView() {
+    return window.innerWidth <= 768;
+  }
+
+  function isLargeAllCardsView() {
+    return window.innerWidth >= 992;
+  }
+
   // ===== Update dots =====
   function updateDots() {
     const visibleCards = getVisibleCards();
@@ -183,6 +191,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ===== Show cards with animations =====
   function showCards(i) {
+    if (isMobileStackView() || isLargeAllCardsView()) {
+      prodIndex = 0;
+      slider.style.transform = "none";
+      cards.forEach((card) => card.classList.add("show"));
+      dotsContainer.innerHTML = "";
+      return;
+    }
+
     const visibleCards = getVisibleCards();
     const maxIndex = cards.length - visibleCards;
     if (i < 0) prodIndex = maxIndex;

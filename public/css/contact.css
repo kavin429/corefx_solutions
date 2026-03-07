@@ -13,13 +13,13 @@ html, body {
 }
 
 :root {
-  --primary-green: #00ff88;
+  --primary-green: #00fffb;
   --secondary-green: #2d5a27;
   --accent-blue: #00d4ff;
   --warm-yellow: #ffeb3b;
   --deep-forest: #0a1a0a;
   --light-mint: #e8fff0;
-  --glow-green: rgba(0, 255, 136, 0.3);
+  --glow-green: rgba(0, 234, 255, 0.3);
   --glow-blue: rgba(0, 212, 255, 0.3);
 }
 
@@ -29,7 +29,7 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e6f4ea;
+  background: #e6f4f4;
   border-radius: 10px;
 }
 
@@ -502,7 +502,7 @@ header.scrolled .menu a:hover {
   content: "";
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #11cb8d, #25fc6d);
+  background: linear-gradient(90deg, #11c8cb, #25f8fc);
   display: block;
   margin-top: 8px;
 }
@@ -540,7 +540,7 @@ header.scrolled .menu a:hover {
 }
 
 .footer-col ul li a:hover {
-  color: #95fede;
+  color: #95f5fe;
 }
 
 /* Logo & Social */

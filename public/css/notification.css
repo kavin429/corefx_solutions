@@ -46,7 +46,7 @@
 
 /* Activities (Green) */
 .card-header.bg-success {
-    background-color: #10b981;
+    background-color: #10aeb9;
 }
 
 /* =========================
@@ -133,11 +133,11 @@ form.d-flex input.form-control {
     transition: all 0.2s;
         background: #c5cdc813;
     color: #ffff;
-    border: 1px solid #00973c;
+    border: 1px solid #008d97;
 }
 
 form.d-flex input.form-control:focus {
-    border-color: #1edd6a;
+    border-color: #1edadd;
     box-shadow: 0 0 0 0.15rem rgba(99, 255, 208, 0.2);
     outline: none;
 }

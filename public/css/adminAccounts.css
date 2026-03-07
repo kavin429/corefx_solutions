@@ -249,7 +249,7 @@ form.mb-3.d-flex .btn1.btn-secondary:hover {
 }
 
 .modal-body .form-control:focus {
-    border-color: #2e6d54;
+    border-color: #2e686d;
     box-shadow: 0 0 0 0.15rem rgba(93, 229, 154, 0.25);
 }
 

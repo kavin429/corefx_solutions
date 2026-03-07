@@ -42,7 +42,7 @@ body {
 
 .card1:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(82, 255, 157, 0.3);
+    box-shadow: 0 4px 15px rgba(82, 243, 255, 0.3);
 }
 
 .card1 h5 {

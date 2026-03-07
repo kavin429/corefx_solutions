@@ -29,7 +29,7 @@
     padding: 0.75rem 1rem;
     border-radius: 12px;
     border: 1px solid;
-    border-color: #46966a;
+    border-color: #469296;
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s;
     background: #1f1f1f27;
@@ -37,8 +37,8 @@
 }
 
 .withdraw-input:focus {
-    border-color: #3aed8b;
-    box-shadow: 0 0 0 3px rgba(58, 237, 171, 0.2);
+    border-color: #3aeded;
+    box-shadow: 0 0 0 3px rgba(58, 195, 237, 0.2);
     outline: none;
 }
 
@@ -59,7 +59,7 @@ label {
     padding-right: 2.5rem;
     cursor: pointer;
     color: #6e706f;
-    border-color: #46966a;
+    border-color: #469296;
 }
 
 /* ---------------------- Dynamic Fields ---------------------- */

@@ -29,7 +29,7 @@ html, body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e6f4ea;
+  background: #e6f4f4;
   border-radius: 10px;
 }
 
@@ -416,6 +416,10 @@ header.scrolled .menu a:hover {
   font-weight: 700;
 }
 
+.card p{
+  color:#05f0d1;
+}
+
 /* =========================================================
    FORM STYLING
    ========================================================= */
@@ -673,7 +677,7 @@ input:-webkit-autofill:hover {
   content: "";
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #11cb8d, #25fc6d);
+  background: linear-gradient(90deg, #11c8cb, #25f8fc);
   display: block;
   margin-top: 8px;
 }
@@ -711,7 +715,7 @@ input:-webkit-autofill:hover {
 }
 
 .footer-col ul li a:hover {
-  color: #95fede;
+  color: #95f5fe;
 }
 
 /* Logo & Social */

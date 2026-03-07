@@ -676,7 +676,7 @@ header.scrolled {
 .about-text {
   width: 100%; /* full width of its parent */
   padding: 30px; /* inner spacing */
-  border: 2px solid #00ffcc; /* solid border, change color as needed */
+  border: 2px solid #00ffee; /* solid border, change color as needed */
   border-radius: 12px; /* optional: rounded corners */
   box-sizing: border-box; /* ensure padding doesn't break width */
   margin-bottom: 30px; /* spacing from other sections */
@@ -754,7 +754,7 @@ header.scrolled {
 /* 2️⃣ Emerald Green */
 .stat-card.green-emerald {
   background: linear-gradient(145deg, #010707cc, #0a3a3fcc);
-  color: #eafff3;
+  color: #eafffe;
 }
 
 .stat-card.green-emerald h3 {
@@ -1394,8 +1394,10 @@ header.scrolled {
 .product-card {
   flex: 0 0 calc(50% - 20px);
   /* Show 2 cards fully on desktop */
-  background: linear-gradient(145deg, #010707cc, #0a3a3fcc);
-  border: 1px solid rgba(0, 255, 136, 0.2);
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(145deg, #073232cc, #15747ecc);
+  border: 1px solid rgba(170, 232, 219, 0.2);
   border-radius: 16px;
   padding: 30px;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
@@ -1413,7 +1415,7 @@ header.scrolled {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   border: solid;
-  border-color: #4dd882;
+  border-color: #4dd8d8;
 }
 
 /* Image */
@@ -1446,6 +1448,8 @@ header.scrolled {
 /* Button */
 .product-card .arrow-link {
   display: inline-block;
+  margin-top: auto;
+  align-self: center;
   padding: 12px 24px;
   background: linear-gradient(135deg, var(--primary-green), var(--accent-blue));
   color: #000000;
@@ -1497,14 +1501,46 @@ header.scrolled {
   }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 992px) {
+  .products-slider {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    transform: none !important;
+    gap: 20px;
+    cursor: default;
+  }
+
   .product-card {
-    flex: 0 0 100%;
-    /* Only 1 card per view on mobile */
+    flex: 1 1 auto;
+    width: 100%;
+    opacity: 1;
+  }
+
+  .slider-dots {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .products-slider {
+    flex-direction: column;
+    transform: none !important;
+    gap: 16px;
+    cursor: default;
+  }
+
+  .product-card {
+    flex: 1 1 auto;
+    width: 100%;
+    opacity: 1;
   }
 
   .product-card .product-img {
     height: 160px;
+  }
+
+  .slider-dots {
+    display: none;
   }
 
 }
@@ -2295,7 +2331,7 @@ header.scrolled {
 }
 
 .footer-col ul li a:hover {
-  color: #95fede;
+  color: #95f5fe;
 }
 
 /* Logo & Social */
