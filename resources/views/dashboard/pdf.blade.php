@@ -223,7 +223,7 @@ td.center {
     </tfoot>
 </table>
 <br>
-<p class="footer-note">If you have any questions about this statement, please contact <strong>accounts@trinityglobalcapitalltd.com </strong></p>
+<p class="footer-note">If you have any questions about this statement, please contact <strong>accounts@corefxsolutions.com </strong></p>
 <br>
 <p class="footer-note">This is a system-generated statement from CORE FINANCE LIMITED.</p>
 

@@ -32,7 +32,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #e6f4ea;
+  background: #e6f4f4;
   /* light green background */
   border-radius: 10px;
 }
@@ -663,7 +663,7 @@ header.scrolled .menu a:hover {
 }
 
 .gradient-text-small {
-  background: linear-gradient(90deg, #4dd882, #aea32b, #46fb8e, #bbf8d3);
+  background: linear-gradient(90deg, #4dd8d8, #aea32b, #46fb8e, #bbf8d3);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -1048,7 +1048,7 @@ header.scrolled .menu a:hover {
 /* 1️⃣ Deep Forest Green */
 .stat-card.green-dark {
   background: linear-gradient(145deg, #0b2e13cc, #14532dcc);
-  color: #e6f4ea;
+  color: #e6f4f4;
 }
 
 .stat-card.green-dark h3 {
@@ -1151,7 +1151,7 @@ header.scrolled .menu a:hover {
   border-radius: 16px;
   padding: 3px;
   /* space for the "border" effect */
-  background: linear-gradient(90deg, #4dd882, #aea32b, #46fb8e, #bbf8d3);
+  background: linear-gradient(90deg, #4dd8d8, #aea32b, #46fb8e, #bbf8d3);
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -1691,7 +1691,7 @@ header.scrolled .menu a:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   border: solid;
-  border-color: #4dd882;
+  border-color: #4dd8d8;
 }
 
 /* Image */
@@ -1836,7 +1836,7 @@ header.scrolled .menu a:hover {
   transform: translateX(-50%);
   width: 3px;
   height: 100%;
-  background: linear-gradient(45deg, #4dd882, #aea32b, #46fb8e, #bbf8d3);
+  background: linear-gradient(45deg, #4dd8d8, #aea32b, #46fb8e, #bbf8d3);
   border-radius: 2px;
 }
 
@@ -1880,7 +1880,7 @@ header.scrolled .menu a:hover {
 .step-number {
   width: 50px;
   height: 50px;
-  background: linear-gradient(135deg, #4dd882, #50ae2b, #46fbc2, #bbf8d3);
+  background: linear-gradient(135deg, #4dd8d8, #50ae2b, #46fbc2, #bbf8d3);
   color: #070707;
   border-radius: 50%;
   font-weight: 700;
@@ -2802,7 +2802,7 @@ header.scrolled .menu a:hover {
   content: "";
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, #11cb8d, #25fc6d);
+  background: linear-gradient(90deg, #11c8cb, #25f8fc);
   display: block;
   margin-top: 8px;
 }
@@ -2840,7 +2840,7 @@ header.scrolled .menu a:hover {
 }
 
 .footer-col ul li a:hover {
-  color: #95fede;
+  color: #95f5fe;
 }
 
 /* Logo & Social */

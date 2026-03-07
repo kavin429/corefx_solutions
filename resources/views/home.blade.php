@@ -533,14 +533,14 @@ window.addEventListener('resize', connectCards);
       <div class="step-number">1</div>
       <div class="step-content">
         <h3>Create Account</h3>
-        <p>Sign up and open your live trading account with Trinity Global Capital LTD.</p>
+        <p>Sign up and open your live trading account with Core Finance LTD.</p>
       </div>
     </div>
     <div class="step right">
       <div class="step-number">2</div>
       <div class="step-content">
         <h3>Verify</h3>
-        <p>Upload your documents to verify your account with Trinity Global Capital LTD.</p>
+        <p>Upload your documents to verify your account with Core Finance LTD.</p>
       </div>
     </div>
     <div class="step left">
@@ -1014,6 +1014,34 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 <script src="{{ asset('js/test.js') }}"></script>
+<script>
+function toggleMenu() {
+  const header = document.querySelector("header");
+  const nav = header ? header.querySelector("nav") : null;
+  const hamburger = header ? header.querySelector(".hamburger") : null;
+  if (!nav || !hamburger) return;
+
+  nav.classList.toggle("active");
+  hamburger.classList.toggle("active");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const header = document.querySelector("header");
+  if (!header) return;
+
+  const nav = header.querySelector("nav");
+  const hamburger = header.querySelector(".hamburger");
+  if (!nav || !hamburger) return;
+
+  // Close mobile menu when a nav link is selected.
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", function () {
+      nav.classList.remove("active");
+      hamburger.classList.remove("active");
+    });
+  });
+});
+</script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".stat-card .counter");

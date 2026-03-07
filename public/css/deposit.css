@@ -30,14 +30,14 @@
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: #caffee;
+    color: #cafbff;
 }
 
 .deposit-form h6 {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.75rem;
-    color: #caffee;
+    color: #cafbff;
 }
 
 .deposit-method {
@@ -45,9 +45,9 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.8rem 1rem;
-    border: 1px solid rgba(107, 255, 191, 0.25);
+    border: 1px solid rgba(107, 255, 255, 0.25);
     border-radius: 8px;
-    background: #002512;
+    background: #002425;
     font-size: 0.95rem;
     transition: all 0.3s ease;
 }
@@ -72,7 +72,7 @@
 .copy-tooltip {
     position: absolute;
     background: #c9fff6;
-    color: #00180d !important;
+    color: #001818 !important;
     font-size: 0.75rem;
     padding: 6px 12px;
     border-radius: 4px;
@@ -153,7 +153,7 @@
 
 .deposit-form input:focus,
 .deposit-form select:focus {
-    border-color: #1edd6a;
+    border-color: #1edadd;
     outline: none;
 }
 
@@ -182,7 +182,7 @@
 .deposit-btn:hover {
     transform: translateY(-2px);
     background: linear-gradient(45deg, #37d3e4 , #28d1cb);
-    color: #00180d;
+    color: #001818;
 }
 
 /* ---------- Screenshot Preview ---------- */
@@ -196,8 +196,8 @@
    🌞 LIGHT THEME (Default)
 ================================================== */
 body:not(.dark-mode) .deposit-form {
-    background: #002511;
-    border: 1px solid rgba(0, 155, 80, 0.15);
+    background: #002325;
+    border: 1px solid rgba(0, 155, 152, 0.15);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
@@ -210,7 +210,7 @@ body:not(.dark-mode) .deposit-form select,
 body:not(.dark-mode) .deposit-form input[type="file"] {
     background: #c5cdc813;
     color: #ffff;
-    border: 1px solid #00973c;
+    border: 1px solid #008d97;
 }
 
 body:not(.dark-mode) .deposit-form input::placeholder {
@@ -222,7 +222,7 @@ body:not(.dark-mode) .deposit-form input::placeholder {
 ========================================= */
 select {
     background: #ffffff0d !important;
-    border: 1px solid rgba(120, 255, 199, 0.25) !important;
+    border: 1px solid rgba(120, 242, 255, 0.25) !important;
     color: #726e6e !important;
     appearance: none; /* remove default arrow */
     -webkit-appearance: none;
@@ -253,7 +253,7 @@ select {
 .alert-success {
     background: #d1fae5;
     color: #065f5f;
-    border: 1px solid #10b981;
+    border: 1px solid #10aeb9;
 }
 
 .alert-danger {

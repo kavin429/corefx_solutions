@@ -320,7 +320,7 @@ body.dark .table-responsive::-webkit-scrollbar-track {
 }
 
 body.dark .table-responsive::-webkit-scrollbar-thumb {
-    background: #59ffac; /* bright purple thumb */
+    background: #59fff7; /* bright purple thumb */
 }
 
 body.dark .table-responsive::-webkit-scrollbar-thumb:hover {
