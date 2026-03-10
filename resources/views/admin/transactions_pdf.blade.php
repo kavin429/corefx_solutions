@@ -22,7 +22,7 @@
         }
 
         .logo img {
-            height: 60px;
+            height: 80px;
         }
 
         .client-info p {
@@ -93,7 +93,7 @@
     <!-- Header -->
     <div class="header">
         <div class="logo">
-            <!--<img src="{{ public_path('pics/Infinity1.png') }}" alt="Logo"> -->
+            <!--<img src="{{ public_path('pics/Corefx1.png') }}" alt="Logo"> -->
         </div>
 
         <div class="client-info">

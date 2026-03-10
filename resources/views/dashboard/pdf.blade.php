@@ -131,7 +131,7 @@ td.center {
 
 <header>
     <div class="logo">
-    <!--<img src="{{ public_path('pics/Infinity1.png') }}"> -->
+    <!--<img src="{{ public_path('pics/Corefx1.png') }}"> -->
 
 </div>
 

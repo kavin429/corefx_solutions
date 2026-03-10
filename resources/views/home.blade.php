@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Corefx Solutions</title>
-  <link rel="icon" type="pics/icon.png" href="pics/Trinitylogo1.png" />
+  <link rel="icon" type="pics/icon.png" href="pics/Corefx.png" />
   <!-- Font Awesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
@@ -223,7 +223,7 @@ body.modal-open::before {
 <header>
     <div class="logo">
         <a href="{{ route('home') }}">
-            <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Infinity Trade Logo" class="logo-img">
+            <img src="{{ asset('pics/Corefxlogo.png') }}" alt="Corefx Trade Logo" class="logo-img">
         </a>
     </div>
 
@@ -839,7 +839,7 @@ window.addEventListener('resize', connectCards);
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-     <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Tradefx Logo" class="footer-logo">
+     <img src="{{ asset('pics/Corefxlogo.png') }}" alt="Tradefx Logo" class="footer-logo">
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>

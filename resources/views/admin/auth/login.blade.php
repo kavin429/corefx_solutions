@@ -131,7 +131,7 @@
 <header>
   <div class="logo">
     <a href="{{ route('home') }}">
-      <img src="{{ asset('pics/Trinitylogo.png') }}" alt="Infinity Trade Logo" class="logo-img">
+      <img src="{{ asset('pics/Corefxlogo.png') }}" alt="Corefx Trade Logo" class="logo-img">
     </a>
   </div>
 

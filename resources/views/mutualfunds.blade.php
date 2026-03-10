@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Infinity Trade Solutions LTD</title>
-  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Infinity1.png') }}"/>
+  <title>Corefx Trade Solutions LTD</title>
+  <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Corefx1.png') }}"/>
 
 
   <link rel="stylesheet" href="{{ asset('css/mutualfunds.css') }}">
@@ -22,7 +22,7 @@
 <header>
     <div class="logo">
         <a href="{{ route('home') }}">
-            <img src="{{ asset('pics/Infinity1.png') }}" alt="Infinity Trade Logo" class="logo-img">
+            <img src="{{ asset('pics/Corefx1.png') }}" alt="Corefx Trade Logo" class="logo-img">
         </a>
     </div>
 
@@ -58,7 +58,7 @@
     <section class="fund-management-section">
         
         <h1 class="fund-title">
-            Infinity Trade Solution Limited – United Kingdom
+            Corefx Trade Solution Limited – United Kingdom
         </h1>
 
         <h4 class="fund-subtitle">
@@ -68,7 +68,7 @@
         <div class="fund-content">
 
             <p class="fund-paragraph">
-                Infinity Trade Solution Limited, incorporated under Companies House UK, is a 
+                Corefx Trade Solution Limited, incorporated under Companies House UK, is a 
                 financial management and consultancy company specializing in global trading 
                 solutions across Forex, Metals, Indices, and Cryptocurrencies. With years of 
                 market experience and a strong analytical team, we offer a structured and secure 
@@ -82,12 +82,12 @@
                 expertise. Once enrolled, each client receives a dedicated account manager, 
                 continuous market monitoring, and a tailored trading plan aligned with the 
                 client’s chosen investment tier. All funds remain under the client's ownership, 
-                while Infinity Trade Solution executes trades on their behalf using tested 
+                while Corefx Trade Solution executes trades on their behalf using tested 
                 market strategies and risk-managed systems.
             </p>
 
             <p class="fund-paragraph">
-                Infinity Trade Solution follows strict compliance with AML (Anti-Money 
+                Corefx Trade Solution follows strict compliance with AML (Anti-Money 
                 Laundering) and KYC (Know Your Customer) guidelines to ensure safe and 
                 legitimate fund handling. Risk disclosure is a core part of the program, and 
                 clients acknowledge market risks while benefiting from professional trade 
@@ -95,7 +95,7 @@
             </p>
 
             <p class="fund-paragraph">
-                Through our Fund Management Scheme, Infinity Trade Solution aims to provide 
+                Through our Fund Management Scheme, Corefx Trade Solution aims to provide 
                 clients with a simplified, secure, and high-return trading experience backed by 
                 expert management, transparent processes, and 24/7 support. Investors can 
                 participate confidently, knowing their accounts are handled by professionals 
@@ -248,7 +248,7 @@
 </div>
 
 <section class="income-plan-section">
-    <h2 class="income-heading">Infinity Income Plan</h2>
+    <h2 class="income-heading">Corefx Income Plan</h2>
 
     <!-- Navigation arrows 
     <button class="nav-arrow left-arrow">❮</button>
@@ -331,14 +331,14 @@
       <h2>Pro Account Summary</h2>
       <span class="account-amount">$25,000 (USD)</span>
     </div>
-    <h4 class="summary-sub">Infinity Income Plan – Infinity Trade Solution LTD</h4>
+    <h4 class="summary-sub">Corefx Income Plan – Corefx Trade Solution LTD</h4>
 
     <ul class="summary-points">
       <li><i class="fas fa-wallet"></i> <strong>Deposit Amount:</strong> 25,000 USD</li>
       <li><i class="fas fa-chart-line"></i> <strong>1st Month Return:</strong> 12,500 USD</li>
       <li><i class="fas fa-coins"></i> <strong>Monthly Growth:</strong> Each month, the return increases by 6,250 USD, 9,370 USD, 14,060 USD, 21,090 USD, and so on.</li>
       <li><i class="fas fa-clock"></i> <strong>Investment Recovery:</strong> Within 2 months, your full investment amount will be returned.</li>
-      <li><i class="fas fa-trophy"></i> <strong>Plan Type:</strong> Infinity Income Plan – designed for steady monthly growth and sustainable profit accumulation.</li>
+      <li><i class="fas fa-trophy"></i> <strong>Plan Type:</strong> Corefx Income Plan – designed for steady monthly growth and sustainable profit accumulation.</li>
       <li><i class="fas fa-check-circle"></i> <strong>Key Benefit:</strong> Continuous monthly income even after your initial investment is recovered.</li>
     </ul>
   </div>
@@ -350,7 +350,7 @@
 
     <div class="legal-container">
       <h2>LEGAL TERMS & CONDITIONS – FUND MANAGEMENT PLAN <br>(FOREX TRADING)</h2>
-      <h3>Infinity Trade Solution Limited (Company No. 09711441, United Kingdom)</h3>
+      <h3>Corefx Trade Solution Limited (Company No. 09711441, United Kingdom)</h3>
 
       <!-- 1. Definitions -->
       <div class="legal-item">
@@ -359,7 +359,7 @@
           <span class="legal-icon">+</span>
         </button>
         <div class="legal-answer">
-          <p><strong>“Company”</strong> refers to Infinity Trade Solution Limited.</p> <br>
+          <p><strong>“Company”</strong> refers to Corefx Trade Solution Limited.</p> <br>
           <p><strong>“Client”</strong> refers to the individual or entity participating in the fund management plan.</p> <br>
           <p><strong>“Funds”</strong> refer to the capital deposited by the Client for trading purposes.</p> <br>
           <p><strong>“Trading Account”</strong> refers to the account held in the Client’s name used for executing trades.</p> <br>
@@ -538,7 +538,7 @@
 
     <!-- Column 1: Logo + Social -->
     <div class="footer-col footer-brand">
-    <img src="{{ asset('pics/Infinity1.png') }}" alt="Tradefx Logo" class="footer-logo">
+    <img src="{{ asset('pics/Corefx1.png') }}" alt="Tradefx Logo" class="footer-logo">
       <div class="footer-social">
         <a href="#"><i class="fab fa-facebook-f"></i></a>
         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -586,7 +586,7 @@
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +44 74 4143 0900</li>
-        <li><i class="fas fa-envelope"></i>  support@infinitytradesolution.com</li>
+        <li><i class="fas fa-envelope"></i>  support@Corefxtradesolution.com</li>
         <li><i class="fas fa-building"></i>  20-22 Wenlock Road, London, England, N1 7GU</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>
@@ -596,7 +596,7 @@
   <!-- Legal -->
   <div class="footer-legal">
     <h3>legal</h3>
-    <p> This Website is Owned by Infinity Trade Solutions LTD Limited. The objects of the Company are all subject 
+    <p> This Website is Owned by Corefx Trade Solutions LTD Limited. The objects of the Company are all subject 
         matters not forbidden by International Business Companies (Amendment and Consolidation).</p>
     <h3>General Risk Warning</h3>
     <p>Trading leveraged products such as Forex and CFDs may not be suitable for all investors as they carry 
@@ -606,17 +606,17 @@
     <h3>Risk disclosure</h3>
     <p>Past performance is not indicative of future results. The information on our website is provided for 
         informational purposes only and should not be construed as investment advice. You should seek independent 
-        advice before making any investment decisions. Infinity Trade Solutions LTD does not accept clients 
+        advice before making any investment decisions. Corefx Trade Solutions LTD does not accept clients 
         from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, China, Congo, Cuba, Egypt, 
         Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, Mali, Moldova, 
         Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, Syria, Tunisia, Turkey, 
-        Vanuatu, Venezuela, Yemen, and Zimbabwe. Infinity Trade Solutions LTD may reject any applicant from any 
+        Vanuatu, Venezuela, Yemen, and Zimbabwe. Corefx Trade Solutions LTD may reject any applicant from any 
         jurisdiction at their sole discretion without the requirement to explain the reason why (Terms and conditions).</p>
   </div>
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>© Infinity Trade Solutions LTD - 09711441</p>
+    <p>© Corefx Trade Solutions LTD - 09711441</p>
     <div class="footer-social">
       <a href="#"><i class="fab fa-facebook-f"></i></a>
       <a href="#"><i class="fab fa-instagram"></i></a>
@@ -708,7 +708,7 @@ function updateDots() {
 container.addEventListener("scroll", () => {
     const scrollLeft = container.scrollLeft;
     let closestIndex = 0;
-    let closestDistance = Infinity;
+    let closestDistance = Corefx;
 
     slides.forEach((slide, index) => {
         const distance = Math.abs(slide.offsetLeft - container.offsetLeft - scrollLeft);

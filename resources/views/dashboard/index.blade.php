@@ -52,7 +52,7 @@
 <div id="inactiveOverlay">
   <div class="modal-box">
     <h2>Account Inactive</h2>
-    <p>Your account has been inactivated.<br>Please contact the Infinity Trade Solutions LTD's Support.</p>
+    <p>Your account has been inactivated.<br>Please contact the Corefx Trade Solutions LTD's Support.</p>
   </div>
 </div>
 @endif
