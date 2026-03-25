@@ -62,7 +62,7 @@
 
     <div class="deposit-method">
         <span>Crypto (TRC 20): <br>
-            <span id="method-3-copy">TYPmJVwMkrdSonKkhsqkJaKGTLZshB75cE</span>
+            <span id="method-3-copy">TEWMewjEb3j3T7ZE5Lzn26nBVbsuKFwQ1o</span>
         </span>
         <i class="fa-regular fa-clipboard"
            onclick="copyText('method-3-copy','method-3-tooltip')"></i>
