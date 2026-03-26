@@ -29,18 +29,18 @@ class PasswordResetController extends Controller
             // Send email
             Mail::raw(
                 "Hello {$user->name},\n\n".
-                "We have reset your password for your account at CORE FINANCE LIMITED.\n\n".
+                "We have reset your password for your account at CoreFX Solutions.\n\n".
                 "Your new login credentials are:\n".
                 "-----------------------------------\n".
                 "Email: {$user->email}\n".
                 "Password: {$newPassword}\n".
                 "-----------------------------------\n\n".
                 "For security reasons, we recommend that you log in immediately and change your password.\n\n".
-                "Thank you for being a valued member of CORE FINANCE LIMITED.\n".
-                "— The CORE FINANCE LIMITED Team",
+                "Thank you for being a valued member of CoreFX Solutions.\n".
+                "— The CoreFX Solutions Team",
                 function ($message) use ($user) {
                     $message->to($user->email)
-                            ->subject('CORE FINANCE LIMITED - Password Reset Notification');
+                            ->subject('CoreFX Solutions - Password Reset Notification');
                 }
             );
 

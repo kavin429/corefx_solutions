@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>CORE FINANCE LIMITED - Transaction Invoice</title>
+    <title>CoreFX Solutions - Transaction Invoice</title>
     <style>
         body {
             font-family: DejaVu Sans, sans-serif;
@@ -137,7 +137,7 @@ td.center {
 
     
     <div class="company-info">
-            <p><strong>CORE FINANCE LIMITED</strong></p>
+            <p><strong>CoreFX Solutions</strong></p>
         <p>+61 861 865 931</p>
         <p>1 Balloon Street, Manchester, M4 4BE, United Kingdom</p>
         <p><strong>support@corefinanceltd.com</strong></p>
@@ -225,7 +225,7 @@ td.center {
 <br>
 <p class="footer-note">If you have any questions about this statement, please contact <strong>accounts@corefxsolutions.com </strong></p>
 <br>
-<p class="footer-note">This is a system-generated statement from CORE FINANCE LIMITED.</p>
+<p class="footer-note">This is a system-generated statement from CoreFX Solutions.</p>
 
 <script type="text/php">
 if (isset($pdf)) {

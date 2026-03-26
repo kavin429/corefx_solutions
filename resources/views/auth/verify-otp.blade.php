@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CORE FINANCE LIMITED</title>
+  <title>CoreFX Solutions</title>
   <link rel="icon" type="pics/icon.png" href="{{ asset('pics/icon1.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
 </head>

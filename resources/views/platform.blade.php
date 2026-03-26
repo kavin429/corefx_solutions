@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CORE FINANCE LIMITED</title>
+  <title>CoreFX Solutions</title>
   <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Corefx.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/platform.css') }}">
 
@@ -60,9 +60,9 @@
 
       <div class="platform-left">
         <section class="platform-section">
-          <h1 class="page-title">CORE FINANCE LIMITED Financial Services Platform</h1>
+          <h1 class="page-title">CoreFX Solutions Financial Services Platform</h1>
           <p class="page-desc">
-              The CORE FINANCE LIMITED platform is designed to provide efficient and secure
+              The CoreFX Solutions platform is designed to provide efficient and secure
   access to professional accounting, bookkeeping, tax consultancy, and financial
   management services. Our system enables clients to manage financial records,
   monitor reports, and access essential documentation through a user-friendly interface.
@@ -184,7 +184,7 @@
 
       <div class="legal-desc-container">
         <p id="legal-desc" class="legal-desc">
-          This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.
+          This Website is Owned by <strong>CoreFX Solutions</strong>.
           The objects of the Company are all subject matters not forbidden by International Business Companies
           (Amendment and Consolidation).
         </p>
@@ -199,11 +199,11 @@
         <p id="risk-disclosure-desc" class="legal-desc">
           Past performance is not indicative of future results. The information on our website is provided
           for informational purposes only and should not be construed as investment advice.
-          You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
+          You should seek independent advice before making any investment decisions. <strong>CoreFX Solutions</strong>
           does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic,
           China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya,
           Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan,
-          Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
+          Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CoreFX Solutions</strong>
           may reject any applicant from any jurisdiction at their sole discretion without the requirement to
           explain the reason why (Terms and conditions).
         </p>
@@ -212,7 +212,7 @@
 
     <!-- Bottom -->
     <div class="footer-bottom">
-      <p>&copy; CORE FINANCE LIMITED - 10956602</p>
+      <p>© CORE FINANCE LIMITED - 10956602</p>
       <section class="partner-section">
         <div class="partner-slider">
           <div class="partner-track">

@@ -364,29 +364,31 @@ body.modal-open::before {
 
   </div>
  <div class="about-text">
-      <h2>About <span>CORE FINANCE LIMITED</span></h2>
+  <h2>About <span>CoreFX Solutions</span></h2>
 
-<p>
-  CORE FINANCE LIMITED is a globally focused trading company delivering innovative 
-  financial solutions to individuals, institutions, and businesses. We provide access 
-  to a wide range of financial instruments including Forex, Crypto, Metals, and Indices, 
-  supported by advanced trading technology and transparent operations.
-</p>
+  <p>
+    CoreFX Solutions is a trading platform and financial service developed under 
+    CORE FINANCE LIMITED, a globally recognized company specializing in innovative 
+    financial solutions. Through this platform, we provide clients with seamless access 
+    to a wide range of trading instruments including Forex, Cryptocurrencies, Metals, 
+    and Indices.
+  </p>
 
-<p>
-  Our mission is to empower clients to achieve their investment goals through 
-  secure platforms, competitive trading conditions, and real-time market insights. 
-  We prioritize integrity, performance, and long-term partnerships in the dynamic 
-  world of global financial markets.
-</p>
+  <p>
+    Backed by the expertise and infrastructure of CORE FINANCE LIMITED, CoreFX Solutions 
+    delivers a secure, transparent, and technology-driven trading environment. Our mission 
+    is to empower traders and investors with reliable tools, competitive conditions, 
+    and real-time market insights to achieve their financial goals.
+  </p>
 
-<p>
-  At CORE FINANCE LIMITED, client satisfaction comes first. Our professional support 
-  team is available 24/7 to assist with account management, technical guidance, 
-  and trading inquiries — ensuring a smooth and uninterrupted trading experience.
-</p>
-      <a href="{{ route('about') }}" class="about-btn">More About Us</a>
-    </div>
+  <p>
+    We are committed to excellence in customer experience. Our dedicated support team 
+    is available 24/7 to assist with account management, technical support, and trading 
+    guidance — ensuring a smooth and efficient trading journey for every client.
+  </p>
+
+  <a href="{{ route('about') }}" class="about-btn">More About Us</a>
+</div>
 
       <!-- Right Side: Features -->
 
@@ -625,7 +627,7 @@ window.addEventListener('resize', connectCards);
           </div>
         </div>
         <p>
-          CORE FINANCE LIMITED delivers exceptional trading conditions. 
+          CoreFX Solutions delivers exceptional trading conditions. 
           The execution speed is impressive, and the analytics tools help 
           me make informed decisions. It’s a reliable platform for serious traders.
         </p>
@@ -688,7 +690,7 @@ window.addEventListener('resize', connectCards);
           </div>
         </div>
         <p>
-          Trading with CORE FINANCE LIMITED has been a great experience. 
+          Trading with CoreFX Solutions has been a great experience. 
           The interface is modern, execution is reliable, and 
           I feel confident managing my investments here.
         </p>
@@ -905,7 +907,7 @@ window.addEventListener('resize', connectCards);
 
   <div class="legal-desc-container">
     <p id="legal-desc" class="legal-desc">
-      This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.  
+      This Website is Owned by <strong>CoreFX Solutions</strong>.  
       The objects of the Company are all subject matters not forbidden by International Business Companies 
       (Amendment and Consolidation).
     </p>
@@ -920,11 +922,11 @@ window.addEventListener('resize', connectCards);
     <p id="risk-disclosure-desc" class="legal-desc">
       Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
+      You should seek independent advice before making any investment decisions. <strong>CoreFX Solutions</strong>
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
       China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CoreFX Solutions</strong>
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
       explain the reason why (Terms and conditions).
     </p>

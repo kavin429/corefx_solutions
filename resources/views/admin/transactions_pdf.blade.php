@@ -97,7 +97,7 @@
         </div>
 
         <div class="client-info">
-            <p><strong>CORE FINANCE LIMITED</strong></p>
+            <p><strong>CoreFX Solutions</strong></p>
         <p>+61 861 865 931</p>
         <p>1 Balloon Street, Manchester, M4 4BE, United Kingdom</p>
         <p><strong>support@corefinanceltd.com</strong></p>
@@ -182,7 +182,7 @@
     </p>
     <br>
     <p class="footer-note">
-        This is a system-generated statement from CORE FINANCE LIMITED.
+        This is a system-generated statement from CoreFX Solutions.
     </p>
 
 <script type="text/php">

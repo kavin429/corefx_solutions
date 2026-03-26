@@ -83,6 +83,6 @@ class DepositController extends Controller
             ]);
         }
 
-        return redirect()->back()->with('success', 'Live ID request sent to Support CORE FINANCE LIMITED!');
+        return redirect()->back()->with('success', 'Live ID request sent to Support CoreFX Solutions!');
     }
 }

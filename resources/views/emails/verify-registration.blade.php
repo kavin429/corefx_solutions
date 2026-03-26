@@ -44,14 +44,14 @@
 </head>
 <body>
   <div class="email-container">
-    <h3>CORE FINANCE LIMITED — Email Verification</h3>
+    <h3>CoreFX Solutions — Email Verification</h3>
     <p>Enter the below OTP to verify your email address.</p>
     <h1>{{ $otp }}</h1>
     <p>This code will expire in <strong>5 minutes</strong>.</p>
     <p>If you didn't request this, ignore this email.</p>
     <hr>
     <p>Thank you</p>
-    <small>CORE FINANCE LIMITED</small>
+    <small>CoreFX Solutions</small>
   </div>
 </body>
 </html>

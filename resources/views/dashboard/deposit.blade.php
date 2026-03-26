@@ -43,51 +43,103 @@
     <h6>Crypto Payment Methods</h6>
 
     <div class="deposit-method">
-        <span>Crypto (BEP 20): <br>
+
+        <!-- TOP LINE: Heading + Redirect -->
+        <div class="method-header">
+            <span>Crypto (BEP 20)</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"
+               onclick="redirectTo('binance')"></i>
+        </div>
+
+        <!-- ADDRESS + COPY -->
+        <div class="method-body">
             <span id="method-1-copy">0xbf32ea52f44a47fc21a456f903df1d6fd513aa0d</span>
-        </span>
-        <i class="fa-regular fa-clipboard"
-           onclick="copyText('method-1-copy','method-1-tooltip')"></i>
+            <i class="fa-regular fa-clipboard"
+               onclick="copyText('method-1-copy','method-1-tooltip')"></i>
+        </div>
+
         <span class="copy-tooltip" id="method-1-tooltip">Copied!</span>
     </div>
 
+
     <div class="deposit-method">
-        <span>Crypto (ERC 20): <br>
+        <div class="method-header">
+            <span>Crypto (ERC 20)</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"
+               onclick="redirectTo('binance')"></i>
+        </div>
+
+        <div class="method-body">
             <span id="method-2-copy">0xbf32ea52f44a47fc21a456f903df1d6fd513aa0d</span>
-        </span>
-        <i class="fa-regular fa-clipboard"
-           onclick="copyText('method-2-copy','method-2-tooltip')"></i>
+            <i class="fa-regular fa-clipboard"
+               onclick="copyText('method-2-copy','method-2-tooltip')"></i>
+        </div>
+
         <span class="copy-tooltip" id="method-2-tooltip">Copied!</span>
     </div>
 
+
     <div class="deposit-method">
-        <span>Crypto (TRC 20): <br>
+        <div class="method-header">
+            <span>Crypto (TRC 20)</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"
+               onclick="redirectTo('binance')"></i>
+        </div>
+
+        <div class="method-body">
             <span id="method-3-copy">TEWMewjEb3j3T7ZE5Lzn26nBVbsuKFwQ1o</span>
-        </span>
-        <i class="fa-regular fa-clipboard"
-           onclick="copyText('method-3-copy','method-3-tooltip')"></i>
+            <i class="fa-regular fa-clipboard"
+               onclick="copyText('method-3-copy','method-3-tooltip')"></i>
+        </div>
+
         <span class="copy-tooltip" id="method-3-tooltip">Copied!</span>
     </div>
 
+
     <div class="deposit-method">
-        <span>Xynder: <br>
+        <div class="method-header">
+            <span>Xynder</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"
+               onclick="redirectTo('xynder')"></i>
+        </div>
+
+        <div class="method-body">
             <span id="method-4-copy">597671</span>
-        </span>
-        <i class="fa-regular fa-clipboard"
-           onclick="copyText('method-4-copy','method-4-tooltip')"></i>
+            <i class="fa-regular fa-clipboard"
+               onclick="copyText('method-4-copy','method-4-tooltip')"></i>
+        </div>
+
         <span class="copy-tooltip" id="method-4-tooltip">Copied!</span>
     </div>
 
+
     <div class="deposit-method">
-        <span>Others: <br>
+        <div class="method-header">
+            <span>Others</span>
+            <i class="fa-solid fa-arrow-up-right-from-square"
+               onclick="redirectTo('binance')"></i>
+        </div>
+
+        <div class="method-body">
             <span id="method-5-copy">0x5ED5C7248EB00A478918eaE5c5b574354607a7E6</span>
-        </span>
-        <i class="fa-regular fa-clipboard"
-           onclick="copyText('method-5-copy','method-5-tooltip')"></i>
+            <i class="fa-regular fa-clipboard"
+               onclick="copyText('method-5-copy','method-5-tooltip')"></i>
+        </div>
+
         <span class="copy-tooltip" id="method-5-tooltip">Copied!</span>
     </div>
 
 </div>
+
+<script>
+function redirectTo(type) {
+    if (type === 'binance') {
+        window.open('https://accounts.binance.com/en/login', '_blank');
+    } else if (type === 'xynder') {
+        window.open('https://www.xynder.com/', '_blank');
+    }
+}
+</script>
 
             <hr style="margin:1.5rem 0;">
 

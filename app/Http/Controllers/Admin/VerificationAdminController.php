@@ -48,7 +48,7 @@ class VerificationAdminController extends Controller
             'sender_id' => auth()->guard('admin')->id(),
             'sender_type' => 'admin',
             'title' => 'Identity Verified',
-            'message' => 'Your identity document has been approved by CORE FINANCE LIMITED.',
+            'message' => 'Your identity document has been approved by CoreFX Solutions.',
             'is_read' => 0,
         ]);
 
@@ -70,7 +70,7 @@ class VerificationAdminController extends Controller
             'sender_id' => auth()->guard('admin')->id(),
             'sender_type' => 'admin',
             'title' => 'Identity Rejected',
-            'message' => 'Your identity document has been rejected by CORE FINANCE LIMITED.',
+            'message' => 'Your identity document has been rejected by CoreFX Solutions.',
             'is_read' => 0,
         ]);
 
@@ -95,7 +95,7 @@ class VerificationAdminController extends Controller
             'sender_id' => auth()->guard('admin')->id(),
             'sender_type' => 'admin',
             'title' => 'Address Verified',
-            'message' => 'Your address document has been approved by CORE FINANCE LIMITED.',
+            'message' => 'Your address document has been approved by CoreFX Solutions.',
             'is_read' => 0,
         ]);
 
@@ -117,7 +117,7 @@ class VerificationAdminController extends Controller
             'sender_id' => auth()->guard('admin')->id(),
             'sender_type' => 'admin',
             'title' => 'Address Rejected',
-            'message' => 'Your address document has been rejected by CORE FINANCE LIMITED.',
+            'message' => 'Your address document has been rejected by CoreFX Solutions.',
             'is_read' => 0,
         ]);
 

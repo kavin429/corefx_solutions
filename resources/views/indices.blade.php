@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CORE FINANCE LIMITED</title>
+  <title>CoreFX Solutions</title>
   <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Corefx.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/forex.css') }}">
   
@@ -78,7 +78,7 @@
     <div class="container">
       <h2>INDICES</h2>
       <p>
-       More than 20 Major Indices. CORE FINANCE LIMITED provides exposure 
+       More than 20 Major Indices. CoreFX Solutions provides exposure 
        to the major stock indices across the world through index 
        CFDs, at competitive leverage on world-class trading platforms. 
        Online CFD indices trading is a great way to participate in 
@@ -165,7 +165,7 @@
 
   <div class="legal-desc-container">
     <p id="legal-desc" class="legal-desc">
-      This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.  
+      This Website is Owned by <strong>CoreFX Solutions</strong>.  
       The objects of the Company are all subject matters not forbidden by International Business Companies 
       (Amendment and Consolidation).
     </p>
@@ -180,11 +180,11 @@
     <p id="risk-disclosure-desc" class="legal-desc">
       Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
+      You should seek independent advice before making any investment decisions. <strong>CoreFX Solutions</strong>
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
       China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CoreFX Solutions</strong>
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
       explain the reason why (Terms and conditions).
     </p>
@@ -193,7 +193,7 @@
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>&copy; CORE FINANCE LIMITED - 10956602</p>
+    <p>© CORE FINANCE LIMITED - 10956602</p>
     <section class="partner-section">
       <div class="partner-slider">
         <div class="partner-track">

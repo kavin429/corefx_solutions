@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="csrf-token" content="{{ csrf_token() }}">
-  <title>CORE FINANCE LIMITED</title>
+  <title>CoreFX Solutions</title>
   <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Corefx.png') }}" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -168,7 +168,7 @@
 
   <div class="legal-desc-container">
     <p id="legal-desc" class="legal-desc">
-      This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.  
+      This Website is Owned by <strong>CoreFX Solutions</strong>.  
       The objects of the Company are all subject matters not forbidden by International Business Companies 
       (Amendment and Consolidation).
     </p>
@@ -183,11 +183,11 @@
     <p id="risk-disclosure-desc" class="legal-desc">
       Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
+      You should seek independent advice before making any investment decisions. <strong>CoreFX Solutions</strong>
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
       China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CoreFX Solutions</strong>
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
       explain the reason why (Terms and conditions).
     </p>

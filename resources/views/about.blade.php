@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CORE FINANCE LIMITED</title>
+  <title>CoreFX Solutions</title>
   <link rel="icon" type="pics/icon.png" href="{{ asset('pics/Corefx.png') }}" />
   <link rel="stylesheet" href="{{ asset('css/about.css') }}">
   <!-- Font Awesome for icons -->
@@ -61,7 +61,7 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
     </video>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1> <span>CORE FINANCE LIMITED</span></h1>
+      <h1> <span>CoreFX Solutions</span></h1>
       <p>One of the leading financial venture firms revolutionizing online forex trading.</p>
     </div>
   </section>
@@ -72,16 +72,20 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
     <!-- Left Side Text -->
     <div class="who-content">
       <h1 class="section-title">Who We Are</h1>
-      <p class="who-text">
-        CORE FINANCE LIMITED is a United Kingdom registered private limited company,
-  incorporated on 11 September 2017. The company is officially registered
-  with Companies House under company number 10956602.
-      </p>
-      <p class="who-text">
-        Our core business activities include accounting and auditing services,
-  bookkeeping, tax consultancy, and financial management solutions,
-  supporting individuals and businesses with professional financial expertise.
-      </p>
+
+<p class="who-text">
+  CoreFX Solutions is a digital trading platform developed and operated under 
+  CORE FINANCE LIMITED, a United Kingdom registered private limited company, 
+  incorporated on 11 September 2017 and officially registered with Companies House 
+  under company number 10956602.
+</p>
+
+<p class="who-text">
+  CORE FINANCE LIMITED provides a strong foundation of financial expertise, with 
+  core business activities including accounting and auditing services, bookkeeping, 
+  tax consultancy, and financial management solutions. Building on this experience, 
+  CoreFX Solutions delivers advanced online trading services to clients worldwide.
+</p>
 
       <!-- Cards -->
       <div class="who-cards">
@@ -293,7 +297,7 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
 
   <div class="legal-desc-container">
     <p id="legal-desc" class="legal-desc">
-      This Website is Owned by <strong>CORE FINANCE LIMITED</strong>.  
+      This Website is Owned by <strong>CoreFX Solutions</strong>.  
       The objects of the Company are all subject matters not forbidden by International Business Companies 
       (Amendment and Consolidation).
     </p>
@@ -308,11 +312,11 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
     <p id="risk-disclosure-desc" class="legal-desc">
       Past performance is not indicative of future results. The information on our website is provided 
       for informational purposes only and should not be construed as investment advice. 
-      You should seek independent advice before making any investment decisions. <strong>CORE FINANCE LIMITED</strong>
+      You should seek independent advice before making any investment decisions. <strong>CoreFX Solutions</strong>
       does not accept clients from the U.S., Afghanistan, Belarus, Burma, Burundi, Central African Republic, 
       China, Congo, Cuba, Egypt, Guinea, Guinea-Bissau, Iraq, Iran, Indonesia, Lebanon, Lesotho, Libya, 
       Mali, Moldova, Nicaragua, Nigeria, North Korea, Pakistan, Russia, Somalia, Sudan, South Sudan, 
-      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CORE FINANCE LIMITED</strong>
+      Syria, Tunisia, Turkey, Vanuatu, Venezuela, Yemen, and Zimbabwe. <strong>CoreFX Solutions</strong>
       may reject any applicant from any jurisdiction at their sole discretion without the requirement to 
       explain the reason why (Terms and conditions).
     </p>
@@ -321,7 +325,7 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>� CORE FINANCE LIMITED - 10956602</p>
+    <p>�  - 10956602</p>
     <section class="partner-section">
       <div class="partner-slider">
         <div class="partner-track">

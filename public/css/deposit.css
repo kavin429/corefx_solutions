@@ -283,3 +283,41 @@ select {
         text-align: center;
 }
 }
+/* HEADER (title + redirect icon) */
+.method-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    color: #cafbff;
+    margin-bottom: 5px;
+    gap: 8px;
+}
+
+/* BODY (address + copy icon) */
+.method-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Address text */
+.method-body span {
+    color: #ffffff;
+    word-break: break-all;
+}
+
+/* Icons */
+.method-header i,
+.method-body i {
+    cursor: pointer;
+    color: #5effdc;
+    transition: 0.2s;
+}
+
+.method-header i:hover,
+.method-body i:hover {
+    transform: scale(1.2);
+    color: #00ffd5;
+}
