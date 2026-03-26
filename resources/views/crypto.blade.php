@@ -147,7 +147,7 @@
       <h4>Contact Info</h4>
       <ul>
         <li> <i class="fas fa-phone"></i>  +61 861 865 931</li>
-        <li><i class="fas fa-envelope"></i>  support@corefinanceltd.com</li>
+        <li><i class="fas fa-envelope"></i>  support@corefxsolutions.com</li>
         <li><i class="fas fa-building"></i>  9 Scott Court, 50 Silverthorne Road, London, United Kingdom, SW8 3HD</li>
         <!--<li><i class="fas fa-globe"></i>  57Q9+6MF - Business Bay - Dubai - UAE</li> -->
       </ul>

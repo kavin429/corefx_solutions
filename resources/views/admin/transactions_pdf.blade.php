@@ -100,7 +100,7 @@
             <p><strong>CoreFX Solutions</strong></p>
         <p>+61 861 865 931</p>
         <p>1 Balloon Street, Manchester, M4 4BE, United Kingdom</p>
-        <p><strong>support@corefinanceltd.com</strong></p>
+        <p><strong>support@corefxsolutions.com</strong></p>
         </div>
     </div>
 
