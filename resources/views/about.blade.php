@@ -325,7 +325,7 @@ rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabl
 
   <!-- Bottom -->
   <div class="footer-bottom">
-    <p>�  - 10956602</p>
+   <p>© CORE FINANCE LIMITED - 10956602</p>
     <section class="partner-section">
       <div class="partner-slider">
         <div class="partner-track">
