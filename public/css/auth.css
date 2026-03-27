@@ -789,7 +789,7 @@ input:-webkit-autofill:hover {
   display: flex;
   gap: 50px;
   align-items: center;
-  animation: slideRight 20s linear infinite;
+  animation: slideRight 20s linear nite;
   animation-play-state: running;
 }
 

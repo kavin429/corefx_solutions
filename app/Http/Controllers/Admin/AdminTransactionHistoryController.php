@@ -158,7 +158,7 @@ public function store(Request $request)
         'sender_id' => auth()->guard('admin')->id(),
         'sender_type' => 'admin',
         'title' => "New $transactionType Transaction",
-        'message' => "A $transactionType transaction of amount {$transaction->amount} has been $status by the CoreFX Solutions.",
+        'message' => "A $transactionType transaction of amount {$transaction->amount} has been $status by the Core FX Solutions LTD.",
         'is_read' => 0,
     ]);
 

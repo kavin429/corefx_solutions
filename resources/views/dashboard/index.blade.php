@@ -6,109 +6,84 @@
 @section('content')
 {{-- Forced Blocking Popup Modal --}}
 @if(!$user->is_active)
-<style>
-  body {
-    overflow: hidden;
-  }
+    <style>
+        body { overflow: hidden; }
+        #dashboardContent { filter: blur(6px); pointer-events: none; user-select: none; }
+        #inactiveOverlay { position: fixed; inset: 0; background: rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+        #inactiveOverlay .modal-box { background: linear-gradient(135deg, #fee0e0ff, #fec7c7ff); padding: 2rem; border-radius: 1rem; max-width: 400px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+        #inactiveOverlay h2 { font-size: 1.5rem; font-weight: bold; color: #471275ff; }
+        #inactiveOverlay p { margin-top: 1rem; color: #374151; font-size: 1rem; }
+        body.dark-mode #inactiveOverlay .modal-box { background: linear-gradient(135deg, #3f2626ff, #330202ff); color: #f5f5f5; }
+    </style>
 
-  #dashboardContent {
-    filter: blur(6px);
-    pointer-events: none;
-    user-select: none;
-  }
-
-  #inactiveOverlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-  }
-
-  #inactiveOverlay .modal-box {
-    background: linear-gradient(135deg, #0b3a3d, #1a6b6c);
-    padding: 2rem;
-    border-radius: 1rem;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-  }
-
-  #inactiveOverlay h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: rgb(224, 255, 238);
-  }
-
-  #inactiveOverlay p {
-    margin-top: 1rem;
-    color: #ffffff;
-    font-size: 1rem;
-  }
-</style>
-
-<div id="inactiveOverlay">
-  <div class="modal-box">
-    <h2>Account Inactive</h2>
-    <p>Your account has been inactivated.<br>Please contact the Corefx Trade Solutions LTD's Support.</p>
-  </div>
-</div>
+    <div id="inactiveOverlay">
+        <div class="modal-box">
+            <h2>Account Inactive</h2>
+            <p>Your account has been inactivated.<br>Please contact the Core FX Solutions LTD's Support.</p>
+        </div>
+    </div>
 @endif
 
 <div id="dashboardContent">
 
-  <div class="liveid-dropdown">
-    <!--<label for="liveIdSelect" class="form-label">Select Live ID:</label> -->
-    <select id="liveIdSelect" class="form-select">
-      <option value="">-- Choose Live ID --</option>
-      @foreach($accounts as $account)
-      <option value="{{ $account->id }}" class="option">{{ $account->live_id }}</option>
-      @endforeach
-    </select>
-  </div>
+<div class="liveid-dropdown"> 
+  <!--<label for="liveIdSelect" class="form-label">Select Live ID:</label> -->
+  <select id="liveIdSelect" class="form-select"> 
+    <option value="">-- Choose Live ID --</option> 
+    @foreach($accounts as $account) 
+    <option value="{{ $account->id }}" class= "option">{{ $account->live_id }}</option> 
+    @endforeach 
+  </select> 
+</div> 
 
-  <div class="cards">
+<div class="cards">
     <!-- Balance Card -->
     <div class="card">
-      <div class="icon-circle balance-icon">
-        <i class="bi bi-wallet2"></i>
-      </div>
-      <h5>Total Balance</h5>
-      <h3>$<span id="cardBalance">{{ number_format($totalBalance, 2) }}</span></h3>
+        <div class="icon-circle balance-icon">
+            <i class="bi bi-wallet2"></i>
+        </div>
+        <h5>Total Balance($)</h5>
+        <h3><span id="cardBalance">{{ number_format($totalBalance, 2) }}</span></h3>
     </div>
 
     <!-- Income Card -->
     <div class="card">
-      <div class="icon-circle income-icon">
-        <i class="bi bi-graph-up-arrow"></i>
-      </div>
-      <h5>Total Deposit</h5>
-      <h3>$<span id="cardDeposit">{{ number_format($totalIncome, 2) }}</span></h3>
+        <div class="icon-circle income-icon">
+            <i class="bi bi-graph-up-arrow"></i>
+        </div>
+        <h5>Total Deposit($)</h5>
+        <h3><span id="cardDeposit">{{ number_format($totalIncome, 2) }}</span></h3>
     </div>
 
     <!-- PNL Card -->
     <div class="card">
-      <div class="icon-circle pnl-icon">
-        <i class="bi bi-bar-chart-line"></i>
-      </div>
-      <h5>Total PNL</h5>
-      <h3>$<span id="cardPNL">{{ number_format($totalPNL, 2) }}</span></h3>
+        <div class="icon-circle pnl-icon">
+            <i class="bi bi-bar-chart-line"></i>
+        </div>
+        <h5>Total Floating P&L($)</h5>
+        <h3><span id="cardPNL">{{ number_format($totalPNL, 2) }}</span></h3>
     </div>
 
     <!-- Outcome Card -->
     <div class="card">
-      <div class="icon-circle outcome-icon">
-        <i class="bi bi-graph-down-arrow"></i>
-      </div>
-      <h5>Total Withdraw</h5>
-      <h3>$<span id="cardWithdraw">{{ number_format($totalOutcome, 2) }}</span></h3>
+        <div class="icon-circle outcome-icon">
+            <i class="bi bi-graph-down-arrow"></i>
+        </div>
+        <h5>Total Withdraw($)</h5>
+        <h3><span id="cardWithdraw">{{ number_format($totalOutcome, 2) }}</span></h3>
     </div>
-  </div>
+
+    <div class="card">
+        <div class="icon-circle fixed-pnl-icon">
+        <i class="bi bi-cash-stack"></i>
+        </div>
+        <h5>Total P&L($)</h5>
+        <h3><span id="cardFixedPNL">{{ number_format($totalFixedPNL, 2) }}</span></h3>
+    </div>
+</div>
 
 
-  <!-- TradingView Widgets in Grid -->
+<!-- TradingView Widgets in Grid -->
   <div class="tradingview-grid mt-4">
     <div class="tradingview-widget-wrapper">
       <div class="tradingview-widget-container">
@@ -373,10 +348,9 @@
   </div>
 
 
-
-  <!-- Grid CSS -->
-  <style>
-    .tradingview-grid {
+<!-- Grid CSS -->
+<style>
+.tradingview-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 1rem;
@@ -388,33 +362,77 @@
       padding: 1rem;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     }
+/* Dark Mode */
+body.dark-mode .tradingview-widget-wrapper {
+    background: linear-gradient(135deg, #1e1e2f, #2a143d); /* darker gradient */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    color: #f1f5f9; /* light text for dark mode */
+}
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    width: 100%;
+}
 
+.fixed-pnl-icon {
+    background: #C6FFF9;
+    color: black;
+}
+</style>
 
-  </style>
+<script>
 
-  <script>
-    document.getElementById('liveIdSelect').addEventListener('change', function() {
-      let accountId = this.value;
+ function formatNumber(num) {
+    return Number(num).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
 
-      if (!accountId) {
+function updateCardValue(id, value) {
+    const el = document.getElementById(id);
+    el.innerText = formatNumber(value);
+
+    // Apply color based on value
+    if (value < 0) {
+        el.classList.add('negative-value');
+        el.classList.remove('positive-value');
+    } else {
+        el.classList.add('positive-value');
+        el.classList.remove('negative-value');
+    }
+}
+
+document.getElementById('liveIdSelect').addEventListener('change', function() {
+    let accountId = this.value;
+
+    if(!accountId) {
         // Reset to default totals
-        document.getElementById('cardBalance').innerText = "{{ number_format($totalBalance, 2) }}";
-        document.getElementById('cardDeposit').innerText = "{{ number_format($totalIncome, 2) }}";
-        document.getElementById('cardWithdraw').innerText = "{{ number_format($totalOutcome, 2) }}";
-        document.getElementById('cardPNL').innerText = "{{ number_format($totalPNL, 2) }}";
+        updateCardValue('cardBalance', {{ $totalBalance }});
+        updateCardValue('cardDeposit', {{ $totalIncome }});
+        updateCardValue('cardWithdraw', {{ $totalOutcome }});
+        updateCardValue('cardPNL', {{ $totalPNL }});
+        updateCardValue('cardFixedPNL', {{ $totalFixedPNL }});
         return;
-      }
+    }
 
-      fetch(`/dashboard/account/${accountId}/details`)
+    fetch(`/dashboard/account/${accountId}/details`)
         .then(res => res.json())
         .then(data => {
-          document.getElementById('cardBalance').innerText = parseFloat(data.totalBalance).toFixed(2);
-          document.getElementById('cardDeposit').innerText = parseFloat(data.totalDeposit).toFixed(2);
-          document.getElementById('cardWithdraw').innerText = parseFloat(data.totalWithdraw).toFixed(2);
-          document.getElementById('cardPNL').innerText = parseFloat(data.totalPNL).toFixed(2);
+            updateCardValue('cardBalance', data.balance);
+            updateCardValue('cardDeposit', data.totalDeposit);
+            updateCardValue('cardWithdraw', data.totalWithdraw);
+            updateCardValue('cardPNL', data.floatingPNL);
+            updateCardValue('cardFixedPNL', data.fixedPNL);
         })
         .catch(err => console.error(err));
-    });
-  </script>
+});
 
-  @endsection
+// On page load, color initial values
+updateCardValue('cardBalance', {{ $totalBalance }});
+updateCardValue('cardDeposit', {{ $totalIncome }});
+updateCardValue('cardWithdraw', {{ $totalOutcome }});
+updateCardValue('cardPNL', {{ $totalPNL }});
+updateCardValue('cardFixedPNL', {{ $totalFixedPNL }});
+
+</script>
+
+@endsection

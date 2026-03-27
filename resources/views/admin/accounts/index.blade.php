@@ -3,6 +3,8 @@
 
     <link rel="stylesheet" href="{{ asset('css/adminAccounts.css') }}">
 
+    @section('title', 'Core FX Solutions LTD')
+
     @section('content')
     <div class="container-fluid">
         <h2>Manage Accounts</h2>
@@ -35,10 +37,11 @@
                         <th>Client</th>
                         <!--<th>Type</th>-->
                         <th>Balance ($)</th>
-                        <th>PNL ($)</th>
+                        <th>Floating PNL ($)</th>
+                        <th>Fixed PNL ($) </th>
                         <th>Actions</th>
                     </tr>
-                </thead>
+                </thead> 
                 <tbody>
                     @forelse ($accounts as $account)
                         <tr>
@@ -59,6 +62,8 @@
                             <!--<td>{{ ucfirst($account->type) }}</td>-->
                             <td style="text-align:right;">{{ number_format($account->balance, 2) }}</td>
                             <td style="text-align:right;">{{ number_format($account->pnl, 2) }}</td>
+                            <td style="text-align:right;">{{ number_format($account->fixed_pnl, 2) }}</td>
+
                             <td class="d-flex gap-1">
                             <!-- Edit 
                             <button class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#editAccountModal{{ $account->id }}">
@@ -66,9 +71,13 @@
                             </button> -->
 
                             <!-- Upload PNL -->
-                            <button class="btn1 btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#uploadPNLModal{{ $account->id }}">
+                            <!-- <button class="btn1 btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#uploadPNLModal{{ $account->id }}">
                                 Edit PNL
-                            </button>
+                            </button> -->
+
+                            <button class="btn1 btn-info btn-sm" data-bs-toggle="modal" data-bs-target="#editLiveIdModal{{ $account->id }}">
+    Edit Live ID
+</button>
 
                             <!-- Toggle User Status -->
                             <form action="{{ route('admin.users.toggleStatus', $account->user->id) }}" method="POST" style="display:inline;">
@@ -152,6 +161,34 @@
                             </div>
                         </div>
 
+                        <div class="modal fade" id="editLiveIdModal{{ $account->id }}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST" action="{{ route('admin.accounts.updateLiveId', $account->id) }}">
+                @csrf
+                @method('PUT')
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Edit Live ID</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="mb-2">
+                        <label class="form-label">Live ID</label>
+                        <input type="text" name="live_id" class="form-control"
+                               value="{{ $account->live_id }}" required>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn1 btn-primary btn-sm">Update</button>
+                    <button type="button" class="btn1 btn-secondary btn-sm" data-bs-dismiss="modal">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
 
                     @empty
