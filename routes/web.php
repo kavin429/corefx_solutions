@@ -371,8 +371,9 @@ Route::get('transactions/history', [AdminTransactionHistoryController::class, 'i
     ->name('admin.transactions.update');
 
 
-    Route::post('transactions/store', [AdminTransactionHistoryController::class, 'store'])
-        ->name('admin.transactions.store');
+   Route::post('transactions/store', [AdminTransactionHistoryController::class, 'store'])
+    ->name('admin.transactions.history.store'); // if you still need it
+
     
 });
 
@@ -507,3 +508,6 @@ Route::get('/admin/get-user-by-live-id/{live_id}', [AdminTransactionHistoryContr
 Route::get('/mutualfunds', function () {
     return view('mutualfunds');
 })->name('mutualfunds');
+
+Route::put('/admin/accounts/{account}/update-live-id', [AdminAccountController::class, 'updateLiveId'])
+    ->name('admin.accounts.updateLiveId');
