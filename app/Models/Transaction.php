@@ -72,4 +72,10 @@ protected $fillable = [
     {
         return $query->where('method', $method);
     }
+
+    // Filter reverse transactions
+public function scopeReverses($query)
+{
+    return $query->where('type', 'reverse');
+}
 }

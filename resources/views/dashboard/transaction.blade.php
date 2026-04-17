@@ -11,7 +11,7 @@
     <div class="summary-row mb-4">
         <div class="summary-box credit-box">
             <p>Total Deposit</p>
-            <h4>$ {{ number_format($totalDeposit, 2) }}</h4>
+            <h4>$ {{ number_format($netDeposit, 2) }}</h4>
         </div>
         <div class="summary-box debit-box">
             <p>Total Withdraw</p>
@@ -51,8 +51,12 @@
         <div class="transaction-list mt-3">
             @foreach($transactions as $transaction)
                 @php
-                    $isDeposit = strtolower($transaction->type) === 'deposit';
-                @endphp
+$type = strtolower($transaction->type);
+
+$isDeposit = $type === 'deposit';
+$isWithdraw = $type === 'withdraw';
+$isReverse = $type === 'reverse';
+@endphp
 
                 <div class="txn-card">
                     <!-- Left Circle with Arrow + Status -->
@@ -74,7 +78,15 @@
 
                     <!-- Middle Info -->
                     <div class="txn-middle">
-                        <p class="txn-type">{{ $isDeposit ? 'Deposit' : 'Withdraw' }}</p>
+                        <p class="txn-type">
+    @if($transaction->type === 'deposit')
+        Deposit
+    @elseif($transaction->type === 'withdraw')
+        Withdraw
+    @elseif($transaction->type === 'reverse')
+        Reversed
+    @endif
+</p>
 
                         <!-- Show account number only if All Accounts is selected -->
                         @if(request('account') === null)

@@ -18,7 +18,8 @@ class DashboardController extends Controller
     private $apiPassword = 'ADMIN'; // <-- put your API password here
 
     /** Display the main dashboard with live balances */
-    public function index()
+    /** Display the main dashboard with live balances */
+public function index()
 {
     $user = Auth::user();
     $profile = $user->profile;
@@ -81,7 +82,17 @@ class DashboardController extends Controller
             ->where('status', 'completed')
             ->sum('amount');
 
-        $fixedPNL = $liveBalance - ($totalDeposits - $totalWithdrawals);
+        // Reverse acts like withdrawal
+        $totalReversals = $account->transactions()
+            ->where('type', 'reverse')
+            ->where('status', 'completed')
+            ->sum('amount');
+
+        // Net deposits after reversal
+        $netDeposits = $totalDeposits - $totalReversals;
+        $netWithdrawals = $totalWithdrawals;
+
+        $fixedPNL = $liveBalance - ($netDeposits - $netWithdrawals);
 
         // Add to total for dashboard
         $totalFixedPNL += $fixedPNL;
@@ -97,10 +108,19 @@ class DashboardController extends Controller
     // DB-BASED DATA
     // ---------------------------
     $totalPNL = $accounts->sum('pnl');
-    $totalIncome = $user->transactions()
+
+    // ✅ Calculate net deposits (total deposit minus reversals)
+    $totalDeposits = $user->transactions()
         ->where('type', 'deposit')
         ->where('status', 'completed')
         ->sum('amount');
+
+    $totalReversals = $user->transactions()
+        ->where('type', 'reverse')
+        ->where('status', 'completed')
+        ->sum('amount');
+
+    $totalIncome = $totalDeposits - $totalReversals; // net deposits
 
     $totalOutcome = $user->transactions()
         ->where('type', 'withdraw')
@@ -124,7 +144,6 @@ class DashboardController extends Controller
         'totalFixedPNL' // <-- pass this to view
     ));
 }
-
 
     /** Return JSON account details for a single account with live balance */
     public function getAccountDetails($accountId)
@@ -171,17 +190,30 @@ class DashboardController extends Controller
     // -----------------------------
     // Calculate fixed PNL using transactions
     // -----------------------------
-    $totalDeposits = $account->transactions()
-        ->where('type', 'deposit')
-        ->where('status', 'completed')
-        ->sum('amount');
+$totalDeposits = $account->transactions()
+    ->where('type', 'deposit')
+    ->where('status', 'completed')
+    ->sum('amount');
 
-    $totalWithdrawals = $account->transactions()
-        ->where('type', 'withdraw')
-        ->where('status', 'completed')
-        ->sum('amount');
+$totalWithdrawals = $account->transactions()
+    ->where('type', 'withdraw')
+    ->where('status', 'completed')
+    ->sum('amount');
 
-    $fixedPNL = $liveBalance - ($totalDeposits - $totalWithdrawals);
+// ✅ Reverse acts like withdrawal
+$totalReversals = $account->transactions()
+    ->where('type', 'reverse')
+    ->where('status', 'completed')
+    ->sum('amount');
+
+// 🔥 FINAL LOGIC
+$netDeposits = $totalDeposits - $totalReversals;
+$netWithdrawals = $totalWithdrawals;
+
+$fixedPNL = $liveBalance - ($netDeposits - $netWithdrawals);
+
+// ✅ ADD THIS
+$netDeposits = $totalDeposits - $totalReversals;
 
     return response()->json([
         'account_id'       => $account->id,
@@ -189,7 +221,7 @@ class DashboardController extends Controller
         'balance'          => $liveBalance,
         'floatingPNL'      => $floatingPNL,   // from API
         'fixedPNL'         => $fixedPNL,      // calculated
-        'totalDeposit'     => $totalDeposits,
+       'totalDeposit' => $netDeposits,
         'totalWithdraw'    => $totalWithdrawals,
     ]);
 }

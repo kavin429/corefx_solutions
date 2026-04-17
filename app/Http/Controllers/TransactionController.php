@@ -45,15 +45,27 @@ class TransactionController extends Controller
         $accounts = Account::where('user_id', auth()->id())->get();
 
         // Totals for filtered transactions (only completed)
-        $totalDeposit = $transactions   ->where('type', 'deposit')
-                                        ->where('status', 'completed')
-                                        ->sum('amount');
+        $totalDeposit = $transactions->where('type', 'deposit')
+    ->where('status', 'completed')
+    ->sum('amount');
 
-        $totalWithdraw = $transactions  ->where('type', 'withdraw')
-                                        ->where('status', 'completed')
-                                        ->sum('amount');
+$totalReverse = $transactions->where('type', 'reverse')
+    ->where('status', 'completed')
+    ->sum('amount');
 
-        return view('dashboard.transaction', compact('transactions', 'accounts', 'totalDeposit', 'totalWithdraw'));
+$totalWithdraw = $transactions->where('type', 'withdraw')
+    ->where('status', 'completed')
+    ->sum('amount');
+
+// ✅ Adjust deposit
+$netDeposit = $totalDeposit - $totalReverse;
+
+        return view('dashboard.transaction', compact(
+    'transactions',
+    'accounts',
+    'netDeposit',
+    'totalWithdraw'
+));
     }
 
     // Store new transaction

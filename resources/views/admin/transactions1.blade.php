@@ -30,6 +30,8 @@
     <input type="text" id="live_id" name="live_id" class="form-control" placeholder="Enter Live ID" required>
 </div>
 
+
+
 <div class="col-md-3">
     <label>Client</label>
     <input type="text" id="user_name" class="form-control" placeholder="Client Name" readonly>
@@ -39,11 +41,21 @@
 </div>
                     <div class="col-md-2">
                         <label>Type</label>
-                        <select name="type" class="form-select" required>
-                            <option value="deposit">Deposit</option>
-                            <option value="withdraw">Withdraw</option>
-                        </select>
+<select name="type" class="form-select" required>
+    <option value="deposit">Deposit</option>
+    <option value="withdraw">Withdraw</option>
+    <option value="reverse">Reverse</option> <!-- ADD THIS -->
+</select>
+
+
                     </div>
+
+                    <div class="col-md-4 reverse-transaction" style="display:none;">
+    <label>Reverse Transaction</label>
+    <select name="original_transaction_id" id="original_transaction_id" class="form-select">
+        <option value="">Select transaction to reverse</option>
+    </select>
+</div>
                     <div class="col-md-2">
                         <label>Amount</label>
                         <input type="number" step="0.01" name="amount" class="form-control" required>
@@ -174,6 +186,7 @@
                 <tr>
                     <th>#</th>
                     <th>Date</th>
+                    <th>Ref No</th>
                     <th>Live ID</th>
                     <th>Client</th>
                     <th>Type</th>
@@ -195,18 +208,20 @@
         {{ $t->created_at->format('d M Y, h:i A') }}
     </span>
 </td>
-
+<td>{{ $t->id }}</td>
                         <td>{{ $t->account?->live_id }}</td>
 
                         <td>{{ $t->user->name ?? 'N/A' }}</td>
 
                         <td class="text-capitalize">
-                             @if($t->type === 'withdraw')
-                                <span>Debited</span>
-                            @else
-                                <span>Credited</span>
-                            @endif
-                        </td>
+    @if($t->type === 'withdraw')
+        <span>Debited</span>
+    @elseif($t->type === 'deposit')
+        <span>Credited</span>
+    @elseif($t->type === 'reverse')
+        <span>Reversed</span>
+    @endif
+</td>
                         <td style="text-align: right;">${{ number_format($t->amount, 2) }}</td>
                         <td class="text-capitalize">{{ $t->method ?? '-' }}</td>
 
@@ -408,20 +423,54 @@ document.getElementById('live_id').addEventListener('input', function() {
                 if(data.success){
                     document.getElementById('user_name').value = data.user.name;
                     document.getElementById('user_id').value = data.user.id;
-                    document.getElementById('account_id').value = data.user.account_id; // add this
+                    document.getElementById('account_id').value = data.user.account_id;
+
+                    // Clear and hide reverse dropdown
+                    const reverseSelect = document.getElementById('original_transaction_id');
+                    reverseSelect.innerHTML = '<option value="">Select transaction to reverse</option>';
+                    document.querySelector('.reverse-transaction').style.display = 'none';
+
+                    // Only show if "Reverse" is selected
+                    if(document.querySelector('select[name="type"]').value === 'reverse'){
+                        fetch('/admin/user-transactions/' + data.user.id)
+                            .then(res => res.json())
+                            .then(transactions => {
+                                transactions.forEach(t => {
+                                    let text = `#${t.id} - ${t.type} $${t.amount} via ${t.method}`;
+                                    let option = new Option(text, t.id);
+                                    reverseSelect.add(option);
+                                });
+                                document.querySelector('.reverse-transaction').style.display = 'block';
+                            });
+                    }
                 } else {
                     document.getElementById('user_name').value = '';
                     document.getElementById('user_id').value = '';
                     document.getElementById('account_id').value = '';
+                    document.querySelector('.reverse-transaction').style.display = 'none';
                 }
             });
     } else {
         document.getElementById('user_name').value = '';
         document.getElementById('user_id').value = '';
         document.getElementById('account_id').value = '';
+        document.querySelector('.reverse-transaction').style.display = 'none';
     }
 });
 
+// Add your type change listener here
+document.querySelector('select[name="type"]').addEventListener('change', function() {
+    const type = this.value;
+    const reverseDiv = document.querySelector('.reverse-transaction');
+
+    if(type === 'reverse' && document.getElementById('user_id').value){
+        reverseDiv.style.display = 'block';
+        // trigger fetch to populate transactions if not already
+        document.getElementById('live_id').dispatchEvent(new Event('input'));
+    } else {
+        reverseDiv.style.display = 'none';
+    }
+});
 </script>
 
 

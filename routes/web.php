@@ -222,6 +222,7 @@ Route::prefix('admin')->middleware('auth:admin')->group(function() {
 });
 
 
+
 use App\Http\Controllers\DepositController;
 
 Route::middleware(['auth'])->group(function() {
@@ -357,24 +358,25 @@ Route::prefix('admin')->middleware(['auth:admin'])->group(function(){
 use App\Http\Controllers\Admin\AdminTransactionHistoryController;
 
 Route::prefix('admin')->middleware(['auth:admin'])->group(function () {
+
+    // Transaction history page
     Route::get('transactions/history', [AdminTransactionHistoryController::class, 'index'])
          ->name('admin.transactions.history');
 
-// Show completed/failed transactions with search & pagination
-Route::get('transactions/history', [AdminTransactionHistoryController::class, 'index'])
-    ->name('admin.transactions.history');
-
+    // Export PDF
     Route::get('transactions/history/pdf', [AdminTransactionHistoryController::class, 'exportPdf'])
          ->name('admin.transactions.history.pdf');
 
-         Route::post('/admin/transactions/{transaction}/update', [AdminTransactionHistoryController::class, 'update'])
-    ->name('admin.transactions.update');
+    // Update transaction
+    Route::post('transactions/{transaction}/update', [AdminTransactionHistoryController::class, 'update'])
+         ->name('admin.transactions.update');
 
+    // Store new transaction
+    Route::post('transactions/store', [AdminTransactionHistoryController::class, 'store'])
+         ->name('admin.transactions.store'); 
 
-   Route::post('transactions/store', [AdminTransactionHistoryController::class, 'store'])
-    ->name('admin.transactions.history.store'); // if you still need it
-
-    
+    // Get completed transactions of a user (for reverse)
+    Route::get('user-transactions/{user_id}', [AdminTransactionHistoryController::class, 'getCompletedTransactions']);
 });
 
 
